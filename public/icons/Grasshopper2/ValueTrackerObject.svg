@@ -1,0 +1,27 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lineara27d78b56ba9" gradientUnits="userSpaceOnUse" x1="16" y1="8" x2="2" y2="8">
+      <stop offset="0%" style="stop-color:#D66000;" />
+      <stop offset="100%" style="stop-color:#DADADA;" />
+    </linearGradient>
+    <linearGradient id="linear4e6d2da5ef0e" gradientUnits="userSpaceOnUse" x1="16" y1="8" x2="2" y2="8">
+      <stop offset="0%" style="stop-color:#0B7285;" />
+      <stop offset="100%" style="stop-color:#DADADA;" />
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 0.5 0.5 L 23.5 0.5 L 23.5 23.5 L 0.5 23.5 Z" fill="#E6E6E6" />
+    <path d="M 4.5 0.5 L 4.5 23.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 9.5 0.5 L 9.5 23.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 14.5 0.5 L 14.5 23.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 19.5 0.5 L 19.5 23.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 0.5 4.5 L 23.5 4.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 0.5 9.5 L 23.5 9.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 0.5 14.5 L 23.5 14.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 0.5 19.5 L 23.5 19.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 0.5 0.5 L 23.5 0.5 L 23.5 23.5 L 0.5 23.5 Z" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 16.085787 14.792893 L 10.207107 8.914213 A 1.0000005 1.0000005 0 0 0 8.83449 8.87493 A 1.9999998 1.9999998 0 0 1 6.089259 8.796366 L 4.2071066 6.9142137 A 1.0000001 1.0000001 0 0 0 2.7928934 6.914214 L 1.8535534 7.8535533 A 0.49999994 0.49999994 0 0 1 1.1464465 7.853554 A 0.49999994 0.49999994 0 0 1 1.1464468 7.1464467 L 2.0857863 6.2071066 A 2 2 0 0 1 4.9142137 6.2071066 L 6.7928934 8.085787 A 1 1 0 0 0 8.165509 8.12507 A 2.0000014 2.0000014 0 0 1 10.910742 8.203633 L 16.792892 14.085787 A 1.0000011 1.0000011 0 0 0 18.207108 14.085787 L 18.414396 13.878497 A 2.0000052 2.0000052 0 0 0 19.000078 12.484694 A 1.4999994 1.4999994 0 0 1 21.56066 11.439342 A 1.4999994 1.4999994 0 0 1 20.515306 13.999922 A 1.9999918 1.9999918 0 0 0 19.121502 14.585605 L 18.914213 14.792893 A 1.9999981 1.9999981 0 0 1 16.085785 14.792894" fill="url(#lineara27d78b56ba9)" />
+    <path d="M 5.9142137 12.207107 L 8.792893 15.085787 A 0.9999984 0.9999984 0 0 0 10.207107 15.085787 L 18.414396 6.8784976 A 2.0000052 2.0000052 0 0 0 19.000078 5.484693 A 1.4999996 1.4999996 0 0 1 21.56066 4.439341 A 1.4999996 1.4999996 0 0 1 20.515306 6.999922 A 1.9999936 1.9999936 0 0 0 19.121502 7.5856047 L 10.914213 15.792893 A 1.9999988 1.9999988 0 0 1 8.085787 15.792893 L 5.2071066 12.914213 A 0.99999917 0.99999917 0 0 0 3.7928932 12.914213 L 1.8535534 14.853554 A 0.5000003 0.5000003 0 0 1 1.1464454 14.853554 A 0.5000003 0.5000003 0 0 1 1.1464461 14.146446 L 3.0857863 12.207107 A 1.999999 1.999999 0 0 1 5.914213 12.207107" fill="url(#linear4e6d2da5ef0e)" />
+    <path d="M 14 11.292893 L 13.292893 12 L 14 12.707107 L 14.707107 12 L 14 11.292893" fill="#FF1493" />
+  </g>
+</svg>

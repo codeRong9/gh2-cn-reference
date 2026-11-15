@@ -1,0 +1,17 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 17.5 7 A 5.5 5.5 0 0 1 6.5 6.9999995 A 5.5 5.5 0 0 1 17.5 7.000001" fill="#FAA2C1" />
+    <path d="M 15.606244 3.393755 A 5.1 5.1 0 0 1 8.393757 10.606246 C 9.21373 11.42622, 11.493556 10.476293, 13.484924 8.484924 C 15.476293 6.493556, 16.42622 4.213731, 15.606245 3.3937554" fill="#E64980" />
+    <path d="M 15.606244 3.393755 A 5.1 5.1 0 0 1 8.393757 10.606246 C 10.189891 12.402381, 13.261323 12.24406, 15.252691 10.252691 C 17.24406 8.261323, 17.402382 5.189892, 15.606245 3.3937554" fill="#A61E4D" />
+    <!--Icon element '(Grasshopper2.UI.Icon.Vector.EggSpan,Grasshopper2.UI.Icon.Vector.VectorStyle)' failed to create valid SVG.-->
+    <path d="M 17.5 7 A 5.5 5.5 0 0 1 6.5 6.9999995 A 5.5 5.5 0 0 1 17.5 7.000001" stroke="#A61E4D" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 12 22.5 L 20.5 18 L 20.5 8 L 12 12.5 L 3.5 8 L 3.5 18 L 12 22.5" fill="#C5F6FA" />
+    <path d="M 20.5 8 L 12 12.5 L 12 22.5 L 20.5 18 L 20.5 8" fill="#66D9E8" />
+    <path d="M 12 22.5 L 20.5 18 L 20.5 8 L 12 12.5 L 3.5 8 L 3.5 18 L 12 22.5" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 20.5 12.5 A 1 1 0 0 1 21.5 13.5 L 21.5 15.5 A 1 1 0 0 1 19.5 15.5 L 19.5 13.5 A 1 1 0 0 1 20.5 12.5" fill="#E64980" stroke="#A61E4D" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 3.5 12.5 A 1 1 0 0 0 2.5 13.5 L 2.5 15.5 A 1 1 0 0 0 4.5 15.5 L 4.5 13.5 A 1 1 0 0 0 3.5 12.5" fill="#E64980" stroke="#A61E4D" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 15.5 8 A 1.5 1.5 0 0 1 12.5 8 A 1.5 1.5 0 0 1 15.5 8" fill="#FFDEEB" stroke="#A61E4D" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 11.5 8 A 1.5 1.5 0 0 1 8.5 8 A 1.5 1.5 0 0 1 11.5 8" fill="#FFDEEB" stroke="#A61E4D" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

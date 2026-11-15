@@ -8,6 +8,13 @@
    "iconTotal": 807
   },
   {
+   "lib": "core",
+   "libCn": "核心",
+   "components": 23,
+   "iconsMatched": 16,
+   "iconTotal": 807
+  },
+  {
    "lib": "maths",
    "libCn": "数学",
    "components": 226,
@@ -184,6 +191,11 @@
   "params/TupleParameter",
   "params/VectorParameter",
   "params/ViewParameter",
+  "core/AiComponent",
+  "core/SvgThemedIconExample",
+  "core/Chain",
+  "core/Cluster",
+  "core/DataFromFile",
   "data/LongestList",
   "data/ShortestList",
   "script/BaseScriptComponent",
@@ -247,6 +259,13 @@
   "params/TupleParameter",
   "params/VectorParameter",
   "params/ViewParameter",
+  "core/SvgThemedIconExample",
+  "core/CustomiseRibbon",
+  "core/DelayingComponent",
+  "core/SubDRaceProbe",
+  "core/WarningsAndErrors",
+  "core/TestDisplaySettings",
+  "core/TestWireframe",
   "maths/PValueFromSamples",
   "maths/RemoveOutliers",
   "maths/ArithmeticDerivative",
@@ -315,12 +334,12 @@
   "script/BaseScriptComponent"
  ],
  "summary": {
-  "components": 1493,
-  "withIcon": 1373,
-  "iconRate": 92.0,
+  "components": 1516,
+  "withIcon": 1389,
+  "iconRate": 91.6,
   "missingNomen": 0,
-  "missingPorts": 90,
-  "chapters": 71,
-  "totalPorts": 5956
+  "missingPorts": 95,
+  "chapters": 72,
+  "totalPorts": 6070
  }
 }

@@ -13,7 +13,7 @@ export interface NameIndex {
   names: string[];
 }
 
-const LIB_KEYS = ["params", "maths", "data", "vector", "curve", "surface", "mesh", "transform",
+const LIB_KEYS = ["params", "core", "maths", "data", "vector", "curve", "surface", "mesh", "transform",
   "intersect", "display", "text", "meta", "annotation", "script"];
 
 /** GH2 的组件代号（IoId，GUID 形式），形如 00000000-a9e2-4ef6-a4d8-a8f87f93757f */

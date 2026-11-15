@@ -20,6 +20,7 @@ OUT_DIR = PROJECT / "data" / "raw"
 
 LIBS = [
     ("params", "Grasshopper2", "参数"),
+    ("core", "Grasshopper2", "核心"),
     ("maths", "G2MathsComponents", "数学"),
     ("data", "G2DataComponents", "数据"),
     ("vector", "G2VectorComponents", "向量"),

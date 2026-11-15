@@ -1,0 +1,24 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="linear91f5199ae265" gradientUnits="userSpaceOnUse" x1="17.25" y1="12" x2="18.32483" y2="14.25715">
+      <stop offset="0%" style="stop-color:#6B4723;" />
+      <stop offset="100%" style="stop-color:#A46D37;" />
+    </linearGradient>
+    <linearGradient id="linear85018da1a626" gradientUnits="userSpaceOnUse" x1="6.75" y1="12" x2="5.67517" y2="14.25715">
+      <stop offset="0%" style="stop-color:#A57744;" />
+      <stop offset="100%" style="stop-color:#D99A5C;" />
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 21.5 8.5 L 12 13.25 L 12 22.5 L 21.5 17 L 21.5 8.5" fill="url(#linear91f5199ae265)" />
+    <path d="M 2.5 8.5 L 12 13.25 L 12 22.5 L 2.5 17 L 2.5 8.5" fill="url(#linear85018da1a626)" />
+    <path d="M 16 16.566668 L 18 15.5 L 18 19.026316 L 16 20.18421 L 16 16.566668" fill="#B18058" />
+    <path d="M 20.928087 8.229093 A 0.9999976 0.9999976 0 0 1 21.5 9.132832 L 21.5 16.423447 A 0.9999987 0.9999987 0 0 1 21.001036 17.288874 L 12.501037 22.209927 A 1.0000025 1.0000025 0 0 1 11.498963 22.209927 L 2.9989638 17.288874 A 1.0000002 1.0000002 0 0 1 2.5000007 16.423447 L 2.5 9.132832 A 1 1 0 0 1 3.0719137 8.229094 L 11.571914 4.202778 A 1.000001 1.000001 0 0 1 12.428086 4.202778 L 20.928087 8.229094" stroke="#473217" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 1.5 9.5 L 1.5 6.5 L 12 2 L 22.5 6.5 L 22.5 9.5 L 12 14.5 L 1.5 9.5" fill="#F1D3AC" />
+    <path d="M 22.5 6.5 L 12 11.5 L 12 14.5 L 22.5 9.5 L 22.5 6.5" fill="#B48047" />
+    <path d="M 1.5 6.5 L 12 11.5 L 12 14.5 L 1.5 9.5 L 1.5 6.5" fill="#E1AA6E" />
+    <path d="M 2.0700667 9.771461 A 1.000001 1.000001 0 0 1 1.4999998 8.8686 L 1.5 7.159396 A 1.0000007 1.0000007 0 0 1 2.106081 6.240251 L 11.606081 2.1688225 A 1.0000035 1.0000035 0 0 1 12.393919 2.1688225 L 21.893919 6.240251 A 1.0000037 1.0000037 0 0 1 22.5 7.159396 L 22.5 8.8686 A 1 1 0 0 1 21.929934 9.771461 L 12.429934 14.29527 A 1.000001 1.000001 0 0 1 11.570066 14.29527 L 2.0700665 9.771461" stroke="#473217" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 21.575735 6.940126 L 12.304399 11.355048" stroke="#D6A569" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 2.4242642 6.940126 L 11.695601 11.355048" stroke="#FFFFFF" stroke-opacity="0.553" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

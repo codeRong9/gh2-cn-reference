@@ -139,7 +139,7 @@ export default function Identify() {
       <p className="mt-3 max-w-[68ch] text-body leading-relaxed text-muted">
         把一张看不懂的画布丢进来，站内会列出它用到的每个组件，并给出中文名、作用与端口含义。
         支持拖入 .ghx / .gh2 文件、粘贴画布内容、粘贴从 GH2 拖出的文本，
-        或者直接贴一个组件代号（拖拽时显示的那串 GUID）。收录范围含 1410 个组件与
+        或者直接贴一个组件代号（拖拽时显示的那串 GUID）。收录范围含 1433 个组件、
         83 个参数对象（Listen / Shout / 滑块 / Panel 等）。
       </p>
 

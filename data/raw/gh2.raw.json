@@ -2,8 +2,8 @@
  "meta": {
   "source": "Grasshopper 2 (Rhino 9) built-in component assemblies",
   "sourcePath": "D:\\RHINO\\RHINO 9\\Plug-ins\\Grasshopper2\\net8.0\\Components",
-  "componentCount": 1493,
-  "libCount": 14,
+  "componentCount": 1516,
+  "libCount": 15,
   "excluded": [
    "migration 库（GH1 旧组件迁移器）",
    "script 库中的 MigrateGh1* 迁移器"
@@ -1917,6 +1917,1478 @@
    "icon": null,
    "inputs": [],
    "outputs": [],
+   "resolve": {}
+  },
+  {
+   "id": "core.ai-component",
+   "lib": "core",
+   "libCn": "核心",
+   "assembly": "Grasshopper2",
+   "namespace": "Grasshopper2.Components.Descriptive",
+   "typeName": "AiComponent",
+   "fullTypeName": "Grasshopper2.Components.Descriptive.AiComponent",
+   "guid": "00000000-a054-4c2b-9723-56cfe1c5860f",
+   "author": null,
+   "name": "AI Component",
+   "info": "A component written by a Large Language Model at the behest of the user.",
+   "chapter": "Params",
+   "section": "Util",
+   "slot": 0,
+   "rank": null,
+   "sortKey": null,
+   "iconKey": null,
+   "icon": "icons/Grasshopper2/AiComponent.svg",
+   "inputs": [],
+   "outputs": [],
+   "resolve": {}
+  },
+  {
+   "id": "core.svg-themed-icon-example",
+   "lib": "core",
+   "libCn": "核心",
+   "assembly": "Grasshopper2",
+   "namespace": "Grasshopper2.Components.DisplayExamples",
+   "typeName": "SvgThemedIconExample",
+   "fullTypeName": "Grasshopper2.Components.DisplayExamples.SvgThemedIconExample",
+   "guid": "00000000-5b6d-4e9a-bb31-2f7c9d4e1a55",
+   "author": "MathiasF",
+   "name": "SVG Themed Icon",
+   "info": "Proof of concept: a component icon imported from an embedded SVG that participates in icon theming.",
+   "chapter": "Params",
+   "section": "Util",
+   "slot": 99,
+   "rank": null,
+   "sortKey": null,
+   "iconKey": null,
+   "icon": null,
+   "inputs": [],
+   "outputs": [],
+   "resolve": {}
+  },
+  {
+   "id": "core.chain",
+   "lib": "core",
+   "libCn": "核心",
+   "assembly": "Grasshopper2",
+   "namespace": "Grasshopper2.Components.Standard",
+   "typeName": "Chain",
+   "fullTypeName": "Grasshopper2.Components.Standard.Chain",
+   "guid": "00000000-3baf-4e2d-8f59-4be3e23087bf",
+   "author": "DavidR",
+   "name": "Chain",
+   "info": "A linear chain of components.",
+   "chapter": "Params",
+   "section": "Util",
+   "slot": 0,
+   "rank": null,
+   "sortKey": null,
+   "iconKey": null,
+   "icon": "icons/Grasshopper2/Chain.svg",
+   "inputs": [],
+   "outputs": [],
+   "resolve": {}
+  },
+  {
+   "id": "core.cluster",
+   "lib": "core",
+   "libCn": "核心",
+   "assembly": "Grasshopper2",
+   "namespace": "Grasshopper2.Components.Standard",
+   "typeName": "Cluster",
+   "fullTypeName": "Grasshopper2.Components.Standard.Cluster",
+   "guid": "00000000-5b8c-4ffa-b0d9-38e86ca1f51d",
+   "author": "DavidR",
+   "name": "Cluster",
+   "info": "",
+   "chapter": "Params",
+   "section": "Util",
+   "slot": 0,
+   "rank": null,
+   "sortKey": null,
+   "iconKey": null,
+   "icon": "icons/Grasshopper2/Cluster.svg",
+   "inputs": [],
+   "outputs": [],
+   "resolve": {}
+  },
+  {
+   "id": "core.constraint-component",
+   "lib": "core",
+   "libCn": "核心",
+   "assembly": "Grasshopper2",
+   "namespace": "Grasshopper2.Components.Standard",
+   "typeName": "ConstraintComponent",
+   "fullTypeName": "Grasshopper2.Components.Standard.ConstraintComponent",
+   "guid": "00000000-44a9-443f-a00d-afaeb60830ca",
+   "author": "DavidR",
+   "name": "Constraint Sketch",
+   "info": "Solve a constraint sketch.",
+   "chapter": "Params",
+   "section": "Util",
+   "slot": 2,
+   "rank": null,
+   "sortKey": null,
+   "iconKey": null,
+   "icon": "icons/Grasshopper2/ConstraintComponent.svg",
+   "inputs": [
+    {
+     "name": "Plane",
+     "nick": "Pl",
+     "info": "Constraint sketch plane.",
+     "type": "Plane",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "Primary Edges",
+     "nick": "E1",
+     "info": "Primary edges in the sketch.",
+     "type": "Curve",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Secondary Edges",
+     "nick": "E2",
+     "info": "Secondary (or 'construction') edges in the sketch.",
+     "type": "Curve",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Errors",
+     "nick": "Er",
+     "info": "Error circles around overconstrained nodes.",
+     "type": "Circle",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "resolve": {}
+  },
+  {
+   "id": "core.create-messages",
+   "lib": "core",
+   "libCn": "核心",
+   "assembly": "Grasshopper2",
+   "namespace": "Grasshopper2.Components.Standard",
+   "typeName": "CreateMessages",
+   "fullTypeName": "Grasshopper2.Components.Standard.CreateMessages",
+   "guid": "00000000-946f-4561-ac8b-838a9683b735",
+   "author": "DavidR",
+   "name": "Make Message",
+   "info": "Create warning or error messages.",
+   "chapter": "Params",
+   "section": "Util",
+   "slot": 7,
+   "rank": null,
+   "sortKey": null,
+   "iconKey": null,
+   "icon": "icons/Grasshopper2/CreateMessages.svg",
+   "inputs": [
+    {
+     "name": "Warnings",
+     "nick": "Wr",
+     "info": "Warning messages",
+     "type": "Text",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Errors",
+     "nick": "Er",
+     "info": "Error messages",
+     "type": "Text",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "outputs": [],
+   "resolve": {}
+  },
+  {
+   "id": "core.customise-ribbon",
+   "lib": "core",
+   "libCn": "核心",
+   "assembly": "Grasshopper2",
+   "namespace": "Grasshopper2.Components.Standard",
+   "typeName": "CustomiseRibbon",
+   "fullTypeName": "Grasshopper2.Components.Standard.CustomiseRibbon",
+   "guid": "00000000-c0a6-43a4-a68a-47ac90a159c0",
+   "author": "DavidR",
+   "name": "Customise Ribbon",
+   "info": "Customise the ribbon layout.",
+   "chapter": "Params",
+   "section": "Util",
+   "slot": 1,
+   "rank": null,
+   "sortKey": null,
+   "iconKey": null,
+   "icon": null,
+   "inputs": [
+    {
+     "name": "Tab Size",
+     "nick": "TSiz",
+     "info": "Height of tab labels.",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Tab Gap",
+     "nick": "TGap",
+     "info": "Gap between tab labels.",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Tab Radius",
+     "nick": "TRad",
+     "info": "Rounding of tab frames.",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Tab Bar",
+     "nick": "TBar",
+     "info": "Height of tab colour bar.",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Panel Gap",
+     "nick": "PGap",
+     "info": "Spacing between adjacent panels.",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Panel Bar",
+     "nick": "PBar",
+     "info": "Height of panel label bars.",
+     "type": "Index",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Item Size",
+     "nick": "ISiz",
+     "info": "Size of item icons.",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Item Gap",
+     "nick": "IGap",
+     "info": "Padding between icons and panels.",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "outputs": [],
+   "resolve": {}
+  },
+  {
+   "id": "core.data-from-file",
+   "lib": "core",
+   "libCn": "核心",
+   "assembly": "Grasshopper2",
+   "namespace": "Grasshopper2.Components.Standard",
+   "typeName": "DataFromFile",
+   "fullTypeName": "Grasshopper2.Components.Standard.DataFromFile",
+   "guid": "00000000-304f-4153-94ac-221a9195c40e",
+   "author": "DavidR",
+   "name": "Data From File",
+   "info": "Load the contents of a Grasshopper data file.",
+   "chapter": "Params",
+   "section": "Util",
+   "slot": null,
+   "rank": null,
+   "sortKey": null,
+   "iconKey": null,
+   "icon": "icons/Grasshopper2/DataFromFile.svg",
+   "inputs": [],
+   "outputs": [],
+   "resolve": {}
+  },
+  {
+   "id": "core.data-to-file",
+   "lib": "core",
+   "libCn": "核心",
+   "assembly": "Grasshopper2",
+   "namespace": "Grasshopper2.Components.Standard",
+   "typeName": "DataToFile",
+   "fullTypeName": "Grasshopper2.Components.Standard.DataToFile",
+   "guid": "00000000-f321-47fa-97f7-7889aa3f4334",
+   "author": "DavidR",
+   "name": "Data To File",
+   "info": "Write various data trees to a Grasshopper data file.",
+   "chapter": "Params",
+   "section": "Util",
+   "slot": null,
+   "rank": null,
+   "sortKey": null,
+   "iconKey": null,
+   "icon": "icons/Grasshopper2/DataToFile.svg",
+   "inputs": [
+    {
+     "name": "First Input",
+     "nick": "A",
+     "info": "First collection of data to write to the file.",
+     "type": "Generic",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "outputs": [],
+   "resolve": {}
+  },
+  {
+   "id": "core.delaying-component",
+   "lib": "core",
+   "libCn": "核心",
+   "assembly": "Grasshopper2",
+   "namespace": "Grasshopper2.Components.Standard",
+   "typeName": "DelayingComponent",
+   "fullTypeName": "Grasshopper2.Components.Standard.DelayingComponent",
+   "guid": "00000000-05ab-4a66-9dea-dab74e9358e8",
+   "author": "DavidR",
+   "name": "Wait!",
+   "info": "Wait for 10 seconds.",
+   "chapter": "Params",
+   "section": "Util",
+   "slot": 7,
+   "rank": null,
+   "sortKey": null,
+   "iconKey": null,
+   "icon": null,
+   "inputs": [
+    {
+     "name": "Delay",
+     "nick": "Ms",
+     "info": "Milliseconds.",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Number",
+     "nick": "In",
+     "info": "Just a number.",
+     "type": "Number",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "Number",
+     "nick": "Out",
+     "info": "Same as input.",
+     "type": "Number",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "resolve": {}
+  },
+  {
+   "id": "core.export-coordinates",
+   "lib": "core",
+   "libCn": "核心",
+   "assembly": "Grasshopper2",
+   "namespace": "Grasshopper2.Components.Standard",
+   "typeName": "ExportCoordinates",
+   "fullTypeName": "Grasshopper2.Components.Standard.ExportCoordinates",
+   "guid": "00000000-5e21-4c9a-bf3d-7c1a2b9e6f44",
+   "author": "AndyP",
+   "name": "Points To File",
+   "info": "Export point coordinates to a variety of text and geographic file formats.",
+   "chapter": "Params",
+   "section": "Util",
+   "slot": 5,
+   "rank": null,
+   "sortKey": null,
+   "iconKey": null,
+   "icon": "icons/Grasshopper2/ExportCoordinates.svg",
+   "inputs": [
+    {
+     "name": "File",
+     "nick": "Fl",
+     "info": "Absolute path of the file to write.",
+     "type": "Text",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Points",
+     "nick": "Pt",
+     "info": "Points to export. Their meta data (name, description, attributes) is written where the format allows.",
+     "type": "Point",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Format",
+     "nick": "Ft",
+     "info": "Output file format. Leave on Auto to choose from the file extension.",
+     "type": "HiddenEnum",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Delimiter",
+     "nick": "Dl",
+     "info": "Column delimiter for delimited text formats. Defaults to a comma.",
+     "type": "Text",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Header",
+     "nick": "Hd",
+     "info": "Write a header row for delimited text formats.",
+     "type": "Boolean",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "File",
+     "nick": "Fl",
+     "info": "Path of the file that was written.",
+     "type": "Text",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "resolve": {}
+  },
+  {
+   "id": "core.graph-mapper-component",
+   "lib": "core",
+   "libCn": "核心",
+   "assembly": "Grasshopper2",
+   "namespace": "Grasshopper2.Components.Standard",
+   "typeName": "GraphMapperComponent",
+   "fullTypeName": "Grasshopper2.Components.Standard.GraphMapperComponent",
+   "guid": "00000000-8f4b-4e01-b16b-9f2b8e2a010a",
+   "author": "DavidR",
+   "name": "Graph Mapper",
+   "info": "Run numbers through one or more functions.",
+   "chapter": "Params",
+   "section": "Input",
+   "slot": 20,
+   "rank": null,
+   "sortKey": null,
+   "iconKey": null,
+   "icon": "icons/Grasshopper2/GraphMapperComponent.svg",
+   "inputs": [
+    {
+     "name": "Parameter",
+     "nick": "x",
+     "info": "Values to run through all hosted functions.",
+     "type": "Number",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "F1",
+     "nick": "Blend",
+     "info": "Value of first function evaluated at x.",
+     "type": "Number",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "resolve": {}
+  },
+  {
+   "id": "core.import-coordinates",
+   "lib": "core",
+   "libCn": "核心",
+   "assembly": "Grasshopper2",
+   "namespace": "Grasshopper2.Components.Standard",
+   "typeName": "ImportCoordinates",
+   "fullTypeName": "Grasshopper2.Components.Standard.ImportCoordinates",
+   "guid": "00000000-33d7-4125-90ae-6b7411fbe0a2",
+   "author": "AndyP",
+   "name": "Points From File",
+   "info": "Import point coordinates from a variety of text and geographic file formats.",
+   "chapter": "Params",
+   "section": "Util",
+   "slot": 5,
+   "rank": null,
+   "sortKey": null,
+   "iconKey": null,
+   "icon": "icons/Grasshopper2/ImportCoordinates.svg",
+   "inputs": [
+    {
+     "name": "File",
+     "nick": "Fl",
+     "info": "Absolute path to the coordinate file.",
+     "type": "Text",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Format",
+     "nick": "Ft",
+     "info": "Source file format. Leave on Auto to detect from the file extension and content.",
+     "type": "HiddenEnum",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Delimiter",
+     "nick": "Dl",
+     "info": "Column delimiter for delimited text files. Leave empty to detect automatically.",
+     "type": "Text",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Comment",
+     "nick": "Cm",
+     "info": "Comment line prefix. Lines starting with this are ignored.",
+     "type": "Text",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Layout",
+     "nick": "Ly",
+     "info": "Column layout for delimited text files. Auto reads the layout from the header row.",
+     "type": "HiddenEnum",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "X Index",
+     "nick": "Ix",
+     "info": "Zero-based column index of the X coordinate (used when Layout is Custom).",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Y Index",
+     "nick": "Iy",
+     "info": "Zero-based column index of the Y coordinate (used when Layout is Custom).",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Z Index",
+     "nick": "Iz",
+     "info": "Zero-based column index of the Z coordinate (used when Layout is Custom).",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "Points",
+     "nick": "Pt",
+     "info": "Imported points. Names, descriptions and extra columns are attached as meta data.",
+     "type": "Point",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "resolve": {}
+  },
+  {
+   "id": "core.log-record",
+   "lib": "core",
+   "libCn": "核心",
+   "assembly": "Grasshopper2",
+   "namespace": "Grasshopper2.Components.Standard",
+   "typeName": "LogRecord",
+   "fullTypeName": "Grasshopper2.Components.Standard.LogRecord",
+   "guid": "00000000-7019-47cf-90df-131c1abce8ed",
+   "author": "DavidR",
+   "name": "Log Record",
+   "info": "Add a record to the Grasshopper log.",
+   "chapter": "Params",
+   "section": "Util",
+   "slot": 7,
+   "rank": null,
+   "sortKey": null,
+   "iconKey": null,
+   "icon": "icons/Grasshopper2/LogRecord.svg",
+   "inputs": [
+    {
+     "name": "Kind",
+     "nick": "Ki",
+     "info": "Log record type. If 'None', no log record will be created.",
+     "type": "Enum",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Message",
+     "nick": "Ms",
+     "info": "Log record message text. If empty, no log record will be created.",
+     "type": "Text",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "outputs": [],
+   "resolve": {}
+  },
+  {
+   "id": "core.read3dm-file",
+   "lib": "core",
+   "libCn": "核心",
+   "assembly": "Grasshopper2",
+   "namespace": "Grasshopper2.Components.Standard",
+   "typeName": "Read3dmFile",
+   "fullTypeName": "Grasshopper2.Components.Standard.Read3dmFile",
+   "guid": "00000000-f378-4138-b329-16501c7117d3",
+   "author": "DavidR",
+   "name": "Read 3dm File",
+   "info": "Load the contents of a Rhino 3dm file.",
+   "chapter": "Params",
+   "section": "Util",
+   "slot": null,
+   "rank": null,
+   "sortKey": null,
+   "iconKey": null,
+   "icon": "icons/Grasshopper2/Read3dmFile.svg",
+   "inputs": [
+    {
+     "name": "File Path",
+     "nick": "Fl",
+     "info": "Absolute path to the file.",
+     "type": "Text",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "Shapes",
+     "nick": "Sh",
+     "info": "Geometry contained in the file.",
+     "type": "Generic",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Layers",
+     "nick": "Ly",
+     "info": "Layers contained in the file.",
+     "type": "Generic",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Named Views",
+     "nick": "Vw",
+     "info": "All named views in the document. The name is embedded in the view meta data.",
+     "type": "HiddenView",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Named C-Planes",
+     "nick": "Cp",
+     "info": "All named construction planes in the document. The name is embedded in the view meta data.",
+     "type": "Plane",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Notes",
+     "nick": "Nt",
+     "info": "Document text notes.",
+     "type": "Text",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "User Keys",
+     "nick": "Ks",
+     "info": "User string keys at the document level.",
+     "type": "Text",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "User Strings",
+     "nick": "Us",
+     "info": "User string values at the document level.",
+     "type": "Text",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Version",
+     "nick": "Vr",
+     "info": "3dm file version of document.",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "resolve": {}
+  },
+  {
+   "id": "core.read-text-file",
+   "lib": "core",
+   "libCn": "核心",
+   "assembly": "Grasshopper2",
+   "namespace": "Grasshopper2.Components.Standard",
+   "typeName": "ReadTextFile",
+   "fullTypeName": "Grasshopper2.Components.Standard.ReadTextFile",
+   "guid": "00000000-cce8-4511-a4eb-a4abe46dd150",
+   "author": "DavidR",
+   "name": "Text From File",
+   "info": "Load the contents of a text file.",
+   "chapter": "Params",
+   "section": "Util",
+   "slot": 5,
+   "rank": null,
+   "sortKey": null,
+   "iconKey": null,
+   "icon": "icons/Grasshopper2/ReadTextFile.svg",
+   "inputs": [
+    {
+     "name": "File Path",
+     "nick": "Fl",
+     "info": "Absolute path of the file to read.",
+     "type": "Text",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "Text",
+     "nick": "Tx",
+     "info": "Text contained in the file.",
+     "type": "Text",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "resolve": {}
+  },
+  {
+   "id": "core.rhino-pipeline",
+   "lib": "core",
+   "libCn": "核心",
+   "assembly": "Grasshopper2",
+   "namespace": "Grasshopper2.Components.Standard",
+   "typeName": "RhinoPipeline",
+   "fullTypeName": "Grasshopper2.Components.Standard.RhinoPipeline",
+   "guid": "00000000-dc6b-4e68-8907-d77126951cec",
+   "author": "DavidR",
+   "name": "Rhino Pipeline",
+   "info": "Import geometry from the current Rhino document.",
+   "chapter": "Params",
+   "section": "Util",
+   "slot": null,
+   "rank": null,
+   "sortKey": null,
+   "iconKey": null,
+   "icon": "icons/Grasshopper2/RhinoPipeline.svg",
+   "inputs": [
+    {
+     "name": "Layer",
+     "nick": "Ly",
+     "info": "Optional layer name filters.",
+     "type": "Text Pattern",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Name",
+     "nick": "Nm",
+     "info": "Optional object name filters.",
+     "type": "Text Pattern",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Locked",
+     "nick": "Lo",
+     "info": "If true, locked objects are included in the output.",
+     "type": "Boolean",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Hidden",
+     "nick": "Hi",
+     "info": "If true, hidden objects are included in the output.",
+     "type": "Boolean",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Selected",
+     "nick": "Sl",
+     "info": "If true, only selected objects are included in the outputs.",
+     "type": "Boolean",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "Collated Values",
+     "nick": "Vv",
+     "info": "All values which aren't included in other, more specific, outputs.",
+     "type": "Generic",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Points",
+     "nick": "Pt",
+     "info": "All matching points in the Rhino document.",
+     "type": "Point",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Text Dots",
+     "nick": "Dt",
+     "info": "All matching text dots in the Rhino document.",
+     "type": "HiddenDot",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Curves",
+     "nick": "Cr",
+     "info": "All curves not sorted into more specific curve outputs.",
+     "type": "Curve",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Lines",
+     "nick": "Ln",
+     "info": "All single segment line curves.",
+     "type": "HiddenLine",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Polylines",
+     "nick": "Pl",
+     "info": "All polyline curves.",
+     "type": "HiddenPolyline",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Rectangles",
+     "nick": "Rc",
+     "info": "All rectangular polyline curves.",
+     "type": "HiddenRectangle",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Triangles",
+     "nick": "Tr",
+     "info": "All triangular polyline curves.",
+     "type": "HiddenTriangle",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Circles",
+     "nick": "Ci",
+     "info": "All circles.",
+     "type": "HiddenCircle",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Arcs",
+     "nick": "Ar",
+     "info": "All circular-arcs.",
+     "type": "HiddenArc",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Surfaces",
+     "nick": "Sf",
+     "info": "All surfaces not sorted into more specific surface outputs.",
+     "type": "HiddenSurface",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Boxes",
+     "nick": "Bx",
+     "info": "All box like surfaces.",
+     "type": "HiddenBox",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Spheres",
+     "nick": "Sp",
+     "info": "All spherical surfaces.",
+     "type": "HiddenSphere",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "SubDs",
+     "nick": "Sb",
+     "info": "All subdivision surfaces.",
+     "type": "HiddenSurface",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Single",
+     "nick": "Ss",
+     "info": "All single-face surfaces.",
+     "type": "HiddenSurface",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Poly",
+     "nick": "Ps",
+     "info": "All poly-face surfaces.",
+     "type": "HiddenSurface",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Meshes",
+     "nick": "Ms",
+     "info": "All meshes.",
+     "type": "HiddenMesh",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "resolve": {}
+  },
+  {
+   "id": "core.sub-d-race-probe",
+   "lib": "core",
+   "libCn": "核心",
+   "assembly": "Grasshopper2",
+   "namespace": "Grasshopper2.Components.Standard",
+   "typeName": "SubDRaceProbe",
+   "fullTypeName": "Grasshopper2.Components.Standard.SubDRaceProbe",
+   "guid": "00000000-9682-1000-0000-000000000001",
+   "author": "Mathias",
+   "name": "SubD Race Probe",
+   "info": "Stress test for the surface-mesh cache race in ON_SubD. RH-96821.",
+   "chapter": "Surface",
+   "section": "SubD",
+   "slot": 1,
+   "rank": null,
+   "sortKey": null,
+   "iconKey": null,
+   "icon": null,
+   "inputs": [
+    {
+     "name": "Cells",
+     "nick": "C",
+     "info": "Grid cells per side of the SubD (16 is a good default; bigger = wider race window).",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Threads",
+     "nick": "T",
+     "info": "Number of parallel Mesh.CreateFromSubD calls to race on the shared SubD.",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Clear per iteration",
+     "nick": "Cl",
+     "info": "If true, ClearEvaluationCache() is called at the top of every thread's iteration so the cache-empty race window is re-opened on every call.",
+     "type": "Boolean",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "Divergent count",
+     "nick": "D",
+     "info": "Number of parallel calls whose resulting mesh's (vertex-count, face-count, vertex-position-hash) differed from a single-threaded baseline. Non-zero = race caught.",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Invalid count",
+     "nick": "I",
+     "info": "Number of parallel calls that returned a null mesh, an IsValid==false mesh, or a mesh with zero vertices / faces.",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Exception count",
+     "nick": "X",
+     "info": "Number of parallel calls that threw an exception.",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Report",
+     "nick": "R",
+     "info": "Human-readable summary line.",
+     "type": "Text",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "resolve": {}
+  },
+  {
+   "id": "core.warnings-and-errors",
+   "lib": "core",
+   "libCn": "核心",
+   "assembly": "Grasshopper2",
+   "namespace": "Grasshopper2.Components.Standard",
+   "typeName": "WarningsAndErrors",
+   "fullTypeName": "Grasshopper2.Components.Standard.WarningsAndErrors",
+   "guid": "00000000-0A31-452C-A44D-19B69DBD6AB9",
+   "author": "DavidR",
+   "name": "Warnings & Errors",
+   "info": "Extract warning and error messages from an object.",
+   "chapter": "Data",
+   "section": "Metric",
+   "slot": 1,
+   "rank": null,
+   "sortKey": null,
+   "iconKey": null,
+   "icon": null,
+   "inputs": [
+    {
+     "name": "Objects",
+     "nick": "Ob",
+     "info": "Object(s) to inspect for warning and error messages.",
+     "type": "Topology",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "Warnings",
+     "nick": "Wr",
+     "info": "Warning messages.",
+     "type": "Text",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Warning Details",
+     "nick": "Wx",
+     "info": "Detailed warning explanations.",
+     "type": "Text",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Errors",
+     "nick": "Er",
+     "info": "Error messages.",
+     "type": "Text",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Error Details",
+     "nick": "Ex",
+     "info": "Detailed error explanations.",
+     "type": "Text",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "resolve": {}
+  },
+  {
+   "id": "core.write-text-file",
+   "lib": "core",
+   "libCn": "核心",
+   "assembly": "Grasshopper2",
+   "namespace": "Grasshopper2.Components.Standard",
+   "typeName": "WriteTextFile",
+   "fullTypeName": "Grasshopper2.Components.Standard.WriteTextFile",
+   "guid": "00000000-1321-4599-906e-aa8b017a9e30",
+   "author": "DavidR",
+   "name": "Text To File",
+   "info": "Write text to one or more files.",
+   "chapter": "Params",
+   "section": "Util",
+   "slot": 5,
+   "rank": null,
+   "sortKey": null,
+   "iconKey": null,
+   "icon": "icons/Grasshopper2/WriteTextFile.svg",
+   "inputs": [
+    {
+     "name": "Text",
+     "nick": "Tx",
+     "info": "Text to write.",
+     "type": "Text",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "File Path",
+     "nick": "Fl",
+     "info": "Absolute path of the file to write.",
+     "type": "Text",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "outputs": [],
+   "resolve": {}
+  },
+  {
+   "id": "core.test-display-settings",
+   "lib": "core",
+   "libCn": "核心",
+   "assembly": "Grasshopper2",
+   "namespace": "Grasshopper2.Display",
+   "typeName": "TestDisplaySettings",
+   "fullTypeName": "Grasshopper2.Display.TestDisplaySettings",
+   "guid": "00000000-a698-b7c8-6643-b7076c174810",
+   "author": "MathiasF",
+   "name": "Test Display Settings",
+   "info": "Try out all possible parameters of the new mesh shader",
+   "chapter": "Mesh",
+   "section": "Display",
+   "slot": 1,
+   "rank": null,
+   "sortKey": null,
+   "iconKey": null,
+   "icon": null,
+   "inputs": [
+    {
+     "name": "Mesh",
+     "nick": "M",
+     "info": "The mesh to draw",
+     "type": "Mesh",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Emission colour",
+     "nick": "Ecl",
+     "info": "The emission colour (standard meta Display.Emission).",
+     "type": "Colour",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Diffuse colour",
+     "nick": "Dcl",
+     "info": "The diffuse colour (standard meta Display.Diffuse, applied by the guise system).",
+     "type": "Colour",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Colour skewness",
+     "nick": "S",
+     "info": "The colour skewness for zany configuration (standard meta Display.Vigour).",
+     "type": "Number",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Desaturation",
+     "nick": "D",
+     "info": "The amount of desaturation in dark areas (custom meta Desaturation, 0-1).",
+     "type": "Number",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Striping",
+     "nick": "Str",
+     "info": "A toggle to turn striping on and off (custom meta Striping; gates StripeWidth/StripeContrast).",
+     "type": "Boolean",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Stripe width",
+     "nick": "Sw",
+     "info": "The stripe width (custom meta StripeWidth; only applied when Striping is true).",
+     "type": "Number",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Stripe contrast",
+     "nick": "Sc",
+     "info": "The stripe contrast (custom meta StripeContrast; only applied when Striping is true).",
+     "type": "Number",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Stippling",
+     "nick": "Sti",
+     "info": "A toggle to turn stippling/dithering on and off (custom meta Stippling; gates StipplingAmount).",
+     "type": "Boolean",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Stippling amount",
+     "nick": "Sm",
+     "info": "The stippling amount in percent (custom meta StipplingAmount, 0-99). Only applied when Stippling is true.",
+     "type": "Number",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Brightness",
+     "nick": "B",
+     "info": "This parameter does not alter any colour gradient; it only reparameterises the emission→diffuse transition (standard meta Display.Glow).",
+     "type": "Number",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Lmax",
+     "nick": "Lm",
+     "info": "Spherical harmonics maximum degree (0-5). Higher values capture more lighting detail (custom meta Lmax).",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Option",
+     "nick": "Op",
+     "info": "Shader option (0-20, custom meta Option). Default in DisplaySettings is 19 = SH + Lambertian gate.",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Blend mode",
+     "nick": "Bm",
+     "info": "Blend mode for option 15+ (0=LumaChroma, 1=Oklab, 2=PrincipalAxis). Custom meta BlendMode.",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Shade false colour",
+     "nick": "Sfc",
+     "info": "Whether to shade meshes that carry per-vertex false colours (custom meta ShadeFalseColour).",
+     "type": "Boolean",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Wireframe",
+     "nick": "Wf",
+     "info": "Render as wireframe (custom meta Wireframe).",
+     "type": "Boolean",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Welded thickness",
+     "nick": "Wt",
+     "info": "Wireframe thickness for welded edges, in pixels (custom meta WeldedThickness).",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Unwelded thickness",
+     "nick": "Ut",
+     "info": "Wireframe thickness for unwelded edges, in pixels (custom meta UnweldedThickness).",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Naked thickness",
+     "nick": "Nt",
+     "info": "Wireframe thickness for naked (true boundary) edges, in pixels (custom meta NakedThickness).",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Non-manifold thickness",
+     "nick": "Mt",
+     "info": "Wireframe thickness for non-manifold edges (three or more faces), in pixels (custom meta NonManifoldThickness).",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "Mesh",
+     "nick": "Ms",
+     "info": "The mesh to be drawn",
+     "type": "Mesh",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "resolve": {}
+  },
+  {
+   "id": "core.test-wireframe",
+   "lib": "core",
+   "libCn": "核心",
+   "assembly": "Grasshopper2",
+   "namespace": "Grasshopper2.Display",
+   "typeName": "TestWireframe",
+   "fullTypeName": "Grasshopper2.Display.TestWireframe",
+   "guid": "00000000-a698-b7c8-6643-b7076c174900",
+   "author": "MathiasF",
+   "name": "Test Wireframe",
+   "info": "Tag arbitrary data with Display.Wireframe metadata.",
+   "chapter": "Mesh",
+   "section": "Display",
+   "slot": 1,
+   "rank": null,
+   "sortKey": null,
+   "iconKey": null,
+   "icon": null,
+   "inputs": [
+    {
+     "name": "Value",
+     "nick": "Vl",
+     "info": "Value to assign meta data to.",
+     "type": "Generic",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Wireframe",
+     "nick": "W",
+     "info": "Whether to draw downstream meshes in wireframe.",
+     "type": "Boolean",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Welded thickness",
+     "nick": "Wt",
+     "info": "Welded-edge thickness in pixels. Zero skips welded edges.",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Unwelded thickness",
+     "nick": "Ut",
+     "info": "Unwelded-edge thickness in pixels. Zero skips unwelded edges.",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Naked thickness",
+     "nick": "Nt",
+     "info": "Naked-edge (true boundary) thickness in pixels. Zero skips naked edges.",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    },
+    {
+     "name": "Non-manifold thickness",
+     "nick": "Mt",
+     "info": "Non-manifold-edge (three or more faces) thickness in pixels. Zero skips them.",
+     "type": "Integer",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "Data",
+     "nick": "D",
+     "info": "Input data tagged with wireframe metadata.",
+     "type": "Generic",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "resolve": {}
+  },
+  {
+   "id": "core.value-tracker-object",
+   "lib": "core",
+   "libCn": "核心",
+   "assembly": "Grasshopper2",
+   "namespace": "Grasshopper2.Parameters.Special",
+   "typeName": "ValueTrackerObject",
+   "fullTypeName": "Grasshopper2.Parameters.Special.ValueTrackerObject",
+   "guid": "00000000-8f37-4e52-a1c0-7e3b5f0a9d84",
+   "author": "AndyPayne",
+   "name": "Value Tracker",
+   "info": "Track and display changes to one or more numbers over time.",
+   "chapter": "Params",
+   "section": "Util",
+   "slot": 1,
+   "rank": null,
+   "sortKey": null,
+   "iconKey": null,
+   "icon": "icons/Grasshopper2/ValueTrackerObject.svg",
+   "inputs": [
+    {
+     "name": "Numbers",
+     "nick": "Nm",
+     "info": "The value or values to track over time. All branches are flattened into the tracked streams.",
+     "type": "Number",
+     "access": null,
+     "requirement": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "Numbers",
+     "nick": "Nm",
+     "info": "The tracked values, passed straight through (tree structure preserved).",
+     "type": "Number",
+     "access": null,
+     "requirement": null
+    }
+   ],
    "resolve": {}
   },
   {
