@@ -57,6 +57,35 @@ export default function About() {
         </p>
       </section>
 
+      <section className="mt-10 rounded-xl border bg-surface p-5">
+        <h2 className="text-[15px] font-medium">在线地址与反馈</h2>
+        <p className="mt-2 text-small leading-[1.9] text-muted">
+          公网地址：
+          <a
+            href="https://coderong9.github.io/gh2-cn-reference/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-accent link-underline"
+          >
+            coderong9.github.io/gh2-cn-reference
+          </a>
+          ；源码在{" "}
+          <a
+            href="https://github.com/codeRong9/gh2-cn-reference"
+            target="_blank"
+            rel="noreferrer"
+            className="text-accent link-underline"
+          >
+            GitHub
+          </a>{" "}
+          公开，发现释义与 GH2 实际行为不符，可以直接提 Issue。
+        </p>
+        <p className="mt-1.5 text-small leading-[1.9] text-muted">
+          更多资讯与交流反馈，欢迎加入论坛 Q 群{" "}
+          <span className="mono text-ink">1104824684</span>。
+        </p>
+      </section>
+
       <section className="mt-10 rounded-xl border border-dashed p-5">
         <h2 className="text-[15px] font-medium">重建数据</h2>
         <p className="mt-2 text-small leading-relaxed text-muted">
