@@ -1,4 +1,8 @@
 import { Link } from "react-router-dom";
+import { Github, Languages, MessageSquarePlus, Puzzle } from "lucide-react";
+
+const REPO = "https://github.com/codeRong9/gh2-cn-reference";
+const QQ = "1104824684";
 
 export function Footer() {
   return (
@@ -32,6 +36,53 @@ export function Footer() {
           </ul>
         </div>
       </div>
+      <section className="border-t bg-accent/[0.04]" aria-labelledby="footer-notice">
+        <div className="mx-auto max-w-[1320px] px-4 py-7 sm:px-6">
+          <h2 id="footer-notice" className="flex items-center gap-2 text-[14px] font-semibold">
+            <Puzzle size={15} className="text-accent" />
+            缺组件 / 想加插件翻译？请告诉我们
+          </h2>
+          <p className="mt-2 max-w-[86ch] text-small leading-[1.85] text-muted">
+            本站目前覆盖 GH2 原生组件、参数对象与核心工具。
+            <strong className="font-medium text-ink/85">第三方插件</strong>、以及 GH2 后续版本新增的电池还没有收录；
+            如果这里有你要用的电池没出现，或者某条释义与软件实际行为不符，欢迎直接反馈——我们会按需求优先补。
+          </p>
+          <p className="mt-1.5 max-w-[86ch] text-small leading-[1.85] text-muted">
+            站点以中文为主，但如果你的母语不是中文、希望补充其它语言版本或发现术语翻译有歧义，同样欢迎反馈，
+            我们更希望术语与官方说明保持一致，而不是各译一套。
+          </p>
+          <div className="mt-3.5 flex flex-wrap items-center gap-2">
+            <a
+              href={`${REPO}/issues/new?template=identify-issue.yml`}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface px-3 py-1.5 text-small text-ink transition hover:border-accent/45 hover:bg-accent/[0.06]"
+            >
+              <MessageSquarePlus size={13} /> 反馈缺少的组件
+            </a>
+            <a
+              href={`${REPO}/issues/new?template=content-correction.yml`}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface px-3 py-1.5 text-small text-ink transition hover:border-accent/45 hover:bg-accent/[0.06]"
+            >
+              <Languages size={13} /> 释义 / 术语纠错
+            </a>
+            <a
+              href={REPO}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface px-3 py-1.5 text-small text-muted transition hover:text-ink"
+            >
+              <Github size={13} /> GitHub 仓库
+            </a>
+            <span className="inline-flex items-center gap-1.5 rounded-lg border border-dashed border-line px-3 py-1.5 text-small text-muted">
+              论坛 Q 群 <span className="mono text-ink">{QQ}</span>
+            </span>
+          </div>
+        </div>
+      </section>
+
       <div className="border-t py-4 text-center text-micro text-muted/70">
         © {new Date().getFullYear()} GH2 中文操作库 · 组件说明译自 Grasshopper 2 内置帮助
       </div>
