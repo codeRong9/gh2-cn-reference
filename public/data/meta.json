@@ -21,25 +21,25 @@
     },
     "Data": {
      "name": "Data",
-     "cn": "Data",
+     "cn": "数据",
      "chapter": "Params",
      "count": 13
     },
     "Geometric": {
      "name": "Geometric",
-     "cn": "Geometric",
+     "cn": "几何",
      "chapter": "Params",
      "count": 28
     },
     "Input": {
      "name": "Input",
-     "cn": "Input",
+     "cn": "输入",
      "chapter": "Params",
      "count": 17
     },
     "Numeric": {
      "name": "Numeric",
-     "cn": "Numeric",
+     "cn": "数值",
      "chapter": "Params",
      "count": 13
     },
@@ -101,7 +101,7 @@
     },
     "Special": {
      "name": "Special",
-     "cn": "Special",
+     "cn": "专用",
      "chapter": "Maths",
      "count": 21
     },

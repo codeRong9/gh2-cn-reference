@@ -280,7 +280,8 @@ export default function Identify() {
                         </span>
                         <span className="mt-0.5 flex items-center gap-1.5 truncate text-micro text-muted">
                           <span>
-                            {record.libCn} · {record.chapter} / {record.sectionCn || record.section}
+                            {record.libCn} · {record.chapterCn || record.chapter} /{" "}
+                            {record.sectionCn || record.section}
                           </span>
                           <span className="shrink-0 rounded border border-line px-1 py-px text-[10px]">
                             {HOW_LABEL[item.how]}

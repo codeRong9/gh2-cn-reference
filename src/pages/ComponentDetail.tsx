@@ -92,7 +92,8 @@ export default function ComponentDetail() {
             )}
           </div>
           <p className="mt-1 text-micro text-muted">
-            {record.chapter} / {record.section} · {record.inputs.length} 输入 · {record.outputs.length} 输出
+            {record.chapterCn || record.chapter} / {record.sectionCn || record.section} ·{" "}
+            {record.inputs.length} 输入 · {record.outputs.length} 输出
           </p>
         </div>
         <div className="flex gap-1.5">
@@ -131,7 +132,8 @@ export default function ComponentDetail() {
           <div className="mt-3 rounded-xl border bg-surface p-3.5">
             <p className="text-micro uppercase tracking-[0.14em] text-muted">在 GH2 中的位置</p>
             <p className="mt-2 text-[12.5px] leading-relaxed">
-              {record.libCn} 库 → {record.chapter} → {record.sectionCn || record.section}
+              {record.libCn} 库 → {record.chapterCn || record.chapter} →{" "}
+              {record.sectionCn || record.section}
             </p>
             <p className="mt-2 text-[11px] leading-relaxed text-muted">
               打开 GH2 工具面板，按这个路径逐级展开即可找到同名电池；面板顶部搜索英文名更快。

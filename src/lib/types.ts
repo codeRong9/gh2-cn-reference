@@ -39,6 +39,7 @@ export interface ComponentRecord {
   info: string;
   alias?: string;
   chapter: string;
+  chapterCn?: string;
   section: string;
   sectionCn: string;
   slot: number | null;

@@ -42,7 +42,30 @@ LIB_META = {
     "script": {"cn": "脚本", "desc": "C# 与 Python 脚本电池，自定义算法入口"},
 }
 
+CHAPTER_CN = {
+    "Params": "参数",
+    "Maths": "数学",
+    "Data": "数据",
+    "Vector": "向量",
+    "Curve": "曲线",
+    "Surface": "曲面",
+    "Mesh": "网格",
+    "Transform": "变换",
+    "Intersect": "相交",
+    "Display": "显示",
+    "Text": "文本",
+    "Meta": "元数据",
+    "Annotation": "标注",
+    "Script": "脚本",
+    "Util": "工具",
+}
+
 SECTION_CN = {
+    "Geometric": "几何",
+    "Input": "输入",
+    "Numeric": "数值",
+    "Data": "数据",
+    "Special": "专用",
     "Operator": "运算符",
     "Trigs": "三角函数",
     "Trig": "三角函数",
@@ -199,6 +222,7 @@ def main() -> int:
         if detail:
             c["detail"] = detail
         c["sectionCn"] = SECTION_CN.get(c.get("section", ""), c.get("section", ""))
+        c["chapterCn"] = CHAPTER_CN.get(c.get("chapter", ""), c.get("chapter", ""))
         c["py"], c["pyi"] = pinyin_fields(c["cn"] or c["name"])
 
     # 排序：库顺序 → 章 → 节 → slot → 名称
