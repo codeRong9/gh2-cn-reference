@@ -1,0 +1,8 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 1 1 L 23 1 L 23 23 L 1 23 L 1 1" stroke="#E67700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 21 12 A 9 9 0 0 1 3 11.999999 A 9 9 0 0 1 21 12.000002" stroke="#0B7285" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 12 4.928932 L 19.071068 12 L 12 19.071068 L 4.928932 12 L 12 4.928932" stroke="#E67700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

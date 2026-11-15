@@ -1,0 +1,2066 @@
+[
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "RadialCellsMigration",
+  "fullTypeName": "RadialCellsMigration",
+  "guid": "00000000-2dfe-4bd0-9524-23aa1a29a00b",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Radial Cells",
+   "info": "Replace the arcs of radial grid cells with straight edges.",
+   "chapter": "",
+   "section": "",
+   "slot": null,
+   "rank": null,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Cells",
+    "nick": "Cl",
+    "info": "Radial grid cells.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Cells",
+    "nick": "Cl",
+    "info": "Straight-edged cells.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "RadialPointsMigration",
+  "fullTypeName": "RadialPointsMigration",
+  "guid": "00000000-d1cf-4055-a4ed-628658d71039",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Radial Points",
+   "info": "Repeat the centre point of a radial grid once per spoke.",
+   "chapter": "",
+   "section": "",
+   "slot": null,
+   "rank": null,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Points",
+    "nick": "Pt",
+    "info": "Radial grid points, structured as rings.",
+    "type": "Point",
+    "access": "tree",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Points",
+    "nick": "Pt",
+    "info": "Radial grid points with a full centre ring.",
+    "type": "Point",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1BarycentricMigrator",
+  "fullTypeName": "Gh1BarycentricMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1CoordinateMaskMigrator",
+  "fullTypeName": "Gh1CoordinateMaskMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1RectangularGridMigrator",
+  "fullTypeName": "Gh1RectangularGridMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1CellGridMigrator",
+  "fullTypeName": "Gh1CellGridMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1RadialGridMigrator",
+  "fullTypeName": "Gh1RadialGridMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1UnitizeMigrator",
+  "fullTypeName": "Gh1UnitizeMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1FlipPlaneMigrator",
+  "fullTypeName": "Gh1FlipPlaneMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "CoordinateMaskMigration",
+  "fullTypeName": "CoordinateMaskMigration",
+  "guid": "00000000-094f-4910-af81-ea425887734b",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Coordinate Mask",
+   "info": "Convert a Grasshopper 1 coordinate mask into a coordinate pattern.",
+   "chapter": "",
+   "section": "",
+   "slot": null,
+   "rank": null,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Mask",
+    "nick": "M",
+    "info": "Grasshopper 1 coordinate mask, as text or as an enum value.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Pattern",
+    "nick": "Pt",
+    "info": "Coordinate pattern.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "ShearVectorMigration",
+  "fullTypeName": "ShearVectorMigration",
+  "guid": "00000000-850b-4083-af43-95dc04a0c7fc",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Shear Vector",
+   "info": "Compute the vector the base plane normal shears onto, from a grip point and where it should end up.",
+   "chapter": "",
+   "section": "",
+   "slot": null,
+   "rank": null,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Plane",
+    "nick": "Pl",
+    "info": "Shearing base plane.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Grip",
+    "nick": "Gp",
+    "info": "Reference point to move.",
+    "type": "Point",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Target",
+    "nick": "Tg",
+    "info": "Where the grip point ends up.",
+    "type": "Point",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Vector",
+    "nick": "Vc",
+    "info": "Vector the plane normal shears onto.",
+    "type": "Vector",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1TranslationArrayMigrator",
+  "fullTypeName": "Gh1TranslationArrayMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1RotateAxisMigrator",
+  "fullTypeName": "Gh1RotateAxisMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1ShearMigrator",
+  "fullTypeName": "Gh1ShearMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1FormatMigrator",
+  "fullTypeName": "Gh1FormatMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1MatchTextMigrator",
+  "fullTypeName": "Gh1MatchTextMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1TextDistanceMigrator",
+  "fullTypeName": "Gh1TextDistanceMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "CaseFoldMigration",
+  "fullTypeName": "CaseFoldMigration",
+  "guid": "00000000-9a46-477a-9f8f-4288e59f5022",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Case Fold",
+   "info": "Convert two texts to upper case for a comparison which ignores case.",
+   "chapter": "",
+   "section": "",
+   "slot": null,
+   "rank": null,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "First Text",
+    "nick": "A",
+    "info": "First text to fold.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Second Text",
+    "nick": "B",
+    "info": "Second text to fold.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Sensitive",
+    "nick": "S",
+    "info": "True if the comparison is case sensitive, which leaves both texts alone.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "First Text",
+    "nick": "A",
+    "info": "First text, in upper case unless the comparison is case sensitive.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Second Text",
+    "nick": "B",
+    "info": "Second text, in upper case unless the comparison is case sensitive.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "EdgeTagSplitMigration",
+  "fullTypeName": "EdgeTagSplitMigration",
+  "guid": "00000000-d499-4ffe-a478-8da971bcee15",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Edge Tag Split",
+   "info": "Route edge ids to the smooth or crease list named by a Grasshopper 1 tag word.",
+   "chapter": "",
+   "section": "",
+   "slot": null,
+   "rank": null,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tag",
+    "nick": "Tg",
+    "info": "Edge tag word, smooth or crease.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Ids",
+    "nick": "Id",
+    "info": "Edge identifiers.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Smooth",
+    "nick": "Sm",
+    "info": "Ids of edges to smooth.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Crease",
+    "nick": "Cr",
+    "info": "Ids of edges to crease.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "VertexTagSplitMigration",
+  "fullTypeName": "VertexTagSplitMigration",
+  "guid": "00000000-96be-4016-98ee-1b932204b2e0",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Vertex Tag Split",
+   "info": "Route vertex ids to the smooth or corner list named by a Grasshopper 1 tag word.",
+   "chapter": "",
+   "section": "",
+   "slot": null,
+   "rank": null,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tag",
+    "nick": "Tg",
+    "info": "Vertex tag word, smooth or corner.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Ids",
+    "nick": "Id",
+    "info": "Vertex identifiers.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Smooth",
+    "nick": "Sm",
+    "info": "Ids of vertices to smooth.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Corner",
+    "nick": "Cr",
+    "info": "Ids of vertices to sharpen.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1BrepClosestPointMigrator",
+  "fullTypeName": "Gh1BrepClosestPointMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1MultipipeMigrator",
+  "fullTypeName": "Gh1MultipipeMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1SubDFromMeshMigrator",
+  "fullTypeName": "Gh1SubDFromMeshMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1SubDEdgeTagsMigrator",
+  "fullTypeName": "Gh1SubDEdgeTagsMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1SubDVertexTagsMigrator",
+  "fullTypeName": "Gh1SubDVertexTagsMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1CylinderMigrator",
+  "fullTypeName": "Gh1CylinderMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "TesselationPlaneMigration",
+  "fullTypeName": "TesselationPlaneMigration",
+  "guid": "00000000-d4ea-468f-8df3-4d9e91790172",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Tesselation Plane",
+   "info": "Create a planar surface on a plane, containing all the points projected onto it.",
+   "chapter": "",
+   "section": "",
+   "slot": null,
+   "rank": null,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Points",
+    "nick": "Pt",
+    "info": "Points the surface must contain.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Plane",
+    "nick": "Pl",
+    "info": "Plane of the surface.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Surface",
+    "nick": "Sf",
+    "info": "Planar surface on the plane, containing all projected points.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1MeshEdgesMigrator",
+  "fullTypeName": "Gh1MeshEdgesMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1MeshSphereMigrator",
+  "fullTypeName": "Gh1MeshSphereMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1DelaunayMeshMigrator",
+  "fullTypeName": "Gh1DelaunayMeshMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1DelaunayEdgesMigrator",
+  "fullTypeName": "Gh1DelaunayEdgesMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1QuadRemeshMigrator",
+  "fullTypeName": "Gh1QuadRemeshMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "EdgeValenceMigration",
+  "fullTypeName": "EdgeValenceMigration",
+  "guid": "00000000-df10-4fc4-8888-4773e4d16990",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Edge Valence",
+   "info": "Sort mesh edge lines into naked, interior and non-manifold edges by their facet valence.",
+   "chapter": "",
+   "section": "",
+   "slot": null,
+   "rank": null,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Edge Lines",
+    "nick": "El",
+    "info": "Mesh edge lines.",
+    "type": "Line",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Facet Valence",
+    "nick": "Fv",
+    "info": "Number of facets adjacent to each edge.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Naked Edges",
+    "nick": "E1",
+    "info": "Edges with a single adjacent face.",
+    "type": "Line",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Interior Edges",
+    "nick": "E2",
+    "info": "Edges with two adjacent faces.",
+    "type": "Line",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Non-Manifold Edges",
+    "nick": "E3",
+    "info": "Edges with three or more adjacent faces.",
+    "type": "Line",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1VariableSubtractionMigrator",
+  "fullTypeName": "Gh1VariableSubtractionMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1ConstantMigrator",
+  "fullTypeName": "Gh1ConstantMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1ExpressionMigrator",
+  "fullTypeName": "Gh1ExpressionMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1LogicGateMigrator",
+  "fullTypeName": "Gh1LogicGateMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1RandomMigrator",
+  "fullTypeName": "Gh1RandomMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1RangeMigrator",
+  "fullTypeName": "Gh1RangeMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1TrigFunctionMigrator",
+  "fullTypeName": "Gh1TrigFunctionMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1AngleUnitMigrator",
+  "fullTypeName": "Gh1AngleUnitMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1TriangleTrigMigrator",
+  "fullTypeName": "Gh1TriangleTrigMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "RegionCurvesMigration",
+  "fullTypeName": "RegionCurvesMigration",
+  "guid": "00000000-7023-402e-a4d1-ff51d649fa07",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Region Curves",
+   "info": "List the boundary curves of all regions, outer boundaries followed by their holes.",
+   "chapter": "",
+   "section": "",
+   "slot": null,
+   "rank": null,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Regions",
+    "nick": "Rg",
+    "info": "Regions whose boundaries to list.",
+    "type": "Region",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Curves",
+    "nick": "Cr",
+    "info": "Boundary curves of all regions.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1ContourMigrator",
+  "fullTypeName": "Gh1ContourMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1RegionUnionMigrator",
+  "fullTypeName": "Gh1RegionUnionMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1RegionDifferenceMigrator",
+  "fullTypeName": "Gh1RegionDifferenceMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1RegionIntersectionMigrator",
+  "fullTypeName": "Gh1RegionIntersectionMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "ContourSectionsMigration",
+  "fullTypeName": "ContourSectionsMigration",
+  "guid": "00000000-9ab2-4381-94c0-94be398eb12c",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Contour Sections",
+   "info": "Arrange contours into one branch per section.",
+   "chapter": "",
+   "section": "",
+   "slot": null,
+   "rank": null,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Contours",
+    "nick": "Ct",
+    "info": "Contour curves, one twig per contoured shape.",
+    "type": "Curve",
+    "access": "tree",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Layers",
+    "nick": "Ly",
+    "info": "Layer of every contour curve.",
+    "type": "Integer",
+    "access": "tree",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Contours",
+    "nick": "Ct",
+    "info": "Contour curves, one branch per section.",
+    "type": "Curve",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "JustificationSplitMigration",
+  "fullTypeName": "JustificationSplitMigration",
+  "guid": "00000000-4763-4b1a-8bf3-3fe633ad5271",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Justification Split",
+   "info": "Split a Grasshopper 1 text justification number, 1 to 9 across three rows, into horizontal and vertical alignments.",
+   "chapter": "",
+   "section": "",
+   "slot": null,
+   "rank": null,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Justification",
+    "nick": "Ju",
+    "info": "Justification from 1, top left, to 9, bottom right.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Horizontal",
+    "nick": "Ha",
+    "info": "Horizontal alignment.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Vertical",
+    "nick": "Va",
+    "info": "Vertical alignment.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1SplitArgbMigrator",
+  "fullTypeName": "Gh1SplitArgbMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1ExoticDateMigrator",
+  "fullTypeName": "Gh1ExoticDateMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1ConstructDateMigrator",
+  "fullTypeName": "Gh1ConstructDateMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1DeconstructDateMigrator",
+  "fullTypeName": "Gh1DeconstructDateMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1TextTag3DMigrator",
+  "fullTypeName": "Gh1TextTag3DMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1TextTagMigrator",
+  "fullTypeName": "Gh1TextTagMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1CullPatternMigrator",
+  "fullTypeName": "Gh1CullPatternMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1ExplodeTreeMigrator",
+  "fullTypeName": "Gh1ExplodeTreeMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1SiftMigrator",
+  "fullTypeName": "Gh1SiftMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1ListItemMigrator",
+  "fullTypeName": "Gh1ListItemMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1SubListMigrator",
+  "fullTypeName": "Gh1SubListMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1TreeItemMigrator",
+  "fullTypeName": "Gh1TreeItemMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1WeaveMigrator",
+  "fullTypeName": "Gh1WeaveMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1EntwineMigrator",
+  "fullTypeName": "Gh1EntwineMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1ListMatchMigrator",
+  "fullTypeName": "Gh1ListMatchMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1SortMigrator",
+  "fullTypeName": "Gh1SortMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1PruneTreeMigrator",
+  "fullTypeName": "Gh1PruneTreeMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1StreamGateMigrator",
+  "fullTypeName": "Gh1StreamGateMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "ParameterFromLocusMigration",
+  "fullTypeName": "ParameterFromLocusMigration",
+  "guid": "00000000-909c-4f13-82d0-f628766a3372",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Parameter From Locus",
+   "info": "Resolve a curve locus to the parameter value it represents on its curve.",
+   "chapter": "",
+   "section": "",
+   "slot": null,
+   "rank": null,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Curve",
+    "nick": "Cr",
+    "info": "Curve the locus belongs to.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Locus",
+    "nick": "Lc",
+    "info": "Locus to resolve.",
+    "type": "Curve Locus",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Parameter",
+    "nick": "t",
+    "info": "Curve parameter at the locus.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "LineFromSpanMigrator",
+  "fullTypeName": "LineFromSpanMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "HullProjectionMigration",
+  "fullTypeName": "HullProjectionMigration",
+  "guid": "00000000-c50c-47bb-96f1-7cc4c3fdd09d",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Hull Projection",
+   "info": "Project a hull polyline onto the plane of its points.",
+   "chapter": "",
+   "section": "",
+   "slot": null,
+   "rank": null,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Hull",
+    "nick": "H",
+    "info": "Hull polyline through the original points.",
+    "type": "Polyline",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Plane",
+    "nick": "Pl",
+    "info": "Optional base plane. If omitted, the plane which best approximates the points is used.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Points",
+    "nick": "Pt",
+    "info": "Points the hull was computed for.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Hull",
+    "nick": "H",
+    "info": "Hull polyline projected onto the base plane.",
+    "type": "Polyline",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1FrameMigrator",
+  "fullTypeName": "Gh1FrameMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1InterpolateMigrator",
+  "fullTypeName": "Gh1InterpolateMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1OffsetCurveMigrator",
+  "fullTypeName": "Gh1OffsetCurveMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1PolygonMigrator",
+  "fullTypeName": "Gh1PolygonMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1RectangleMigrator",
+  "fullTypeName": "Gh1RectangleMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1TriangleCentreMigrator",
+  "fullTypeName": "Gh1TriangleCentreMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Circle3PointsMigrator",
+  "fullTypeName": "Circle3PointsMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "CircleDeviationMigration",
+  "fullTypeName": "CircleDeviationMigration",
+  "guid": "00000000-64f4-424b-8185-c55f0de4e361",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Circle Deviation",
+   "info": "Measure the largest distance between a circle and a set of points.",
+   "chapter": "",
+   "section": "",
+   "slot": null,
+   "rank": null,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Circle",
+    "nick": "Ci",
+    "info": "Fitted circle.",
+    "type": "Circle",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Points",
+    "nick": "Pt",
+    "info": "Points the circle was fitted to.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Deviation",
+    "nick": "Dv",
+    "info": "Largest distance between the circle and the points.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "CircleNPointsMigrator",
+  "fullTypeName": "CircleNPointsMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "InCircleMigrator",
+  "fullTypeName": "InCircleMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "ArcFrom3PointsMigrator",
+  "fullTypeName": "ArcFrom3PointsMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "ArcFromIntervalMigrator",
+  "fullTypeName": "ArcFromIntervalMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "ArcFromTangentMigrator",
+  "fullTypeName": "ArcFromTangentMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "ColourPropertyMigration",
+  "fullTypeName": "ColourPropertyMigration",
+  "guid": "00000000-8566-4468-8cc0-a278efc9926f",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Colour Property",
+   "info": "Measure one property of a colour the way the Grasshopper 1 Image Sampler did.",
+   "chapter": "",
+   "section": "",
+   "slot": null,
+   "rank": null,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Colour to measure.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Property",
+    "nick": "P",
+    "info": "The measured property, between zero and one.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1FanOutMigrator",
+  "fullTypeName": "Gh1FanOutMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1GuardedMigrator",
+  "fullTypeName": "Gh1GuardedMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1VariadicMigrator",
+  "fullTypeName": "Gh1VariadicMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "migration",
+  "assembly": "G2MigrationComponents",
+  "namespace": "",
+  "typeName": "Gh1MassPropertiesMigrator",
+  "fullTypeName": "Gh1MassPropertiesMigrator",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ }
+]

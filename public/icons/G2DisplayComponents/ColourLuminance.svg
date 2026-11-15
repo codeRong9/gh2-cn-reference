@@ -1,0 +1,31 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="linear6b79eb8a19f4" gradientUnits="userSpaceOnUse" x1="12" y1="9" x2="12" y2="15">
+      <stop offset="0%" style="stop-color:#C21735;" />
+      <stop offset="100%" style="stop-color:#141414;" />
+    </linearGradient>
+    <radialGradient id="radial286d61c7640f" gradientUnits="userSpaceOnUse" cx="12" cy="8" r="11">
+      <stop offset="0%" style="stop-color:#FFFFFF;" />
+      <stop offset="100%" style="stop-color:#FFF2F2;" />
+    </radialGradient>
+    <linearGradient id="linear1dde4eac470a" gradientUnits="userSpaceOnUse" x1="12" y1="7" x2="12" y2="1">
+      <stop offset="0%" style="stop-color:#C21735;" />
+      <stop offset="100%" style="stop-color:#141414;" />
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 0.5 15.5 L 23.5 15.5 L 23.5 0.5 L 0.5 0.5 L 0.5 15.5" stroke="#808080" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 0.5 23.5 L 23.5 23.5 L 23.5 17.5 L 0.5 17.5 L 0.5 23.5" fill="#808080" stroke="#808080" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 1 18.5 L 23 18.5" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 23 9 L 1 9 L 1 15 L 23 15 L 23 9" fill="url(#linear6b79eb8a19f4)" />
+    <path d="M 1 9 L 23 9 L 23 7 L 1 7 L 1 9" fill="url(#radial286d61c7640f)" />
+    <path d="M 1 7 L 23 7 L 23 1 L 1 1 L 1 7" fill="url(#linear1dde4eac470a)" />
+    <path d="M 2.5 18 L 2.5 20" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 5.5 18 L 5.5 21" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 8.5 18 L 8.5 20" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 11.5 18 L 11.5 21" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 14.5 18 L 14.5 20" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 17.5 18 L 17.5 21" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 20.5 18 L 20.5 20" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+  </g>
+</svg>

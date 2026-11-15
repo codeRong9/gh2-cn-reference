@@ -1,0 +1,5195 @@
+[
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "CarveRegion",
+  "fullTypeName": "CarveRegion",
+  "guid": "00000000-4ce4-48d2-bf53-c56a7e6eb7f1",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Carve Region",
+   "info": "Carve a region into parallel slices using points.",
+   "chapter": "Intersect",
+   "section": "Region",
+   "slot": 50,
+   "rank": -1,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Region",
+    "nick": "Rg",
+    "info": "Region to carve.",
+    "type": "Region",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Points",
+    "nick": "Pt",
+    "info": "Carving points.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Direction",
+    "nick": "Dr",
+    "info": "Direction of parallel slices.",
+    "type": "Vector",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Slices",
+    "nick": "Sl",
+    "info": "Resulting region slices.",
+    "type": "Region",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "CurveBoolean",
+  "fullTypeName": "CurveBoolean",
+  "guid": "00000000-4270-48ab-b38e-1abd05934e94",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Curve Boolean",
+   "info": "Find regions bounded by curves.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 55,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Curves",
+    "nick": "Cr",
+    "info": "Boundary curves.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Points",
+    "nick": "Pt",
+    "info": "Optional region seed points. If omitted, all regions will be found.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Combine",
+    "nick": "Cb",
+    "info": "True to combine contiguous regions.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Regions",
+    "nick": "Rg",
+    "info": "Regions based on curve boundaries and seed points.",
+    "type": "Region",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Curve Map",
+    "nick": "Mc",
+    "info": "List of curve indices contributing to each region.",
+    "type": "Text",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Point Map",
+    "nick": "Mp",
+    "info": "List of point indices contributing to each region.",
+    "type": "Text",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "SphereSection",
+  "fullTypeName": "SphereSection",
+  "guid": "00000000-0108-431c-9183-1c6479229fb0",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Sphere Section",
+   "info": "Find the intersection circle between a plane and a sphere.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 40,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Sphere",
+    "nick": "Sp",
+    "info": "Sphere for intersection.",
+    "type": "Sphere",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Plane",
+    "nick": "Pl",
+    "info": "Sectioning plane.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Circle",
+    "nick": "Ci",
+    "info": "Circle at the intersection of the sphere and the plane.",
+    "type": "Circle",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "SphereSphereIntersection",
+  "fullTypeName": "SphereSphereIntersection",
+  "guid": "00000000-77f6-495f-9656-45fb44a3394f",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Sphere-Sphere",
+   "info": "Find the circular intersection of two spheres.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 5,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "First Sphere",
+    "nick": "Sa",
+    "info": "First sphere for intersection.",
+    "type": "Sphere",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Second Sphere",
+    "nick": "Sb",
+    "info": "Second sphere for intersection.",
+    "type": "Sphere",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Circle",
+    "nick": "Ci",
+    "info": "Circle defined by the intersection of two spheres.",
+    "type": "Circle",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "ArcArcIntersection",
+  "fullTypeName": "ArcArcIntersection",
+  "guid": "00000000-c472-481d-bb4e-679973d13f3d",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Arc-Arc",
+   "info": "Find the intersection points of two circular arcs.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "First Arc",
+    "nick": "A1",
+    "info": "First arc for intersection.",
+    "type": "Arc",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Second Arc",
+    "nick": "A2",
+    "info": "Second arc for intersection.",
+    "type": "Arc",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Point A",
+    "nick": "Pa",
+    "info": "First intersection point.",
+    "type": "Point",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Point B",
+    "nick": "Pb",
+    "info": "Second intersection point.",
+    "type": "Point",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Parameter A",
+    "nick": "Ta",
+    "info": "Parameter of the first intersection on arc 1.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Paramerer B",
+    "nick": "Tb",
+    "info": "Parameter of the second intersection on arc 1.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Type",
+    "nick": "Ty",
+    "info": "Type of intersection.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "BoxSection",
+  "fullTypeName": "BoxSection",
+  "guid": "00000000-297e-4cf3-ad0e-c7df7d26e312",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Box Section",
+   "info": "Find the intersection polyline between a plane and a box.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 40,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Box",
+    "nick": "Bx",
+    "info": "Box for intersection.",
+    "type": "Box",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Plane",
+    "nick": "Pl",
+    "info": "Plane for intersection.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Polyline",
+    "nick": "Pl",
+    "info": "Polyline intersection.",
+    "type": "Polyline",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "CollideList",
+  "fullTypeName": "CollideList",
+  "guid": "00000000-df9e-4d89-823b-66cd2c1c06fc",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Collide List",
+   "info": "Find collisions between all the shapes in a list.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Colliders",
+    "nick": "Co",
+    "info": "Shapes to collide.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Tolerance",
+    "nick": "Tl",
+    "info": "Optional distance tolerance for collision detection. If omitted, the Absolute Tolerance Pin is used as a fallback.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Collision",
+    "nick": "Cl",
+    "info": "True if the collider is within the tolerance distance of any of the other shapes.",
+    "type": "Boolean",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Indices",
+    "nick": "Ix",
+    "info": "Indices of all colliding obstacles per shape.",
+    "type": "Text",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "CollideWithShapes",
+  "fullTypeName": "CollideWithShapes",
+  "guid": "00000000-1790-4f37-9fc9-2d794f11b66a",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Collide With Shapes",
+   "info": "Find collisions between an object and a list of obstacles.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Collider",
+    "nick": "Co",
+    "info": "Shape to collide.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Obstacles",
+    "nick": "Ob",
+    "info": "Obstacles for collision.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Tolerance",
+    "nick": "Tl",
+    "info": "Optional distance tolerance for collision detection. Positive tolerances also count near misses as collisions, negative tolerances only count overlaps deeper than the tolerance. Since only closed shapes can overlap, negative tolerances never yield collisions between points, curves or open surfaces. If omitted, the Absolute Tolerance Pin is used as a fallback.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Collision",
+    "nick": "Cl",
+    "info": "True if the collider is within the tolerance distance of any of the obstacles.",
+    "type": "Boolean",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Indices",
+    "nick": "Ix",
+    "info": "Indices of all obstacles that collide with the shape.",
+    "type": "Text",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "CurveContours",
+  "fullTypeName": "CurveContours",
+  "guid": "00000000-2bc7-4e0e-9515-20e2c9a67688",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Curve Contours",
+   "info": "Create a set of equally spaced curve contour points.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 50,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Curve",
+    "nick": "Cv",
+    "info": "Curve to contour.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "Contour base point",
+    "type": "Point",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Normal",
+    "nick": "Nr",
+    "info": "Contour slice normal direction.",
+    "type": "Vector",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Spacing",
+    "nick": "Sp",
+    "info": "Spacing between contour layers.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Contours",
+    "nick": "Ct",
+    "info": "Contour points, sorted by layer.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Loci",
+    "nick": "Lc",
+    "info": "Loci of contour points on the curve.",
+    "type": "Curve Locus",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Layer",
+    "nick": "Ly",
+    "info": "Layer, i.e. contour section offset, given as an integer. Layer zero is the section through the base point.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "CurveCurveIntersection",
+  "fullTypeName": "CurveCurveIntersection",
+  "guid": "00000000-9380-4952-85d2-2895b72008ff",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Curve-Curve",
+   "info": "Find the intersection points between two curves.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 1,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "First Curve",
+    "nick": "C1",
+    "info": "First curve for intersection.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Second Curve",
+    "nick": "C2",
+    "info": "Second curve for intersection.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Count",
+    "nick": "Nx",
+    "info": "Number of intersections found.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "All intersection points.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "First Loci",
+    "nick": "L1",
+    "info": "Loci of all intersections on the first curve.",
+    "type": "Curve Locus",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Second Loci",
+    "nick": "L2",
+    "info": "Loci of all intersections on the second curve.",
+    "type": "Curve Locus",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "CurveLineIntersection",
+  "fullTypeName": "CurveLineIntersection",
+  "guid": "00000000-525a-40fb-bbc2-8fe0723b4ca2",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Curve-Line",
+   "info": "Find the intersection points of a curve and an infinite line.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Curve",
+    "nick": "Cr",
+    "info": "Curve to intersect.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Line",
+    "nick": "Ln",
+    "info": "Infinite line for intersection.",
+    "type": "Line",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "Intersection points.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Locus",
+    "nick": "Lc",
+    "info": "Curve loci at intersections.",
+    "type": "Curve Locus",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Line Parameter",
+    "nick": "Lp",
+    "info": "Line parameters at intersections.",
+    "type": "Number",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Type",
+    "nick": "Ty",
+    "info": "Type of intersection.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "CurveSection",
+  "fullTypeName": "CurveSection",
+  "guid": "00000000-dd7f-42f8-9802-62a60efe4259",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Curve Section",
+   "info": "Find the intersection points of a curve and a plane.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 40,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Curve",
+    "nick": "Cr",
+    "info": "Curve for intersection.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Plane",
+    "nick": "Pl",
+    "info": "Plane for intersection.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Points",
+    "nick": "Pt",
+    "info": "Intersection points.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Loci",
+    "nick": "Lc",
+    "info": "Curve loci at intersections.",
+    "type": "Curve Locus",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Plane Parameter",
+    "nick": "Uv",
+    "info": "Plane parameters at intersections.",
+    "type": "UvPoint",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "CurveSelfIntersection",
+  "fullTypeName": "CurveSelfIntersection",
+  "guid": "00000000-bd77-493f-abe4-c8d05a7f6e42",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Curve-Self",
+   "info": "Find the self-intersections of a curve.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Curve",
+    "nick": "Cr",
+    "info": "Curve for self-intersections.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Count",
+    "nick": "Nx",
+    "info": "Number of self-intersections found.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Points",
+    "nick": "Pt",
+    "info": "All intersection points.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Loci",
+    "nick": "Lc",
+    "info": "Loci of all intersections on the curve.",
+    "type": "Curve Locus",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "CurveSurfaceIntersection_Obsolete",
+  "fullTypeName": "CurveSurfaceIntersection_Obsolete",
+  "guid": "00000000-3400-4adf-9e8f-a86d8c87511a",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Curve-Surface",
+   "info": "Find the intersection points between a curve and a surface.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 5,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Curve",
+    "nick": "Cr",
+    "info": "Curve for intersection.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Surface",
+    "nick": "Sf",
+    "info": "Surface for intersection.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Count",
+    "nick": "Nx",
+    "info": "Number of intersections found.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "All intersection points.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Curve Loci",
+    "nick": "Lc",
+    "info": "Loci of all intersections on the curve.",
+    "type": "Curve Locus",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Surface Loci",
+    "nick": "Ls",
+    "info": "Loci of all intersections on the surface.",
+    "type": "Surface Locus",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "CurveSurfaceIntersection",
+  "fullTypeName": "CurveSurfaceIntersection",
+  "guid": "00000000-2f2e-46e1-af6e-6d791994b596",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Curve-Surface",
+   "info": "Find the intersection points and overlaps between a curve and a surface.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 5,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Curve",
+    "nick": "Cr",
+    "info": "Curve for intersection.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Surface",
+    "nick": "Sf",
+    "info": "Surface for intersection.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Count",
+    "nick": "Nx",
+    "info": "Number of intersections found.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "All intersection points.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Overlaps",
+    "nick": "Ov",
+    "info": "All overlap curves.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Curve Loci",
+    "nick": "Lc",
+    "info": "Loci of all intersections on the curve.",
+    "type": "Curve Locus",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Surface Loci",
+    "nick": "Ls",
+    "info": "Loci of all intersections on the surface.",
+    "type": "Surface Locus",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "Isovist2D",
+  "fullTypeName": "Isovist2D",
+  "guid": "00000000-3f6c-4d21-9b8a-1c7e5a2d0e44",
+  "author": "AndyP",
+  "iconKey": null,
+  "nomen": {
+   "name": "Isovist 2D",
+   "info": "Compute an isovist by casting sample rays radially around a plane.",
+   "chapter": "Intersect",
+   "section": "Relation",
+   "slot": 4,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Plane",
+    "nick": "Pl",
+    "info": "Plane encoding the location and orientation of the observer.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Count",
+    "nick": "Cn",
+    "info": "Number of isovist rays.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Radius",
+    "nick": "Rd",
+    "info": "Optional maximum sampling radius. If omitted, the largest meaningful radius is picked and all hit-less rays are omitted from the outputs.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Obstacles",
+    "nick": "Ob",
+    "info": "Ray obstacles. May incluce curves, planes, surfaces, and meshes.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Mode",
+    "nick": "Md",
+    "info": "Ray casting accuracy. Accurate uses exact surface intersections; Fast meshes surfaces for speed.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Points",
+    "nick": "Pt",
+    "info": "Point where each sample ray stops, either at an obstacle hit or at the horizon.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Rays",
+    "nick": "Ry",
+    "info": "Ray vector from the origin to each sample point.",
+    "type": "Vector",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Distances",
+    "nick": "Ds",
+    "info": "Distance from the origin to each sample point.",
+    "type": "Number",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Indices",
+    "nick": "Ix",
+    "info": "Index of the obstacle hit by each ray, or -1 if no obstacle was hit.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "Isovist3D",
+  "fullTypeName": "Isovist3D",
+  "guid": "00000000-2d9f-4a16-b7c3-8e0d4f5a1b62",
+  "author": "AndyP",
+  "iconKey": null,
+  "nomen": {
+   "name": "Isovist 3D",
+   "info": "Compute an isovist by casting sample rays spherically around a location.",
+   "chapter": "Intersect",
+   "section": "Relation",
+   "slot": 4,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Plane",
+    "nick": "Pl",
+    "info": "Sampling plane and origin. For a hemisphere the plane is the horizon and rays are cast above it.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Count",
+    "nick": "Cn",
+    "info": "Number of sample rays.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Radius",
+    "nick": "Rd",
+    "info": "Sample radius.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Obstacles",
+    "nick": "Ob",
+    "info": "Obstacles to sample against (curves, planes, surfaces and meshes are supported).",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Domain",
+    "nick": "Dm",
+    "info": "Whether to sample the upper hemisphere or the full sphere of directions.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Mode",
+    "nick": "Md",
+    "info": "Ray casting accuracy. Accurate uses exact surface intersections; Fast meshes surfaces for speed.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Points",
+    "nick": "Pt",
+    "info": "Point where each sample ray stops, either at an intersection or at the horizon.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Rays",
+    "nick": "Ry",
+    "info": "Ray vector from the origin to each sample point.",
+    "type": "Vector",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Distances",
+    "nick": "Ds",
+    "info": "Distance from the origin to each sample point.",
+    "type": "Number",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Indices",
+    "nick": "Ix",
+    "info": "Index of the obstacle hit by each ray, or -1 if no obstacle was hit.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "IsovistCoverage",
+  "fullTypeName": "IsovistCoverage",
+  "guid": "00000000-c0e2-4a18-8b3c-7d4f9a6e15b0",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Isovist Coverage",
+   "info": "Compute coverage and visibility statistics for a collection of isovist rays.",
+   "chapter": "Intersect",
+   "section": "Relation",
+   "slot": 4,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Rays",
+    "nick": "Ry",
+    "info": "Isovist rays. Use the Rays output of an Isovist 2D or Isovist 3D component.",
+    "type": "Vector",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Coverage",
+    "nick": "Cv",
+    "info": "Fraction of the original sampling dome occupied by rays that hit an obstacle.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Hits",
+    "nick": "Ht",
+    "info": "Number of rays that hit an obstacle.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Mininum Distance",
+    "nick": "D↓",
+    "info": "Smallest visible distance among hit rays, or zero if there were no hits.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Mean Distance",
+    "nick": "D•",
+    "info": "Average visible distance among hit rays, or zero if there were no hits.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Maximum Distance",
+    "nick": "D↑",
+    "info": "Largest visible distance among hit rays, or zero if there were no hits.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Distance Deviation",
+    "nick": "Sd",
+    "info": "Standard deviation of visible distance among hit rays, or zero if there were no hits.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "IsovistExtent",
+  "fullTypeName": "IsovistExtent",
+  "guid": "00000000-e472-4d91-a058-2c6b8f7e93d5",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Isovist Extent",
+   "info": "Compute the area (2D) or volume (3D) of an isovist, optionally with a distance falloff.",
+   "chapter": "Intersect",
+   "section": "Relation",
+   "slot": 4,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Rays",
+    "nick": "Ry",
+    "info": "Isovist rays. Use the Rays output of an Isovist 2D or Isovist 3D component.",
+    "type": "Vector",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Weight",
+    "nick": "Wt",
+    "info": "Distance falloff applied to each ray's contribution.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Transition",
+    "nick": "Tr",
+    "info": "Transition distance where the falloff begins to take effect. Ignored for Block.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Normalise",
+    "nick": "Nm",
+    "info": "If true, divide by the maximum possible extent at the sample horizon so the result is a unitless score. If false, report the absolute area or volume metrics.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Extent",
+    "nick": "Et",
+    "info": "Isovist area (2D) or volume (3D). With Normalise on, a unitless openness score in $[0,1]$; otherwise an absolute measure.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "IsovistField2D",
+  "fullTypeName": "IsovistField2D",
+  "guid": "00000000-1c8d-4f53-9a72-6b0e2d4a8f31",
+  "author": "AndyP",
+  "iconKey": null,
+  "nomen": {
+   "name": "Isovist Field 2D",
+   "info": "Create a scalar field whose value at each point is a planar isovist statistic.",
+   "chapter": "Intersect",
+   "section": "Relation",
+   "slot": 4,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Plane",
+    "nick": "Pl",
+    "info": "Orientation of the sampling planes. The isovist at each queried point is cast on a plane parallel to this.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Count",
+    "nick": "Cn",
+    "info": "Number of sample rays per isovist. Lower values evaluate faster when the field is sampled densely.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Radius",
+    "nick": "Rd",
+    "info": "Sample radius.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Obstacles",
+    "nick": "Ob",
+    "info": "Obstacles to sample against (curves, planes, surfaces and meshes are supported).",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Metric",
+    "nick": "Mt",
+    "info": "Scalar metric reported at each query point.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Transition",
+    "nick": "Tr",
+    "info": "Transition distance where the falloff begins. Ignored unless the metric is LinearRamp, Exponential or Smoothstep (or their normalised variants).",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Field",
+    "nick": "Fl",
+    "info": "Scalar field of the selected isovist metric at each point.",
+    "type": "Field",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "IsovistField3D",
+  "fullTypeName": "IsovistField3D",
+  "guid": "00000000-4f91-4c0a-8e6d-2b7a1f93c4e5",
+  "author": "AndyP",
+  "iconKey": null,
+  "nomen": {
+   "name": "Isovist Field 3D",
+   "info": "Create a scalar field whose value at each point is a spherical isovist statistic.",
+   "chapter": "Intersect",
+   "section": "Relation",
+   "slot": 4,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Plane",
+    "nick": "Pl",
+    "info": "Sampling orientation. For a hemisphere the plane normal is the up axis and the plane is the horizon.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Count",
+    "nick": "Cn",
+    "info": "Number of sample rays per isovist. Lower values evaluate faster when the field is sampled densely.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Radius",
+    "nick": "Rd",
+    "info": "Sample radius.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Obstacles",
+    "nick": "Ob",
+    "info": "Obstacles to sample against (curves, planes, surfaces and meshes are supported).",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Domain",
+    "nick": "Dm",
+    "info": "Whether to sample the upper hemisphere or the full sphere of directions.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Metric",
+    "nick": "Mt",
+    "info": "Scalar metric reported at each query point.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Transition",
+    "nick": "Tr",
+    "info": "Transition distance where the falloff begins. Ignored unless the metric is LinearRamp, Exponential or Smoothstep (or their normalised variants).",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Field",
+    "nick": "Fl",
+    "info": "Scalar field of the selected isovist metric at each point.",
+    "type": "Field",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "IsovistRay",
+  "fullTypeName": "IsovistRay",
+  "guid": "00000000-5b81-4e7a-8c2f-9d3a6f1b08c5",
+  "author": "AndyP",
+  "iconKey": null,
+  "nomen": {
+   "name": "Isovist Ray",
+   "info": "Compute a single isovist sample by casting one ray into a collection of obstacles.",
+   "chapter": "Intersect",
+   "section": "Relation",
+   "slot": 4,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Sample",
+    "nick": "Sm",
+    "info": "Sampling ray. Its start is the origin and its direction the cast direction.",
+    "type": "Line",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Radius",
+    "nick": "Rd",
+    "info": "Sample radius.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Obstacles",
+    "nick": "Ob",
+    "info": "Obstacles to sample against (curves, planes, surfaces and meshes are supported).",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Mode",
+    "nick": "Md",
+    "info": "Ray casting accuracy. Accurate uses exact surface intersections; Fast meshes surfaces for speed.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "Point where the sample ray stops, either at an intersection or at the horizon.",
+    "type": "Point",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Ray",
+    "nick": "Ry",
+    "info": "Ray vector from the origin to the sample point.",
+    "type": "Vector",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Distance",
+    "nick": "Ds",
+    "info": "Distance from the origin to the sample point.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Index",
+    "nick": "Ix",
+    "info": "Index of the obstacle hit, or -1 if no obstacle was hit.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "LineLineIntersection",
+  "fullTypeName": "LineLineIntersection",
+  "guid": "00000000-eb4b-43e5-ada1-c49bbc2712a0",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Line-Line",
+   "info": "Find the intersection or crossing point of two lines.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "First Line",
+    "nick": "L1",
+    "info": "First line for intersection.",
+    "type": "Line",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Second Line",
+    "nick": "L2",
+    "info": "Second line for intersection.",
+    "type": "Line",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "Intersection or crossing point.",
+    "type": "Point",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "First Parameter",
+    "nick": "L1",
+    "info": "Parameter of the intersection on first line.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Second Parameter",
+    "nick": "L2",
+    "info": "Parameter of the intersection on second line.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Type",
+    "nick": "Ty",
+    "info": "Type of intersection.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "LineSection",
+  "fullTypeName": "LineSection",
+  "guid": "00000000-74e3-4a6d-b70c-579d8b314135",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Line Section",
+   "info": "Find the intersection of a line and a plane.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 40,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Line",
+    "nick": "Ln",
+    "info": "Line for intersection.",
+    "type": "Line",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Plane",
+    "nick": "Pl",
+    "info": "Plane for intersection.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "Intersection point.",
+    "type": "Point",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Line Parameter",
+    "nick": "Lp",
+    "info": "Parameter of the intersection on line.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Plane Parameter",
+    "nick": "Uv",
+    "info": "Parameter of the intersection on plane.",
+    "type": "UvPoint",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Type",
+    "nick": "Ty",
+    "info": "Type of intersection.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "MeshClash",
+  "fullTypeName": "MeshClash",
+  "guid": "00000000-c906-401c-8898-c0bab8f7ec41",
+  "author": "AndyP",
+  "iconKey": null,
+  "nomen": {
+   "name": "Mesh Clash",
+   "info": "Compute a clash analysis between two sets of meshes.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Meshes A",
+    "nick": "Ma",
+    "info": "First set of meshes.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Meshes B",
+    "nick": "Mb",
+    "info": "Second set of meshes.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Tolerance",
+    "nick": "Tl",
+    "info": "Optional distance tolerance for clash detection. If omitted, the Absolute Tolerance Pin is used as a fallback.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Limit",
+    "nick": "Li",
+    "info": "Maximum number of clashes to search for. If omitted, all clashes within the tolerance will be found.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Count",
+    "nick": "Nx",
+    "info": "Number of clashes found.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Points",
+    "nick": "Pt",
+    "info": "Clash intersection points.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Radii",
+    "nick": "Rd",
+    "info": "Clash radii at each intersection point.",
+    "type": "Number",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Index A",
+    "nick": "Ia",
+    "info": "Index of clashing mesh from the first set.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Index B",
+    "nick": "Ib",
+    "info": "Index of clashing mesh from the second set.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "MeshContours",
+  "fullTypeName": "MeshContours",
+  "guid": "00000000-d7f0-4452-9984-449219b5f84c",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Mesh Contours",
+   "info": "Create a set of equally spaced mesh contours.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 50,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Mesh",
+    "nick": "Ms",
+    "info": "Mesh to contour.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "Contour base point.",
+    "type": "Point",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Normal",
+    "nick": "Nr",
+    "info": "Contour slice normal direction.",
+    "type": "Vector",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Spacing",
+    "nick": "Sp",
+    "info": "Spacing between contour layers.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Contours",
+    "nick": "Ct",
+    "info": "Contour polylines, sorted by layer.",
+    "type": "Polyline",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Layer",
+    "nick": "Ly",
+    "info": "Layer, i.e. contour section offset, given as an integer. Layer zero is the section through the base point.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "MeshCurveIntersection",
+  "fullTypeName": "MeshCurveIntersection",
+  "guid": "00000000-7970-4be1-8af5-141bed3084ec",
+  "author": "AndyP",
+  "iconKey": "MeshCurveIntersection",
+  "nomen": {
+   "name": "Mesh-Curve",
+   "info": "Find the intersection of a mesh with a curve.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Mesh",
+    "nick": "Ms",
+    "info": "Mesh to intersect.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Curve",
+    "nick": "Cr",
+    "info": "Curve to intersect with the mesh.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Points",
+    "nick": "Pt",
+    "info": "Intersection points.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Face Indices",
+    "nick": "Fi",
+    "info": "Intersection face index for each point",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "MeshCurveIntersection_GIULIO",
+  "fullTypeName": "MeshCurveIntersection_GIULIO",
+  "guid": "00000000-9381-4a07-8c2e-1f3b6d40ae72",
+  "author": "Giulio",
+  "iconKey": "MeshCurveIntersection",
+  "nomen": {
+   "name": "Mesh-Curve",
+   "info": "Find the intersection of a mesh with a curve.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Mesh",
+    "nick": "Ms",
+    "info": "Mesh to intersect.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Curve",
+    "nick": "Cr",
+    "info": "Curve to intersect with the mesh.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Points",
+    "nick": "Pt",
+    "info": "Intersection points.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Type",
+    "nick": "Ty",
+    "info": "Facet intersection type for each point.",
+    "type": "Enum",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Facets",
+    "nick": "Fi",
+    "info": "Mesh facet indices associated with each intersection point.",
+    "type": "Integer",
+    "access": "tree",
+    "requirement": null
+   },
+   {
+    "name": "Overlaps",
+    "nick": "Ov",
+    "info": "Segments of the curve where it overlaps with the mesh.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "MeshMeshIntersection",
+  "fullTypeName": "MeshMeshIntersection",
+  "guid": "00000000-c617-4be6-bc1e-5e9a0c910cfa",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Mesh-Mesh",
+   "info": "Find the intersection polylines between two meshes.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Mesh A",
+    "nick": "Ma",
+    "info": "First mesh for intersection.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Mesh B",
+    "nick": "Mb",
+    "info": "Second mesh for intersection.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Count",
+    "nick": "Nx",
+    "info": "Number of intersections found, not including overlaps.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Polylines",
+    "nick": "Pl",
+    "info": "All intersection polylines.",
+    "type": "Polyline",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Overlaps",
+    "nick": "Ov",
+    "info": "Overlapping regions.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "MeshRayIntersection",
+  "fullTypeName": "MeshRayIntersection",
+  "guid": "00000000-e2a3-4c51-bb9f-deff5a9c76c2",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Mesh-Ray",
+   "info": "Find the first intersection point of a semi-finite ray hitting a mesh.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Mesh",
+    "nick": "Ms",
+    "info": "Mesh to intersect.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Ray",
+    "nick": "Ry",
+    "info": "Ray to shoot at mesh.",
+    "type": "Line",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "Intersection point.",
+    "type": "Point",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Parameter",
+    "nick": "Rt",
+    "info": "Parameter on the ray at the intersection.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "MeshSection",
+  "fullTypeName": "MeshSection",
+  "guid": "00000000-4bc5-44a0-b6d6-34d803fbd1f9",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Mesh Section",
+   "info": "Find the intersection polylines between a plane and a mesh.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 40,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Mesh",
+    "nick": "Ms",
+    "info": "Mesh for intersection.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Plane",
+    "nick": "Pl",
+    "info": "Plane for intersection.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Polyline",
+    "nick": "Pl",
+    "info": "Polylines at the intersection of the mesh and the section plane.",
+    "type": "Polyline",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "MultipleCurvesIntersection",
+  "fullTypeName": "MultipleCurvesIntersection",
+  "guid": "00000000-aedb-464a-9732-b942a3e3051c",
+  "author": "AndyP",
+  "iconKey": null,
+  "nomen": {
+   "name": "Multiple Curves",
+   "info": "Find the intersections between multiple curves.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Curves",
+    "nick": "Cr",
+    "info": "Curves to intersect with each other.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "Intersection points of each curve with all subsequent curves.",
+    "type": "Point",
+    "access": "tree",
+    "requirement": null
+   },
+   {
+    "name": "First Index",
+    "nick": "I1",
+    "info": "Curve index of first curve for every intersection.",
+    "type": "Integer",
+    "access": "tree",
+    "requirement": null
+   },
+   {
+    "name": "Second Index",
+    "nick": "I2",
+    "info": "Curve index of second curve for every intersection.",
+    "type": "Integer",
+    "access": "tree",
+    "requirement": null
+   },
+   {
+    "name": "First Locus",
+    "nick": "L1",
+    "info": "Locus on first curve for every intersection.",
+    "type": "Curve Locus",
+    "access": "tree",
+    "requirement": null
+   },
+   {
+    "name": "Second Locus",
+    "nick": "L2",
+    "info": "Locus on second curve for every intersection.",
+    "type": "Curve Locus",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "RayShoot",
+  "fullTypeName": "RayShoot",
+  "guid": "00000000-896a-40a8-9556-b1b1a8e2b14c",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Shoot Ray",
+   "info": "Shoot a semi-finite ray into a collection of shapes.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Ray",
+    "nick": "Ry",
+    "info": "Line representing the start of the semi-finite ray.",
+    "type": "Line",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Shapes",
+    "nick": "Sh",
+    "info": "Shapes to hit.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Offset",
+    "nick": "Of",
+    "info": "Offset distance at the start of the ray.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "First intersection point along the semi-infinite ray.",
+    "type": "Point",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Index",
+    "nick": "Ix",
+    "info": "Index of the shape which was hit.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Tangent",
+    "nick": "Tn",
+    "info": "Tangent at intersection. Either a vector or a plane, depending on the kind of shape that was hit.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Perpendicular",
+    "nick": "Pp",
+    "info": "Perpendicular at intersection. Either a vector or a plane, depending on the kind of shape that was hit.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "SurfaceContours",
+  "fullTypeName": "SurfaceContours",
+  "guid": "00000000-c898-4c23-8494-10e30d8087c6",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Surface Contours",
+   "info": "Create a set of equally spaced surface contours.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 50,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Surface",
+    "nick": "Sf",
+    "info": "Surface or mesh to contour.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "Contour base point",
+    "type": "Point",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Normal",
+    "nick": "Nr",
+    "info": "Contour slice normal direction.",
+    "type": "Vector",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Spacing",
+    "nick": "Sp",
+    "info": "Spacing between contour layers.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Contours",
+    "nick": "Ct",
+    "info": "Contour curves, sorted by layer",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Layer",
+    "nick": "Ly",
+    "info": "Layer, i.e. contour section offset, given as an integer. Layer zero is the section through the base point.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "SurfaceLineIntersection",
+  "fullTypeName": "SurfaceLineIntersection",
+  "guid": "00000000-b3a0-41fe-ba86-de42b04a6794",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Surface-Line",
+   "info": "Find the intersection points and overlaps between a surface and an infinite line.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 5,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Surface",
+    "nick": "Sf",
+    "info": "Surface for intersection.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Line",
+    "nick": "Ln",
+    "info": "Infinite line for intersection.",
+    "type": "Line",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Count",
+    "nick": "Nx",
+    "info": "Number of intersections found.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "All intersection points.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Overlaps",
+    "nick": "Ov",
+    "info": "All overlap curves.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Surface Loci",
+    "nick": "Ls",
+    "info": "Loci of all intersections on the surface.",
+    "type": "Surface Locus",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "SurfaceSection",
+  "fullTypeName": "SurfaceSection",
+  "guid": "00000000-845c-4944-941b-b539f5a01807",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Surface Section",
+   "info": "Find the intersection curves between a plane and a surface.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 40,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Surface",
+    "nick": "Sf",
+    "info": "Surface for intersection.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Plane",
+    "nick": "Pl",
+    "info": "Plane for intersection.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Curve",
+    "nick": "Cr",
+    "info": "Curves at the intersection of the plane and the surface.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "SurfaceSplit",
+  "fullTypeName": "SurfaceSplit",
+  "guid": "00000000-72da-4b90-883c-b48bbfe768fa",
+  "author": "AndyP",
+  "iconKey": null,
+  "nomen": {
+   "name": "Split With Curves",
+   "info": "Split a surface with a set of curves.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 5,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Surface",
+    "nick": "Sf",
+    "info": "Surface to split.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Curves",
+    "nick": "Cr",
+    "info": "Curves used for splitting.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Surfaces",
+    "nick": "Sf",
+    "info": "Split surface fragments.",
+    "type": "Surface",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "SurfaceSurfaceIntersection",
+  "fullTypeName": "SurfaceSurfaceIntersection",
+  "guid": "00000000-c339-491f-916b-9e4ba02bf584",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Surface-Surface",
+   "info": "Find the intersection curves between two surfaces.",
+   "chapter": "Intersect",
+   "section": "Intersection",
+   "slot": 5,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Surface A",
+    "nick": "Sa",
+    "info": "First surface for intersection.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Surface B",
+    "nick": "Sb",
+    "info": "Second surface for intersection.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Count",
+    "nick": "Nx",
+    "info": "Number of intersections found.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Curves",
+    "nick": "Cs",
+    "info": "All intersection curves.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "AbovePlane",
+  "fullTypeName": "AbovePlane",
+  "guid": "00000000-3a74-44da-aa66-f2c7e1c14672",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Above Plane",
+   "info": "Test whether a shape is above or below a plane.",
+   "chapter": "Intersect",
+   "section": "Relation",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Shape",
+    "nick": "Sh",
+    "info": "Shape for plane relation test.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Plane",
+    "nick": "Pl",
+    "info": "Reference plane.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Boolean Relation",
+    "nick": "Rb",
+    "info": "Boolean relation between shape and plane:¶true = above or coincident¶false = below",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Integer Relation",
+    "nick": "Ri",
+    "info": "Integer relation between shape and plane:¶1 = above¶0 = coincident¶-1 = below",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "BoundaryVolume",
+  "fullTypeName": "BoundaryVolume",
+  "guid": "00000000-497a-49a9-baf6-4c6fa9831368",
+  "author": "MathiasF",
+  "iconKey": null,
+  "nomen": {
+   "name": "Boundary Volume",
+   "info": "Create a closed solid from a set of boundary surfaces.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Boundaries",
+    "nick": "Bd",
+    "info": "Boundary surfaces.",
+    "type": "Surface",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Solid",
+    "nick": "Sd",
+    "info": "Closed solid bounded by the input surfaces.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "CurveContainment",
+  "fullTypeName": "CurveContainment",
+  "guid": "00000000-9e19-4a6c-9ef8-e784c2de6589",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Curve Containment",
+   "info": "Test whether a point is inside or outside a closed curve.",
+   "chapter": "Intersect",
+   "section": "Relation",
+   "slot": 2,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "Point for curve containment test.",
+    "type": "Point",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Curve",
+    "nick": "Cr",
+    "info": "Boundary curve. If not closed, a line segment will be inserted to close the curve.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Plane",
+    "nick": "Pl",
+    "info": "Optional override for containment testing plane. If omitted, the curve plane is used.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Inside",
+    "nick": "In",
+    "info": "True if the point is inside the curve.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Outside",
+    "nick": "Ex",
+    "info": "True if the point is outside the curve.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "CurveRelation",
+  "fullTypeName": "CurveRelation",
+  "guid": "00000000-8750-4c72-86dc-1792acc8e2b6",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Curve Relation",
+   "info": "Test the spatial relationship between a curve and a shape, i.e. whether they are disjoint, contain each other, or intersect.",
+   "chapter": "Intersect",
+   "section": "Relation",
+   "slot": 2,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "First Shape",
+    "nick": "Ca",
+    "info": "First curve or shape for relation test.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Second Shape",
+    "nick": "Cb",
+    "info": "Second curve or shape for relation test.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Relation",
+    "nick": "Rel",
+    "info": "Containment relationship state:¶{0} = Disjoint¶{1} = A inside B¶{2} = B inside A¶{3} = Intersecting",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "A Inside B",
+    "nick": "BAB",
+    "info": "True if A is fully inside B.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "B Inside A",
+    "nick": "ABA",
+    "info": "True if B is fully inside A.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "CurveSide",
+  "fullTypeName": "CurveSide",
+  "guid": "00000000-a578-44d2-a752-a514266f8155",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Curve Side",
+   "info": "Test whether a point is to the left or the right of a curve.",
+   "chapter": "Intersect",
+   "section": "Relation",
+   "slot": 2,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "Point for curve side test.",
+    "type": "Point",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Curve",
+    "nick": "Cr",
+    "info": "Guide curve.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Plane",
+    "nick": "Pl",
+    "info": "Optional override for testing plane. If omitted, the curve plane is used.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Left",
+    "nick": "Le",
+    "info": "True if the shape is to the left of the curve.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Right",
+    "nick": "Ri",
+    "info": "True if the shape is to the right of the curve.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "CutWithPlane",
+  "fullTypeName": "CutWithPlane",
+  "guid": "00000000-ea9d-4ff3-9ab0-cd4c0653a8e4",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Cut With Plane",
+   "info": "Cut a shape using an infinite plane.",
+   "chapter": "Intersect",
+   "section": "Relation",
+   "slot": 1,
+   "rank": -1,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Shape",
+    "nick": "Sh",
+    "info": "Shape to cut.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Planes",
+    "nick": "Pl",
+    "info": "Cutting planes.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Close",
+    "nick": "Cl",
+    "info": "Try to close the cut shape.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Shape",
+    "nick": "Sh",
+    "info": "Cut shape.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "DecomposeRegion",
+  "fullTypeName": "DecomposeRegion",
+  "guid": "00000000-44f4-49db-8377-a32bdd0ae49e",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Dissect Region",
+   "info": "Dissect a region into outer and inner boundary curves.",
+   "chapter": "Intersect",
+   "section": "Region",
+   "slot": 20,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Region",
+    "nick": "Rg",
+    "info": "Region to dissect.",
+    "type": "Region",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Outer",
+    "nick": "Ob",
+    "info": "List of all outer boundary curves.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Inner",
+    "nick": "Ib",
+    "info": "List of all inner boundary, or hole curves.",
+    "type": "Curve",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "ExplodeRegion",
+  "fullTypeName": "ExplodeRegion",
+  "guid": "00000000-e6e5-467d-b13b-0b3444b2486b",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Explode Region",
+   "info": "Explode a region into all disjoint fragments.",
+   "chapter": "Intersect",
+   "section": "Region",
+   "slot": 20,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Region",
+    "nick": "Rg",
+    "info": "Region to explode.",
+    "type": "Region",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Regions",
+    "nick": "Rg",
+    "info": "Disjoint fragments of the region.",
+    "type": "Region",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "HalfSpaceContainment",
+  "fullTypeName": "HalfSpaceContainment",
+  "guid": "00000000-b89f-418b-9615-8678c9405516",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Half-Space Containment",
+   "info": "Determine whether a point is contained inside one or more half spaces delineated by planes. Containment is taken to mean a negative signed distance. I.e. the plane normal points towards the outside.",
+   "chapter": "Intersect",
+   "section": "Relation",
+   "slot": 3,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Spaces",
+    "nick": "Bn",
+    "info": "Half space boundaries.",
+    "type": "Plane",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "Point for inclusion test.",
+    "type": "Point",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Strict",
+    "nick": "St",
+    "info": "If true, the inclusion is strict.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Inside",
+    "nick": "In",
+    "info": "True if the point is on the inside of at least one of the spaces.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Indices",
+    "nick": "Ix",
+    "info": "Indices of all spaces which contain the point.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "MeshContainment",
+  "fullTypeName": "MeshContainment",
+  "guid": "00000000-fd78-443b-b3ef-142ddab7c232",
+  "author": "AndyP",
+  "iconKey": null,
+  "nomen": {
+   "name": "Mesh Containment",
+   "info": "Determine whether a point is contained inside one or more closed meshes.",
+   "chapter": "Intersect",
+   "section": "Relation",
+   "slot": 3,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Meshes",
+    "nick": "Ms",
+    "info": "Meshes to include in the search.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "Point for inclusion test.",
+    "type": "Point",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Strict",
+    "nick": "St",
+    "info": "If true, the inclusion is strict.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Inside",
+    "nick": "In",
+    "info": "True if the point is on the inside of at least one of the meshes.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Indices",
+    "nick": "Ix",
+    "info": "Indices of all meshes which contain the point.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "MeshSolidDifference_Obsolete",
+  "fullTypeName": "MeshSolidDifference_Obsolete",
+  "guid": "00000000-90C5-4E73-ADF7-E629D117A286",
+  "author": "DanPiker",
+  "iconKey": null,
+  "nomen": {
+   "name": "Mesh Difference",
+   "info": "Compute the solid difference between two closed meshes.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 10,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "First Meshes",
+    "nick": "Ma",
+    "info": "Meshes to subtract from.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Second Meshes",
+    "nick": "Mb",
+    "info": "Meshes to subtract with.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Ms",
+    "info": "Solid difference mesh result.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "MeshSolidDifference",
+  "fullTypeName": "MeshSolidDifference",
+  "guid": "00000000-a666-4398-9a29-978ae0c50c1c",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Mesh Difference",
+   "info": "Compute the solid difference by subtracting a set of meshes from a base mesh.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 10,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Base Mesh",
+    "nick": "Ma",
+    "info": "Mesh to subtract from.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Cutters",
+    "nick": "Mb",
+    "info": "Set of meshes to subtract.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Ms",
+    "info": "Solid difference mesh result.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "MeshSolidIntersection_Obsolete",
+  "fullTypeName": "MeshSolidIntersection_Obsolete",
+  "guid": "00000000-5B0B-4437-BFE1-9270BCE29118",
+  "author": "DanPiker",
+  "iconKey": null,
+  "nomen": {
+   "name": "Mesh Intersection",
+   "info": "Compute the solid intersection between two closed meshes.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "First Mesh",
+    "nick": "Ma",
+    "info": "First mesh for intersection.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Second Mesh",
+    "nick": "Mb",
+    "info": "Second mesh for intersection.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Ms",
+    "info": "Solid intersection mesh result.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "MeshSolidIntersection",
+  "fullTypeName": "MeshSolidIntersection",
+  "guid": "00000000-50f6-4e22-b08e-9f6a35f22d1c",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Mesh Intersection",
+   "info": "Compute the solid intersection between two sets of closed meshes.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "First Mesh",
+    "nick": "Ma",
+    "info": "First mesh for intersection.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Second Mesh",
+    "nick": "Mb",
+    "info": "Second mesh for intersection.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Ms",
+    "info": "Solid intersection mesh result.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "MeshSolidIntersectionList",
+  "fullTypeName": "MeshSolidIntersectionList",
+  "guid": "00000000-73d8-4782-a98a-a2efbf725f0c",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Mesh Intersection List",
+   "info": "Compute the volume shared by every mesh in a list of closed meshes.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Meshes",
+    "nick": "Ms",
+    "info": "Meshes to intersect.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Ms",
+    "info": "Volume shared by all input meshes.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "MeshSolidUnion",
+  "fullTypeName": "MeshSolidUnion",
+  "guid": "00000000-ecb6-48da-8d19-8c0c58f66353",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Mesh Union",
+   "info": "Compute the solid union of several closed meshes.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 10,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "First Mesh",
+    "nick": "M1",
+    "info": "First mesh for union.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Second Mesh",
+    "nick": "M2",
+    "info": "Second mesh for union.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Un",
+    "info": "Solid union mesh result.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "MeshSolidUnionList",
+  "fullTypeName": "MeshSolidUnionList",
+  "guid": "00000000-6CDC-4C2E-B401-94190A544682",
+  "author": "DanPiker",
+  "iconKey": null,
+  "nomen": {
+   "name": "Mesh Union List",
+   "info": "Compute the solid union of a list of closed meshes.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Meshes",
+    "nick": "Ms",
+    "info": "Meshes to union.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Un",
+    "info": "Solid union mesh result.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "MeshSplit",
+  "fullTypeName": "MeshSplit",
+  "guid": "00000000-0146-41B5-8957-A2D34E3B1C77",
+  "author": "DanPiker",
+  "iconKey": null,
+  "nomen": {
+   "name": "Mesh Split",
+   "info": "Split one set of meshes with another set of meshes.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Mesh",
+    "nick": "Ms",
+    "info": "Meshes to split.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Splitter",
+    "nick": "Sp",
+    "info": "Meshes to split with.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Ms",
+    "info": "Result of mesh split.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "PipeContainment",
+  "fullTypeName": "PipeContainment",
+  "guid": "00000000-1664-4e0e-a97d-52c93497edaf",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Pipe Containment",
+   "info": "Determine whether a point is contained inside one or more implied curve pipes.",
+   "chapter": "Intersect",
+   "section": "Relation",
+   "slot": 3,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Pipe Axes",
+    "nick": "Px",
+    "info": "Pipe axis curves.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Pipe Radii",
+    "nick": "Pr",
+    "info": "Radius for each pipe.",
+    "type": "Number",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "Point for inclusion test.",
+    "type": "Point",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Strict",
+    "nick": "St",
+    "info": "If true, the inclusion is strict.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Inside",
+    "nick": "In",
+    "info": "True if the point is on the inside of at least one of the pipes.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Indices",
+    "nick": "Ix",
+    "info": "Indices of all pipes which contain the point.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "PlaneQuadrant",
+  "fullTypeName": "PlaneQuadrant",
+  "guid": "00000000-97c8-4088-be4e-ee1322382ed4",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Plane Quadrant",
+   "info": "Test in which plane quadrants a shape resides.",
+   "chapter": "Intersect",
+   "section": "Relation",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Shape",
+    "nick": "Sh",
+    "info": "Point or curve to examine.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Plane",
+    "nick": "Pl",
+    "info": "Reference plane.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Quadrant Indices",
+    "nick": "Ri",
+    "info": "List of all plane quadrants that overlap with the shape.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "RectangleNonant",
+  "fullTypeName": "RectangleNonant",
+  "guid": "00000000-dea1-44c1-bb57-c537acd43f9d",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Rectangle Nonant",
+   "info": "Test in which rectangle nonant regions a shape resides.",
+   "chapter": "Intersect",
+   "section": "Relation",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Shape",
+    "nick": "Sh",
+    "info": "Point or curve to examine.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Rectangle",
+    "nick": "Rc",
+    "info": "Reference rectangle.",
+    "type": "Rectangle",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Nonant Indices",
+    "nick": "Ni",
+    "info": "List of all nonant indices that overlap with the shape.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "RegionContainment",
+  "fullTypeName": "RegionContainment",
+  "guid": "00000000-f3d5-492c-9de5-23b4a6a92b40",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Region Containment",
+   "info": "Determine whether a point is contained inside one or more planar regions.",
+   "chapter": "Intersect",
+   "section": "Relation",
+   "slot": 3,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Regions",
+    "nick": "Rg",
+    "info": "Regions to include in the search.",
+    "type": "Region",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "Point for inclusion test.",
+    "type": "Point",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Strict",
+    "nick": "St",
+    "info": "If true, then the inclusion is strict.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Inside",
+    "nick": "In",
+    "info": "True if the point is on the inside of at least one of the regions.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Indices",
+    "nick": "Ix",
+    "info": "Indices of all regions which contain the point.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "RegionDifference",
+  "fullTypeName": "RegionDifference",
+  "guid": "00000000-9d49-4ca1-8df2-a62ba3fe6fdb",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Region Difference",
+   "info": "Compute the boolean difference between two planar regions.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 50,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Region A",
+    "nick": "Ra",
+    "info": "Region to subtract from, i.e. the minuend.",
+    "type": "Region",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Region B",
+    "nick": "Rb",
+    "info": "Region to subtract, i.e. the subtrahend.",
+    "type": "Region",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Region",
+    "nick": "Rg",
+    "info": "Remaining region after difference.",
+    "type": "Region",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "RegionFromCurves",
+  "fullTypeName": "RegionFromCurves",
+  "guid": "00000000-2cef-417e-98db-28f7e9feb1fd",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Region From Curves",
+   "info": "Create a region out of boundary and hole curves.",
+   "chapter": "Intersect",
+   "section": "Region",
+   "slot": 10,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Boundaries",
+    "nick": "Bn",
+    "info": "Outer boundary curves.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Holes",
+    "nick": "Ho",
+    "info": "Optional hole curves.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Plane",
+    "nick": "Pl",
+    "info": "Optional plane for region. If omitted, the best fit plane through the curves is used.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Region",
+    "nick": "Rg",
+    "info": "Planar region bounded by input curves.",
+    "type": "Region",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "RegionFromPlanes",
+  "fullTypeName": "RegionFromPlanes",
+  "guid": "00000000-246e-4a5a-9752-9d8eb887bd91",
+  "author": "AndyP",
+  "iconKey": null,
+  "nomen": {
+   "name": "Region From Planes",
+   "info": "Create a region from a sequence of bounding planes.",
+   "chapter": "Intersect",
+   "section": "Region",
+   "slot": 10,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Plane",
+    "nick": "Pl",
+    "info": "Region base plane.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Boundaries",
+    "nick": "Bn",
+    "info": "Planes that intersect to create the region boundaries.",
+    "type": "Plane",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Region",
+    "nick": "Rg",
+    "info": "Planar region bounded by input planes.",
+    "type": "Region",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "RegionIntersection",
+  "fullTypeName": "RegionIntersection",
+  "guid": "00000000-fa5a-4168-a8be-7198f787b00b",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Region Intersection",
+   "info": "Compute the boolean intersection between two planar regions.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 50,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Region A",
+    "nick": "Ra",
+    "info": "Primary region to intersect.",
+    "type": "Region",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Region B",
+    "nick": "Rb",
+    "info": "Secondary region to intersect.",
+    "type": "Region",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Region",
+    "nick": "Rg",
+    "info": "Remaining region after intersection.",
+    "type": "Region",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "RegionIntersectionList",
+  "fullTypeName": "RegionIntersectionList",
+  "guid": "00000000-280a-4762-bcb2-baa11b5dbd3c",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Region Intersection List",
+   "info": "Compute the region intersection of a list of planar regions.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 50,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Regions",
+    "nick": "Rg",
+    "info": "Closed, planar regions to intersect.",
+    "type": "Region",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Intersection",
+    "nick": "Is",
+    "info": "Region shared by all input regions.",
+    "type": "Region",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "RegionRollingDisc",
+  "fullTypeName": "RegionRollingDisc",
+  "guid": "00000000-dbc9-460a-ae36-86bd5eb74152",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Rolling Disc",
+   "info": "Compute the rolling disc coverage of a region.",
+   "chapter": "Intersect",
+   "section": "Region",
+   "slot": 50,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Region",
+    "nick": "Rg",
+    "info": "Region to operate on.",
+    "type": "Region",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Radius",
+    "nick": "Rd",
+    "info": "Radius of rolling disc.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "Optional start point for limiting the rolling disc region.",
+    "type": "Point",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Coverage",
+    "nick": "Cv",
+    "info": "Part of region covered by the disc.",
+    "type": "Region",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "RegionSurfaceDifference",
+  "fullTypeName": "RegionSurfaceDifference",
+  "guid": "00000000-59e7-4b4b-a1c7-9307e9ca2726",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Region Surface Difference",
+   "info": "Perform a boolean difference between a region and a surface.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 55,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Region",
+    "nick": "Rg",
+    "info": "Region to intersect.",
+    "type": "Region",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Surface",
+    "nick": "Sf",
+    "info": "Surface to subtract.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Region",
+    "nick": "Rg",
+    "info": "Remaining region after subtraction.",
+    "type": "Region",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "RegionSurfaceIntersection",
+  "fullTypeName": "RegionSurfaceIntersection",
+  "guid": "00000000-16dc-4fc5-a997-9321e2ce9979",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Region Surface Intersection",
+   "info": "Perform a boolean intersection between a region and a surface.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 55,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Region",
+    "nick": "Rg",
+    "info": "Region to intersect.",
+    "type": "Region",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Surface",
+    "nick": "Sf",
+    "info": "Surface to intersect with.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Region",
+    "nick": "Rg",
+    "info": "Remaining region after intersection.",
+    "type": "Region",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "RegionUnion",
+  "fullTypeName": "RegionUnion",
+  "guid": "00000000-4067-4773-b7ac-349ff210fa95",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Region Union",
+   "info": "Compute the boolean union of planar regions.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 50,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Region A",
+    "nick": "Ra",
+    "info": "First region to combine.",
+    "type": "Region",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Region B",
+    "nick": "Rb",
+    "info": "Second region to combine.",
+    "type": "Region",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Union",
+    "nick": "Un",
+    "info": "Combined region.",
+    "type": "Region",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "RegionUnionList",
+  "fullTypeName": "RegionUnionList",
+  "guid": "00000000-f576-4380-8efa-1b1722aede62",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Region Union List",
+   "info": "Compute the region union of a list of planar regions.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 50,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Regions",
+    "nick": "Rg",
+    "info": "Closed, planar regions to combine.",
+    "type": "Region",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Union",
+    "nick": "Un",
+    "info": "Combined region.",
+    "type": "Region",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "RegionWithoutHoles",
+  "fullTypeName": "RegionWithoutHoles",
+  "guid": "00000000-eb67-4a8f-a4ad-6b4da7723d22",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Region Without Holes",
+   "info": "Remove all holes from a region.",
+   "chapter": "Intersect",
+   "section": "Region",
+   "slot": 20,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Region",
+    "nick": "Rg",
+    "info": "Region with holes to remove.",
+    "type": "Region",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Region",
+    "nick": "Rg",
+    "info": "Filled region without holes or nested child regions.",
+    "type": "Region",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Holes",
+    "nick": "Hs",
+    "info": "Number of holes removed.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Nested",
+    "nick": "Ns",
+    "info": "Number of nested regions removed.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "ShapeInSurface",
+  "fullTypeName": "ShapeInSurface",
+  "guid": "00000000-7c4e-4b91-a83d-6f2e91d40a17",
+  "author": "AndyP",
+  "iconKey": null,
+  "nomen": {
+   "name": "Shape In Surface",
+   "info": "Determine whether a shape is contained inside a closed surface.",
+   "chapter": "Intersect",
+   "section": "Relation",
+   "slot": 3,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Surface",
+    "nick": "Sf",
+    "info": "Closed surface for inside/outside testing.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Shape",
+    "nick": "Sh",
+    "info": "Shape for inside/outside testing.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Relationship",
+    "nick": "Rl",
+    "info": "Relationship of shape to surface.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "SolidDifference",
+  "fullTypeName": "SolidDifference",
+  "guid": "00000000-29da-45c5-855f-259ec4fc1fac",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Solid Difference",
+   "info": "Compute the solid difference by subtracting a set of surfaces from a base surface.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 1,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Surface",
+    "nick": "Sf",
+    "info": "Surface to subtract from, i.e. the minuend.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Subtrahends",
+    "nick": "Sb",
+    "info": "Set of surfaces to subtract, i.e. the subtrahends",
+    "type": "Surface",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Sf",
+    "info": "Remaining surfaces.",
+    "type": "Surface",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "SolidIntersection",
+  "fullTypeName": "SolidIntersection",
+  "guid": "00000000-ebe9-43ca-9a01-ac1091561392",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Solid Intersection",
+   "info": "Compute the solid intersection between two surfaces.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 1,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Surface A",
+    "nick": "SA",
+    "info": "First surface for intersection.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Surface B",
+    "nick": "Sb",
+    "info": "Second surface for intesection.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Sf",
+    "info": "Remaining surfaces.",
+    "type": "Surface",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "SolidIntersectionList",
+  "fullTypeName": "SolidIntersectionList",
+  "guid": "00000000-228f-4745-8ac9-3242b46bb5de",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Solid Intersection List",
+   "info": "Compute the volume shared by every surface in a list of surfaces.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Surfaces",
+    "nick": "Sf",
+    "info": "Surfaces to intersect.",
+    "type": "Surface",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Sf",
+    "info": "Volume shared by all input surfaces.",
+    "type": "Surface",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "SolidUnion",
+  "fullTypeName": "SolidUnion",
+  "guid": "00000000-068d-402b-8ca0-7d978044fafc",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Solid Union",
+   "info": "Compute the solid union of several surfaces.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 1,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "First Surface",
+    "nick": "S1",
+    "info": "First surface for union.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Second Surface",
+    "nick": "S2",
+    "info": "Second surface for union.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Sf",
+    "info": "Unioned surfaces.",
+    "type": "Surface",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "SolidUnionList",
+  "fullTypeName": "SolidUnionList",
+  "guid": "00000000-8230-48da-99e4-642c8db832b0",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Solid Union List",
+   "info": "Compute the solid union of a list of surfaces.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Surfaces",
+    "nick": "Sf",
+    "info": "Surfaces to combine.",
+    "type": "Surface",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Union",
+    "nick": "Un",
+    "info": "Combined surfaces.",
+    "type": "Surface",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "SplitWithCutters",
+  "fullTypeName": "SplitWithCutters",
+  "guid": "00000000-2c88-4dd8-b079-2bd5ec90f573",
+  "author": "MathiasF",
+  "iconKey": null,
+  "nomen": {
+   "name": "Split With Cutters",
+   "info": "Split a surface with one or more cutter shapes.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 20,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Surface",
+    "nick": "Sf",
+    "info": "Surface to split.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Cutters",
+    "nick": "Ct",
+    "info": "Cutter shapes.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Fragments",
+    "nick": "Fr",
+    "info": "Surface fragments produced by the split.",
+    "type": "Surface",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "SplitWithSurfaces",
+  "fullTypeName": "SplitWithSurfaces",
+  "guid": "00000000-70e6-44dc-aa47-25761f1200eb",
+  "author": "MathiasF",
+  "iconKey": null,
+  "nomen": {
+   "name": "Split with Surfaces",
+   "info": "Split a curve with one or more surfaces.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 20,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Curve",
+    "nick": "Cr",
+    "info": "Curve to split.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Cutters",
+    "nick": "Sf",
+    "info": "Surface or mesh cutter(s).",
+    "type": "Surface",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Fragments",
+    "nick": "Ft",
+    "info": "Curve fragments.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Points",
+    "nick": "Pt",
+    "info": "Splitting points at the surfaces, ordered along the curve.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "SurfaceContainment",
+  "fullTypeName": "SurfaceContainment",
+  "guid": "00000000-9d2a-4533-9248-aaf13ed57f66",
+  "author": "AndyP",
+  "iconKey": null,
+  "nomen": {
+   "name": "Surface Containment",
+   "info": "Determine whether a point is contained inside one or more closed surfaces.",
+   "chapter": "Intersect",
+   "section": "Relation",
+   "slot": 3,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Surfaces",
+    "nick": "Sf",
+    "info": "Surfaces to include in the search.",
+    "type": "Surface",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "Point for inclusion test.",
+    "type": "Point",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Strict",
+    "nick": "St",
+    "info": "If true, the inclusion is strict.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Inside",
+    "nick": "In",
+    "info": "True if the point is on the inside of at least one of the surfaces.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Indices",
+    "nick": "Ix",
+    "info": "Indices of all surfaces which contain the point.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "TrimSolid",
+  "fullTypeName": "TrimSolid",
+  "guid": "00000000-3C5F-481E-A97B-51E9B6FC131B",
+  "author": "DanP",
+  "iconKey": null,
+  "nomen": {
+   "name": "Trim Solid",
+   "info": "Cut holes into a shape with a set of solid cutters.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Surface",
+    "nick": "Sf",
+    "info": "Surface to subtract from.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Cutters",
+    "nick": "Ct",
+    "info": "Set of solids to cut with.",
+    "type": "Surface",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Outside",
+    "nick": "Ot",
+    "info": "Trimmed surface fragments falling outside of the cutters.",
+    "type": "Surface",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Inside",
+    "nick": "In",
+    "info": "Trimmed surface fragments falling within the cutters.",
+    "type": "HiddenSurface",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "TrimWithClosedSurfaces",
+  "fullTypeName": "TrimWithClosedSurfaces",
+  "guid": "00000000-2905-438a-b0c0-cb812b23d3aa",
+  "author": "MathiasF",
+  "iconKey": null,
+  "nomen": {
+   "name": "Trim With Surface",
+   "info": "Trim a curve with one or more closed surfaces.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 20,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Curve",
+    "nick": "Cr",
+    "info": "Curve to trim.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Cutters",
+    "nick": "Sf",
+    "info": "Closed surface or mesh cutters.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Outside",
+    "nick": "Ex",
+    "info": "Curve fragments outside the cutters.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Inside",
+    "nick": "In",
+    "info": "Curve fragments inside the cutters.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Points",
+    "nick": "Pt",
+    "info": "Splitting points on the surfaces, ordered along the curve.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "intersect",
+  "assembly": "G2IntersectComponents",
+  "namespace": "",
+  "typeName": "TrimWithRegion",
+  "fullTypeName": "TrimWithRegion",
+  "guid": "00000000-3abb-4715-9429-dbb63b4abd59",
+  "author": "MathiasF",
+  "iconKey": null,
+  "nomen": {
+   "name": "Trim with Region",
+   "info": "Trim a curve to the boundaries of a given region.",
+   "chapter": "Intersect",
+   "section": "Operators",
+   "slot": 20,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Curve",
+    "nick": "Cr",
+    "info": "Curve to trim.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Region",
+    "nick": "Rg",
+    "info": "Region to trim against.",
+    "type": "Region",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Outside",
+    "nick": "Ex",
+    "info": "Curve fragments outside the regions.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Inside",
+    "nick": "In",
+    "info": "Curve fragments inside the regions.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Points",
+    "nick": "Pt",
+    "info": "Splitting points at region boundaries, ordered along the curve.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ }
+]

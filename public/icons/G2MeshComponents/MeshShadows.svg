@@ -1,0 +1,30 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="radial88a314fd6eba" gradientUnits="userSpaceOnUse" cx="10.5" cy="13.5" r="11.31371">
+      <stop offset="0%" style="stop-color:#000000; stop-opacity:0.137;" />
+      <stop offset="100%" style="stop-color:#000000; stop-opacity:0;" />
+    </radialGradient>
+    <radialGradient id="radialf6d7e139f63d" gradientUnits="userSpaceOnUse" cx="10.5" cy="13.5" r="11.31371">
+      <stop offset="0%" style="stop-color:#000000; stop-opacity:0.137;" />
+      <stop offset="100%" style="stop-color:#000000; stop-opacity:0;" />
+    </radialGradient>
+    <radialGradient id="radial3123666fd43f" gradientUnits="userSpaceOnUse" cx="10.5" cy="13.5" r="11.31371">
+      <stop offset="0%" style="stop-color:#000000; stop-opacity:0.137;" />
+      <stop offset="100%" style="stop-color:#000000; stop-opacity:0;" />
+    </radialGradient>
+    <radialGradient id="radial3244ee881277" gradientUnits="userSpaceOnUse" cx="10.5" cy="13.5" r="11.31371">
+      <stop offset="0%" style="stop-color:#000000; stop-opacity:0.137;" />
+      <stop offset="100%" style="stop-color:#000000; stop-opacity:0;" />
+    </radialGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 6 13.5 L 16 24 L 24 24 L 24 22 L 12 12 L 10.5 13.5 L 6 13.5" fill="url(#radial88a314fd6eba)" />
+    <path d="M 6 13.5 L 18 24 L 23 24 L 12 12 L 10.5 13.5 L 6 13.5" fill="url(#radialf6d7e139f63d)" />
+    <path d="M 6 13.5 L 19 22 L 12 12 L 10.5 13.5 L 6 13.5" fill="url(#radial3123666fd43f)" />
+    <path d="M 6 13.5 L 14 24 L 24 24 L 24 20 L 12 12 L 10.5 13.5 L 6 13.5" fill="url(#radial3244ee881277)" />
+    <path d="M 6.5 13.5 L 10 13.5 L 11.5 12 L 11.5 1.5 L 8 1.5 L 6.5 3 L 6.5 13.5" fill="#66D9E8" />
+    <path d="M 10 13.5 L 11.5 12 L 11.5 1.5 L 10 3" fill="#22B8CF" />
+    <path d="M 6.5 3 L 10 3 L 11.5 1.5 L 8 1.5" fill="#C5F6FA" />
+    <path d="M 6.5 13.5 L 10 13.5 L 11.5 12 L 11.5 1.5 L 8 1.5 L 6.5 3 L 6.5 13.5" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

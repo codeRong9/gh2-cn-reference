@@ -1,0 +1,21 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="linear879e4c7c49f9" gradientUnits="userSpaceOnUse" x1="0.93934" y1="0.93934" x2="23.5" y2="12.5">
+      <stop offset="0%" style="stop-color:#DDFB44;" />
+      <stop offset="100%" style="stop-color:#00A9B6;" />
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 24 13 L 3.5527137E-15 13 L 0 2 A 2 2 0 0 1 2 0 L 22 0 A 2 2 0 0 1 24 2.0000002 L 24 13" fill="url(#linear879e4c7c49f9)" />
+    <path d="M 24 13 L 24 22 A 2 2 0 0 1 22 24 L 2 24 A 2 2 0 0 1 0 22 L 3.5527137E-15 13 L 24 13" fill="#000000" />
+    <path d="M 3.5 22 L 3.5 15" stroke="#E7E7E7" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 6.5 22 L 6.5 15" stroke="#E7E7E7" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 3.5 18.5 L 6.5 18.5" stroke="#E7E7E7" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 10.5 15.5 L 8.5 17.5" stroke="#D9D9D9" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 8.5 15.5 L 10.5 17.5" stroke="#D9D9D9" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 12.5 20 L 12.5 20.5 A 1 1 0 0 0 13.5 21.5 L 14.5 21.5 A 1 1 0 0 0 15.5 20.5 L 15.5 19.5 A 1 1 0 0 0 14.5 18.5 L 13.5 18.5 A 1 1 0 0 1 12.5 17.5 L 12.5 16.5 A 1 1 0 0 1 13.5 15.5 L 14.5 15.5 A 1 1 0 0 1 15.5 16.5 L 15.5 17" stroke="#E7E7E7" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 18.5 22 L 18.5 15.5 L 20.5 15.5 A 1 1 0 0 1 21.5 16.5 L 21.5 17.5 A 1 1 0 0 1 20.5 18.5 L 18.5 18.5" stroke="#E7E7E7" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 23.5 13 L 23.5 2 A 1.5 1.5 0 0 0 22 0.5 L 2 0.5 A 1.5 1.5 0 0 0 0.5 1.9999999 L 0.5 13" stroke="#010101" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 0 12 L 24 12 L 24 13 L 0 13 L 0 12" fill="#000000" fill-opacity="0.298" />
+  </g>
+</svg>

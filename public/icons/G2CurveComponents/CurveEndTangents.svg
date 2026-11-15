@@ -1,0 +1,12 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 3 20 C 3 11.705633, 9.25 16.352818, 11.838428 15.9766 C 14.426855 15.600383, 13.35371 10.200765, 14.996996 8.05067 C 16.640282 5.9005737, 21 7, 21 12" stroke="#0B7285" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 3 20 L 3 7" stroke="#A61E4D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 21 12 L 21 22" stroke="#A61E4D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 22.5 12 A 1.5 1.5 0 0 1 19.5 12 A 1.5 1.5 0 0 1 22.5 12" fill="#FAA2C1" stroke="#A61E4D" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 4.5 20 A 1.5 1.5 0 0 1 1.5 20 A 1.5 1.5 0 0 1 4.5 20" fill="#FAA2C1" stroke="#A61E4D" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 19 20 L 21 22 L 23 20" stroke="#A61E4D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 5 9 L 3 7 L 1 9" stroke="#A61E4D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

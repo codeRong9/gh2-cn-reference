@@ -1,0 +1,16 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 0.5 0.5 L 23.5 0.5 L 23.5 23.5 L 0.5 23.5 Z" fill="#E6E6E6" />
+    <path d="M 4.5 0.5 L 4.5 23.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 9.5 0.5 L 9.5 23.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 14.5 0.5 L 14.5 23.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 19.5 0.5 L 19.5 23.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 0.5 4.5 L 23.5 4.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 0.5 9.5 L 23.5 9.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 0.5 14.5 L 23.5 14.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 0.5 19.5 L 23.5 19.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 0.5 0.5 L 23.5 0.5 L 23.5 23.5 L 0.5 23.5 Z" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 23 15.090021 L 20.752577 17.658504 A 0.9999994 0.9999994 0 0 1 19 17 L 19 11.661449 L 13.752577 17.658504 A 1.0000005 1.0000005 0 0 1 11.999998 17 L 12 11.661449 L 6.752577 17.658504 A 0.99999994 0.99999994 0 0 1 4.9999995 17 L 5 11.661449 L 1 16.232878 L 1 13.195693 L 5.247423 8.3414955 A 0.99999976 0.99999976 0 0 1 6.999999 9 L 7 14.338551 L 12.247423 8.3414955 A 0.99999976 0.99999976 0 0 1 13.999999 9 L 14 14.338551 L 19.247423 8.3414955 A 0.9999999 0.9999999 0 0 1 20.999996 9 L 21 14.338551 L 23 12.052836 L 23 15.090021" fill="#808080" />
+  </g>
+</svg>

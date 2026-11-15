@@ -1,0 +1,24 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="linear8ad838999d24" gradientUnits="userSpaceOnUse" x1="12.5" y1="5.5" x2="18.5" y2="11.5">
+      <stop offset="0%" style="stop-color:#FFE066;" />
+      <stop offset="100%" style="stop-color:#FCC419;" />
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 7.5 2 L 18.5 2" stroke="#0B7285" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 2 7.5 L 7.5 2" stroke="#0B7285" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 2 22 L 2 7.5" stroke="#0B7285" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 16.5 22 L 2 22" stroke="#0B7285" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 22 16.5 L 16.5 22" stroke="#0B7285" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 22 5.5 L 22 16.5" stroke="#0B7285" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 18.5 2 A 3.5 3.5 0 0 1 22 5.5000005" stroke="#D66000" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 22 16.5 L 16.5 22 L 16.5 18 L 22 5.5 L 22 16.5" fill="#22B8CF" />
+    <path d="M 16.5 18 A 10.5 10.5 0 0 0 5.9999995 7.5 L 18.5 2 A 3.5 3.5 0 0 1 22 5.5000005 L 16.5 18" fill="url(#linear8ad838999d24)" />
+    <path d="M 7.5 2 L 18.5 2 L 6 7.5 L 2 7.5 L 7.5 2" fill="#C5F6FA" />
+    <path d="M 6 7.5 A 10.5 10.5 0 0 1 16.5 18.000002 L 16.5 22 L 2 22 L 2 7.5 L 6 7.5" fill="#66D9E8" />
+    <path d="M 16.5 18 L 22 5.5" stroke="#D66000" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 18.5 2 L 6 7.5" stroke="#D66000" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 2 7.5 L 6 7.5 A 10.5 10.5 0 0 1 16.5 18.000002 L 16.5 22" stroke="#0B7285" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

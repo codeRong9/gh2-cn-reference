@@ -1,0 +1,32 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 14 11 L 18 12 L 18 15 L 14 14 L 14 11" fill="#FF1493" />
+    <path d="M 6 6 L 2 8 L 2 11 L 6 9 L 6 6" fill="#FF1493" />
+    <path d="M 6 9 L 2 11 L 2 14 L 6 12 L 6 9" fill="#FF1493" />
+    <path d="M 6 12 L 2 14 L 2 17 L 6 15 L 6 12" fill="#FF1493" />
+    <path d="M 10 2 L 6 3 L 6 6 L 10 5 L 10 2" fill="#FAA2C1" />
+    <path d="M 10 5 L 6 6 L 6 9 L 10 8 L 10 5" fill="#FF1493" />
+    <path d="M 10 8 L 6 9 L 6 12 L 10 11 L 10 8" fill="#FF1493" />
+    <path d="M 10 11 L 6 12 L 6 15 L 10 14 L 10 11" fill="#FF1493" />
+    <path d="M 10 14 L 6 15 L 6 18 L 10 17 L 10 14" fill="#FF1493" />
+    <path d="M 14 14 L 18 15 L 18 18 L 14 17 L 14 14" fill="#FF1493" />
+    <path d="M 21.276394 19.638197 L 18 18 L 18 15 L 22 17 L 22 19.190983 A 0.5000001 0.5000001 0 0 1 21.276394 19.638197" fill="#FF1493" />
+    <path d="M 6 3 L 2 5 L 2 8 L 6 6 L 6 3" fill="#FF1493" />
+    <path d="M 14 8 L 18 9 L 18 12 L 14 11 L 14 8" fill="#FF1493" />
+    <path d="M 14 2 L 18 3 L 18 6 L 14 5 L 14 2" fill="#FF1493" />
+    <path d="M 18 12 L 22 14 L 22 17 L 18 15 L 18 12" fill="#FAA2C1" />
+    <path d="M 18 9 L 22 11 L 22 14 L 18 12 L 18 9" fill="#FF1493" />
+    <path d="M 18 6 L 22 8 L 22 11 L 18 9 L 18 6" fill="#FF1493" />
+    <path d="M 18 3 L 22 5 L 22 8 L 18 6 L 18 3" fill="#FF1493" />
+    <path d="M 10 2 L 14 2 L 14 5 L 10 5 L 10 2" fill="#FF1493" />
+    <path d="M 10 5 L 14 5 L 14 8 L 10 8 L 10 5" fill="#FF1493" />
+    <path d="M 10 8 L 14 8 L 14 11 L 10 11 L 10 8" fill="#FF1493" />
+    <path d="M 10 11 L 14 11 L 14 14 L 10 14 L 10 11" fill="#FF1493" />
+    <path d="M 10 14 L 14 14 L 14 17 L 10 17 L 10 14" fill="#A61E4D" />
+    <path d="M 14 5 L 18 6 L 18 9 L 14 8 L 14 5" fill="#FF1493" />
+    <path d="M 2.7236068 19.638197 L 6 18 L 6 15 L 2 17 L 2 19.190983 A 0.50000066 0.50000066 0 0 0 2.723607 19.638197" fill="#FF1493" />
+    <path d="M 13.5 21 A 1.5 1.5 0 0 1 10.5 21 A 1.5 1.5 0 0 1 13.5 21" fill="#66D9E8" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 2.6055727 4.1381965 L 5.8254848 2.5282407 L 9.938447 1.5 L 14.061553 1.5 L 18.174515 2.5282407 L 21.394426 4.1381965 A 2.0000017 2.0000017 0 0 1 22.5 5.9270506 L 22.5 19.190983 A 1.0000006 1.0000006 0 0 1 21.052786 20.085411 L 17.825485 18.47176 L 13.938447 17.5 L 10.061553 17.5 L 6.1745152 18.47176 L 2.9472136 20.085411 A 0.99999964 0.99999964 0 0 1 1.5000004 19.190983 L 1.5 5.927051 A 2.0000005 2.0000005 0 0 1 2.6055727 4.1381965" stroke="#A61E4D" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="radialfe26593b9b66" gradientUnits="userSpaceOnUse" cx="6" cy="11.5" r="11">
+      <stop offset="0%" style="stop-color:#FFE066;" />
+      <stop offset="100%" style="stop-color:#FCC419;" />
+    </radialGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 5.5 18.5 C 4.3333335 17.333334, 3.1666667 16.166666, 2.75 15 C 2.3333333 13.833333, 2.6666667 12.666667, 3.0833333 11.583333 C 3.5 10.5, 4 9.5, 5 8.416667 C 6 7.3333335, 7.5 6.1666665, 8.916667 5.0833335 C 10.333333 4, 11.666667 3, 12.833333 3.1666667 C 14 3.3333333, 15 4.6666665, 16.583334 5.25 C 18.166666 5.8333335, 20.333334 5.6666665, 21.25 6.75 C 22.166666 7.8333335, 21.833334 10.166667, 21 12.25 C 20.166666 14.333333, 18.833334 16.166666, 17.583334 17.583334 C 16.333334 19, 15.166667 20, 13.75 20.666666 C 12.333333 21.333334, 10.666667 21.666666, 9.25 21.25 C 7.8333335 20.833334, 6.6666665 19.666666, 5.5 18.5" fill="url(#radialfe26593b9b66)" stroke="#E67700" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 9 5 C 11.666667 8.666667, 15.666667 10.833333, 21 11.5" stroke="#E67700" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 16.5 5.5 C 15.5 10.5, 7 11, 5.5 18" stroke="#E67700" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 3.5 11.500001 A 16.724775 16.724775 0 0 1 13.499999 20.499998" stroke="#E67700" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 1.5 15.5 L 8.5 22.5" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 13.500002 1.500001 A 7.2886925 7.2886925 0 0 0 22.500002 4.4999995" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 4.5 8.5 A 13.579783 13.579783 0 0 1 17.5 18.033333" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

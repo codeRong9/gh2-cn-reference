@@ -1,0 +1,43 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 8.5 18 A 3.5 3.5 0 0 1 1.5 18 A 3.5 3.5 0 0 1 8.5 18" fill="#66D9E8" />
+    <path d="M 7.1920304 15.807968 A 3.1 3.1 0 0 1 2.8079696 20.192032 C 3.3676348 20.751698, 4.8030796 20.223959, 6.0135193 19.01352 C 7.223959 17.80308, 7.7516966 16.367634, 7.192031 15.807969" fill="#22B8CF" />
+    <path d="M 7.1920304 15.807968 A 3.1 3.1 0 0 1 2.8079696 20.192032 C 4.018409 21.402472, 5.981591 21.402472, 7.192031 20.192032 C 8.402471 18.981592, 8.402471 17.018408, 7.192031 15.807969" fill="#0B7285" />
+    <!--Icon element '(Grasshopper2.UI.Icon.Vector.EggSpan,Grasshopper2.UI.Icon.Vector.VectorStyle)' failed to create valid SVG.-->
+    <path d="M 8.5 18 A 3.5 3.5 0 0 1 1.5 18 A 3.5 3.5 0 0 1 8.5 18" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 19.215881 5.6755266 L 18.823723 4.7326946" stroke="#E60026" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 17.592634 3.1124775 L 16.78936 2.4820218" stroke="#E60026" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 14.9230175 1.6711905 L 13.914005 1.5143003" stroke="#E60026" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 11.889578 1.7201607 L 10.9328 2.0769486" stroke="#E60026" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 9.267877 3.2468681 L 8.607954 4.0261135" stroke="#E60026" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 7.6642156 8.894137 L 7.985138 9.863535" stroke="#E60026" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 9.092266 11.570857 L 9.846404 12.259332" stroke="#E60026" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 11.091766 13.800201 A 1.9999957 1.9999957 0 0 1 11.03825 14.810062" stroke="#E60026" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 10.505871 16.770206 L 10.5696 17.788391" stroke="#E60026" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 13.848709 21.350233 L 14.858162 21.497765" stroke="#E60026" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 16.84668 21.103628 L 17.723545 20.58222" stroke="#E60026" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 20.435953 16.332935 L 21.153498 15.605336" stroke="#E60026" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 22.179453 13.850208 L 22.432177 12.861081" stroke="#E60026" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 22.37388 10.828925 L 22.064869 9.855913" stroke="#E60026" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 20.939985 8.162486 L 20.21324 7.444233" stroke="#E60026" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 7.728206 5.8609776 L 7.5338616 6.8634505" stroke="#E60026" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 19.019468 19.023333 L 19.383545 18.06945" stroke="#E60026" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 11.365189 19.65295 L 12.056159 20.403498" stroke="#E60026" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 17.5 7.5 A 4 4 0 0 1 9.5 7.4999995 A 4 4 0 0 1 17.5 7.5000005" fill="#66D9E8" />
+    <path d="M 16.045584 4.9544153 A 3.6 3.6 0 0 1 10.954416 10.045586 C 11.579159 10.670326, 13.225698 10.037043, 14.631371 8.631371 C 16.037043 7.2256985, 16.670326 5.579159, 16.045584 4.954416" fill="#22B8CF" />
+    <path d="M 16.045584 4.9544153 A 3.6 3.6 0 0 1 10.954416 10.045586 C 12.31128 11.402448, 14.551524 11.362868, 15.957196 9.957196 C 17.362867 8.551524, 17.402447 6.3112793, 16.045584 4.954416" fill="#0B7285" />
+    <!--Icon element '(Grasshopper2.UI.Icon.Vector.EggSpan,Grasshopper2.UI.Icon.Vector.VectorStyle)' failed to create valid SVG.-->
+    <path d="M 17.5 7.5 A 4 4 0 0 1 9.5 7.4999995 A 4 4 0 0 1 17.5 7.5000005" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 20.5 12 A 3.5 3.5 0 0 1 13.5 12 A 3.5 3.5 0 0 1 20.5 12.000001" fill="#66D9E8" />
+    <path d="M 19.19203 9.807968 A 3.1 3.1 0 0 1 14.80797 14.192032 C 15.367635 14.751697, 16.80308 14.223959, 18.01352 13.013519 C 19.223959 11.80308, 19.751698 10.367635, 19.192032 9.807969" fill="#22B8CF" />
+    <path d="M 19.19203 9.807968 A 3.1 3.1 0 0 1 14.80797 14.192032 C 16.018408 15.402471, 17.981592 15.402471, 19.192032 14.192031 C 20.402472 12.981591, 20.402472 11.018409, 19.192032 9.807969" fill="#0B7285" />
+    <!--Icon element '(Grasshopper2.UI.Icon.Vector.EggSpan,Grasshopper2.UI.Icon.Vector.VectorStyle)' failed to create valid SVG.-->
+    <path d="M 20.5 12 A 3.5 3.5 0 0 1 13.5 12 A 3.5 3.5 0 0 1 20.5 12.000001" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 17.5 17 A 2.5 2.5 0 0 1 12.5 17 A 2.5 2.5 0 0 1 17.5 17" fill="#66D9E8" />
+    <path d="M 16.484924 15.515076 A 2.1 2.1 0 0 1 13.515077 18.484924 C 13.944587 18.914434, 14.957843 18.597792, 15.777818 17.777817 C 16.597794 16.957842, 16.914434 15.944587, 16.484924 15.515076" fill="#22B8CF" />
+    <path d="M 16.484924 15.515076 A 2.1 2.1 0 0 1 13.515077 18.484924 C 14.432667 19.402515, 15.841726 19.481676, 16.661701 18.661701 C 17.481676 17.841726, 17.402515 16.432667, 16.484924 15.515076" fill="#0B7285" />
+    <!--Icon element '(Grasshopper2.UI.Icon.Vector.EggSpan,Grasshopper2.UI.Icon.Vector.VectorStyle)' failed to create valid SVG.-->
+    <path d="M 17.5 17 A 2.5 2.5 0 0 1 12.5 17 A 2.5 2.5 0 0 1 17.5 17" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

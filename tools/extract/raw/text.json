@@ -1,0 +1,2044 @@
+[
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "FormatText",
+  "fullTypeName": "FormatText",
+  "guid": "00000000-67da-49aa-a32e-83a9e2c426bd",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Format",
+   "info": "Replace bracketed indices embedded within a text using the input with the same index.",
+   "chapter": "Text",
+   "section": "Create",
+   "slot": 1,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text with bracketed indices.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Rs",
+    "info": "Modified text.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "TextConcatenate",
+  "fullTypeName": "TextConcatenate",
+  "guid": "00000000-3057-44aa-8a8c-f5e5217df38c",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Concatenate",
+   "info": "String together two or more fragments into a longer text.",
+   "chapter": "Text",
+   "section": "Create",
+   "slot": 0,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "",
+    "nick": "",
+    "info": "",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "",
+    "nick": "",
+    "info": "",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Concatenated text.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "TextFragment",
+  "fullTypeName": "TextFragment",
+  "guid": "00000000-f0bf-46af-b5b3-ff0e30c74759",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Text Fragment",
+   "info": "Extract a fragment from a larger text.",
+   "chapter": "Text",
+   "section": "Create",
+   "slot": 0,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text to extract from.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Start",
+    "nick": "St",
+    "info": "Index of first character to include in the fragment.",
+    "type": "Index",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Length",
+    "nick": "Ln",
+    "info": "Optional length of fragment to extract. Leave blank to consume the entire remainder of the text.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Fragment",
+    "nick": "Fr",
+    "info": "Fragment from the input text.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "TextFromCardinal",
+  "fullTypeName": "TextFromCardinal",
+  "guid": "00000000-76c4-469c-9799-60e166b8074e",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Text From Cardinal",
+   "info": "Convert an integer into English text.",
+   "chapter": "Text",
+   "section": "Create",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Integer",
+    "nick": "In",
+    "info": "Integer to convert.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Transition",
+    "nick": "Tr",
+    "info": "Magnitude at which to switch from words to digits.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text representing the cardinal integer.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "TextFromOrdinal",
+  "fullTypeName": "TextFromOrdinal",
+  "guid": "00000000-4fc7-4304-9e4c-3c79ebe9b288",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Text From Ordinal",
+   "info": "Convert an ordinal integer into English text.",
+   "chapter": "Text",
+   "section": "Create",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Integer",
+    "nick": "In",
+    "info": "Integer to convert.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text representing the ordinal integer.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "TextFromRomanNumeral",
+  "fullTypeName": "TextFromRomanNumeral",
+  "guid": "00000000-1fb8-447e-97a5-73e8162d7fe3",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Text From Roman",
+   "info": "Convert an integer into a Roman numeral.",
+   "chapter": "Text",
+   "section": "Create",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Integer",
+    "nick": "In",
+    "info": "Integer to convert.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text representing the integer.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "TextJoin",
+  "fullTypeName": "TextJoin",
+  "guid": "00000000-6673-4aa2-9437-e16562938ed5",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Text Join",
+   "info": "Join together two or more text fragments with an optional separator.",
+   "chapter": "Text",
+   "section": "Create",
+   "slot": 0,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Fragments",
+    "nick": "Fr",
+    "info": "Text fragments to join.",
+    "type": "Text",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Separator",
+    "nick": "Sp",
+    "info": "Separator to place in between the fragments.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text consisting of all fragments joined together, interspersed with separators.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "TextOnCurve",
+  "fullTypeName": "TextOnCurve",
+  "guid": "00000000-2145-4dfb-98dd-6b774693639a",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Text On Curve",
+   "info": "Create and align a collection of textual shapes onto a base curve and a normal field.",
+   "chapter": "Text",
+   "section": "Create",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text to create.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Font",
+    "nick": "Fn",
+    "info": "Font name and optional properties.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Height",
+    "nick": "Hg",
+    "info": "Height of text shapes.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Depth",
+    "nick": "Dp",
+    "info": "Depth of text shapes.",
+    "type": "Field",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Base Line",
+    "nick": "Ln",
+    "info": "Base line for text positioning.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Normal",
+    "nick": "Nr",
+    "info": "Orientation of normal direction.",
+    "type": "Field",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Shapes",
+    "nick": "Sh",
+    "info": "Resulting text shapes.",
+    "type": "Surface",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "TextSplit",
+  "fullTypeName": "TextSplit",
+  "guid": "00000000-10a7-47d1-98e4-dd6981462548",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Text Split",
+   "info": "Split a text into fragments using a separator.",
+   "chapter": "Text",
+   "section": "Create",
+   "slot": 0,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text block to split.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Separator",
+    "nick": "Sp",
+    "info": "Separator used for splitting.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Fragments",
+    "nick": "Fr",
+    "info": "Fragments of the input text without the separator.",
+    "type": "Text",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "TextSplitLines",
+  "fullTypeName": "TextSplitLines",
+  "guid": "00000000-d622-4eba-aedd-65b52677d9ad",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Text Split Lines",
+   "info": "Split a text into individual lines.",
+   "chapter": "Text",
+   "section": "Create",
+   "slot": 0,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text block to split.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Lines",
+    "nick": "Ln",
+    "info": "Individual lines of text.",
+    "type": "Text",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "TextSplitWords",
+  "fullTypeName": "TextSplitWords",
+  "guid": "00000000-937a-4cbc-8ddd-184b378dc8ed",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Text Split Words",
+   "info": "Split a text into individual words and numbers. All non-alphanumeric characters will be skipped.",
+   "chapter": "Text",
+   "section": "Create",
+   "slot": 0,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text to split into words and numbers.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Vectors",
+    "nick": "Vc",
+    "info": "Parse embedded coordinates as vectors.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Words",
+    "nick": "Wo",
+    "info": "Individual words and numbers.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "CollapseWhitespace",
+  "fullTypeName": "CollapseWhitespace",
+  "guid": "00000000-b7d1-4a84-9051-1d9016fd7960",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Collapse Whitespace",
+   "info": "Collapse consecutive whitespace characters into a predefined character sequence.",
+   "chapter": "Text",
+   "section": "Operators",
+   "slot": 5,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text whose whitespace to collapse.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Replacement",
+    "nick": "Rp",
+    "info": "Text to replace all whitespace sequences.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text with collapsed whitespace.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "Lowercase",
+  "fullTypeName": "Lowercase",
+  "guid": "00000000-7862-485e-9864-2e1609728b40",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Lower Case",
+   "info": "Convert all characters in a text block to their lowercase equivalents.",
+   "chapter": "Text",
+   "section": "Operators",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text to make lowercase.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Text",
+    "nick": "tx",
+    "info": "Lower case version of the input text.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "LSystemGrowth",
+  "fullTypeName": "LSystemGrowth",
+  "guid": "00000000-2c85-43f3-93b8-d2e0cd85f90a",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "L-System Growth",
+   "info": "Grow an L-System out of an axiom and a set of rules.",
+   "chapter": "Text",
+   "section": "Operators",
+   "slot": 3,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Axiom",
+    "nick": "Ax",
+    "info": "L-System axiom.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Rules",
+    "nick": "Ru",
+    "info": "L-System rules to apply. Must be in the form `Symbol->Replacement`.",
+    "type": "Text",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Iterations",
+    "nick": "It",
+    "info": "Number of iterations.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Rs",
+    "info": "Grown L-System.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "NormaliseText",
+  "fullTypeName": "NormaliseText",
+  "guid": "00000000-4aae-462b-8d68-39f82af9dc58",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Normalise Text",
+   "info": "Apply one of the standard Unicode normalisation methods to a text.",
+   "chapter": "Text",
+   "section": "Operators",
+   "slot": 3,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text to normalise.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Method",
+    "nick": "Mt",
+    "info": "Normalisation method.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Text",
+    "nick": "TX",
+    "info": "Normalised text.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "WordPlural",
+  "fullTypeName": "WordPlural",
+  "guid": "00000000-d2f3-4635-98e4-94957f72102c",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Word Plural",
+   "info": "Apply standard English language rules to create the plural of a noun.",
+   "chapter": "Text",
+   "section": "Operators",
+   "slot": 2,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Word",
+    "nick": "Sn",
+    "info": "Singular noun.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Plural",
+    "nick": "Pl",
+    "info": "Best guess at the plural of the input noun.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "RemoveWhitespace",
+  "fullTypeName": "RemoveWhitespace",
+  "guid": "00000000-c2ad-4e51-a480-ce0960ed2e80",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Remove Whitespace",
+   "info": "Remove whitespace from a text.",
+   "chapter": "Text",
+   "section": "Operators",
+   "slot": 5,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text whose whitespace to remove.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Start",
+    "nick": "St",
+    "info": "Remove all whitespace from the start of the text.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Middle",
+    "nick": "Md",
+    "info": "Remove all whitespace from within the text.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "End",
+    "nick": "En",
+    "info": "Remove all whitespace from the end of the text.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Cleaned text.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Count",
+    "nick": "Cn",
+    "info": "Number of whitespace characters removed.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "ReplaceText",
+  "fullTypeName": "ReplaceText",
+  "guid": "00000000-5438-4a55-a925-649641fe3bd2",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Replace Text",
+   "info": "Replace occurrences of one character sequence with another within a text.",
+   "chapter": "Text",
+   "section": "Operators",
+   "slot": 3,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text to modify.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Find",
+    "nick": "Fn",
+    "info": "One or more character sequences to replace.",
+    "type": "Text",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Replace",
+    "nick": "Rp",
+    "info": "One or more replacement texts.",
+    "type": "Text",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Rs",
+    "info": "Text with replacements.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Count",
+    "nick": "Rn",
+    "info": "Number of performed replacements.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "TextTrimming",
+  "fullTypeName": "TextTrimming",
+  "guid": "00000000-4290-4d27-b4ec-bf5dec951d0c",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Text Trimming",
+   "info": "Trim a text to a maximum length",
+   "chapter": "Text",
+   "section": "Operators",
+   "slot": 3,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text to trim.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Limit",
+    "nick": "Lm",
+    "info": "Maximum allowed character count.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Method",
+    "nick": "Mt",
+    "info": "Trimming method.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Trimmed text.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "Uppercase",
+  "fullTypeName": "Uppercase",
+  "guid": "00000000-671f-4466-bc37-4a67db506e93",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Upper Case",
+   "info": "Convert all characters in a text block to their uppercase equivalents.",
+   "chapter": "Text",
+   "section": "Operators",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text to uppercase.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Text",
+    "nick": "TX",
+    "info": "Upper case version of the input text.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "WordCasing",
+  "fullTypeName": "WordCasing",
+  "guid": "00000000-dd14-4b05-a350-150fbbb3c870",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Word Casing",
+   "info": "Apply both word and sentence casing to a text.",
+   "chapter": "Text",
+   "section": "Operators",
+   "slot": 2,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text to case.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Lower Case",
+    "nick": "Lc",
+    "info": "Lower case version of the input text.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Uppper Case",
+    "nick": "Uc",
+    "info": "Upper case version of the input text.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Word Case",
+    "nick": "Wc",
+    "info": "Word case version of the input text.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Sentence Case",
+    "nick": "Sc",
+    "info": "Sentence case version of the input text.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "DissectText",
+  "fullTypeName": "DissectText",
+  "guid": "00000000-bf52-4724-88de-9da0c25e1bc8",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Dissect Text",
+   "info": "Extract the individual characters that make up a text.",
+   "chapter": "Text",
+   "section": "Analysis",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text to dissect.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Characters",
+    "nick": "Ch",
+    "info": "Individual characters.",
+    "type": "Text",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Unicode",
+    "nick": "Uc",
+    "info": "Unicode code points for each character.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Category",
+    "nick": "Ct",
+    "info": "Character category.",
+    "type": "Text",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "DecryptText",
+  "fullTypeName": "DecryptText",
+  "guid": "00000000-cca2-4072-b5c6-63722f4a0e3f",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Decrypt Text",
+   "info": "Decrypt a text using a key.",
+   "chapter": "Text",
+   "section": "Encoding",
+   "slot": 10,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Encrypted text to decrypt.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Key",
+    "nick": "Ky",
+    "info": "Encryption key.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Decrypted text.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "DeserialiseValue",
+  "fullTypeName": "DeserialiseValue",
+  "guid": "00000000-8c6e-4e38-88d2-fa1a0cb79e55",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Deserialise Value",
+   "info": "Deserialise a text and recreate the value encoded therein.",
+   "chapter": "Text",
+   "section": "Encoding",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Code",
+    "nick": "Tx",
+    "info": "Text encoding a value.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Value",
+    "nick": "Vl",
+    "info": "Value decoded from text.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "EncryptText",
+  "fullTypeName": "EncryptText",
+  "guid": "00000000-1479-438f-b5a9-fbdd5425609c",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Encrypt Text",
+   "info": "Encrypt a text using a key.",
+   "chapter": "Text",
+   "section": "Encoding",
+   "slot": 10,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text to encrypt.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Key",
+    "nick": "Ky",
+    "info": "Encryption key.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Encrypted text.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "ParseNumbers",
+  "fullTypeName": "ParseNumbers",
+  "guid": "00000000-ccf1-42fb-942a-ec79e45d8696",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Parse Numbers",
+   "info": "Find all the numbers in a piece of text.",
+   "chapter": "Text",
+   "section": "Analysis",
+   "slot": 10,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text to parse.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Include Decimals",
+    "nick": "Dc",
+    "info": "If true, handle decimal points and output decimal values.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Numbers",
+    "nick": "Nm",
+    "info": "All the numbers found in the text.",
+    "type": "Numeric",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Fragments",
+    "nick": "Fr",
+    "info": "The original text fragments interpreted as numbers.",
+    "type": "Text",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "SerialiseValue",
+  "fullTypeName": "SerialiseValue",
+  "guid": "00000000-f0fe-4844-b9f6-ba21952a1571",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Serialise Value",
+   "info": "Serialise a value by converting it into an encoded text.",
+   "chapter": "Text",
+   "section": "Encoding",
+   "slot": 1,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Value",
+    "nick": "Vl",
+    "info": "Value to serialise.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Code",
+    "nick": "Tx",
+    "info": "Text encoding the given value.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "TextContains",
+  "fullTypeName": "TextContains",
+  "guid": "00000000-2055-452c-8729-a49217cf169d",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Text Contains",
+   "info": "Determine whether a text contains a given text fragment.",
+   "chapter": "Text",
+   "section": "Analysis",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text for containment comparison.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Fragment",
+    "nick": "Fr",
+    "info": "Textual fragment to match.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Rs",
+    "info": "True if the text contains the given fragment in a case sensitive way.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "ReSuLt",
+    "nick": "rS",
+    "info": "",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "TextContainsIsolated",
+  "fullTypeName": "TextContainsIsolated",
+  "guid": "00000000-823b-4b1f-a093-460a66e72c43",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Contains Isolated",
+   "info": "Determine whether a text contains a given isolated fragment. I.e. the fragment is not surrounded by alphanumeric characters.",
+   "chapter": "Text",
+   "section": "Analysis",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text for containment comparison.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Fragment",
+    "nick": "Fr",
+    "info": "Textual fragment to match.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Rs",
+    "info": "True if the text contains the given fragment in a case sensitive way.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "ReSuLt",
+    "nick": "rS",
+    "info": "True if the text contains the given fragment in a case insensitive way.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "TextCount",
+  "fullTypeName": "TextCount",
+  "guid": "00000000-6ecd-4447-b6bc-899b45ccf38f",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Fragment Count",
+   "info": "Count how often a given fragment appears in a text.",
+   "chapter": "Text",
+   "section": "Analysis",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text to search in.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Fragment",
+    "nick": "Fr",
+    "info": "Text fragment to find.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Count",
+    "nick": "Cn",
+    "info": "Number of times the fragment appears in the text.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "TextDistance",
+  "fullTypeName": "TextDistance",
+  "guid": "00000000-8124-462F-94E1-008168180F8D",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Text Distance",
+   "info": "Compute the distance between two strings of text.",
+   "chapter": "Text",
+   "section": "Analysis",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "First Text String",
+    "nick": "Ta",
+    "info": "First text for distance.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Second Text String",
+    "nick": "Tb",
+    "info": "Second text for distance.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Metric",
+    "nick": "M",
+    "info": "Distance metric to be used.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Distance",
+    "nick": "D",
+    "info": "Distance between texts.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "TextEndsWith",
+  "fullTypeName": "TextEndsWith",
+  "guid": "00000000-5714-4aa4-be60-c9c99ea36814",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Text Ends With",
+   "info": "Determine whether a text ends in a specific way.",
+   "chapter": "Text",
+   "section": "Analysis",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text whose ending to check.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Fragment",
+    "nick": "Fr",
+    "info": "Textual fragment to match.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Rs",
+    "info": "True if the text ends with the given fragment in a case sensitive way.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "ReSuLt",
+    "nick": "rS",
+    "info": "True if the text ends with the given fragment in a case insensitive way.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "TextEquality",
+  "fullTypeName": "TextEquality",
+  "guid": "00000000-9edc-4c9c-b06f-aab09d111745",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Text Equality",
+   "info": "Determine whether two texts are equal in a language unspecific way.",
+   "chapter": "Text",
+   "section": "Analysis",
+   "slot": 1,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "First Text",
+    "nick": "Ta",
+    "info": "First text for equality comparison.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Second Text",
+    "nick": "Tb",
+    "info": "Second text for equality comparison.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Equality",
+    "nick": "Eq",
+    "info": "True if the texts are equal character by character. QQ",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "TextEqualityComplex",
+  "fullTypeName": "TextEqualityComplex",
+  "guid": "00000000-9864-4a3b-8a58-152dd1f4714a",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Text Equality Funky",
+   "info": "Determine whether two texts are equal given certain comparison rules.",
+   "chapter": "Text",
+   "section": "Analysis",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "First Text",
+    "nick": "Ta",
+    "info": "First text for equality comparison.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Second Text",
+    "nick": "Tb",
+    "info": "Second text for equality comparison.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Ignore Case",
+    "nick": "Ic",
+    "info": "Ignore differences in casing.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Ignore Whitespace",
+    "nick": "Iw",
+    "info": "Ignore differences in whitespace. If enabled, differences in width and type of whitespace are ignored.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Equality",
+    "nick": "Eq",
+    "info": "True if the texts are equal based on given linguistic rules. QQ",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "TextHash",
+  "fullTypeName": "TextHash",
+  "guid": "00000000-6dc3-41f5-bb21-ed3ccd0ead76",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Text Hash",
+   "info": "Compute the 32-bit hash of a text.",
+   "chapter": "Text",
+   "section": "Analysis",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text to hash.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Hash",
+    "nick": "Hs",
+    "info": "Standard 32-bit hash of the input text.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "TextLength",
+  "fullTypeName": "TextLength",
+  "guid": "00000000-1fea-4c81-a640-ce5ffc2d1f99",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Text Length",
+   "info": "Compute the length of a string of text.",
+   "chapter": "Text",
+   "section": "Analysis",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text string",
+    "nick": "Tx",
+    "info": "Text to measure.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Length",
+    "nick": "Ln",
+    "info": "Number of distinct characters according to the specified culture.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "MatchText",
+  "fullTypeName": "MatchText",
+  "guid": "00000000-219b-4f86-8239-7c0ced1b3e87",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Match Text",
+   "info": "Determine whether a text matches a given pattern.",
+   "chapter": "Text",
+   "section": "Analysis",
+   "slot": 10,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text to match.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Pattern",
+    "nick": "Pt",
+    "info": "Pattern to match.",
+    "type": "Text Pattern",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Match",
+    "nick": "Mt",
+    "info": "True if the text matches the given pattern.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Fragments",
+    "nick": "Fr",
+    "info": "The substrings which matched the provided or implied wildcards.",
+    "type": "Text",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "text",
+  "assembly": "G2TextComponents",
+  "namespace": "",
+  "typeName": "TextStartsWith",
+  "fullTypeName": "TextStartsWith",
+  "guid": "00000000-019c-418d-8fd1-d64a5974adb9",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Text Starts With",
+   "info": "Determine whether a text starts in a specific way.",
+   "chapter": "Text",
+   "section": "Analysis",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text whose beginning to check.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Fragment",
+    "nick": "Fr",
+    "info": "Textual fragment to match.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Rs",
+    "info": "True if the text starts with the given fragment in a case sensitive way.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "ReSuLt",
+    "nick": "rS",
+    "info": "True if the text starts with the given fragment in a case insensitive way.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ }
+]

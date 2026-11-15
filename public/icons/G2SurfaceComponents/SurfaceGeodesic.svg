@@ -1,0 +1,21 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="radial9031bd8037cc" gradientUnits="userSpaceOnUse" cx="2.5" cy="7.5" r="8.5">
+      <stop offset="0%" style="stop-color:#22B8CF;" />
+      <stop offset="100%" style="stop-color:#66D9E8;" />
+    </radialGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 4.7037716 4.2395835 L 4.7389135 4.138299 A 4.000001 4.000001 0 0 1 8.5 1.5000005 L 22.5 1.5 L 22.5 22.5 L 1.5 22.5 L 1.5 15 A 6.7272153 6.7272153 0 0 1 1.8500896 12.834547 L 1.8805867 12.74375 A 6.873193 6.873193 0 0 1 5.939263 8.5728855 A 3.922225 3.922225 0 0 1 4.681736 4.30695 L 4.7037716 4.2395835" fill="url(#radial9031bd8037cc)" />
+    <path d="M 5.9392624 8.5728855 A 6.8731985 6.8731985 0 0 0 1.8805871 12.74375 L 4.6817355 4.30695 A 4.0005817 4.0005817 0 0 0 5.9392624 8.572885" fill="#C5F6FA" />
+    <path d="M 19.5 5.5 A 11.901551 11.901551 0 0 1 8.499994 19.5" stroke="#22B8CF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 19.5 5.5 A 27.27652 27.27652 0 0 1 8.500002 19.5" stroke="#22B8CF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 18.499996 4.5 A 15.195524 15.195524 0 0 0 7.5 18.5" stroke="#22B8CF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 18.500002 4.500001 A 9.922579 9.922579 0 0 0 7.499998 18.499996" stroke="#22B8CF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 5.9392624 8.5728855 A 4 4 0 0 1 8.5 1.5000005 L 22.5 1.5 L 22.5 22.5 L 1.5 22.5 L 1.5 15 A 6.872184 6.872184 0 0 1 5.939263 8.5728855" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 4.7037716 4.2395835 L 1.8500888 12.834547" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 18.999996 5 A 50.547226 50.547226 0 0 0 7.999996 19.000002" stroke="#A61E4D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 9.5 19 A 1.5 1.5 0 0 1 6.5 19 A 1.5 1.5 0 0 1 9.5 19" fill="#C5F6FA" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 20.5 5 A 1.5 1.5 0 0 1 17.5 5 A 1.5 1.5 0 0 1 20.5 5.0000005" fill="#C5F6FA" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

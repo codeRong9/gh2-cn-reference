@@ -1,0 +1,20 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 16 17 L 16 21 C 16 21.5522, 14.2088 22, 12 22 C 9.7912 22, 8 21.5522, 8 21 L 8 17 C 8 16.4478, 9.7912 16, 12 16 C 14.2088 16, 16 16.4478, 16 17" stroke="#0B7285" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 16 17 L 16 21 C 16 21.5522, 14.2088 22, 12 22 C 9.7912 22, 8 21.5522, 8 21 L 8 17 C 8 16.4478, 9.7912 16, 12 16 C 14.2088 16, 16 16.4478, 16 17" fill="#66D9E8" />
+    <!--Icon element '(Grasshopper2.UI.Icon.Vector.EggSpan,Grasshopper2.UI.Icon.Vector.VectorStyle)' failed to create valid SVG.-->
+    <path d="M 16 17 L 16 21 C 16 21.38654, 15.122313 21.721924, 13.838081 21.888365 L 13.838081 17.888365 C 15.122313 17.721924, 16 17.38654, 16 17" fill="#22B8CF" />
+    <path d="M 9.637799 17.807034 L 9.637799 21.807035 C 8.644833 21.625057, 8 21.331322, 8 21 L 8 17 C 8 17.331322, 8.644833 17.625057, 9.637799 17.807034" fill="#C5F6FA" />
+    <path d="M 20 7 L 20 17 C 20 18.1044, 16.4176 19, 12 19 C 7.5824 19, 4 18.1044, 4 17 L 4 7 C 4 5.8956, 7.5824 5, 12 5 C 16.4176 5, 20 5.8956, 20 7" stroke="#E67700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 20 7 L 20 17 C 20 18.1044, 16.4176 19, 12 19 C 7.5824 19, 4 18.1044, 4 17 L 4 7 C 4 5.8956, 7.5824 5, 12 5 C 16.4176 5, 20 5.8956, 20 7" fill="#FFE066" />
+    <!--Icon element '(Grasshopper2.UI.Icon.Vector.EggSpan,Grasshopper2.UI.Icon.Vector.VectorStyle)' failed to create valid SVG.-->
+    <path d="M 20 7 L 20 17 C 20 17.77308, 18.244625 18.443848, 15.676162 18.776731 L 15.676162 8.7767315 C 18.244625 8.443848, 20 7.77308, 20 7" fill="#FCC419" />
+    <path d="M 7.275597 8.614067 L 7.275597 18.614069 C 5.2896643 18.250114, 4 17.66264, 4 17 L 4 7 C 4 7.6626396, 5.2896643 8.250113, 7.275597 8.614067" fill="#FFF3BF" />
+    <path d="M 16 3 L 16 6 C 16 6.5522, 14.2088 7, 12 7 C 9.7912 7, 8 6.5522, 8 6 L 8 3 C 8 2.4478, 9.7912 2, 12 2 C 14.2088 2, 16 2.4478, 16 3" stroke="#0B7285" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 16 3 L 16 6 C 16 6.5522, 14.2088 7, 12 7 C 9.7912 7, 8 6.5522, 8 6 L 8 3 C 8 2.4478, 9.7912 2, 12 2 C 14.2088 2, 16 2.4478, 16 3" fill="#66D9E8" />
+    <!--Icon element '(Grasshopper2.UI.Icon.Vector.EggSpan,Grasshopper2.UI.Icon.Vector.VectorStyle)' failed to create valid SVG.-->
+    <path d="M 16 3 L 16 6 C 16 6.38654, 15.122313 6.7219243, 13.838081 6.8883657 L 13.838081 3.888366 C 15.122313 3.7219243, 16 3.3865402, 16 3" fill="#22B8CF" />
+    <path d="M 9.637799 3.807034 L 9.637799 6.807034 C 8.644833 6.6250563, 8 6.33132, 8 6 L 8 3 C 8 3.3313203, 8.644833 3.6250563, 9.637799 3.807034" fill="#C5F6FA" />
+  </g>
+</svg>

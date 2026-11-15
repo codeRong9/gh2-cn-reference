@@ -1,0 +1,19 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="linear31556dfe70b9" gradientUnits="userSpaceOnUse" x1="9" y1="12" x2="16" y2="12">
+      <stop offset="0%" style="stop-color:#0B7285;" />
+      <stop offset="100%" style="stop-color:#D66000;" />
+    </linearGradient>
+    <linearGradient id="linear6457951775f3" gradientUnits="userSpaceOnUse" x1="9" y1="12" x2="16" y2="12">
+      <stop offset="0%" style="stop-color:#66D9E8;" />
+      <stop offset="100%" style="stop-color:#FCC419;" />
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 15.828427 9.878679 L 20 5.7071066 L 20 6.5 A 1.5 1.5 0 0 0 23 6.5 L 23 1.5 A 1.5 1.5 0 0 0 21.5 0 L 16.5 -1.7763568E-15 A 1.5 1.5 0 0 0 16.5 3 L 17.292892 3 L 13.903806 6.389087 A 5.499998 5.499998 0 0 1 10.014718 8 L 2.5 8 A 1.5 1.5 0 0 0 1 9.5 L 1 14.5 A 1.5 1.5 0 0 0 2.5 16 L 4 16 L 4 18.5 A 0.50000036 0.50000036 0 0 0 4.9160247 18.77735 L 6.767592 16 L 10.014719 16 A 5.500002 5.500002 0 0 1 13.903805 17.61091 L 17.292892 21 L 16.5 21 A 1.5 1.5 0 0 0 16.5 24 L 21.5 24 A 1.5 1.5 0 0 0 23 22.5 L 23 17.5 A 1.5 1.5 0 0 0 20 17.5 L 20 18.292892 L 15.828427 14.121321 A 3.0000012 3.0000012 0 0 1 15.828427 9.878679" fill="url(#linear31556dfe70b9)" />
+    <path d="M 15.121321 9.171573 L 19.292892 5 A 0.9999999 0.9999999 0 0 1 21.000002 5.7071066 L 21 6.5 A 0.5 0.5 0 0 0 22 6.5 L 22 1.5 A 0.5 0.5 0 0 0 21.5 1 L 16.5 1 A 0.5 0.5 0 0 0 16.5 2 L 17.292892 2 A 1.0000002 1.0000002 0 0 1 18 3.7071066 L 14.610912 7.0961943 A 6.500001 6.500001 0 0 1 10.01472 9 L 2.5 9 A 0.5 0.5 0 0 0 2 9.5 L 2 14.5 A 0.5 0.5 0 0 0 2.5 15 L 4.5 15 A 0.5 0.5 0 0 1 5 15.5 L 5 16.848612 L 6.083975 15.22265 A 0.49999934 0.49999934 0 0 1 6.5 15 L 10.014719 15 A 6.499996 6.499996 0 0 1 14.610912 16.903807 L 18 20.292892 A 0.9999999 0.9999999 0 0 1 17.292892 22 L 16.5 22 A 0.5 0.5 0 0 0 16.5 23 L 21.5 23 A 0.5 0.5 0 0 0 22 22.5 L 22 17.5 A 0.5 0.5 0 0 0 21 17.5 L 21 18.292892 A 1.0000005 1.0000005 0 0 1 19.292892 19 L 15.121321 14.828427 A 4.000001 4.000001 0 0 1 15.12132 9.171573" fill="url(#linear6457951775f3)" />
+    <path d="M 3.5 10.5 L 5.5 10.5" stroke="#22B8CF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 7.5 10.5 L 10.5 10.5" stroke="#22B8CF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 3.5 12.5 L 8.5 12.5" stroke="#22B8CF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

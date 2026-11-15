@@ -1,0 +1,10 @@
+{
+  "annotation.area-centroid": { "cn": "面积质心", "summary": "测量对象的面积，并给出面积的质心位置。" },
+  "annotation.description": { "cn": "对象描述", "summary": "为几何生成一段可读的描述文字。" },
+  "annotation.measure-area": { "cn": "面积", "summary": "测量曲面、网格或闭合曲线的面积。" },
+  "annotation.measure-length": { "cn": "长度", "summary": "测量曲线或边界的长度。" },
+  "annotation.measure-volume": { "cn": "体积", "summary": "测量封闭实体的体积。" },
+  "annotation.rhino-object-properties": { "cn": "Rhino 对象属性", "summary": "读取 Rhino 对象自带的属性信息。" },
+  "annotation.spatial-layer": { "cn": "空间图层", "summary": "按空间位置把几何分配到图层。" },
+  "annotation.volume-centroid": { "cn": "体积质心", "summary": "测量实体的体积，并给出体积质心位置。" }
+}

@@ -1,0 +1,19 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 3.5 0.5 L 20.5 0.5 L 20.5 23.5 L 3.5 23.5 L 3.5 0.5" fill="#FFE066" stroke="#E67700" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 11.528245 2.7078252 L 17.03493 9.5251875 A 11.099998 11.099998 0 0 1 19.5 16.500002 L 19.5 22.5 L 4.5 22.5 L 4.5 1.5 L 9 1.5 A 3.2500012 3.2500012 0 0 1 11.528245 2.7078247" fill="#F8F8F8" stroke="#303030" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 11.528245 2.7078252 L 17.03493 9.5251875 A 11.099998 11.099998 0 0 0 12.000002 6 A 3.2500007 3.2500007 0 0 0 11.528246 2.707825" fill="#F8F8F8" stroke="#303030" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 8 20.5 L 6.5 20.5 L 6.5 19" stroke="#000000" stroke-opacity="0.125" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 12 20.5 L 10 20.5" stroke="#000000" stroke-opacity="0.125" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 6.5 15 L 6.5 17" stroke="#000000" stroke-opacity="0.125" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 17.5 12 L 17.5 10" stroke="#000000" stroke-opacity="0.125" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 12 3.5 L 10 3.5" stroke="#000000" stroke-opacity="0.125" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 17.5 20 L 17.5 18" stroke="#000000" stroke-opacity="0.125" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 17.5 16 L 17.5 14" stroke="#000000" stroke-opacity="0.125" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 16 20.5 L 14 20.5" stroke="#000000" stroke-opacity="0.125" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 6.5 11 L 6.5 13" stroke="#000000" stroke-opacity="0.125" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 6.5 7 L 6.5 9" stroke="#000000" stroke-opacity="0.125" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 8 3.5 L 6.5 3.5 L 6.5 5" stroke="#000000" stroke-opacity="0.125" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+  </g>
+</svg>

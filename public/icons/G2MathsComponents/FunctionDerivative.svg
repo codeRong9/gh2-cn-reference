@@ -1,0 +1,18 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 17.5 10.5 L 13.5 10.5 L 15.5 5.5 L 17.5 10.5" stroke="#808080" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 19.5 11.5 L 19.75 11.5 A 1.0416669 1.0416669 0 0 0 20.75 10.75 L 22.5 5.5 L 22.5 5" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 19.5 5 L 19.5 5.5 L 21 9.5" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 17.5 19.5 L 13.5 19.5 L 15.5 14.5 L 17.5 19.5" stroke="#808080" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 19.5 20 L 19.5 19.5 L 22.5 15.5 L 22.5 15" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 19.5 15 L 19.5 15.5 L 22.5 19.5 L 22.5 20" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 13 12.5 L 24 12.5" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 15.238095 6.154762 L 16.818182 10.5" stroke="#808080" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 8 13.5 L 11 13.5" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 8 11.5 L 11 11.5" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 11 3 L 11 6 L 11.5 6 L 12.5 3 L 11 3" fill="#808080" />
+    <path d="M 15.238095 15.154762 L 16.818182 19.5" stroke="#808080" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 5.8453074 10.861292 C 5.5239754 13.1555, 5.320417 15.294183, 4.873234 16.91723 C 4.355179 18.797506, 3.5101588 19.985756, 1.0445827 19.99944 A 0.9999677 0.9999677 0 0 1 0.3931712 18.20559 A 0.9999677 0.9999677 0 0 1 1.9516857 19.307074 C 2.6295812 19.17569, 2.8052115 17.992054, 2.9583333 16.583334 C 3.1609616 14.719153, 3.324174 12.460814, 3.7546623 10 L 2.5 10 L 2.5 9 L 3.162286 9 A 0.99999976 0.99999976 0 0 0 4.1255255 8.268643 C 4.6802588 6.2796116, 5.8003697 4.600046, 9 5 A 0.9999986 0.9999986 0 0 1 9.533926 6.845528 A 0.9999986 0.9999986 0 0 1 8.097099 5.570153 C 7.110506 5.1273236, 6.521198 6.8057265, 6.1347 9 L 7.5 9 L 7.5 10 L 6.8356404 10 A 0.99999934 0.99999934 0 0 0 5.845308 10.861292" fill="#808080" />
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 23 12 A 11 11 0 0 1 1 11.999999 A 11 11 0 0 1 23 12.000002" fill="#FF1493" stroke="#A61E4D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" paint-order="stroke fill" />
+    <path d="M 20 12 A 8 8 0 0 1 4 11.999999 A 8 8 0 0 1 20 12.000001" fill="#F0F0F0" />
+    <path d="M 17 12 A 5 5 0 0 1 7 12 A 5 5 0 0 1 17 12.000001" fill="#FF1493" />
+    <path d="M 14 12 A 2 2 0 0 1 10 12 A 2 2 0 0 1 14 12" fill="#F0F0F0" />
+    <path d="M 11 11 A 1 1 0 0 1 9 11 A 1 1 0 0 1 11 11" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 19 8 A 1 1 0 0 1 17 8 A 1 1 0 0 1 19 8" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 18 20 A 1 1 0 0 1 16 20 A 1 1 0 0 1 18 20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 16 16 A 1 1 0 0 1 14 16 A 1 1 0 0 1 16 16" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 11 4 A 1 1 0 0 1 9 4 A 1 1 0 0 1 11 4" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 8 19 A 1 1 0 0 1 6 19 A 1 1 0 0 1 8 19" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

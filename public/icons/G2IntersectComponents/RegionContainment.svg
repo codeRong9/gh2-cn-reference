@@ -1,0 +1,19 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 2.5 17.5 L 17.5 20.5 L 20.5 5.5 L 5.5 2.5 L 2.5 17.5" fill="#66D9E8" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 22.5 14.5 L 20.5 16.5" stroke="#A61E4D" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 20.5 14.5 L 22.5 16.5" stroke="#A61E4D" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 18.5 1.5 L 20.5 3.5" stroke="#A61E4D" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 20.5 1.5 L 18.5 3.5" stroke="#A61E4D" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 19.5 20.5 L 21.5 22.5" stroke="#A61E4D" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 21.5 20.5 L 19.5 22.5" stroke="#A61E4D" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 3.5 20.5 L 5.5 22.5" stroke="#A61E4D" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 5.5 20.5 L 3.5 22.5" stroke="#A61E4D" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 10.737121 5.07713 L 7.6572776 4.461161 A 1.0000001 1.0000001 0 0 0 6.480581 5.2456255 L 5.7999835 8.648613" stroke="#C5F6FA" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 10.5 8 A 1.5 1.5 0 0 1 7.5 8 A 1.5 1.5 0 0 1 10.5 8" fill="#FAA2C1" stroke="#A61E4D" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 16.5 16 A 1.5 1.5 0 0 1 13.5 16 A 1.5 1.5 0 0 1 16.5 16" fill="#FAA2C1" stroke="#A61E4D" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 8.5 14 A 1.5 1.5 0 0 1 5.5 14 A 1.5 1.5 0 0 1 8.5 14" fill="#FAA2C1" stroke="#A61E4D" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 15.5 10 A 1.5 1.5 0 0 1 12.5 10 A 1.5 1.5 0 0 1 15.5 10" fill="#FAA2C1" stroke="#A61E4D" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

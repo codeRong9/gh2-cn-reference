@@ -1,0 +1,41 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 20.833334 1 L 20.166666 2" stroke="#303030" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 5 20.5 A 1.5 1.5 0 0 1 2 20.5 A 1.5 1.5 0 0 1 5 20.5" fill="#D66000" />
+    <path d="M 7 17.5 A 1.5 1.5 0 0 1 4 17.5 A 1.5 1.5 0 0 1 7 17.5" fill="#D66000" />
+    <path d="M 13 2.5 A 1.5 1.5 0 0 1 10 2.4999998 A 1.5 1.5 0 0 1 13 2.5000002" fill="#D66000" />
+    <path d="M 17 2.5 A 1.5 1.5 0 0 1 14 2.4999998 A 1.5 1.5 0 0 1 17 2.5000002" fill="#D66000" />
+    <path d="M 15 5.5 A 1.5 1.5 0 0 1 12 5.5 A 1.5 1.5 0 0 1 15 5.5000005" fill="#D66000" />
+    <path d="M 13 8.5 A 1.5 1.5 0 0 1 10 8.5 A 1.5 1.5 0 0 1 13 8.5" fill="#D66000" />
+    <path d="M 17 15.5 A 1.5 1.5 0 0 1 14 15.5 A 1.5 1.5 0 0 1 17 15.5" fill="#0B7285" />
+    <path d="M 5 2.5 A 1.5 1.5 0 0 1 2 2.4999998 A 1.5 1.5 0 0 1 5 2.5000002" fill="#D66000" />
+    <path d="M 5 8.5 A 1.5 1.5 0 0 1 2 8.5 A 1.5 1.5 0 0 1 5 8.5" fill="#D66000" />
+    <path d="M 9 8.5 A 1.5 1.5 0 0 1 6 8.5 A 1.5 1.5 0 0 1 9 8.5" fill="#D66000" />
+    <path d="M 7 5.5 A 1.5 1.5 0 0 1 4 5.5 A 1.5 1.5 0 0 1 7 5.5000005" fill="#D66000" />
+    <path d="M 11 5.5 A 1.5 1.5 0 0 1 8 5.5 A 1.5 1.5 0 0 1 11 5.5000005" fill="#D66000" />
+    <path d="M 5 14.5 A 1.5 1.5 0 0 1 2 14.5 A 1.5 1.5 0 0 1 5 14.5" fill="#D66000" />
+    <path d="M 9 14.5 A 1.5 1.5 0 0 1 6 14.5 A 1.5 1.5 0 0 1 9 14.5" fill="#D66000" />
+    <path d="M 9 2.5 A 1.5 1.5 0 0 1 6 2.4999998 A 1.5 1.5 0 0 1 9 2.5000002" fill="#D66000" />
+    <path d="M 19 12.5 A 1.5 1.5 0 0 1 16 12.5 A 1.5 1.5 0 0 1 19 12.5" fill="#0B7285" />
+    <path d="M 23 12.5 A 1.5 1.5 0 0 1 20 12.5 A 1.5 1.5 0 0 1 23 12.5" fill="#0B7285" />
+    <path d="M 21 15.5 A 1.5 1.5 0 0 1 18 15.5 A 1.5 1.5 0 0 1 21 15.5" fill="#0B7285" />
+    <path d="M 6.8333335 22 L 6.1666665 23" stroke="#303030" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 18.833334 4 L 18.166666 5" stroke="#303030" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 16.833334 7 L 16.166666 8" stroke="#303030" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 14.833333 10 L 14.166667 11" stroke="#303030" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 12.833333 13 L 12.166667 14" stroke="#303030" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 10.833333 16 L 10.166667 17" stroke="#303030" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 8.833333 19 L 8.166667 20" stroke="#303030" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 13 21.5 A 1.5 1.5 0 0 1 10 21.5 A 1.5 1.5 0 0 1 13 21.5" fill="#0B7285" />
+    <path d="M 21 21.5 A 1.5 1.5 0 0 1 18 21.5 A 1.5 1.5 0 0 1 21 21.5" fill="#0B7285" />
+    <path d="M 23 18.5 A 1.5 1.5 0 0 1 20 18.5 A 1.5 1.5 0 0 1 23 18.5" fill="#0B7285" />
+    <path d="M 19 18.5 A 1.5 1.5 0 0 1 16 18.5 A 1.5 1.5 0 0 1 19 18.5" fill="#0B7285" />
+    <path d="M 15 18.5 A 1.5 1.5 0 0 1 12 18.5 A 1.5 1.5 0 0 1 15 18.5" fill="#0B7285" />
+    <path d="M 17 21.5 A 1.5 1.5 0 0 1 14 21.5 A 1.5 1.5 0 0 1 17 21.5" fill="#0B7285" />
+    <path d="M 21 9.5 A 1.5 1.5 0 0 1 18 9.5 A 1.5 1.5 0 0 1 21 9.5" fill="#0B7285" />
+    <path d="M 23 6.5 A 1.5 1.5 0 0 1 20 6.5 A 1.5 1.5 0 0 1 23 6.5000005" fill="#0B7285" />
+    <path d="M 7 11.5 A 1.5 1.5 0 0 1 4 11.5 A 1.5 1.5 0 0 1 7 11.5" fill="#D66000" />
+    <path d="M 11 11.5 A 1.5 1.5 0 0 1 8 11.5 A 1.5 1.5 0 0 1 11 11.5" fill="#D66000" />
+  </g>
+</svg>

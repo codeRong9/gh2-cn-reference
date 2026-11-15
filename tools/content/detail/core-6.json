@@ -1,0 +1,415 @@
+{
+  "maths.subtraction": {
+    "concept": "做减法。两个数相减，或一个大数减一列数；接列表时按数据匹配规则逐项相减。",
+    "steps": [
+      "A 端接被减数。",
+      "B 端接减数，可以是单个值也可以是一列。",
+      "输出结果，负数照常保留。"
+    ],
+    "scenes": [
+      {
+        "title": "算净高",
+        "body": "层高减去梁高，得到梁下净空，用于检查是否碰头。",
+        "wiring": "层高 − 梁高 → 净高"
+      }
+    ],
+    "pitfalls": [
+      "A、B 长短不一致时按「最短对齐」或「重复最后一项」匹配，结果数量取决于匹配规则。",
+      "想算绝对值差时别忘了接 Absolute。"
+    ],
+    "related": ["maths.addition", "maths.multiplication", "maths.absolute-function"],
+    "tip": "减法最容易被数据匹配坑，先 Flatten 再算，心里更有底。"
+  },
+  "maths.division": {
+    "concept": "做除法，输出 A 除以 B 的商。",
+    "steps": [
+      "A 端接被除数。",
+      "B 端接除数。",
+      "输出商；除数为 0 时结果无效。"
+    ],
+    "scenes": [
+      {
+        "title": "等分尺寸",
+        "body": "总长除以格数，得到每一格的宽度。",
+        "wiring": "总长 ÷ 格数 → 单格宽"
+      }
+    ],
+    "pitfalls": [
+      "除数为 0 会得到无效值且不报错，下游会一路带着空值跑下去。",
+      "整数相除结果仍是浮点，需要整格数时再 Truncate。"
+    ],
+    "related": ["maths.multiplication", "maths.modulus", "maths.truncate"],
+    "tip": "做除法前先判断除数是否为零，是数值图里最常见的隐形 Bug。"
+  },
+  "maths.modulus": {
+    "concept": "求余数。A 除以 B 剩下的部分，用来判断「能不能整除」或做循环取值。",
+    "steps": [
+      "A 端接被除数。",
+      "B 端接除数。",
+      "输出余数，范围在 0 到 B 之间。"
+    ],
+    "scenes": [
+      {
+        "title": "隔一个取一个",
+        "body": "用序号对 2 取余，余数为 0 的一组、为 1 的一组，正好交错分开。",
+        "wiring": "Series → Modulus(2) → Dispatch"
+      }
+    ],
+    "pitfalls": [
+      "负数的余数符号跟随被除数，跨零取值时结果可能出乎意料。",
+      "用浮点数取余几乎得不到 0，判断整除请用整数序列。"
+    ],
+    "related": ["maths.division", "maths.truncate", "data.cull-by-pattern"],
+    "tip": "所有周期性分组（隔几取一、网格行列）本质都是取余。"
+  },
+  "maths.square-root": {
+    "concept": "开平方。给一个非负数，返回它的平方根。",
+    "steps": [
+      "Number 端接非负数。",
+      "输出平方根。"
+    ],
+    "scenes": [
+      {
+        "title": "由面积反推边长",
+        "body": "正方形面积开方得到边长，用于快速校验尺寸。",
+        "wiring": "面积 → Square Root → 边长"
+      }
+    ],
+    "pitfalls": [
+      "负数输入会得到无效值，几何里常见于距离计算方向搞反。",
+      "想算两点距离不要手动开方，直接用 Distance 组件更稳。"
+    ],
+    "related": ["maths.absolute-function", "maths.logarithm-function", "vector.vector-from2-points"],
+    "tip": "开方只用于标量换算，几何距离交给专门的几何组件。"
+  },
+  "maths.logarithm-function": {
+    "concept": "求对数。默认以 e 或 10 为底，可自定义底数，把乘性关系转成加性关系。",
+    "steps": [
+      "Value 端接正数。",
+      "设置底数（e、10 或自定义）。",
+      "输出对数值。"
+    ],
+    "scenes": [
+      {
+        "title": "压缩数据范围",
+        "body": "把跨度极大的数值取对数后再映射到色阶，避免少数极值吃掉全部颜色。",
+        "wiring": "数值 → Logarithm → Remap → 渐变"
+      }
+    ],
+    "pitfalls": [
+      "0 与负数没有实数对数，输入前要 Limit 到正区间。",
+      "底数不同结果差一个常数倍，比较前确认底数一致。"
+    ],
+    "related": ["maths.evaluate-function", "maths.remap-number", "maths.smooth-numbers"],
+    "tip": "做数据可视化时，先看分布再决定要不要取对数。"
+  },
+  "maths.absolute-function": {
+    "concept": "取绝对值，把负数翻成正数，只保留大小不保留方向。",
+    "steps": [
+      "Number 端接任意数值。",
+      "输出非负结果。"
+    ],
+    "scenes": [
+      {
+        "title": "偏差取正",
+        "body": "实测值与设计值相减后取绝对值，得到无方向的偏差量。",
+        "wiring": "实测 − 设计 → Absolute → 偏差"
+      }
+    ],
+    "pitfalls": [
+      "取绝对值会丢掉方向信息，需要区分正负时不要提前取。",
+      "对向量用错组件只会处理分量，要长度请用向量长度。"
+    ],
+    "related": ["maths.positive-function", "maths.negative-function", "maths.subtraction"],
+    "tip": "排序、比较、求最大偏差之前，几乎都要先取一次绝对值。"
+  },
+  "maths.equality": {
+    "concept": "判断两个数是否相等，输出真或假；浮点数比较有容差概念。",
+    "steps": [
+      "A、B 两端接要比较的数值。",
+      "输出布尔结果，可接 Dispatch 分流。"
+    ],
+    "scenes": [
+      {
+        "title": "挑出标准层",
+        "body": "把层高正好等于 3000 的楼层挑出来单独成组。",
+        "wiring": "层高列表 → Equality(3000) → Dispatch"
+      }
+    ],
+    "pitfalls": [
+      "浮点计算得到的 0.1+0.2 并不等于 0.3，直接比较会失败。",
+      "要做区间判断请用 Contains Number 或区间组件。"
+    ],
+    "related": ["maths.contains-number", "maths.number-statistics", "data.dispatch"],
+    "tip": "浮点数永远比「差多少」而不是比「等不等」。"
+  },
+  "maths.sine-function": {
+    "concept": "正弦函数。输入角度（或弧度），输出 -1 到 1 之间的值，是波浪与周期造型的基础。",
+    "steps": [
+      "Angle 端接角度值，注意单位是度还是弧度。",
+      "输出正弦值。"
+    ],
+    "scenes": [
+      {
+        "title": "做波浪表皮",
+        "body": "用序号乘以系数后取正弦，得到起伏的点高，形成波浪立面。",
+        "wiring": "Series → Sine → 点的 Z 坐标"
+      }
+    ],
+    "pitfalls": [
+      "角度单位不统一会让波形完全变形，度与弧度务必对齐。",
+      "周期由系数控制，忘记乘 2π 会得到不完整的波。"
+    ],
+    "related": ["maths.cosine-function", "maths.trig-component", "maths.smooth-step-function"],
+    "tip": "任何周期造型，先写出「输入 → 角度」的映射，再套三角函数。"
+  },
+  "maths.number-sequence": {
+    "concept": "生成等差数列（Series）：给起点、步长与数量，得到一串连续编号。",
+    "steps": [
+      "Start 端给起始值。",
+      "Step 端给步长（默认 1）。",
+      "Count 端给数量，输出一列数字。"
+    ],
+    "scenes": [
+      {
+        "title": "批量编号",
+        "body": "给一排构件生成 0、1、2…的序号，用于命名与交错分组。",
+        "wiring": "Series → Format Text → 名称"
+      }
+    ],
+    "pitfalls": [
+      "Count 为 0 时没有任何输出，下游会静默地空跑。",
+      "数量与要匹配的几何数量不一致时，数据匹配会自动循环补齐，容易掩盖错误。"
+    ],
+    "related": ["maths.range-from-steps", "maths.range-from-limits", "maths.number-statistics"],
+    "tip": "Series 管数量，Range 管区间，两者别混用。"
+  },
+  "maths.range-from-steps": {
+    "concept": "生成范围（Range）：给起止值与步长，得到覆盖这个区间的一列数字。数量由区间与步长算出来。",
+    "steps": [
+      "Domain 端接区间。",
+      "Steps 端给步数，输出等分的节点值。"
+    ],
+    "scenes": [
+      {
+        "title": "沿长度等分定位",
+        "body": "把 0 到 10 米等分 20 段，得到 21 个定位点参数。",
+        "wiring": "Range(0-10, 20) → 曲线上的参数"
+      }
+    ],
+    "pitfalls": [
+      "Steps 是段数不是点数，节点数永远比段数多 1。",
+      "步长为小数时首尾值仍精确落在区间端点，不必担心累积误差。"
+    ],
+    "related": ["maths.range-from-limits", "maths.number-sequence", "maths.divide-interval"],
+    "tip": "「几个点」和「几段」差一个，画网格前先数清楚。"
+  },
+  "maths.mean": {
+    "concept": "求一列数字的平均值。",
+    "steps": [
+      "Numbers 端接数值列表。",
+      "输出平均值。"
+    ],
+    "scenes": [
+      {
+        "title": "层高均值",
+        "body": "把各层高度取平均，快速得到项目的代表性层高。",
+        "wiring": "层高列表 → Mean"
+      }
+    ],
+    "pitfalls": [
+      "树结构会按分支各自求均值，跨分支不合并。",
+      "极端值会明显拉偏平均值，需要稳健统计时改用中位数。"
+    ],
+    "related": ["maths.number-statistics", "maths.quartiles", "maths.weighted-mean"],
+    "tip": "先看分布再报平均值，否则容易被极值误导。"
+  },
+  "maths.number-statistics": {
+    "concept": "一次给出一列数字的整体统计：数量、总和、均值、极值、标准差等。",
+    "steps": [
+      "Numbers 端接数值列表。",
+      "从输出端口各取所需指标。"
+    ],
+    "scenes": [
+      {
+        "title": "尺寸检查",
+        "body": "一次性拿到开间尺寸的最小值、最大值与标准差，判断离散程度。",
+        "wiring": "尺寸列表 → Number Statistics"
+      }
+    ],
+    "pitfalls": [
+      "空列表会输出无效值，先判断 List Length。",
+      "统计按分支独立计算，汇总要先去树结构。"
+    ],
+    "related": ["maths.mean", "maths.quartiles", "maths.remove-outliers"],
+    "tip": "拿它当「数据体检」的第一站，比手算快得多。"
+  },
+  "maths.random-numbers": {
+    "concept": "生成随机数。给定区间与数量，得到一列随机值。",
+    "steps": [
+      "Domain 端给取值范围。",
+      "Count 端给数量。",
+      "接随机引擎（Seed）可复现同一批随机数。"
+    ],
+    "scenes": [
+      {
+        "title": "随机开窗位置",
+        "body": "在立面区间内随机取数，生成位置略有差异的窗洞。",
+        "wiring": "Range → Random Numbers → 点"
+      }
+    ],
+    "pitfalls": [
+      "不固定 Seed 每次重算结果都变，方案对比时无法复现。",
+      "随机数会重复，需要不重复抽样得另行处理。"
+    ],
+    "related": ["maths.random-engine", "maths.random-integers", "maths.normal-distribution"],
+    "tip": "做方案探索时把 Seed 接到滑块上，扫一遍就是一个族。"
+  },
+  "maths.normal-distribution": {
+    "concept": "正态分布。给定均值与标准差，生成符合钟形分布的随机样本。",
+    "steps": [
+      "设置均值（中心位置）。",
+      "设置标准差（离散程度）。",
+      "给样本数量，输出随机值列表。"
+    ],
+    "scenes": [
+      {
+        "title": "自然的高度变化",
+        "body": "让一排柱子的高度围绕基准值上下浮动，看起来更自然。",
+        "wiring": "Normal Distribution → 柱高"
+      }
+    ],
+    "pitfalls": [
+      "标准差设太大会出现负值或超界值，需要 Limit 或 Clamp 兜底。",
+      "样本量很小时分布看起来并不「正态」，别急着调参数。"
+    ],
+    "related": ["maths.random-numbers", "maths.remove-outliers", "maths.distribution-statistics"],
+    "tip": "要自然的随机感，用正态；要均匀铺开，用均匀随机。"
+  },
+  "maths.evaluate-expression": {
+    "concept": "解析并计算一个数学表达式字符串，支持变量代入。相当于图里的计算器。",
+    "steps": [
+      "Expression 端写公式，例如「2*pi*r」。",
+      "把变量名对应的数值接入变量端口。",
+      "输出计算结果。"
+    ],
+    "scenes": [
+      {
+        "title": "随手改公式",
+        "body": "把系数抽成变量接滑块，公式不用重连电池就能试算。",
+        "wiring": "滑块 → Evaluate Expression"
+      }
+    ],
+    "pitfalls": [
+      "变量名拼错会得到无效值，且不一定会弹出明显报错。",
+      "表达式里用错运算符（例如把 ^ 当乘方）结果会悄悄出错。"
+    ],
+    "related": ["maths.expression-component", "maths.evaluate-function", "maths.evaluate-integral"],
+    "tip": "公式只有一两个变量时用它，逻辑复杂了还是拆成标准电池更清楚。"
+  },
+  "maths.expression-component": {
+    "concept": "表达式电池：写一段公式，把输入接成变量，输出结果。",
+    "steps": [
+      "双击电池输入公式。",
+      "电池的输入端口随公式里的变量自动增减。",
+      "接上数值即可得到输出。"
+    ],
+    "scenes": [
+      {
+        "title": "批量换算",
+        "body": "用一条公式对整列数据做单位换算或经验公式计算。",
+        "wiring": "数据列表 → Expression → 结果"
+      }
+    ],
+    "pitfalls": [
+      "公式改了端口名，原有连线会断，重连前先想清楚变量命名。",
+      "它按数据匹配规则逐项计算，别指望它自动汇总。"
+    ],
+    "related": ["maths.evaluate-expression", "maths.evaluate-function", "text.format-text"],
+    "tip": "变量命名用有意义的短词（h、w），比 x、y 好维护。"
+  },
+  "maths.evaluate-function": {
+    "concept": "给一个函数和一个参数，算出函数在该点的值。函数是数据，可以像几何一样传来传去。",
+    "steps": [
+      "Function 端接函数对象（线性、正弦、噪声等）。",
+      "Parameter 端接参数值。",
+      "输出该点的函数值。"
+    ],
+    "scenes": [
+      {
+        "title": "用噪声做起伏",
+        "body": "把噪声函数在一个区间上取样，得到连续起伏的曲面高度。",
+        "wiring": "Noise Function → Evaluate Function → 高度"
+      }
+    ],
+    "pitfalls": [
+      "函数有定义域，超出范围会得到无效值。",
+      "不同函数的参数含义不同（角度、时间、位置），先看说明再接线。"
+    ],
+    "related": ["maths.noise-function", "maths.evaluate-derivative", "maths.evaluate-integral"],
+    "tip": "把函数当数据传，能拼出非常灵活的造型系统。"
+  },
+  "maths.noise-function": {
+    "concept": "生成平滑的随机噪声函数。看起来随机，但相邻位置连续变化，是自然纹理的常用来源。",
+    "steps": [
+      "设置频率与振幅等参数。",
+      "接到 Evaluate Function 上取样。",
+      "把结果用作高度、位移或颜色。"
+    ],
+    "scenes": [
+      {
+        "title": "自然地形",
+        "body": "对一片点阵按坐标取噪声值，得到起伏而不突兀的地形。",
+        "wiring": "点阵 → Noise → 抬高 Z"
+      }
+    ],
+    "pitfalls": [
+      "频率过高会变成满屏噪点，失去「地形感」。",
+      "噪声是确定性的：同样的坐标永远同样结果，不是每次刷新都变。"
+    ],
+    "related": ["maths.simple-noise-function", "maths.evaluate-function", "maths.random-numbers"],
+    "tip": "噪声叠加两三个倍频（分形）比单层更容易看着自然。"
+  },
+  "maths.find-interval": {
+    "concept": "在一列区间里找出包含指定数值的那个区间，输出它的索引与区间本身。",
+    "steps": [
+      "Domains 端接区间列表。",
+      "Number 端接要查询的数值。",
+      "输出命中的区间索引与区间。"
+    ],
+    "scenes": [
+      {
+        "title": "按层分区",
+        "body": "判断某个标高落在哪一层，据此决定归属楼层。",
+        "wiring": "楼层区间 → Find Interval → Dispatch"
+      }
+    ],
+    "pitfalls": [
+      "区间端点归属（开闭）会影响恰好落在边界上的值。",
+      "区间之间有缝隙时可能找不到命中项，输出为空。"
+    ],
+    "related": ["maths.contains-number", "maths.classify-interval", "maths.divide-interval"],
+    "tip": "分层、分段、分档这类问题，先建好区间列表再查，逻辑最清楚。"
+  },
+  "maths.divide-interval": {
+    "concept": "把一个区间均分成若干段，输出一列子区间。",
+    "steps": [
+      "Domain 端接原区间。",
+      "Count 端给段数。",
+      "输出按顺序排列的子区间列表。"
+    ],
+    "scenes": [
+      {
+        "title": "幕墙分格区间",
+        "body": "把整段长度区间均分，每段区间再去生成一块面板。",
+        "wiring": "Interval → Divide Interval(6) → 逐段建面"
+      }
+    ],
+    "pitfalls": [
+      "段数决定区间个数，想按尺寸分要先算出段数。",
+      "子区间首尾相接，取点时注意相邻边界会被用到两次。"
+    ],
+    "related": ["maths.range-from-steps", "maths.dissect-interval", "maths.divide-intervals"],
+    "tip": "区间先行、几何后建，改分格数量时整条链路自动跟着变。"
+  }
+}

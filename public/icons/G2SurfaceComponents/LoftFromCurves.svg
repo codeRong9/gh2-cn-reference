@@ -1,0 +1,23 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="linearc9043688f037" gradientUnits="userSpaceOnUse" x1="8" y1="10" x2="17.5" y2="19.5">
+      <stop offset="0%" style="stop-color:#FFF3BF;" />
+      <stop offset="100%" style="stop-color:#FCC419;" />
+    </linearGradient>
+    <linearGradient id="linearbb714120b074" gradientUnits="userSpaceOnUse" x1="9" y1="9" x2="5.5" y2="5.5">
+      <stop offset="0%" style="stop-color:#FFF3BF;" />
+      <stop offset="100%" style="stop-color:#FFE066;" />
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 14.5 22.5 C 9.5 21.5, 10 16.75, 8.5 15 C 7 13.25, 3.5 14.5, 1.5 9.5 L 9.5 1.5 C 11.5 6.5, 15 5.25, 16.5 7 C 18 8.75, 17.5 13.5, 22.5 14.5 L 14.5 22.5" fill="url(#linearc9043688f037)" />
+    <path d="M 12.732559 5.2674413 A 6.4693108 6.4693108 0 0 1 9.500001 1.5000002 L 1.5 9.5 A 6.469323 6.469323 0 0 0 4.732559 13.267441 L 12.732559 5.2674403" fill="url(#linearbb714120b074)" />
+    <path d="M 9.5 1.5 C 11.5 6.5, 15 5.25, 16.5 7 C 18 8.75, 17.5 13.5, 22.5 14.5" stroke="#E67700" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 14.5 22.5 C 9.5 21.5, 10 16.75, 8.5 15 C 7 13.25, 3.5 14.5, 1.5 9.5" stroke="#E67700" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 5.4873614 13.584034 L 13.487362 5.5840335" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 9.253698 16.447416 L 17.253698 8.447417" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 11.292927 20.781317 L 19.292927 12.781317" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 1.5 9.5 L 9.5 1.5" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 22.5 14.5 L 14.5 22.5" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

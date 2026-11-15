@@ -1,0 +1,142 @@
+[
+ {
+  "lib": "maths",
+  "classes": 247,
+  "components": 226,
+  "abstractSkipped": 4,
+  "nomenMissing": 0,
+  "portsMissing": 0,
+  "inputs": 451,
+  "outputs": 328
+ },
+ {
+  "lib": "data",
+  "classes": 123,
+  "components": 119,
+  "abstractSkipped": 0,
+  "nomenMissing": 0,
+  "portsMissing": 2,
+  "inputs": 250,
+  "outputs": 164
+ },
+ {
+  "lib": "vector",
+  "classes": 223,
+  "components": 188,
+  "abstractSkipped": 2,
+  "nomenMissing": 0,
+  "portsMissing": 0,
+  "inputs": 527,
+  "outputs": 295
+ },
+ {
+  "lib": "curve",
+  "classes": 238,
+  "components": 230,
+  "abstractSkipped": 0,
+  "nomenMissing": 0,
+  "portsMissing": 0,
+  "inputs": 665,
+  "outputs": 427
+ },
+ {
+  "lib": "surface",
+  "classes": 188,
+  "components": 177,
+  "abstractSkipped": 0,
+  "nomenMissing": 0,
+  "portsMissing": 0,
+  "inputs": 536,
+  "outputs": 264
+ },
+ {
+  "lib": "mesh",
+  "classes": 122,
+  "components": 116,
+  "abstractSkipped": 0,
+  "nomenMissing": 0,
+  "portsMissing": 0,
+  "inputs": 313,
+  "outputs": 231
+ },
+ {
+  "lib": "transform",
+  "classes": 94,
+  "components": 92,
+  "abstractSkipped": 0,
+  "nomenMissing": 0,
+  "portsMissing": 0,
+  "inputs": 290,
+  "outputs": 171
+ },
+ {
+  "lib": "intersect",
+  "classes": 93,
+  "components": 83,
+  "abstractSkipped": 0,
+  "nomenMissing": 0,
+  "portsMissing": 0,
+  "inputs": 196,
+  "outputs": 173
+ },
+ {
+  "lib": "display",
+  "classes": 115,
+  "components": 96,
+  "abstractSkipped": 0,
+  "nomenMissing": 0,
+  "portsMissing": 0,
+  "inputs": 271,
+  "outputs": 147
+ },
+ {
+  "lib": "text",
+  "classes": 40,
+  "components": 38,
+  "abstractSkipped": 0,
+  "nomenMissing": 0,
+  "portsMissing": 0,
+  "inputs": 76,
+  "outputs": 51
+ },
+ {
+  "lib": "meta",
+  "classes": 36,
+  "components": 32,
+  "abstractSkipped": 0,
+  "nomenMissing": 0,
+  "portsMissing": 0,
+  "inputs": 55,
+  "outputs": 46
+ },
+ {
+  "lib": "annotation",
+  "classes": 10,
+  "components": 8,
+  "abstractSkipped": 0,
+  "nomenMissing": 0,
+  "portsMissing": 0,
+  "inputs": 11,
+  "outputs": 18
+ },
+ {
+  "lib": "script",
+  "classes": 76,
+  "components": 9,
+  "abstractSkipped": 2,
+  "nomenMissing": 4,
+  "portsMissing": 9,
+  "inputs": 0,
+  "outputs": 0
+ },
+ {
+  "lib": "migration",
+  "classes": 143,
+  "components": 88,
+  "abstractSkipped": 1,
+  "nomenMissing": 72,
+  "portsMissing": 72,
+  "inputs": 29,
+  "outputs": 22
+ }
+]

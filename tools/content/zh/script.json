@@ -1,0 +1,7 @@
+{
+  "script.c-sharp-component": { "cn": "C# 脚本", "summary": "用 C# 写自定义逻辑，可自由定义输入输出端口。" },
+  "script.iron-python2-component": { "cn": "IronPython 2 脚本", "summary": "用 IronPython 2 写脚本（旧版解释器，兼容老文件）。" },
+  "script.python3-component": { "cn": "Python 3 脚本", "summary": "用 Python 3 写自定义逻辑，可自由定义输入输出端口。" },
+  "script.script-component": { "cn": "运行脚本", "summary": "运行一个脚本对象，执行其中的自定义逻辑。" },
+  "script.base-script-component": { "cn": "脚本基类", "summary": "脚本组件的公共基础类型，通常由具体脚本组件继承使用。" }
+}

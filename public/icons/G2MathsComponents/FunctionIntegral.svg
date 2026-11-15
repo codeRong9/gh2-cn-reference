@@ -1,0 +1,13 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 12.5 0 L 12.5 6.5 L 14.5 6.5 A 1 1 0 0 0 15.5 5.5 L 15.5 3.5 A 1 1 0 0 0 14.5 2.5 L 12.5 2.5" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 8.5 22.5 A 1 1 0 0 1 7.5 21.5 L 7.5 19.5 A 1 1 0 0 1 8.5 18.5 L 9 18.5 A 1.5 1.5 0 0 1 10.5 20 L 10.5 21 A 1.5 1.5 0 0 1 9 22.5 L 8.5 22.5" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 10.5 23 L 10.5 18" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 2.0445828 23 A 0.9999665 0.9999665 0 0 1 1.3931711 21.206154 A 0.9999665 0.9999665 0 0 1 2.951685 22.307634 C 3.6295812 22.17625, 3.8052115 20.992615, 3.9583333 19.028008 C 4.1609616 16.428213, 4.324174 12.460814, 5.068282 6.874204 C 5.6802588 2.2796118, 6.8003697 0.6000462, 10 1 A 1.0000007 1.0000007 0 0 1 10.533926 2.8455331 A 1.0000007 1.0000007 0 0 1 9.097098 1.570153 C 8.110506 1.1273237, 7.521198 2.8057263, 7.0368724 7.8323455 C 6.5239754 13.1555, 6.320417 16.684307, 5.873234 19.053452 C 5.355179 21.798067, 4.5101585 22.986317, 2.0445828 23" fill="#808080" />
+    <path d="M 17 17.5 L 15.5 17.5 L 15.5 9.5 L 17 9.5" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 18.5 17 L 18.5 11.5 A 1 1 0 0 1 19.5 10.5 L 21 10.5" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 18.5 13.5 L 20 13.5" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 22 17.5 L 23.5 17.5 L 23.5 9.5 L 22 9.5" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+  </g>
+</svg>

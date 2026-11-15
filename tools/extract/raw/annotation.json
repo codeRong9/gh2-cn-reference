@@ -1,0 +1,450 @@
+[
+ {
+  "lib": "annotation",
+  "assembly": "G2AnnotationComponents",
+  "namespace": "",
+  "typeName": "AreaCentroid",
+  "fullTypeName": "AreaCentroid",
+  "guid": "00000000-32cf-47e5-881e-01eb9251b548",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Area Centroid",
+   "info": "Measure the area properties of an object, or a collection of objects.",
+   "chapter": "Data",
+   "section": "Metric",
+   "slot": 0,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Shape",
+    "nick": "Sh",
+    "info": "Shapes for area measurement.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Area",
+    "nick": "Ar",
+    "info": "Area of shapes.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Centroid",
+    "nick": "Ct",
+    "info": "Area centroid point of shapes.",
+    "type": "Point",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Principal Axes",
+    "nick": "Ax",
+    "info": "Principal axes of inertia (max=pink, mid=lime, min=blue).",
+    "type": "Vector",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Principal Moments",
+    "nick": "Mo",
+    "info": "Principal moments of inertia.",
+    "type": "Number",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "annotation",
+  "assembly": "G2AnnotationComponents",
+  "namespace": "",
+  "typeName": "Description",
+  "fullTypeName": "Description",
+  "guid": "00000000-1bcc-4565-88ee-50e9550037a6",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Description",
+   "info": "Create the primary and secondary descriptions of a value.",
+   "chapter": "Data",
+   "section": "Metric",
+   "slot": 0,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Value",
+    "nick": "Vl",
+    "info": "Value to describe.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Primary",
+    "nick": "D1",
+    "info": "Primary description.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Secondary",
+    "nick": "D2",
+    "info": "Secondary, or alternate, description.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "annotation",
+  "assembly": "G2AnnotationComponents",
+  "namespace": "",
+  "typeName": "MeasureArea",
+  "fullTypeName": "MeasureArea",
+  "guid": "00000000-c01e-43e0-8408-5233a9ea9a0c",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Area",
+   "info": "Measure the area of an object (e.g. surface, number or region).",
+   "chapter": "Data",
+   "section": "Metric",
+   "slot": 0,
+   "rank": 173,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Shape",
+    "nick": "Sh",
+    "info": "Shape for area measurement.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Area",
+    "nick": "A",
+    "info": "Area of shape.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "annotation",
+  "assembly": "G2AnnotationComponents",
+  "namespace": "",
+  "typeName": "MeasureLength",
+  "fullTypeName": "MeasureLength",
+  "guid": "00000000-a938-44e4-94e4-c3a24910b005",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Length",
+   "info": "Measure the length of an object (e.g. curve, text or region).",
+   "chapter": "Curve",
+   "section": "Analysis",
+   "slot": 0,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Value",
+    "nick": "Vl",
+    "info": "Value for length measurement.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Length",
+    "nick": "L",
+    "info": "Length of value.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "annotation",
+  "assembly": "G2AnnotationComponents",
+  "namespace": "",
+  "typeName": "MeasureVolume",
+  "fullTypeName": "MeasureVolume",
+  "guid": "00000000-ac8d-48de-a12f-30d117a1a8ab",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Volume",
+   "info": "Measure the volume of an object (e.g. shape or transformation).",
+   "chapter": "Data",
+   "section": "Metric",
+   "slot": 0,
+   "rank": 173,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Shape",
+    "nick": "Sh",
+    "info": "Shape for volume measurement.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Volume",
+    "nick": "V",
+    "info": "Volume of shape.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "annotation",
+  "assembly": "G2AnnotationComponents",
+  "namespace": "",
+  "typeName": "RhinoObjectProperties",
+  "fullTypeName": "RhinoObjectProperties",
+  "guid": "00000000-ab66-45d5-b7e9-ec51710b4d18",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Rhino Object Properties",
+   "info": "Retrieve a property of the Rhino object referenced by a Grasshopper value.",
+   "chapter": "Data",
+   "section": "Metric",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Object",
+    "nick": "Ob",
+    "info": "Object referenced from the Rhino document.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Property",
+    "nick": "Pr",
+    "info": "Object property to retrieve.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Value",
+    "nick": "Vl",
+    "info": "Harvested property value.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "annotation",
+  "assembly": "G2AnnotationComponents",
+  "namespace": "",
+  "typeName": "SpatialLayer",
+  "fullTypeName": "SpatialLayer",
+  "guid": "00000000-8e69-478a-8bec-00dea54c9506",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Spatial Layer",
+   "info": "Measure the overlaps between a given shape and a collection of spatial layers.",
+   "chapter": "Data",
+   "section": "Metric",
+   "slot": 0,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Shape",
+    "nick": "Sh",
+    "info": "Shape whose bounding box to analyse.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Layers",
+    "nick": "Ly",
+    "info": "Lower and upper elevation of each layer along the axis direction.",
+    "type": "Interval",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Axis",
+    "nick": "Ax",
+    "info": "Origin and direction of layer stack.",
+    "type": "Line",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "All Layers",
+    "nick": "Al",
+    "info": "Indices of all layers overlapping with the given shape.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Main Layer",
+    "nick": "Ml",
+    "info": "Index of layer with the largest overlap.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Nearest Layer",
+    "nick": "Nl",
+    "info": "Index of layer closest to the bounding box centre.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "annotation",
+  "assembly": "G2AnnotationComponents",
+  "namespace": "",
+  "typeName": "VolumeCentroid",
+  "fullTypeName": "VolumeCentroid",
+  "guid": "00000000-6a1e-41e2-8123-49f7a41e205c",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Volume Centroid",
+   "info": "Measure the volume properties of an object or a collection of objects.",
+   "chapter": "Data",
+   "section": "Metric",
+   "slot": 0,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Shape",
+    "nick": "Sh",
+    "info": "Meshes or surfaces for volume measurement.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Volume",
+    "nick": "Vo",
+    "info": "Volume of shapes.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Centroid",
+    "nick": "Ct",
+    "info": "Volume centroid point of shapes.",
+    "type": "Point",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Mass",
+    "nick": "Ms",
+    "info": "Physical",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Principal Axes",
+    "nick": "Ax",
+    "info": "Principal axes of inertia (max=pink, mid=lime, min=blue).",
+    "type": "Vector",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Principal Moments",
+    "nick": "Mo",
+    "info": "Principal moments of inertia.",
+    "type": "Number",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ }
+]

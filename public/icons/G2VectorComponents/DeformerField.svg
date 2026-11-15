@@ -1,0 +1,25 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 8 18.5 L 10.5 18.5" stroke="#E67700" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 9 20 L 7.5 18.5 L 9 17" stroke="#E67700" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 20 21.292892 L 20 20.5 A 0.5 0.5 0 0 0 19 20.5 L 19.000336 22.474129 A 0.5010115 0.5010115 0 0 0 19.525871 22.999662 L 21.5 23 A 0.5 0.5 0 0 0 21.5 22 L 20.707108 22 L 22.853554 19.853554 A 0.50000054 0.50000054 0 0 0 22.146446 19.146448 L 20 21.292892" fill="#FF1493" />
+    <path d="M 21.292892 8 L 20.5 8 A 0.5 0.5 0 0 0 20.5 9 L 22.474129 8.999665 A 0.5010138 0.5010138 0 0 0 22.999664 8.474129 L 23 6.5 A 0.5 0.5 0 0 0 22 6.5 L 22 7.2928934 L 19.853554 5.1464467 A 0.5000002 0.5000002 0 0 0 19.146446 5.8535533 L 21.292892 8" fill="#FF1493" />
+    <path d="M 18 14.292893 L 18.646446 13.646446 A 0.50000054 0.50000054 0 0 1 19.353558 13.646446 A 0.50000054 0.50000054 0 0 1 19.353556 14.353556 L 17.853554 15.853554 A 0.50000054 0.50000054 0 0 1 17.146446 15.853554 L 15.646446 14.353554 A 0.50000054 0.50000054 0 0 1 16.353554 13.646445 L 17 14.292893 L 17 11.5 A 0.5 0.5 0 0 1 18 11.5 L 18 14.292893" fill="#FF1493" />
+    <path d="M 16 18.292892 L 16 17.5 A 0.5 0.5 0 0 0 15 17.5 L 15.000335 19.474129 A 0.5010147 0.5010147 0 0 0 15.525871 19.999664 L 17.5 20 A 0.5 0.5 0 0 0 17.5 19 L 16.707108 19 L 17.853554 17.853554 A 0.50000054 0.50000054 0 0 0 17.146446 17.146446 L 16 18.292892" fill="#FF1493" />
+    <path d="M 22 16.292892 L 22.646446 15.646446 A 0.50000054 0.50000054 0 0 1 23.353554 16.353554 L 21.853554 17.853554 A 0.50000054 0.50000054 0 0 1 21.146446 17.853554 L 19.646446 16.353554 A 0.50000054 0.50000054 0 0 1 20.353554 15.646446 L 21 16.292892 L 21 12.5 A 0.5 0.5 0 0 1 22 12.5 L 22 16.292892" fill="#FF1493" />
+    <path d="M 15.292893 9 L 14.5 9 A 0.5 0.5 0 0 0 14.5 10 L 16.474129 9.999665 A 0.5010152 0.5010152 0 0 0 16.999664 9.474129 L 17 7.5 A 0.5 0.5 0 0 0 16 7.5 L 16 8.292893 L 14.853554 7.1464467 A 0.5000002 0.5000002 0 0 0 14.146446 7.8535533 L 15.292893 9" fill="#FF1493" />
+    <path d="M 12 4 L 13.5 5.5 L 12 7" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 13 5.5 L 9.5 5.5" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 18 3.5 L 14.5 3.5" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 17 2 L 18.5 3.5 L 17 5" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 5 2 L 6.5 3.5 L 5 5" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 6 3.5 L 3.5 3.5" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 7 6 L 8.5 7.5 L 7 9" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 8 7.5 L 4.5 7.5" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 11 21.5 L 14.5 21.5" stroke="#E67700" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 12 23 L 10.5 21.5 L 12 20" stroke="#E67700" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 3 20.5 L 6.5 20.5" stroke="#E67700" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 4 22 L 2.5 20.5 L 4 19" stroke="#E67700" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

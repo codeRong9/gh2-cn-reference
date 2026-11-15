@@ -1,0 +1,28 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 18.420214 7.5000315 L 17.420214 7.5" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 5.5910254 7.5 A 2 2 0 0 0 4.6321745 7.744835" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 3.5720856 9.354296 L 3.3472261 10.328687" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 2.897507 12.27747 L 2.6726475 13.251861" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 2.2229285 15.200644 L 1.998069 16.175034" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 1.5497415 18.124119 A 2.0000024 2.0000024 0 0 0 1.6100066 19.111898" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 3.0002098 20.432852 L 3.9943802 20.5" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 5.99438 20.5 L 6.99438 20.5" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 8.99438 20.5 L 9.99438 20.5" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 14.99438 20.5 L 15.99438 20.5" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 17.99438 20.5 L 18.99438 20.5" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 20.98892 20.435709 A 1.9999928 1.9999928 0 0 0 21.85537 19.957582" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 22.45234 18.135164 L 22.229319 17.160378" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 21.779598 15.211595 L 21.554739 14.237204" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 21.10502 12.288422 L 20.880161 11.31403" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 20.43044 9.365248 L 20.097963 8.42887" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 11.99438 20.5 L 12.99438 20.5" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 17.515049 15 C 17.515049 15.678985, 16.69592 16.35797, 15.853179 16.776525 C 15.010438 17.19508, 14.144082 17.353203, 13.284995 17.432266 C 12.425909 17.511328, 11.574091 17.511328, 10.715005 17.432266 C 9.855918 17.353203, 8.989562 17.19508, 8.146821 16.776525 C 7.304079 16.35797, 6.484951 15.678985, 6.484951 15 C 6.484951 14.321015, 7.304079 13.64203, 8.146821 13.223475 C 8.989562 12.80492, 9.855918 12.646796, 10.715005 12.567734 C 11.574091 12.488672, 12.425909 12.488672, 13.284995 12.567734 C 14.144082 12.646796, 15.010438 12.80492, 15.853179 13.223475 C 16.69592 13.64203, 17.515049 14.321015, 17.515049 15" fill="#FFE066" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 17.5 9 A 5.5 5.5 0 0 1 6.5 8.999999 A 5.5 5.5 0 0 1 17.5 9.000001" fill="#66D9E8" />
+    <path d="M 15.606244 5.393755 A 5.1 5.1 0 0 1 8.393757 12.606246 C 9.21373 13.42622, 11.493556 12.476293, 13.484924 10.484924 C 15.476293 8.493556, 16.42622 6.213731, 15.606245 5.3937554" fill="#22B8CF" />
+    <path d="M 15.606244 5.393755 A 5.1 5.1 0 0 1 8.393757 12.606246 C 10.189891 14.402381, 13.261323 14.24406, 15.252691 12.252691 C 17.24406 10.261323, 17.402382 7.189892, 15.606245 5.3937554" fill="#0B7285" />
+    <!--Icon element '(Grasshopper2.UI.Icon.Vector.EggSpan,Grasshopper2.UI.Icon.Vector.VectorStyle)' failed to create valid SVG.-->
+    <path d="M 17.5 9 A 5.5 5.5 0 0 1 6.5 8.999999 A 5.5 5.5 0 0 1 17.5 9.000001" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

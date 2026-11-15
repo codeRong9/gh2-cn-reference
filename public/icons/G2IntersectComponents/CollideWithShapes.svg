@@ -1,0 +1,20 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="linear7edb733b5bb7" gradientUnits="userSpaceOnUse" x1="9.5" y1="2.5" x2="12.5" y2="21.5">
+      <stop offset="0%" style="stop-color:#FFE066;" />
+      <stop offset="100%" style="stop-color:#FCC419;" />
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 8.481615 2.46027 A 1.0000012 1.0000012 0 0 1 9.480824 1.4999993 L 12.456183 1.5 A 0.9999999 0.9999999 0 0 1 13.451992 2.5914588 C 12.999444 7.5188227, 9.5 7.791001, 9.5 12 C 9.5 16.209, 12.999444 16.481176, 13.451992 21.40854 A 0.9999981 0.9999981 0 0 1 12.456183 22.5 L 9.480824 22.5 A 1.000001 1.000001 0 0 1 8.481613 21.53973 C 8.280658 16.485672, 6.5 16.246077, 6.5 12 C 6.5 7.7539244, 8.280658 7.5143285, 8.481614 2.46027" fill="url(#linear7edb733b5bb7)" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 5.0432916 9.690301 L 4.2779245 7.842542" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 3.6903012 11.043291 L 1.842542 10.277925" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 3.6903012 12.956709 L 1.842542 13.722075" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 5.0432916 14.309699 L 4.2779245 16.157457" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 19.5 12 A 4.5 4.5 0 0 1 10.5 12 A 4.5 4.5 0 0 1 19.5 12.000001" fill="#66D9E8" />
+    <path d="M 17.899137 9.100862 A 4.1 4.1 0 0 1 12.1008625 14.899138 C 12.790683 15.588958, 14.648318 14.850125, 16.249222 13.249222 C 17.850126 11.648318, 18.588959 9.790683, 17.899137 9.1008625" fill="#22B8CF" />
+    <path d="M 17.899137 9.100862 A 4.1 4.1 0 0 1 12.1008625 14.899138 C 13.604151 16.402426, 16.121456 16.323265, 17.72236 14.722361 C 19.323265 13.121457, 19.402426 10.604151, 17.899137 9.1008625" fill="#0B7285" />
+    <!--Icon element '(Grasshopper2.UI.Icon.Vector.EggSpan,Grasshopper2.UI.Icon.Vector.VectorStyle)' failed to create valid SVG.-->
+    <path d="M 19.5 12 A 4.5 4.5 0 0 1 10.5 12 A 4.5 4.5 0 0 1 19.5 12.000001" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

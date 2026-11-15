@@ -1,0 +1,21 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="linear6c8c64b103c2" gradientUnits="userSpaceOnUse" x1="9" y1="12.5" x2="13" y2="18">
+      <stop offset="0%" style="stop-color:#FFF3BF;" />
+      <stop offset="100%" style="stop-color:#FFE066;" />
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 14.5 20.5 L 17.5 23.5 L 23.5 17.5 L 20.5 14.5 L 22.5 13.5 L 20.25 9 L 22.5 4.5 L 14.5 0.5 L 11.833333 5.8333335 L 6.5 0.5 L 0.5 6.5 L 5.8333335 11.833333 L 0.5 14.5 L 4.5 22.5 L 9 20.25 L 13.5 22.5 L 14.5 20.5" fill="#C5F6FA" />
+    <path d="M 13.431695 19.431696 L 17.5 23.5 L 23.5 17.5 L 19.431696 13.431695" stroke="#0B7285" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 10.765028 7.9699435 L 14.5 0.5 L 22.5 4.5 L 19.089256 11.321488" stroke="#0B7285" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 15.011845 7.2440777 L 18.5 5.5 L 22.5 13.5 L 18.36339 15.568305" stroke="#0B7285" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 15.568305 18.36339 L 13.5 22.5 L 5.5 18.5 L 7.2440777 15.011845" stroke="#0B7285" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 11.321488 19.089256 L 4.5 22.5 L 0.5 14.5 L 7.9699435 10.765028" stroke="#0B7285" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 12.901638 6.9016385 L 6.5 0.5 L 0.5 6.5 L 6.9016385 12.901638" stroke="#0B7285" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 13.833333 7.8333335 L 9.833333 9.833333 L 7.8333335 13.833333 L 12.5 18.5 L 16.5 16.5 L 18.5 12.5 L 13.833333 7.8333335" fill="url(#linear6c8c64b103c2)" />
+    <path d="M 12 14 L 12.5 18.5 L 16.5 16.5 L 18.5 12.5 L 12 14" fill="#FCC419" />
+    <path d="M 13.833333 7.8333335 L 12 14 L 18.5 12.5 L 13.833333 7.8333335" fill="#FFE066" />
+    <path d="M 13.833333 7.8333335 L 9.833333 9.833333 L 7.8333335 13.833333 L 12.5 18.5 L 16.5 16.5 L 18.5 12.5 L 13.833333 7.8333335" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 19 3 A 1 1 0 0 1 17 3 A 1 1 0 0 1 19 3.0000002" fill="#0B7285" />
+    <path d="M 14 21 A 1 1 0 0 1 12 21 A 1 1 0 0 1 14 21" fill="#0B7285" />
+    <path d="M 19 21 A 1 1 0 0 1 17 21 A 1 1 0 0 1 19 21" fill="#0B7285" />
+    <path d="M 6.5 18 A 1 1 0 0 1 4.5 18 A 1 1 0 0 1 6.5 18" fill="#0B7285" />
+    <path d="M 11.5 18 A 1 1 0 0 1 9.5 18 A 1 1 0 0 1 11.5 18" fill="#0B7285" />
+    <path d="M 16.5 18 A 1 1 0 0 1 14.5 18 A 1 1 0 0 1 16.5 18" fill="#0B7285" />
+    <path d="M 21.5 18 A 1 1 0 0 1 19.5 18 A 1 1 0 0 1 21.5 18" fill="#0B7285" />
+    <path d="M 9 21 A 1 1 0 0 1 7 21 A 1 1 0 0 1 9 21" fill="#0B7285" />
+    <path d="M 19 15 A 1 1 0 0 1 17 15 A 1 1 0 0 1 19 15" fill="#0B7285" />
+    <path d="M 4 15 A 1 1 0 0 1 2 15 A 1 1 0 0 1 4 15" fill="#0B7285" />
+    <path d="M 4 9 A 1 1 0 0 1 2 9 A 1 1 0 0 1 4 9" fill="#0B7285" />
+    <path d="M 19 9 A 1 1 0 0 1 17 9 A 1 1 0 0 1 19 9" fill="#0B7285" />
+    <path d="M 6.5 6 A 1 1 0 0 1 4.5 6 A 1 1 0 0 1 6.5 6" fill="#0B7285" />
+    <path d="M 21.5 6 A 1 1 0 0 1 19.5 6 A 1 1 0 0 1 21.5 6" fill="#0B7285" />
+    <path d="M 4 3 A 1 1 0 0 1 2 3 A 1 1 0 0 1 4 3.0000002" fill="#0B7285" />
+    <path d="M 9 3 A 1 1 0 0 1 7 3 A 1 1 0 0 1 9 3.0000002" fill="#0B7285" />
+    <path d="M 14 3 A 1 1 0 0 1 12 3 A 1 1 0 0 1 14 3.0000002" fill="#0B7285" />
+    <path d="M 21.5 12 A 1 1 0 0 1 19.5 12 A 1 1 0 0 1 21.5 12" fill="#0B7285" />
+    <path d="M 4 21 A 1 1 0 0 1 2 21 A 1 1 0 0 1 4 21" fill="#0B7285" />
+    <path d="M 6.7613077 7.7080812 A 13.009612 13.009612 0 0 1 14.543798 15.080965 A 5.5 5.5 0 0 1 6.7613096 7.708084" fill="#D66000" />
+    <path d="M 17 10.5 A 5.5 5.5 0 0 1 6 10.499999 A 5.5 5.5 0 0 1 17 10.500001" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 15.5 14.5 L 20 19" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

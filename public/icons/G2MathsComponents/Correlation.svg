@@ -1,0 +1,38 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 0.5 0.5 L 23.5 0.5 L 23.5 23.5 L 0.5 23.5 Z" fill="#E6E6E6" />
+    <path d="M 4.5 0.5 L 4.5 23.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 9.5 0.5 L 9.5 23.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 14.5 0.5 L 14.5 23.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 19.5 0.5 L 19.5 23.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 0.5 4.5 L 23.5 4.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 0.5 9.5 L 23.5 9.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 0.5 14.5 L 23.5 14.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 0.5 19.5 L 23.5 19.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 0.5 0.5 L 23.5 0.5 L 23.5 23.5 L 0.5 23.5 Z" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 14.030528 15.444741 L 15.7852 14.370987 L 23 21.585787 L 23 23 L 21.585787 23 L 14.030528 15.444741" fill="#808080" />
+    <path d="M 14.330583 12.916369 L 23 7.6112037 L 23 9.95596 L 15.7852 14.370987 L 14.330583 12.916369" fill="#808080" />
+    <path d="M 14.030528 15.444741 L 12.575911 13.990124 L 14.330583 12.916369 L 15.7852 14.370987 L 14.030528 15.444741" fill="#6AB107" />
+    <path d="M 12.575911 13.990124 L 14.030528 15.444741 L 1.6841304 23 L 1 23 L 1 21.07389 L 12.575911 13.990124" fill="#808080" />
+    <path d="M 12.575911 13.990124 L 1 2.4142137 L 1 1 L 2.4142137 1 L 14.330583 12.916369 L 12.575911 13.990124" fill="#808080" />
+    <path d="M 18 13 A 1 1 0 0 1 16 13 A 1 1 0 0 1 18 13" fill="#808080" />
+    <path d="M 23 11 A 1 1 0 0 1 21 11 A 1 1 0 0 1 23 11" fill="#808080" />
+    <path d="M 20 10 A 1 1 0 0 1 18 10 A 1 1 0 0 1 20 10" fill="#808080" />
+    <path d="M 22 8 A 1 1 0 0 1 20 8 A 1 1 0 0 1 22 8" fill="#808080" />
+    <path d="M 4 19 A 1 1 0 0 1 2 19 A 1 1 0 0 1 4 19" fill="#808080" />
+    <path d="M 11 8 A 1 1 0 0 1 9 8 A 1 1 0 0 1 11 8" fill="#808080" />
+    <path d="M 8 21 A 1 1 0 0 1 6 21 A 1 1 0 0 1 8 21" fill="#808080" />
+    <path d="M 9 16 A 1 1 0 0 1 7 16 A 1 1 0 0 1 9 16" fill="#808080" />
+    <path d="M 12 17 A 1 1 0 0 1 10 17 A 1 1 0 0 1 12 17" fill="#808080" />
+    <path d="M 22 20 A 1 1 0 0 1 20 20 A 1 1 0 0 1 22 20" fill="#808080" />
+    <path d="M 13 11 A 1 1 0 0 1 11 11 A 1 1 0 0 1 13 11" fill="#808080" />
+    <path d="M 20 17 A 1 1 0 0 1 18 17 A 1 1 0 0 1 20 17" fill="#808080" />
+    <path d="M 18 19 A 1 1 0 0 1 16 19 A 1 1 0 0 1 18 19" fill="#808080" />
+    <path d="M 8 9 A 1 1 0 0 1 6 9 A 1 1 0 0 1 8 9" fill="#808080" />
+    <path d="M 6 7 A 1 1 0 0 1 4 7 A 1 1 0 0 1 6 7" fill="#808080" />
+    <path d="M 8 4 A 1 1 0 0 1 6 4 A 1 1 0 0 1 8 4" fill="#808080" />
+    <path d="M 11 5 A 1 1 0 0 1 9 5 A 1 1 0 0 1 11 5" fill="#808080" />
+    <path d="M 4 4 A 1 1 0 0 1 2 4 A 1 1 0 0 1 4 4" fill="#808080" />
+  </g>
+</svg>

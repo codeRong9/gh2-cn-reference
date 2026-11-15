@@ -1,0 +1,22 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="linearda3bd99dba7c" gradientUnits="userSpaceOnUse" x1="19" y1="5.5" x2="19.5" y2="22.5">
+      <stop offset="0%" style="stop-color:#FFF3BF;" />
+      <stop offset="100%" style="stop-color:#FCC419;" />
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 10.5 20.5 C 14.833333 19.166666, 18.166666 19.166666, 20.5 20.5 C 26.097754 10.792932, 17.8334 11.965448, 21.5 2.5 A 15.971242 15.971242 0 0 0 11.5 2.5 L 10 12 L 10.5 20.5" fill="url(#linearda3bd99dba7c)" />
+    <path d="M 1.5 4.5 L 12 11 L 11.5 2.5 L 1.5 4.5" fill="#C5F6FA" />
+    <path d="M 1.5 4.5 L 3.5 12.5 L 12 11 L 1.5 4.5" fill="#FF1493" />
+    <path d="M 10.5 20.5 L 12 11 L 3.5 12.5 L 10.5 20.5" fill="#66D9E8" />
+    <path d="M 3.5 12.5 L 10.5 20.5 L 1.5 22.5 L 3.5 12.5" fill="#FF1493" />
+    <path d="M 1.5 4.5 L 12 11 L 3.5 12.5 L 10.5 20.5 L 12 11 L 11.5 2.5" stroke="#0B7285" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 10.5 20.5 C 14.833333 19.166666, 18.166666 19.166666, 20.5 20.5 C 26.097754 10.792932, 17.8334 11.965448, 21.5 2.5 A 15.971242 15.971242 0 0 0 11.5 2.5" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 11.5 2.5 L 1.5 4.5 L 3.5 12.5 L 1.5 22.5 L 10.5 20.5" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 12.5 2.5 A 1 1 0 0 1 10.5 2.5 A 1 1 0 0 1 12.5 2.5000002" fill="#66D9E8" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 11.5 20.5 A 1 1 0 0 1 9.5 20.5 A 1 1 0 0 1 11.5 20.5" fill="#66D9E8" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 21.5 20.5 A 1 1 0 0 1 19.5 20.5 A 1 1 0 0 1 21.5 20.5" fill="#66D9E8" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 22.5 2.5 A 1 1 0 0 1 20.5 2.5 A 1 1 0 0 1 22.5 2.5000002" fill="#66D9E8" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

@@ -1,0 +1,332 @@
+{
+  "maths.greater-than": {
+    "concept": "判断 A 是否大于 B，输出真或假。数据筛选最常用的开关。",
+    "steps": [
+      "A 端接被比较的数值。",
+      "B 端接阈值。",
+      "输出布尔，接 Dispatch 或 Cull 分流。"
+    ],
+    "scenes": [
+      {
+        "title": "筛出超限尺寸",
+        "body": "把大于 6000 的开间挑出来单独标注，提醒需要加梁。",
+        "wiring": "开间列表 → Greater Than(6000) → Dispatch"
+      }
+    ],
+    "pitfalls": [
+      "等于阈值时结果为假，边界值要不要算进区间得先想清楚。",
+      "浮点误差会让「看起来相等」的值判定不稳。"
+    ],
+    "related": ["maths.less-than", "maths.equality", "data.dispatch"],
+    "tip": "所有「挑出符合条件的东西」都从这里出发。"
+  },
+  "maths.less-than": {
+    "concept": "判断 A 是否小于 B，输出真或假。",
+    "steps": [
+      "A 端接数值。",
+      "B 端接阈值。",
+      "输出布尔结果。"
+    ],
+    "scenes": [
+      {
+        "title": "找净高不足的位置",
+        "body": "净高小于 2200 的区域标红，用于管线避让调整。",
+        "wiring": "净高列表 → Less Than(2200) → 标色"
+      }
+    ],
+    "pitfalls": [
+      "两个方向的比较要配对用，只写一个容易漏掉另一半。",
+      "阈值与数据单位不一致时判断全错，先核对单位。"
+    ],
+    "related": ["maths.greater-than", "maths.equality", "data.cull-by-pattern"],
+    "tip": "「大于阈值」与「小于阈值」是互补的，别重复搭两套逻辑。"
+  },
+  "maths.round-decimals": {
+    "concept": "按指定小数位数四舍五入，把数值整理成好看的精度。",
+    "steps": [
+      "Number 端接数值。",
+      "设置保留的小数位数。",
+      "输出取整后的数值。"
+    ],
+    "scenes": [
+      {
+        "title": "标注取两位小数",
+        "body": "面积标注统一保留两位，避免图上出现一长串小数。",
+        "wiring": "面积 → Round Decimals(2) → 标注"
+      }
+    ],
+    "pitfalls": [
+      "取整只影响显示值，参与后续计算的仍是原值。",
+      "位数设太小时累积误差会放大，用于加工尺寸要谨慎。"
+    ],
+    "related": ["maths.floor", "maths.ceiling", "maths.round-multiple"],
+    "tip": "数值展示层做四舍五入，计算层永远保留原精度。"
+  },
+  "maths.floor": {
+    "concept": "向下取整：丢掉小数部分，得到不大于原值的整数。",
+    "steps": [
+      "Number 端接数值。",
+      "输出整数结果。"
+    ],
+    "scenes": [
+      {
+        "title": "算能排几个",
+        "body": "可用长度除以构件宽度后向下取整，得到最多能排的下数。",
+        "wiring": "可用长 ÷ 构件宽 → Floor → 数量"
+      }
+    ],
+    "pitfalls": [
+      "负数向下取整会更小（-1.2 变 -2），与截断不同。",
+      "取整后乘回原单位容易与总长差一截，注意余量。"
+    ],
+    "related": ["maths.ceiling", "maths.truncate", "maths.round-decimals"],
+    "tip": "算「最多能放几个」永远是先除再取整。"
+  },
+  "maths.minimum": {
+    "concept": "取较小值：两个数比大小，或一列数里挑最小的。",
+    "steps": [
+      "A、B 两端接数值，或把列表接进来。",
+      "输出较小值。"
+    ],
+    "scenes": [
+      {
+        "title": "取控制尺寸",
+        "body": "两个方向上的可用空间取小的那个，作为构件最大尺寸。",
+        "wiring": "宽 + 高 → Minimum → 最大构件"
+      }
+    ],
+    "pitfalls": [
+      "列表输入会按数据匹配逐对比较，不是全局最小。",
+      "要全局极值请用统计类组件，别指望它自动汇总。"
+    ],
+    "related": ["maths.maximum", "maths.number-statistics", "maths.limit-number"],
+    "tip": "「取小」是设计里最常见的约束表达。"
+  },
+  "maths.maximum": {
+    "concept": "取较大值：两个数比大小，或逐项取大。",
+    "steps": [
+      "A、B 两端接数值。",
+      "输出较大值。"
+    ],
+    "scenes": [
+      {
+        "title": "保证最小净宽",
+        "body": "通道宽度与最小值取大，保证不会做窄。",
+        "wiring": "计算宽 + 最小宽 → Maximum"
+      }
+    ],
+    "pitfalls": [
+      "列表输入同样按逐对匹配，不做汇总。",
+      "与 Minimum 混用时注意顺序，取大取小是两回事。"
+    ],
+    "related": ["maths.minimum", "maths.limit-number", "maths.number-statistics"],
+    "tip": "约束上下限：下界用 Maximum，上界用 Minimum。"
+  },
+  "maths.interpolate": {
+    "concept": "线性插值：给起点、终点与比例 t，得到两者之间的过渡值。",
+    "steps": [
+      "A 端接起点值。",
+      "B 端接终点值。",
+      "t 端接 0 到 1 的比例，输出插值结果。"
+    ],
+    "scenes": [
+      {
+        "title": "渐变层高",
+        "body": "从 3000 到 4500 之间按 t 取值，做逐层变化的层高。",
+        "wiring": "3000 + 4500 + Range(0-1) → Interpolate"
+      }
+    ],
+    "pitfalls": [
+      "t 超出 0-1 会外插，得到超出两端范围的值。",
+      "只能线性过渡，需要曲线过渡得用函数类组件。"
+    ],
+    "related": ["maths.remap-number", "maths.evaluate-function", "maths.smooth-step"],
+    "tip": "一切「从 A 平滑变到 B」的需求，本质都是插值。"
+  },
+  "data.split-list": {
+    "concept": "在指定位置把一列数据切成两段，前半段与后半段分别输出。",
+    "steps": [
+      "List 端接数据列表。",
+      "设置切分索引。",
+      "输出 A、B 两段。"
+    ],
+    "scenes": [
+      {
+        "title": "分成上下两部分",
+        "body": "把排序后的楼层在中间一刀切开，分别处理裙房与塔楼。",
+        "wiring": "楼层列表 → Split List → 两段"
+      }
+    ],
+    "pitfalls": [
+      "索引为 0 时第一段为空，后续组件会拿到空列表。",
+      "索引从 0 开始计数，与「第几个」差一。"
+    ],
+    "related": ["data.sub-list", "data.partition-list", "data.list-length"],
+    "tip": "分组先排序再切分，位置才稳定。"
+  },
+  "data.reverse-list": {
+    "concept": "把列表顺序倒过来。常用于修正「点序反了」的连线方向。",
+    "steps": [
+      "List 端接数据。",
+      "输出倒序后的列表。"
+    ],
+    "scenes": [
+      {
+        "title": "修正曲线方向",
+        "body": "放样用的截面方向相反，倒序一次就能让所有截面朝向一致。",
+        "wiring": "截面列表 → Reverse → Loft"
+      }
+    ],
+    "pitfalls": [
+      "倒序也影响所有并行列表，必须一起倒，否则数据错位。",
+      "嵌套树只倒分支内顺序，不改变分支顺序。"
+    ],
+    "related": ["data.sort", "curve.flip-curve", "vector.sort-along"],
+    "tip": "凡是对齐问题，先试倒序，能解决一大半。"
+  },
+  "data.cull-by-index": {
+    "concept": "按索引剔除列表中的项。给要删的序号，其余保留。",
+    "steps": [
+      "List 端接数据。",
+      "Indices 端接要剔除的索引（可多个）。",
+      "输出剩余项。"
+    ],
+    "scenes": [
+      {
+        "title": "去掉首尾多余点",
+        "body": "等分得到的点里去掉第一个与最后一个，让布点不贴边。",
+        "wiring": "点列表 → Cull Index(0,-1)"
+      }
+    ],
+    "pitfalls": [
+      "索引超出范围会静默忽略，不会报错提醒。",
+      "多个索引同时剔除时按原列表编号，不受删除顺序影响。"
+    ],
+    "related": ["data.sub-list", "data.cull-by-pattern", "data.item-from-index"],
+    "tip": "只删固定位置用 Cull Index，按条件删用 Cull Pattern。"
+  },
+  "data.insert-into-list": {
+    "concept": "在列表的指定位置插入新项，原有项依次后移。",
+    "steps": [
+      "List 端接原列表。",
+      "设置插入位置。",
+      "接要插入的项，输出新列表。"
+    ],
+    "scenes": [
+      {
+        "title": "补一个基准点",
+        "body": "在定位点列表开头插入原点，保证序列从 0 开始。",
+        "wiring": "点列表 → Insert(0, 原点)"
+      }
+    ],
+    "pitfalls": [
+      "插入后所有后续索引都会变，依赖索引的逻辑要一起改。",
+      "树结构按分支分别插入，不跨分支。"
+    ],
+    "related": ["data.replace-items", "data.split-list", "data.list-length"],
+    "tip": "插项会打乱索引，尽量在流程早段做完。"
+  },
+  "data.tree-length": {
+    "concept": "统计树结构的规模：有多少分支、总共有多少项、分支最长多少。",
+    "steps": [
+      "Tree 端接树数据。",
+      "从输出端口取分支数、项数等指标。"
+    ],
+    "scenes": [
+      {
+        "title": "检查拆解结果",
+        "body": "曲面拆成 UV 树后先看分支数对不对，再继续建模。",
+        "wiring": "UV 树 → Tree Length"
+      }
+    ],
+    "pitfalls": [
+      "项数是所有分支之和，不等于分支数乘以某项。",
+      "空分支也会计入分支数，容易误判结构正确。"
+    ],
+    "related": ["data.list-length", "data.tree-paths", "data.clean-tree"],
+    "tip": "怀疑数据结构出错时，先量一量它的规模。"
+  },
+  "data.clean-tree": {
+    "concept": "清理树结构里的空分支与空项，让后续操作不再被空数据干扰。",
+    "steps": [
+      "Tree 端接树。",
+      "输出清理后的树。"
+    ],
+    "scenes": [
+      {
+        "title": "筛选后收拾残局",
+        "body": "按条件删掉大量项后，分支里剩下的空洞会影响下游，先清理再继续。",
+        "wiring": "筛选结果 → Clean Tree"
+      }
+    ],
+    "pitfalls": [
+      "清理会改变分支编号，依赖路径的下游逻辑要重新检查。",
+      "它是「删空」不是「补空」，缺少的结构不会自动补齐。"
+    ],
+    "related": ["data.prune-tree", "data.simplify-tree", "data.tree-length"],
+    "tip": "每次大规模删除之后，都该接一次 Clean Tree。"
+  },
+  "vector.cull-duplicate-points": {
+    "concept": "去掉位置重复的点，可设容差，避免重复几何与布尔失败。",
+    "steps": [
+      "Points 端接点集。",
+      "设置容差（多近算重复）。",
+      "输出唯一化的点集。"
+    ],
+    "scenes": [
+      {
+        "title": "修补网格前的清理",
+        "body": "焊接后仍有重合顶点时先清理，再修复拓扑。",
+        "wiring": "顶点 → Cull Duplicates → 修补"
+      }
+    ],
+    "pitfalls": [
+      "容差过大会误删靠得很近但确实不同的点。",
+      "去重后索引全变，用索引关联的属性会错位。"
+    ],
+    "related": ["mesh.weld-mesh", "vector.closest-points", "vector.sort-along"],
+    "tip": "重复点是一堆几何错误的根源，宁可多清一次。"
+  },
+  "vector.project-point": {
+    "concept": "把点投影到目标几何上：平面、曲线或曲面，得到最近的落点。",
+    "steps": [
+      "Point 端接原始点。",
+      "Geometry 端接目标几何。",
+      "可指定投影方向，输出投影点。"
+    ],
+    "scenes": [
+      {
+        "title": "落到屋面上",
+        "body": "把平面上布置的设备点沿竖直方向投影到坡屋面，得到真实安装位置。",
+        "wiring": "设备点 → Project Point(屋面) → 定位"
+      }
+    ],
+    "pitfalls": [
+      "不指定方向时按最近点投影，可能落到背面。",
+      "目标几何不覆盖该点时输出为空。"
+    ],
+    "related": ["vector.pull-point", "surface.surface-closest-point", "curve.curve-closest-point"],
+    "tip": "投影方向要显式给，否则「最近点」经常不是你要的那一面。"
+  },
+  "vector.pull-point": {
+    "concept": "把点拉回曲面上，得到曲面上的对应点与 UV 参数。",
+    "steps": [
+      "Point 端接点。",
+      "Surface 端接目标曲面。",
+      "输出曲面点与 UV。"
+    ],
+    "scenes": [
+      {
+        "title": "点落到曲面上取 UV",
+        "body": "先得到曲面点，再用 UV 在该处取样建组件。",
+        "wiring": "点 → Pull Point → UV → Evaluate Surface"
+      }
+    ],
+    "pitfalls": [
+      "裁剪曲面上可能拉到已被剪掉的区域。",
+      "多个曲面输入会得到多组结果，注意树结构。"
+    ],
+    "related": ["vector.project-point", "surface.surface-closest-point", "surface.evaluate-surface"],
+    "tip": "要在曲面上「长」东西，就先把点拉上去拿 UV。"
+  }
+}

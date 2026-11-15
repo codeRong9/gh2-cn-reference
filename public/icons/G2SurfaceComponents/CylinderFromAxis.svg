@@ -1,0 +1,10 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 18 4 L 18 20 C 18 21.1044, 15.3132 22, 12 22 C 8.6868 22, 6 21.1044, 6 20 L 6 4 C 6 2.8955998, 8.6868 2, 12 2 C 15.3132 2, 18 2.8955998, 18 4" stroke="#D66000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 18 4 L 18 20 C 18 21.1044, 15.3132 22, 12 22 C 8.6868 22, 6 21.1044, 6 20 L 6 4 C 6 2.8955998, 8.6868 2, 12 2 C 15.3132 2, 18 2.8955998, 18 4" fill="#FFE066" />
+    <!--Icon element '(Grasshopper2.UI.Icon.Vector.EggSpan,Grasshopper2.UI.Icon.Vector.VectorStyle)' failed to create valid SVG.-->
+    <path d="M 18 4 L 18 20 C 18 20.773079, 16.683468 21.443848, 14.75712 21.776731 L 14.75712 5.7767315 C 16.683468 5.4438477, 18 4.77308, 18 4" fill="#FCC419" />
+    <path d="M 8.456698 5.6140676 L 8.456698 21.614069 C 6.9672484 21.250114, 6 20.66264, 6 20 L 6 4 C 6 4.66264, 6.9672484 5.2501125, 8.456698 5.6140676" fill="#FFF3BF" />
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 17.5 14.156855 L 23.156855 8.5 L 17.5 2.8431458 L 11.843145 8.5" fill="#66D9E8" />
+    <path d="M 17.5 8.5 L 20.328426 11.328427" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 17.5 8.5 L 20.328426 5.6715727" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 17.5 14.156855 L 23.156855 8.5 L 17.5 2.8431458 L 11.843145 8.5 L 17.5 14.156855" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 17.025126 21.974874 L 2.175884 7.1256313 C 1.7658964 6.715644, 2.5416703 5.274921, 3.9082956 3.9082956 C 5.274921 2.5416703, 6.715644 1.7658964, 7.1256313 2.175884 L 21.974874 17.025126 C 22.384863 17.435114, 21.609087 18.875837, 20.242462 20.242462 C 18.875837 21.609087, 17.435114 22.384863, 17.025126 21.974874" stroke="#D66000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 17.025126 21.974874 L 2.175884 7.1256313 C 1.7658964 6.715644, 2.5416703 5.274921, 3.9082956 3.9082956 C 5.274921 2.5416703, 6.715644 1.7658964, 7.1256313 2.175884 L 21.974874 17.025126 C 22.384863 17.435114, 21.609087 18.875837, 20.242462 20.242462 C 18.875837 21.609087, 17.435114 22.384863, 17.025126 21.974874" fill="#FFE066" />
+    <!--Icon element '(Grasshopper2.UI.Icon.Vector.EggSpan,Grasshopper2.UI.Icon.Vector.VectorStyle)' failed to create valid SVG.-->
+    <path d="M 17.025126 21.974874 L 2.175884 7.1256313 C 1.8888927 6.83864, 2.1829243 6.046589, 2.8539252 5.128434 L 17.703167 19.977678 C 17.032166 20.895832, 16.738134 21.687881, 17.025126 21.974874" fill="#FCC419" />
+    <path d="M 20.362347 17.43927 L 5.513104 2.5900288 C 6.262582 2.1107733, 6.879639 1.9298916, 7.1256313 2.175884 L 21.974874 17.025126 C 21.728882 16.779133, 21.111824 16.960014, 20.362347 17.43927" fill="#FFF3BF" />
+    <path d="M 1.136039 12.378679 L 9.621321 20.86396 L 15.985281 18.742641 L 3.2573593 6.0147185" fill="#66D9E8" />
+    <path d="M 7.5 14.5 L 5.3786798 16.62132" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 7.5 14.5 L 12.803301 19.8033" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 1.136039 12.378679 L 9.621321 20.86396 L 15.985281 18.742641 L 3.2573593 6.0147185 L 1.136039 12.378679" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

@@ -1,0 +1,5931 @@
+[
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ChangeViewProjection",
+  "fullTypeName": "ChangeViewProjection",
+  "guid": "00000000-5735-4466-87f2-40b6d1d32168",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Change Projection",
+   "info": "Change the projection of a view to either parallel or perspective.",
+   "chapter": "Display",
+   "section": "View",
+   "slot": 10,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "View",
+    "nick": "Vw",
+    "info": "View to modify.",
+    "type": "View",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Projection",
+    "nick": "Pr",
+    "info": "New projection type.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "View",
+    "nick": "Vw",
+    "info": "View with modified projection.",
+    "type": "View",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "CreateComplexParallelView",
+  "fullTypeName": "CreateComplexParallelView",
+  "guid": "00000000-05b8-4aca-81ec-b68b38566890",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Parallel View Complex",
+   "info": "Create a parallel view projection from advanced properties.",
+   "chapter": "Display",
+   "section": "View",
+   "slot": 0,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Camera",
+    "nick": "Pc",
+    "info": "Location of view point.",
+    "type": "Point",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Target",
+    "nick": "Pt",
+    "info": "Location of target point.",
+    "type": "Point",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Frustum Width",
+    "nick": "Wi",
+    "info": "Horizontal range of the parallel frustum box in model units.",
+    "type": "Interval",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Frustum Height",
+    "nick": "Hg",
+    "info": "Vertical range of the parallel frustum box in model units.",
+    "type": "Interval",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Tilt Angle",
+    "nick": "An",
+    "info": "Camera tilt angle around the view-target axis.",
+    "type": "Angle",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "View",
+    "nick": "Vw",
+    "info": "Parallel view with complex properties.",
+    "type": "View",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "CreateSimpleParallelView",
+  "fullTypeName": "CreateSimpleParallelView",
+  "guid": "00000000-b882-4670-91f4-9e7ed9ce348d",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Parallel View",
+   "info": "Create a parallel view projection from basic properties.",
+   "chapter": "Display",
+   "section": "View",
+   "slot": 0,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Camera",
+    "nick": "Pc",
+    "info": "Location of view point.",
+    "type": "Point",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Target",
+    "nick": "Pt",
+    "info": "Location of target point.",
+    "type": "Point",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Frame Size",
+    "nick": "Sz",
+    "info": "Width of the parallel frustum box in model units.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Aspect Ratio",
+    "nick": "As",
+    "info": "Frustum width to height aspect ratio.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "View",
+    "nick": "Vw",
+    "info": "Parallel view with basic properties.",
+    "type": "View",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "CreateSimplePerspectiveView",
+  "fullTypeName": "CreateSimplePerspectiveView",
+  "guid": "00000000-9e15-46ff-80a9-246aadbb20bb",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Perspective View",
+   "info": "Create a perspective view projection from basic properties.",
+   "chapter": "Display",
+   "section": "View",
+   "slot": 0,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Camera",
+    "nick": "Pc",
+    "info": "Location of view point.",
+    "type": "Point",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Target",
+    "nick": "Pt",
+    "info": "Location of target point.",
+    "type": "Point",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Lens Length",
+    "nick": "Ll",
+    "info": "Lens length (in millimetres) for a canonical 36mm sensor.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Aspect Ratio",
+    "nick": "As",
+    "info": "Frustum width to height aspect ratio.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "View",
+    "nick": "Vw",
+    "info": "Perspective view with basic properties.",
+    "type": "View",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "View Angle",
+    "nick": "An",
+    "info": "Resulting minimum view angle.",
+    "type": "Angle",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "CropView",
+  "fullTypeName": "CropView",
+  "guid": "00000000-2212-4a4d-bc62-a239f7a1e989",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Crop View",
+   "info": "Adjust the near and far plane limits of a view.",
+   "chapter": "Display",
+   "section": "View",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "View",
+    "nick": "Vw",
+    "info": "View to crop.",
+    "type": "View",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Range",
+    "nick": "Rn",
+    "info": "Optional depth range measured from the view camera location.",
+    "type": "Interval",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Box",
+    "nick": "Bx",
+    "info": "Optional content box to be contained.",
+    "type": "Box",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "View",
+    "nick": "Vw",
+    "info": "View with modified projection.",
+    "type": "View",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "DollyZoom",
+  "fullTypeName": "DollyZoom",
+  "guid": "00000000-d2f8-4a53-9845-c0e1028de5d4",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Dolly Zoom",
+   "info": "Perform a dolly zoom transformation on a view.",
+   "chapter": "Display",
+   "section": "View",
+   "slot": 10,
+   "rank": -1,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "View",
+    "nick": "Vw",
+    "info": "View to zoom.",
+    "type": "View",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Bounding Box",
+    "nick": "Bx",
+    "info": "Bounding box to encompass.",
+    "type": "Box",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "View",
+    "nick": "Vw",
+    "info": "Zoomed view.",
+    "type": "View",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "LookAtFrame",
+  "fullTypeName": "LookAtFrame",
+  "guid": "00000000-5cbd-497e-81b7-96a8fd72b391",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Look At Frame",
+   "info": "Create a perspective view anchored at a camera location which exactly covers a rectangular frame.",
+   "chapter": "Display",
+   "section": "View",
+   "slot": 0,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Frame",
+    "nick": "Fr",
+    "info": "Framing rectangle of the view.",
+    "type": "Rectangle",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Camera",
+    "nick": "Pc",
+    "info": "Location of view point.",
+    "type": "Point",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "View",
+    "nick": "Vw",
+    "info": "View looking at the frame.",
+    "type": "View",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Lens Length",
+    "nick": "Ll",
+    "info": "The effective lens length of the resulting view.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "Make2D",
+  "fullTypeName": "Make2D",
+  "guid": "00000000-a483-4f3e-ac48-3beb6d41c83e",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Make 2D",
+   "info": "Create a hidden line drawing of a collection of objects.",
+   "chapter": "Display",
+   "section": "View",
+   "slot": 50,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Shapes",
+    "nick": "Sh",
+    "info": "Shapes to draw.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "View",
+    "nick": "Vw",
+    "info": "View of objects.",
+    "type": "View",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Clipping Planes",
+    "nick": "Pl",
+    "info": "Clipping planes to include in the drawing.",
+    "type": "Plane",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Page",
+    "nick": "Pg",
+    "info": "Page for hidden line drawing.",
+    "type": "Rectangle",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Curves",
+    "nick": "Cr",
+    "info": "Visible curves in the drawing.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Clipped Curves",
+    "nick": "Cc",
+    "info": "Clipped curves in the drawing.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Hidden Curves",
+    "nick": "Cx",
+    "info": "Hidden curves in the drawing.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Scene Silhouette",
+    "nick": "Cs",
+    "info": "Silhouette curves of the entire scene.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Visible Points",
+    "nick": "Pt",
+    "info": "Visible points in the drawing.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Hidden Points",
+    "nick": "Px",
+    "info": "Hidden points in the drawing.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ParallelViewFromFrame",
+  "fullTypeName": "ParallelViewFromFrame",
+  "guid": "00000000-e564-4729-97ca-446c7a7e56d2",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Parallel From Frame",
+   "info": "Create a parallel view looking through the centre of a rectangular frame.",
+   "chapter": "Display",
+   "section": "View",
+   "slot": 0,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Frame",
+    "nick": "Fr",
+    "info": "Framing rectangle of the view.",
+    "type": "Rectangle",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Flip",
+    "nick": "Fl",
+    "info": "Flip the view direction to be counter to the rectangle normal.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "View",
+    "nick": "Vw",
+    "info": "Parallel view looking at the frame.",
+    "type": "View",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "Silhouette",
+  "fullTypeName": "Silhouette",
+  "guid": "00000000-6fea-4850-a7f2-159f0e100cc1",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Silhouette",
+   "info": "Compute the silhouette of a shape based on a view projection.",
+   "chapter": "Display",
+   "section": "View",
+   "slot": 50,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Shape",
+    "nick": "Sh",
+    "info": "Mesh or surface shape for silhouettes.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "View",
+    "nick": "Vw",
+    "info": "View projection.",
+    "type": "View",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Silhouette 2D",
+    "nick": "S2",
+    "info": "Silhouette curves projected onto the view plane.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Silhouette 3D",
+    "nick": "S3",
+    "info": "Silhouette curves coincident with the shape.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "SurfacePooling",
+  "fullTypeName": "SurfacePooling",
+  "guid": "00000000-526a-4ada-8bad-5fae22e27dfe",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Surface Pooling",
+   "info": "Douse a mesh in rain and fill all depressions.",
+   "chapter": "Display",
+   "section": "Analysis",
+   "slot": 3,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Mesh",
+    "nick": "Ms",
+    "info": "Mesh to douse.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Results",
+    "nick": "Rs",
+    "info": "Output surface type.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Mesh",
+    "nick": "Ms",
+    "info": "Mesh results of pooling analysis.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Lake Shores",
+    "nick": "Lk",
+    "info": "Boundary curves of all shores.",
+    "type": "Polyline",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "TiltView",
+  "fullTypeName": "TiltView",
+  "guid": "00000000-0f4e-4eab-853c-e368c7c7cbbe",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Tilt View",
+   "info": "Rotate a view around the camera-target axis.",
+   "chapter": "Display",
+   "section": "View",
+   "slot": 10,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "View",
+    "nick": "Vw",
+    "info": "View to tilt.",
+    "type": "View",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Up Direction",
+    "nick": "Up",
+    "info": "Optional up direction at view point.",
+    "type": "Field",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Tilt Angle",
+    "nick": "An",
+    "info": "Tilt angle to apply to view.",
+    "type": "Angle",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "View",
+    "nick": "Vw",
+    "info": "View with modified projection.",
+    "type": "View",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ViewFromFrame",
+  "fullTypeName": "ViewFromFrame",
+  "guid": "00000000-5922-486f-9c5c-e345f2cb47ff",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Perspective From Frame",
+   "info": "Create a perspective view looking through the centre of a rectangular frame.",
+   "chapter": "Display",
+   "section": "View",
+   "slot": 0,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Frame",
+    "nick": "Fr",
+    "info": "Framing rectangle of the view.",
+    "type": "Rectangle",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Lens Length",
+    "nick": "Ll",
+    "info": "Lens length (in millimetres) for a canonical 36mm sensor.",
+    "type": "LensLengthPresets",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Lens Length",
+    "nick": "Ll",
+    "info": "Lens length (in millimetres) for a canonical 36mm sensor.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "View",
+    "nick": "Vw",
+    "info": "View looking at the frame.",
+    "type": "View",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "View Angle",
+    "nick": "An",
+    "info": "The resulting view angle.",
+    "type": "Angle",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ViewProperty",
+  "fullTypeName": "ViewProperty",
+  "guid": "00000000-2a4e-48d9-b3be-c4a368e80d37",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "View Property",
+   "info": "Compute a given property of a view.",
+   "chapter": "Display",
+   "section": "View",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "View",
+    "nick": "Vw",
+    "info": "View to zoom.",
+    "type": "View",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Property",
+    "nick": "Pr",
+    "info": "Property to measure.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Property",
+    "nick": "Pr",
+    "info": "Requested view property. The type will depend on the property.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ViewTransform",
+  "fullTypeName": "ViewTransform",
+  "guid": "00000000-3ce4-4090-bf98-da0dcf53ff37",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "View Transform",
+   "info": "Compute the transformation from one view coordinate system to another.",
+   "chapter": "Display",
+   "section": "View",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "View",
+    "nick": "Vw",
+    "info": "View to process.",
+    "type": "View",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Source System",
+    "nick": "Ss",
+    "info": "Initial coordinate system.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Target System",
+    "nick": "Ts",
+    "info": "Final coordinate system.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Transform",
+    "nick": "Tr",
+    "info": "Requested transformation.",
+    "type": "Transform",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "Crowd",
+  "fullTypeName": "Crowd",
+  "guid": "00000000-3881-4692-a6de-2eb8e027ccda",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Crowd",
+   "info": "Populate a region with figurines.",
+   "chapter": "Display",
+   "section": "Scene",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Boundary",
+    "nick": "Bn",
+    "info": "Region boundary.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Figurines",
+    "nick": "Fi",
+    "info": "Optional figurine filter.",
+    "type": "Text",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Spacing",
+    "nick": "Sp",
+    "info": "Field encoding the additional empty space between neighbouring figurines.",
+    "type": "Field",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Orientation",
+    "nick": "Or",
+    "info": "Figurine orientation field.",
+    "type": "Field",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Cr",
+    "nick": "Crowd",
+    "info": "Figurine crowd.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "Figurine",
+  "fullTypeName": "Figurine",
+  "guid": "00000000-e490-47c3-a25f-8059f3c76163",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Figurine",
+   "info": "Draw a model figurine in the viewport.",
+   "chapter": "Display",
+   "section": "Scene",
+   "slot": 1,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Plane",
+    "nick": "Pl",
+    "info": "Person base plane.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Figurine",
+    "nick": "Fi",
+    "info": "Optional person figurine. If omitted, a random figurine will be chosen.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Figurine",
+    "nick": "Fg",
+    "info": "Model figurine.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Space",
+    "nick": "Sp",
+    "info": "Circular personal space around figurine, which adds 20cm on all sides.",
+    "type": "Circle",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "Plant",
+  "fullTypeName": "Plant",
+  "guid": "00000000-08be-4c0c-8296-7955711235e8",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Plant",
+   "info": "Draw a tree in the viewport.",
+   "chapter": "Display",
+   "section": "Scene",
+   "slot": 3,
+   "rank": -1,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Plane",
+    "nick": "Pl",
+    "info": "Tree base plane.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Species",
+    "nick": "Sp",
+    "info": "Tree species.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Age",
+    "nick": "Yr",
+    "info": "Age of tree (in years).",
+    "type": "Field",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Model tree.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Base",
+    "nick": "Bs",
+    "info": "Circle around the base of the trunk.",
+    "type": "Circle",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Boundary",
+    "nick": "Bn",
+    "info": "Circle around canopy boundary.",
+    "type": "Circle",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "Traffic",
+  "fullTypeName": "Traffic",
+  "guid": "00000000-f985-404e-b604-581b199f0bd9",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Traffic",
+   "info": "Populate a region with vehicles.",
+   "chapter": "Display",
+   "section": "Scene",
+   "slot": 2,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Roads",
+    "nick": "Rd",
+    "info": "Road centre lines.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Vehicles",
+    "nick": "Ve",
+    "info": "Optional vehicle filter.",
+    "type": "Text",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Spacing",
+    "nick": "Sp",
+    "info": "Field encoding the empty additional space between neighbouring vehicles.",
+    "type": "Field",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Tr",
+    "nick": "Traffic",
+    "info": "Traffic jam.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "Vehicle",
+  "fullTypeName": "Vehicle",
+  "guid": "00000000-a044-4528-96a3-34f627e279de",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Vehicle",
+   "info": "Draw a model vehicle in the viewport.",
+   "chapter": "Display",
+   "section": "Scene",
+   "slot": 2,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Plane",
+    "nick": "Pl",
+    "info": "Vehicle base plane.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Vehicle",
+    "nick": "Vh",
+    "info": "Optional vehicle make. If omitted, a random vehicle will be chosen.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Colour",
+    "nick": "Bc",
+    "info": "Optional body colour override.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Vehicle",
+    "nick": "Vh",
+    "info": "Model vehicle.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Space",
+    "nick": "Sp",
+    "info": "Space taken up by vehicle including a 40cm buffer.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "GraphPaper",
+  "fullTypeName": "GraphPaper",
+  "guid": "00000000-0371-4d52-92be-216bd37d952a",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Graph Paper",
+   "info": "Draw two-dimensional graph paper in the Rhino viewports.",
+   "chapter": "Display",
+   "section": "Visuals",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Boundary",
+    "nick": "Bn",
+    "info": "Graph boundary.",
+    "type": "Rectangle",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Domain",
+    "nick": "Dx",
+    "info": "Optional domain of graph along the boundary X direction.",
+    "type": "Interval",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Codomain",
+    "nick": "Dy",
+    "info": "Optional codomain of graph along the boundary Y direction.",
+    "type": "Interval",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Functions",
+    "nick": "Fn",
+    "info": "Optional functions to display in the graph.",
+    "type": "Function",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "CurvatureGraph",
+  "fullTypeName": "CurvatureGraph",
+  "guid": "00000000-d09e-470d-99dc-9c51d87901b0",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Curvature Graph",
+   "info": "Draw the curvature graph for a given curve.",
+   "chapter": "Display",
+   "section": "Analysis",
+   "slot": 2,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Curve",
+    "nick": "Cr",
+    "info": "Curve to analyze.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Scale",
+    "nick": "Sc",
+    "info": "Scaling factor.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Range",
+    "nick": "Rn",
+    "info": "Optional range limit for graph. When specified, curvatures outside of the range will not be drawn.",
+    "type": "Interval",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Graph",
+    "nick": "Gr",
+    "info": "Graph curve.",
+    "type": "Polyline",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Spokes",
+    "nick": "Sp",
+    "info": "Graph spokes.",
+    "type": "Line",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "CurvatureShader",
+  "fullTypeName": "CurvatureShader",
+  "guid": "00000000-5e17-4876-a833-e010b03506be",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Curvature Display",
+   "info": "Display the curvature of a surface.",
+   "chapter": "Display",
+   "section": "Analysis",
+   "slot": 3,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Shape",
+    "nick": "Sh",
+    "info": "Surface to analyse.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Type",
+    "nick": "Ty",
+    "info": "Type of curvature to display.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Gradient",
+    "nick": "Gr",
+    "info": "Visualisation gradient.",
+    "type": "Gradient",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Mesh",
+    "nick": "Ms",
+    "info": "Mesh with analysis colours.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "CurveOrder",
+  "fullTypeName": "CurveOrder",
+  "guid": "00000000-d07e-4e75-bc65-cdef257ffc08",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Curve Order Display",
+   "info": "Display connecting lines and indices for lists of curves.",
+   "chapter": "Display",
+   "section": "Visuals",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Curves",
+    "nick": "Cr",
+    "info": "Curve list to display.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Text Style",
+    "nick": "Ts",
+    "info": "Styling of curve label display.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Line Style",
+    "nick": "Ls",
+    "info": "Styling of connecting arrow display.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "CurveTopology",
+  "fullTypeName": "CurveTopology",
+  "guid": "00000000-1157-4caf-b5e9-f06169d1a97a",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Curve Topology",
+   "info": "Display symbols identifiying topological and geometrical properties of a curve.",
+   "chapter": "Display",
+   "section": "Analysis",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Curve",
+    "nick": "Cr",
+    "info": "Curve to analyze.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Spans",
+    "nick": "Sp",
+    "info": "Points marking the transitions between all curve spans.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Tangents",
+    "nick": "St",
+    "info": "Tangent vectors at all span transitions.",
+    "type": "Vector",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Curvatures",
+    "nick": "Cx",
+    "info": "Points marking the local maximum curvatures.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Inflections",
+    "nick": "If",
+    "info": "Points marking the curve inflections.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "DistanceShader",
+  "fullTypeName": "DistanceShader",
+  "guid": "00000000-c4d9-477c-883f-7a93578a0dc4",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Distance Display",
+   "info": "Display a colour gradient on a surface representing the distance from that surface to one or more shapes.",
+   "chapter": "Display",
+   "section": "Analysis",
+   "slot": 3,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Surface",
+    "nick": "Sf",
+    "info": "Surface or mesh to analyse.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Shapes",
+    "nick": "Sh",
+    "info": "Shapes for distance measurements.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Falloff",
+    "nick": "Ff",
+    "info": "Distance falloff function.",
+    "type": "Function",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Gradient",
+    "nick": "Gr",
+    "info": "Visualisation gradient.",
+    "type": "Gradient",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Mesh",
+    "nick": "Ms",
+    "info": "Mesh with analysis colours.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "DraftAngleShader",
+  "fullTypeName": "DraftAngleShader",
+  "guid": "00000000-60aa-4714-8919-2c7fec7a7e1d",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Draft Angle Display",
+   "info": "Display the draft angle analysis of a surface.",
+   "chapter": "Display",
+   "section": "Analysis",
+   "slot": 3,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Shape",
+    "nick": "Sh",
+    "info": "Surface or mesh to analyse.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Direction",
+    "nick": "Up",
+    "info": "Up direction.",
+    "type": "Vector",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Gradient",
+    "nick": "Gr",
+    "info": "Visualisation gradient, parameterised to degrees.",
+    "type": "Gradient",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Mesh",
+    "nick": "Ms",
+    "info": "Mesh with analysis colours.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ElevationShader",
+  "fullTypeName": "ElevationShader",
+  "guid": "00000000-87ea-4506-9bf4-4c667de38ede",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Elevation Display",
+   "info": "Paint a surface based on elevation.",
+   "chapter": "Display",
+   "section": "Analysis",
+   "slot": 3,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Shape",
+    "nick": "Sh",
+    "info": "Surface or mesh to analyse.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Zero",
+    "nick": "Zr",
+    "info": "Zero elevation plane.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Above",
+    "nick": "Ab",
+    "info": "Colour gradient for elevations.",
+    "type": "Gradient",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Below",
+    "nick": "Bl",
+    "info": "Optional override gradient for the below zero elevations.",
+    "type": "Gradient",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Mesh",
+    "nick": "Ms",
+    "info": "Mesh with analysis colours.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "EmapShader",
+  "fullTypeName": "EmapShader",
+  "guid": "00000000-4297-45b6-a1b8-e52854f8797c",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Emap Display",
+   "info": "Visualise the reflective properties of a shape using an environmental map.",
+   "chapter": "Display",
+   "section": "Analysis",
+   "slot": 3,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Shape",
+    "nick": "Sh",
+    "info": "Surface or mesh to display.",
+    "type": "Surface",
+    "access": "tree",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "LabelCoordinate",
+  "fullTypeName": "LabelCoordinate",
+  "guid": "00000000-c294-47a5-9b60-8b218261c955",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Label Coordinate",
+   "info": "Draw coordinate labels along the edges of the Rhino viewports.",
+   "chapter": "Display",
+   "section": "Visuals",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Points",
+    "nick": "Pt",
+    "info": "Point coordinates to label.",
+    "type": "Point",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "Decimals",
+    "nick": "Dc",
+    "info": "Number of decimals in numeric coordinate formatting.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "VolumeCooling",
+  "fullTypeName": "VolumeCooling",
+  "guid": "00000000-8928-459b-8e36-4435b8a4be37",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Volumetric Cooling",
+   "info": "Simulate the volumetric cooling of a surface or a mesh.",
+   "chapter": "Display",
+   "section": "Analysis",
+   "slot": 3,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Shape",
+    "nick": "Sh",
+    "info": "Surface or mesh to analyse.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Unit",
+    "nick": "Un",
+    "info": "Optional voxel accuracy. Smaller values drastically increase computation time.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Gradient",
+    "nick": "Gr",
+    "info": "Normalised temperature gradient.",
+    "type": "Gradient",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Function",
+    "nick": "Fn",
+    "info": "Optional function for post-processing subsurface temperature gradient values.",
+    "type": "Function",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Sections",
+    "nick": "Sc",
+    "info": "Optional planar sections through the shape.",
+    "type": "Plane",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Surface",
+    "nick": "Sf",
+    "info": "Cooling gradient on shape surface.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Sections",
+    "nick": "Sc",
+    "info": "Sections with normalised temperature distributions.",
+    "type": "Mesh",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "MeshTopology",
+  "fullTypeName": "MeshTopology",
+  "guid": "00000000-c403-4b45-ae37-dcba80878a20",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Mesh Topology",
+   "info": "Draw index markers on mesh vertices, edges, or facets.",
+   "chapter": "Display",
+   "section": "Analysis",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Mesh",
+    "nick": "Ms",
+    "info": "Base mesh.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Type",
+    "nick": "Ty",
+    "info": "Topological elements to mark.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Boundary",
+    "nick": "Bn",
+    "info": "Optional boundary. Elements outside the boundary will be omitted.",
+    "type": "Box",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Intervals",
+    "nick": "Iv",
+    "info": "Optional index intervals. Indices outside the intervals will be omitted.",
+    "type": "Interval",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Dots",
+    "nick": "Dt",
+    "info": "Marker dots with indices.",
+    "type": "Dot",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "OrthogonalityShader",
+  "fullTypeName": "OrthogonalityShader",
+  "guid": "00000000-8047-40ee-bea2-0c651a339a06",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Orthogonality Display",
+   "info": "Visualise the orthogonalities of the U and V directions across a surface.",
+   "chapter": "Display",
+   "section": "Analysis",
+   "slot": 3,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Shape",
+    "nick": "Sh",
+    "info": "Surface to analyse.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Gradient",
+    "nick": "Gr",
+    "info": "Visualisation gradient parameterised at angular degrees.",
+    "type": "Gradient",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Mesh",
+    "nick": "Ms",
+    "info": "Mesh with analysis colours.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "OsculatingGraph",
+  "fullTypeName": "OsculatingGraph",
+  "guid": "00000000-1342-4117-be09-9503296faa80",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Osculating Graph",
+   "info": "Draw osculating circles at the maximum curvature points of a curve.",
+   "chapter": "Display",
+   "section": "Analysis",
+   "slot": 2,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Curve",
+    "nick": "Cr",
+    "info": "Curve to analyze.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Gradient",
+    "nick": "Gr",
+    "info": "Optional gradient to be applied to the circles, based on their radii.",
+    "type": "Gradient",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Circles",
+    "nick": "Cs",
+    "info": "Osculating circles.",
+    "type": "Circle",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Radii",
+    "nick": "Rd",
+    "info": "Circle radii.",
+    "type": "Dot",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "PointDensityHistogram",
+  "fullTypeName": "PointDensityHistogram",
+  "guid": "00000000-55e8-47a0-9972-e5ac3dcd4fc2",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Density Bar Graph",
+   "info": "Create a 3D bar graph in the viewport, representing the density of points underneath each bar.",
+   "chapter": "Display",
+   "section": "Analysis",
+   "slot": 3,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Points",
+    "nick": "Pt",
+    "info": "Points to sample.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Graph Boundary",
+    "nick": "Bn",
+    "info": "Outer boundary of the entire bar graph.",
+    "type": "Rectangle",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "X Count",
+    "nick": "Nx",
+    "info": "Number of bars along the graph x-axis, or the approximate total number of bars if Ny is not set.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Y Count",
+    "nick": "Ny",
+    "info": "Optional number of bars along the graph y-axis. If omitted, the Nx value controls the total number of bars.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Gradient",
+    "nick": "Gr",
+    "info": "Optional gradient which maps bar valence to bar colour.",
+    "type": "Gradient",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Height Function",
+    "nick": "Fh",
+    "info": "Optional function which bar valence to bar height.",
+    "type": "Function",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Mesh",
+    "nick": "Ms",
+    "info": "Mesh representing the 3D bar graph.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "PointOrder",
+  "fullTypeName": "PointOrder",
+  "guid": "00000000-6529-4e41-a3ae-7bf5b0e4beec",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Point Order Display",
+   "info": "Draw connecting lines and indices in the viewports for lists of points.",
+   "chapter": "Display",
+   "section": "Visuals",
+   "slot": 1,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Points",
+    "nick": "Pt",
+    "info": "Point list to display.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Point Style",
+    "nick": "Ps",
+    "info": "Styling of point display.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Line Style",
+    "nick": "Ls",
+    "info": "Styling of line display.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "SurfaceTopology",
+  "fullTypeName": "SurfaceTopology",
+  "guid": "00000000-ba3f-4759-9973-93249756b713",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Surface Topology",
+   "info": "Draw index markers on surface vertices, edges, or faces.",
+   "chapter": "Display",
+   "section": "Analysis",
+   "slot": 1,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Surface",
+    "nick": "Sf",
+    "info": "Base surface.",
+    "type": "Surface",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Type",
+    "nick": "Ty",
+    "info": "Topological elements to mark.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Boundary",
+    "nick": "Bn",
+    "info": "Optional boundary. Elements outside the boundary will be omitted.",
+    "type": "Box",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Intervals",
+    "nick": "Iv",
+    "info": "Optional index intervals. Indices outside the intervals will be omitted.",
+    "type": "Interval",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Dots",
+    "nick": "Dt",
+    "info": "Marker dots with indices.",
+    "type": "Dot",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ThicknessShader",
+  "fullTypeName": "ThicknessShader",
+  "guid": "00000000-eb8d-4a8a-abba-f0800246320b",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Thickness Display",
+   "info": "Display the local thickness of a surface or a mesh.",
+   "chapter": "Display",
+   "section": "Analysis",
+   "slot": 3,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Shape",
+    "nick": "Sh",
+    "info": "Surface or mesh to analyse.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Lower Limit",
+    "nick": "Mn",
+    "info": "Lower thickness limit. Regions thinner than this limit will be drawn in red.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Upper Limit",
+    "nick": "Mx",
+    "info": "Optional upper thickness limit. Regions thicker than this limit will be drawn in yellow.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Gradient",
+    "nick": "Gr",
+    "info": "Visualisation gradient to be used between the limits.",
+    "type": "Gradient",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Mesh",
+    "nick": "Ms",
+    "info": "Mesh with analysis colours.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "TreeTopology",
+  "fullTypeName": "TreeTopology",
+  "guid": "00000000-c501-48c2-b3fa-cba04a8b14cd",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Tree Diagram",
+   "info": "Draw a diagrammatical representation of a data tree.",
+   "chapter": "Display",
+   "section": "Analysis",
+   "slot": 1,
+   "rank": -1,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree to diagram.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "Plane",
+    "nick": "Pl",
+    "info": "Orientation plane for diagram.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Scale",
+    "nick": "Sc",
+    "info": "Diagram scaling factor.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Twigs",
+    "nick": "Tw",
+    "info": "Twig curves.",
+    "type": "Curve",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Paths",
+    "nick": "Pt",
+    "info": "Twig paths.",
+    "type": "Dot",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "TwistingGraph",
+  "fullTypeName": "TwistingGraph",
+  "guid": "00000000-9808-4dd1-916f-32c4556cb13f",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Twist Graph",
+   "info": "Draw the graph of the minimum twisting frames for a given curve.",
+   "chapter": "Display",
+   "section": "Analysis",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Curve",
+    "nick": "Cr",
+    "info": "Curve to analyse.",
+    "type": "Curve",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Scale",
+    "nick": "Sc",
+    "info": "Scaling factor.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Graph X",
+    "nick": "Gx",
+    "info": "Graph curve connecting the frame x directions.",
+    "type": "Polyline",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Spokes X",
+    "nick": "Sx",
+    "info": "Spokes for the x graph.",
+    "type": "Line",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Graph Y",
+    "nick": "Gy",
+    "info": "Graph curve connecting the frame y directions.",
+    "type": "Polyline",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Spokes Y",
+    "nick": "Sy",
+    "info": "Spokes for the y graph.",
+    "type": "Line",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "VectorDisplay",
+  "fullTypeName": "VectorDisplay",
+  "guid": "00000000-08e4-41b9-ab23-c36018777f94",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Vector Display",
+   "info": "Draw vectors with the available display styling options.",
+   "chapter": "Display",
+   "section": "Visuals",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Vectors",
+    "nick": "Vc",
+    "info": "Vectors to style.",
+    "type": "Vector",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Anchors",
+    "nick": "Pt",
+    "info": "Optional vector anchor points. If not specified, the incoming vectors must already have anchors.",
+    "type": "Point",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Style",
+    "nick": "St",
+    "info": "Optional vector shape style.",
+    "type": "HiddenEnum",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Weights",
+    "nick": "Wg",
+    "info": "Optional line weights for each vector.",
+    "type": "Number",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Gradient",
+    "nick": "Gr",
+    "info": "Optional gradient to apply to vector lengths.",
+    "type": "Gradient",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Function",
+    "nick": "Fn",
+    "info": "Optional function to apply to vector lengths prior to gradient colouring.",
+    "type": "HiddenFunction",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Vectors",
+    "nick": "Vs",
+    "info": "Styled vectors.",
+    "type": "Vector",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "VisibilityShader",
+  "fullTypeName": "VisibilityShader",
+  "guid": "00000000-0c53-4411-9c7c-393a20d30dbb",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Visibility Display",
+   "info": "Paint the visible part of a surface or a mesh.",
+   "chapter": "Display",
+   "section": "Analysis",
+   "slot": 3,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Shape",
+    "nick": "Sh",
+    "info": "Surface or mesh to analyse.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Observer Location",
+    "nick": "Ob",
+    "info": "Observer location.",
+    "type": "Point",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Hidden Colour",
+    "nick": "Hd",
+    "info": "Colour for invisible part of surface.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Visibility Gradient",
+    "nick": "Vs",
+    "info": "Colour of visible part of surface based on incidence angle in degrees.",
+    "type": "Gradient",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Mesh",
+    "nick": "Ms",
+    "info": "Mesh with analysis colours.",
+    "type": "Mesh",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ZebraShader",
+  "fullTypeName": "ZebraShader",
+  "guid": "00000000-7952-4f6f-81f8-adde6d49c3ab",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Zebra Display",
+   "info": "Visualise the curvature continuity of a shape using zebra stripes.",
+   "chapter": "Display",
+   "section": "Analysis",
+   "slot": 3,
+   "rank": -1,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Shape",
+    "nick": "Sh",
+    "info": "Surface to analyse.",
+    "type": "Surface",
+    "access": "tree",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "AutomateGradient",
+  "fullTypeName": "AutomateGradient",
+  "guid": "00000000-b56b-43dd-9898-0188318a5c44",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Auto Gradient Limits",
+   "info": "Make the gradient limits automatically adapt to local conditions.",
+   "chapter": "Display",
+   "section": "Gradient",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Gradient",
+    "nick": "Gr",
+    "info": "Gradient to modify.",
+    "type": "Gradient",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Lower",
+    "nick": "Lo",
+    "info": "If true, the lower gradient limit will automatically adapt to local conditions. If false, the lower gradient limit remains constant. If omitted, the existing lower limit behaviour remains intact.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Upper",
+    "nick": "Up",
+    "info": "If true, the upper gradient limit will automatically adapt to local conditions. If false, the upper gradient limit remains constant. If omitted, the existing upper limit behaviour remains intact.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Gradient",
+    "nick": "Gr",
+    "info": "Modified gradient.",
+    "type": "Gradient",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "DissectGradient",
+  "fullTypeName": "DissectGradient",
+  "guid": "00000000-37ff-42ac-b5a8-1cdd55298452",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Dissect Gradient",
+   "info": "Dissect a colour gradient into grip parameters, colours, an interpolation scheme and a colour space.",
+   "chapter": "Display",
+   "section": "Gradient",
+   "slot": 10,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Gradient",
+    "nick": "Gr",
+    "info": "Gradient to dissect.",
+    "type": "Gradient",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Grips",
+    "nick": "Gr",
+    "info": "Grip parameters.",
+    "type": "Number",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Grip colours.",
+    "type": "Colour",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Interpolation",
+    "nick": "In",
+    "info": "Gradient interpolation scheme.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Colour Space",
+    "nick": "Sp",
+    "info": "Gradient colour space.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "EvaluateGradient",
+  "fullTypeName": "EvaluateGradient",
+  "guid": "00000000-39e3-4913-b1fc-af0109cb3c94",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Evaluate Gradient",
+   "info": "Compute the colour of a gradient at a given parameter.",
+   "chapter": "Display",
+   "section": "Gradient",
+   "slot": 10,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Gradient",
+    "nick": "Gr",
+    "info": "Gradient to evaluate.",
+    "type": "Gradient",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Parameter",
+    "nick": "t",
+    "info": "Evaluation parameter.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Colour of the gradient at the given parameter.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "GradientFromFunctions",
+  "fullTypeName": "GradientFromFunctions",
+  "guid": "00000000-cc19-4ff7-9a3e-221d1db28098",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Gradient From Functions",
+   "info": "Create a colour gradient out of colour channel functions.",
+   "chapter": "Display",
+   "section": "Gradient",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Function 1",
+    "nick": "",
+    "info": "Function for first colour channel.",
+    "type": "Function",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Function 2",
+    "nick": "",
+    "info": "Function for second colour channel.",
+    "type": "Function",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Function 3",
+    "nick": "",
+    "info": "Function for third colour channel.",
+    "type": "Function",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Colour Space",
+    "nick": "Sp",
+    "info": "Gradient colour space.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Gradient",
+    "nick": "Gr",
+    "info": "Colour gradient based on functions.",
+    "type": "Gradient",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "GradientFromGrips",
+  "fullTypeName": "GradientFromGrips",
+  "guid": "00000000-825a-4440-9845-d1b8171c5886",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Gradient From Grips",
+   "info": "Create a colour gradient out of a sequence of grips.",
+   "chapter": "Display",
+   "section": "Gradient",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Locations",
+    "nick": "Lc",
+    "info": "List of grip parameters.",
+    "type": "Number",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Colours",
+    "nick": "Cl",
+    "info": "List of grip colours.",
+    "type": "Colour",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Interpolation",
+    "nick": "In",
+    "info": "Gradient interpolation scheme.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Colour Space",
+    "nick": "Sp",
+    "info": "Gradient colour space.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Gradient",
+    "nick": "Gr",
+    "info": "Colour gradient based on grips.",
+    "type": "Gradient",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "GradientFromInterval",
+  "fullTypeName": "GradientFromInterval",
+  "guid": "00000000-96fa-4d8f-bd2c-02affd16e19b",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Gradient From Interval",
+   "info": "Create a colour gradient within a given numeric interval.",
+   "chapter": "Display",
+   "section": "Gradient",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Interval",
+    "nick": "In",
+    "info": "Interval within which to distribute the colours.",
+    "type": "Interval",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Colours",
+    "nick": "Cl",
+    "info": "Sequence of grip colours.",
+    "type": "Colour",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Interpolation",
+    "nick": "In",
+    "info": "Gradient interpolation scheme.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Gradient",
+    "nick": "Gr",
+    "info": "Colour gradient within interval.",
+    "type": "Gradient",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "GradientFunctions",
+  "fullTypeName": "GradientFunctions",
+  "guid": "00000000-4f31-4b6c-ba06-05e4913e60b7",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Gradient Functions",
+   "info": "Extract the interpolation functions for each colour channel in a gradient.",
+   "chapter": "Display",
+   "section": "Gradient",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Gradient",
+    "nick": "Gr",
+    "info": "Gradient to inspect.",
+    "type": "Gradient",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "First Interpolator",
+    "nick": "F1",
+    "info": "Interpolation function for first colour channel.",
+    "type": "Function",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Second Interpolator",
+    "nick": "F2",
+    "info": "Interpolation function for second colour channel.",
+    "type": "Function",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Third Interpolator",
+    "nick": "F3",
+    "info": "Interpolation function for third colour channel.",
+    "type": "Function",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Gradient Domain",
+    "nick": "Dm",
+    "info": "Numeric domain within which the gradient is defined.",
+    "type": "Interval",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Gradient Codomain",
+    "nick": "Cd",
+    "info": "Numeric codomain covering the y-range of the interpolation functions.",
+    "type": "Interval",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Colour Space",
+    "nick": "Sp",
+    "info": "Gradient colour space.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "NumbersToColours",
+  "fullTypeName": "NumbersToColours",
+  "guid": "00000000-8f3a-4b66-b38e-87f02ed83ce2",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Numbers To Colours",
+   "info": "Map a collection of numbers onto a gradient to yield the associated colours.",
+   "chapter": "Display",
+   "section": "Gradient",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Numbers",
+    "nick": "Nm",
+    "info": "Numbers to measure.",
+    "type": "Number",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Gradient",
+    "nick": "Gr",
+    "info": "Gradient to evaluate.",
+    "type": "Gradient",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Colours",
+    "nick": "Cl",
+    "info": "Colour of each number along the gradient.",
+    "type": "Colour",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "RemapGradient",
+  "fullTypeName": "RemapGradient",
+  "guid": "00000000-d39e-49d0-a552-ddfbbdf642b5",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Remap Gradient",
+   "info": "Remap a gradient from a source interval into a target interval.",
+   "chapter": "Display",
+   "section": "Gradient",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Gradient",
+    "nick": "Gr",
+    "info": "Gradient to map.",
+    "type": "Gradient",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Source",
+    "nick": "Si",
+    "info": "Optional source interval to map from. If omitted, the gradient's own interval is used.",
+    "type": "Interval",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Target",
+    "nick": "Ti",
+    "info": "Target interval to map into.",
+    "type": "Interval",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Gradient",
+    "nick": "Gr",
+    "info": "Remapped gradient.",
+    "type": "Gradient",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "Analemma",
+  "fullTypeName": "Analemma",
+  "guid": "00000000-ac5f-4d3d-a006-b964a03d112d",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Analemma",
+   "info": "Create the solar analemma curve for a specific location on Earth.",
+   "chapter": "Display",
+   "section": "Time",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Sky Dome",
+    "nick": "Sk",
+    "info": "A sphere representing the dome of the sky. The sphere's x-axis points to the East, while the y-axis points to the North.",
+    "type": "Sphere",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Year",
+    "nick": "Yr",
+    "info": "Year for analemma curve.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Time",
+    "nick": "Tm",
+    "info": "Time of day.",
+    "type": "TimeSpan",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Latitude",
+    "nick": "La",
+    "info": "Latitude of position.",
+    "type": "Angle",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Longitude",
+    "nick": "Lo",
+    "info": "Longitude of position.",
+    "type": "Angle",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Analemma",
+    "nick": "An",
+    "info": "Analemma polyline containing as many vertices as there are days in the given year.",
+    "type": "Polyline",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "CombineDateAndTime",
+  "fullTypeName": "CombineDateAndTime",
+  "guid": "00000000-c648-4a8d-8aef-8671c811c0c0",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Combine Date And Time",
+   "info": "Create a moment in time by combining a pure date and a pure time.",
+   "chapter": "Display",
+   "section": "Time",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Date",
+    "nick": "D",
+    "info": "Pure date.",
+    "type": "DateTime",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Time",
+    "nick": "T",
+    "info": "Pure time.",
+    "type": "TimeSpan",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Combined Date",
+    "nick": "Co",
+    "info": "Pure date offset by the pure time.",
+    "type": "DateTime",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "DateFromCalendar",
+  "fullTypeName": "DateFromCalendar",
+  "guid": "00000000-9fed-4304-9c78-73a4bbd9467e",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Date From Calendar",
+   "info": "Construct a date within a specific calendar.",
+   "chapter": "Display",
+   "section": "Time",
+   "slot": 0,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Calendar",
+    "nick": "C",
+    "info": "Calendar in which the date is defined.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Year",
+    "nick": "Y",
+    "info": "Year in the chosen calendar.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Month",
+    "nick": "M",
+    "info": "Month in the chosen calendar.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Day",
+    "nick": "D",
+    "info": "Day of the month in the chosen calendar.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Date",
+    "nick": "D",
+    "info": "Date in the specified calendar, set to midnight.",
+    "type": "DateTime",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "DateFromYD",
+  "fullTypeName": "DateFromYD",
+  "guid": "00000000-2e29-4a75-aeaa-d4a3ef08168b",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Date From Y/D",
+   "info": "Construct a date out of a year and a day of the year.",
+   "chapter": "Display",
+   "section": "Time",
+   "slot": 0,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Year",
+    "nick": "Y",
+    "info": "Gregorian year, must be between {DateTime.MinValue.Year} and {DateTime.MaxValue.Year}.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Day",
+    "nick": "D",
+    "info": "Day of the year.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Date",
+    "nick": "D",
+    "info": "Constructed date, set to midnight.",
+    "type": "DateTime",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "DateFromYMD",
+  "fullTypeName": "DateFromYMD",
+  "guid": "00000000-bc75-46c5-9d6a-07de187359d4",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Date From Y/M/D",
+   "info": "Construct a date out of a year, a month and a day.",
+   "chapter": "Display",
+   "section": "Time",
+   "slot": 0,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Year",
+    "nick": "Y",
+    "info": "Gregorian year, must be between {DateTime.MinValue.Year} and {DateTime.MaxValue.Year}.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Month",
+    "nick": "M",
+    "info": "Gregorian month.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Day",
+    "nick": "D",
+    "info": "Day of the month.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Date",
+    "nick": "D",
+    "info": "Constructed date, set to midnight.",
+    "type": "DateTime",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "DateFromYWD",
+  "fullTypeName": "DateFromYWD",
+  "guid": "00000000-9ff9-4121-bf63-2cbcd7e00ba9",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Date From Y/W/D",
+   "info": "Construct a date out of a year, a week number and a day.",
+   "chapter": "Display",
+   "section": "Time",
+   "slot": 0,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Year",
+    "nick": "Y",
+    "info": "Gregorian year, must be between {DateTime.MinValue.Year} and {DateTime.MaxValue.Year}.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Week",
+    "nick": "W",
+    "info": "Week number.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Day",
+    "nick": "D",
+    "info": "Day of the week.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Date",
+    "nick": "D",
+    "info": "Constructed date, set to midnight.",
+    "type": "DateTime",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "DateProperty",
+  "fullTypeName": "DateProperty",
+  "guid": "00000000-cda9-4f3e-852a-0745bc9e3884",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Date Property",
+   "info": "Extract a specific property from a date.",
+   "chapter": "Display",
+   "section": "Time",
+   "slot": 3,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Date",
+    "nick": "Dt",
+    "info": "Date to evaluate.",
+    "type": "DateTime",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Property",
+    "nick": "Pt",
+    "info": "Property to extract.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Property",
+    "nick": "Pr",
+    "info": "Property of date.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "DecimalTime",
+  "fullTypeName": "DecimalTime",
+  "guid": "00000000-f5d0-49d0-85b5-5fc944bb6837",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Decimal Time",
+   "info": "Construct a time out of decimal hours, minutes and seconds.",
+   "chapter": "Display",
+   "section": "Time",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Hour",
+    "nick": "H",
+    "info": "Decimal hour. A decimal day contains 10 hours, as opposed to 24.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Minute",
+    "nick": "M",
+    "info": "Decimal minute. A decimal hour contains 100 minutes, as opposed to 60.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Second",
+    "nick": "S",
+    "info": "Decimal second. A decimal minute contains 100 seconds, as opposed to 60.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Time",
+    "nick": "T",
+    "info": "Constructed time of day.",
+    "type": "TimeSpan",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "DissectDate",
+  "fullTypeName": "DissectDate",
+  "guid": "00000000-339c-4853-8359-eb76c0f5f551",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Dissect Date",
+   "info": "Extract the year, month, day and time from a date.",
+   "chapter": "Display",
+   "section": "Time",
+   "slot": 3,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Date",
+    "nick": "Dt",
+    "info": "Date to dissect.",
+    "type": "DateTime",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Year",
+    "nick": "Y",
+    "info": "Gregorian calendar year.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Month",
+    "nick": "M",
+    "info": "Month of year (from 1 to 12).",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Day",
+    "nick": "D",
+    "info": "Day of month (from 1 to 31).",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Time",
+    "nick": "T",
+    "info": "Time of day.",
+    "type": "TimeSpan",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "DissectTime",
+  "fullTypeName": "DissectTime",
+  "guid": "00000000-f870-4ba6-9ff8-fa00a06e9ae3",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Dissect Time",
+   "info": "Extract the days, hours, minutes and seconds from a time.",
+   "chapter": "Display",
+   "section": "Time",
+   "slot": 3,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Time",
+    "nick": "Tm",
+    "info": "Time to dissect.",
+    "type": "TimeSpan",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Days",
+    "nick": "D",
+    "info": "Whole number of days.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Hour",
+    "nick": "H",
+    "info": "Hour of the day (from 1 to 23).",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Minute",
+    "nick": "M",
+    "info": "Minute of the hour (from 1 to 59).",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Second",
+    "nick": "S",
+    "info": "Second of the minute (from 1 to 59).",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "OffsetTime",
+  "fullTypeName": "OffsetTime",
+  "guid": "00000000-a659-48d8-a08b-1ae083a912ba",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Offset Time",
+   "info": "Offset a date or a time span by a given number of hours, minutes or seconds.",
+   "chapter": "Display",
+   "section": "Time",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Time",
+    "nick": "T",
+    "info": "Date or time to offset.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Hours",
+    "nick": "H",
+    "info": "Number of partial or whole hours.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Minutes",
+    "nick": "M",
+    "info": "Number of partial or whole minutes.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Seconds",
+    "nick": "S",
+    "info": "Number of partial or whole seconds.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Offset Time",
+    "nick": "Of",
+    "info": "Modified date or time span.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "SmoothTime",
+  "fullTypeName": "SmoothTime",
+  "guid": "00000000-4fb2-4915-ad70-4f7156a22d47",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Smooth Time",
+   "info": "Create a time duration out of partial time units.",
+   "chapter": "Display",
+   "section": "Time",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Days",
+    "nick": "Pd",
+    "info": "Number of days.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Hours",
+    "nick": "Ph",
+    "info": "Number of hours.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Minutes",
+    "nick": "Pm",
+    "info": "Number of minutes.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Seconds",
+    "nick": "Ps",
+    "info": "Number of seconds.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Time",
+    "nick": "T",
+    "info": "Constructed duration.",
+    "type": "TimeSpan",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "SunLight",
+  "fullTypeName": "SunLight",
+  "guid": "00000000-0b8b-45f9-9081-815d8be2d3e0",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Sunlight",
+   "info": "Compute the position and direction of the sun at a given time, on a given date.",
+   "chapter": "Display",
+   "section": "Time",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Sky Dome",
+    "nick": "Sk",
+    "info": "A sphere representing the dome of the sky. The sphere's x-axis points to the East while the y-axis points to the North.",
+    "type": "Sphere",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Time",
+    "nick": "Ti",
+    "info": "Date and time for the sun's position.",
+    "type": "DateTime",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Latitude",
+    "nick": "La",
+    "info": "Latitude of position.",
+    "type": "Angle",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Longitude",
+    "nick": "Lo",
+    "info": "Longitude of position.",
+    "type": "Angle",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Position",
+    "nick": "Pt",
+    "info": "The position of the sun on the sky.",
+    "type": "Point",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Direction",
+    "nick": "Dr",
+    "info": "The direction of the sun's light.",
+    "type": "Vector",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "TimeFromDays",
+  "fullTypeName": "TimeFromDays",
+  "guid": "00000000-f89f-4799-864e-e5ea3a6a03ca",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Time From Days",
+   "info": "Construct a time out of partial and whole days.",
+   "chapter": "Display",
+   "section": "Time",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Days",
+    "nick": "D",
+    "info": "Number of days.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Time",
+    "nick": "T",
+    "info": "Constructed time.",
+    "type": "TimeSpan",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "TimeFromHMS",
+  "fullTypeName": "TimeFromHMS",
+  "guid": "00000000-2c97-47af-8fbc-4e87070f1631",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Time From H/M/S",
+   "info": "Construct a time of day out of an hour, minute and second.",
+   "chapter": "Display",
+   "section": "Time",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Hour",
+    "nick": "H",
+    "info": "Hour. This should be between zero and 24, but larger ranges are supported.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Minute",
+    "nick": "M",
+    "info": "Minute of the hour. This should be between zero and 59, but larger ranges are supported.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Second",
+    "nick": "S",
+    "info": "Second of the minute. This should be between zero and 59, but larger ranges are supported.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Time",
+    "nick": "T",
+    "info": "Constructed time of day.",
+    "type": "TimeSpan",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "TimeFromHours",
+  "fullTypeName": "TimeFromHours",
+  "guid": "00000000-c715-4524-8d17-ba908e49505a",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Time From Hours",
+   "info": "Construct a time of day out of a number of partial and whole hours.",
+   "chapter": "Display",
+   "section": "Time",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Hours",
+    "nick": "H",
+    "info": "Number of hours.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Time",
+    "nick": "T",
+    "info": "Constructed time of day.",
+    "type": "TimeSpan",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "TimeFromSeconds",
+  "fullTypeName": "TimeFromSeconds",
+  "guid": "00000000-6760-4d51-8a5b-f214a3e8172e",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Time From Seconds",
+   "info": "Construct a time out of a number of partial and whole seconds.",
+   "chapter": "Display",
+   "section": "Time",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Seconds",
+    "nick": "S",
+    "info": "Number of seconds.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Time",
+    "nick": "T",
+    "info": "Constructed time of day.",
+    "type": "TimeSpan",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "TimeProperty",
+  "fullTypeName": "TimeProperty",
+  "guid": "00000000-6f26-42c4-b7a2-de009ba6648b",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Time Property",
+   "info": "Extract a specific property from a time.",
+   "chapter": "Display",
+   "section": "Time",
+   "slot": 3,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Time",
+    "nick": "Tm",
+    "info": "Time to evaluate.",
+    "type": "TimeSpan",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Property",
+    "nick": "Pt",
+    "info": "Property to extract.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Property",
+    "nick": "Pr",
+    "info": "Property of time.",
+    "type": "Numeric",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "AdjustHueSatLum",
+  "fullTypeName": "AdjustHueSatLum",
+  "guid": "00000000-e5d1-4907-877e-8d7ee947f911",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Adjust HSL",
+   "info": "Modify the hue, saturation, and luminance properties of a colour.",
+   "chapter": "Display",
+   "section": "Colour",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Colour to adjust.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Hue Delta",
+    "nick": "ΔH",
+    "info": "Hue angle adjustment.",
+    "type": "Angle",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Saturation Delta",
+    "nick": "ΔS",
+    "info": "Saturation adjustment in the range $[-1,1]$.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Luminance Delta",
+    "nick": "ΔL",
+    "info": "Luminance adjustment in the range $[-1,1]$.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Adjusted colour.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Difference",
+    "nick": "ΔE",
+    "info": "Difference between the original and the adjusted colour in the CIEΔE2000 metric.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "AdjustColourSpace",
+  "fullTypeName": "AdjustColourSpace",
+  "guid": "00000000-9608-42de-a9b4-370714950abe",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Change Colour Space",
+   "info": "Change the space a colour is defined in.",
+   "chapter": "Display",
+   "section": "Colour",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Colour to transform.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Space",
+    "nick": "Sp",
+    "info": "Colour space for redefining the colour. This may cause the colour to change slightly due to gamut incompatibilities.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Transformed colour.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ColourDistance",
+  "fullTypeName": "ColourDistance",
+  "guid": "00000000-864F-4364-92AE-5AA7D11FC3F1",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Colour Distance",
+   "info": "Compute the distance between two colours.",
+   "chapter": "Display",
+   "section": "Colour",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "First Colour",
+    "nick": "Ca",
+    "info": "First colour for computing the distance.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Second Colour",
+    "nick": "Cb",
+    "info": "Second colour for computing the distance.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Metric",
+    "nick": "M",
+    "info": "Distance metric to be used.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Distance",
+    "nick": "D",
+    "info": "Distance between colours.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ColourFromCmyk",
+  "fullTypeName": "ColourFromCmyk",
+  "guid": "00000000-93b6-4e50-b02b-081484c5b6e4",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Colour From CMYK",
+   "info": "Create a colour out of CMYK channel values.",
+   "chapter": "Display",
+   "section": "Colour",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Cyan Channel",
+    "nick": "C",
+    "info": "Value of the cyan channel in the $[0,1]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Magenta Channel",
+    "nick": "M",
+    "info": "Value of the magenta channel in the $[0,1]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Yellow Channel",
+    "nick": "Y",
+    "info": "Value of the yellow channel in the $[0,1]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Key Channel",
+    "nick": "K",
+    "info": "Value of the key channel in the $[0,1]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Colour from CMYK channels.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ColourFromField",
+  "fullTypeName": "ColourFromField",
+  "guid": "00000000-8055-4425-bb11-41e06b899fb1",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Colour From Field",
+   "info": "Create a colour out of a scalar field value, mapped onto a gradient.",
+   "chapter": "Display",
+   "section": "Colour",
+   "slot": 3,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "Field measurement location.",
+    "type": "Point",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Scalar Field",
+    "nick": "Fl",
+    "info": "Scalar field to measure.",
+    "type": "Field",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Gradient",
+    "nick": "Gr",
+    "info": "Colour gradient sampled using the field measurement.",
+    "type": "Gradient",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Gradient colour at the measured field value.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ColourFromFields",
+  "fullTypeName": "ColourFromFields",
+  "guid": "00000000-ffa9-4e1e-b197-61630be2aa9d",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Colour From Fields",
+   "info": "Create a colour out of scalar field values.",
+   "chapter": "Display",
+   "section": "Colour",
+   "slot": 3,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "Field measurement location.",
+    "type": "Point",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "First Field",
+    "nick": "F1",
+    "info": "First scalar field to measure.",
+    "type": "Field",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Second Field",
+    "nick": "F2",
+    "info": "Second scalar field to measure.",
+    "type": "Field",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Third Field",
+    "nick": "F3",
+    "info": "Third scalar field to measure.",
+    "type": "Field",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Colour Space",
+    "nick": "Sp",
+    "info": "Colour space to use.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Colour with channel values derived from field measurements.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ColourFromHex",
+  "fullTypeName": "ColourFromHex",
+  "guid": "00000000-cf78-40a0-b6ad-ad0684b8c1bb",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Colour From Hex",
+   "info": "Create a colour from a hexadecimal RGB(A) integer, or three byte-accuracy channels.",
+   "chapter": "Display",
+   "section": "Colour",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Red",
+    "nick": "R",
+    "info": "Optional red channel byte value.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Green",
+    "nick": "G",
+    "info": "Optional blue channel byte value.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Blue",
+    "nick": "B",
+    "info": "Optional green channel byte value.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Hex",
+    "nick": "X",
+    "info": "Optional hexadecimal colour descriptor.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Colour from byte-accuracy channel data.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ColourFromHsp",
+  "fullTypeName": "ColourFromHsp",
+  "guid": "00000000-bc21-4a1c-a266-c26f1900bcac",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Colour From HSP",
+   "info": "Create a colour from H*SP channel values.",
+   "chapter": "Display",
+   "section": "Colour",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Hue Channel",
+    "nick": "H*",
+    "info": "Value of the hue* channel in the $[0,360)$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Saturation Channel",
+    "nick": "S",
+    "info": "Value of the saturation channel in the $[0,1]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Luminance Channel",
+    "nick": "P",
+    "info": "Value of the perceived luminance channel in the $[0,1]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Colour from H*SP channels.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ColourFromHsv",
+  "fullTypeName": "ColourFromHsv",
+  "guid": "00000000-2f2f-4738-b195-91b4f3091271",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Colour From HSV",
+   "info": "Create a colour from HSV channel values.",
+   "chapter": "Display",
+   "section": "Colour",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Hue Channel",
+    "nick": "H",
+    "info": "Value of the hue channel in the $[0,360)$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Saturation Channel",
+    "nick": "S",
+    "info": "Value of the saturation channel in the $[0,1]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Value Channel",
+    "nick": "V",
+    "info": "Value of the value channel in the $[0,1]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Colour from HSV channels.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ColourFromLab",
+  "fullTypeName": "ColourFromLab",
+  "guid": "00000000-616e-41ec-b8d0-36c8c9403e20",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Colour From Lab",
+   "info": "Create a colour from Cie-L*a*b* channel values.",
+   "chapter": "Display",
+   "section": "Colour",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "L* Channel",
+    "nick": "L*",
+    "info": "Value of the L* channel in the $[0,100]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "a* Channel",
+    "nick": "a*",
+    "info": "Value of the a* channel in the $[-50,+50]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "b* Channel",
+    "nick": "b*",
+    "info": "Value of the b* channel in the $[-50,+50]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Colour from Cie-L*a*b* channels.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ColourFromRgb",
+  "fullTypeName": "ColourFromRgb",
+  "guid": "00000000-6106-4e61-b01b-beb122f6af46",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Colour From RGB",
+   "info": "Create a colour from standard RGB channel values.",
+   "chapter": "Display",
+   "section": "Colour",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Red Channel",
+    "nick": "R",
+    "info": "Value of the red channel in the $[0,1]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Green Channel",
+    "nick": "G",
+    "info": "Value of the green channel in the $[0,1]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Blue Channel",
+    "nick": "B",
+    "info": "Value of the blue channel in the $[0,1]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Colour from standard RGB channels.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ColourFromXyz",
+  "fullTypeName": "ColourFromXyz",
+  "guid": "00000000-555e-4fdf-974b-7c86864685a1",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Colour From XYZ",
+   "info": "Create a colour from Cie-XYZ channel values.",
+   "chapter": "Display",
+   "section": "Colour",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "X Channel",
+    "nick": "X",
+    "info": "Value of the Xarvine channel in the (0,  {95.047f:0.000}) range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Y Channel",
+    "nick": "Y",
+    "info": "Value of the Yimber channel in the (0, {100f:0.000}) range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Z Channel",
+    "nick": "Z",
+    "info": "Value of the Zorn channel in the (0, {108.883f:0.000}) range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Colour from Cie-XYZ channels.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ColourFromYxy",
+  "fullTypeName": "ColourFromYxy",
+  "guid": "00000000-84d0-408c-9c3f-c07256765e8a",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Colour From Yxy",
+   "info": "Create a colour from Cie-Yxy channel values.",
+   "chapter": "Display",
+   "section": "Colour",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Y Channel",
+    "nick": "Y",
+    "info": "Value of the luminance Y channel in the $[0,100]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "x Channel",
+    "nick": "x",
+    "info": "Value of the  x channel in the $[0,1]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "y Channel",
+    "nick": "y",
+    "info": "Value of the  y channel in the $[0,1]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Colour from Cie-XYZ channels.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ColourLuminance",
+  "fullTypeName": "ColourLuminance",
+  "guid": "00000000-9538-466a-8577-2978b36d4d8c",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Colour Luminance",
+   "info": "Measure the luminance of a colour.",
+   "chapter": "Display",
+   "section": "Colour",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Colour",
+    "nick": "C",
+    "info": "Colour to measure.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Metric",
+    "nick": "M",
+    "info": "Luminance metric.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Luminance",
+    "nick": "L",
+    "info": "Luminance of colour according to given metric.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ColourToCmyk",
+  "fullTypeName": "ColourToCmyk",
+  "guid": "00000000-a026-4a5b-b666-ebed2052b1b6",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Colour To CMYK",
+   "info": "Compute the channel values of a colour using the CMYK colour model.",
+   "chapter": "Display",
+   "section": "Colour",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Colour to analyse.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Cyan Channel",
+    "nick": "C",
+    "info": "Value of the cyan channel in the $[0,1]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Magenta Channel",
+    "nick": "M",
+    "info": "Value of the magenta channel in the $[0,1]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Yellow Channel",
+    "nick": "Y",
+    "info": "Value of the yellow channel in the $[0,1]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Key Channel",
+    "nick": "K",
+    "info": "Value of the key channel in the $[0,1]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ColourToHsp",
+  "fullTypeName": "ColourToHsp",
+  "guid": "00000000-cf51-4cc5-a773-c56d80e3f889",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Colour To H*SP",
+   "info": "Compute the channel values of a colour using the H*SP colour model.",
+   "chapter": "Display",
+   "section": "Colour",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Colour to analyse.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Hue* Channel",
+    "nick": "H",
+    "info": "Value of the hue* channel in the $[0,360)$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Saturation Channel",
+    "nick": "S",
+    "info": "Value of the saturation channel in the $[0,1]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Luminance Channel",
+    "nick": "P",
+    "info": "Value of the perceived luminance channel in the $[0,1]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ColourToHsv",
+  "fullTypeName": "ColourToHsv",
+  "guid": "00000000-a6b2-4669-880f-896e3160e236",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Colour To HSV",
+   "info": "Compute the channel values of a colour using the HSV colour model.",
+   "chapter": "Display",
+   "section": "Colour",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Colour to analyse.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Hue Channel",
+    "nick": "H",
+    "info": "Value of the hue channel in the $[0,360)$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Saturation Channel",
+    "nick": "S",
+    "info": "Value of the saturation channel in the $[0,1]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Brightness Channel",
+    "nick": "V",
+    "info": "Value of the brightness channel in the $[0,1]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ColourToLab",
+  "fullTypeName": "ColourToLab",
+  "guid": "00000000-576d-41dc-b9a9-0fbe8ea43add",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Colour To Lab",
+   "info": "Compute the channel values of a colour using the L*a*b* colour model.",
+   "chapter": "Display",
+   "section": "Colour",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Colour to analyse.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Luminance Channel",
+    "nick": "L*",
+    "info": "Value of the luminance channel in the $[0,100]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "A* Channel",
+    "nick": "A*",
+    "info": "Value of the (green, red) opposition channel. Nominally within $[-50,+50]$, though saturated colours exceed that.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "B* Channel",
+    "nick": "B*",
+    "info": "Value of the (blue, yellow) opposition channel. Nominally within $[-50,+50]$, though saturated colours exceed that.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ColourToRgb",
+  "fullTypeName": "ColourToRgb",
+  "guid": "00000000-221b-4a84-93c2-e7f5f3297ebe",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Colour To RGB",
+   "info": "Compute the channel values of a colour using the standard RGB colour model.",
+   "chapter": "Display",
+   "section": "Colour",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Colour to analyse.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Red Channel",
+    "nick": "R",
+    "info": "Value of the red channel.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Green Channel",
+    "nick": "G",
+    "info": "Value of the green channel.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Blue Channel",
+    "nick": "B",
+    "info": "Value of the blue channel.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ColourToRgbByte",
+  "fullTypeName": "ColourToRgbByte",
+  "guid": "00000000-cceb-49e1-bb48-31bde9343cd0",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Colour To Hex",
+   "info": "Compute the hexadecimal description and byte channel values of a colour using the standard RGB colour model.",
+   "chapter": "Display",
+   "section": "Colour",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Colour to analyse.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Red Channel",
+    "nick": "Ri",
+    "info": "Value of the red channel in the $[0,255]$ range.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Green Channel",
+    "nick": "Gi",
+    "info": "Value of the green channel in the $[0,255]$ range.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Blue Channel",
+    "nick": "Bi",
+    "info": "Value of the blue channel in the $[0,255]$ range.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Hex Descriptor",
+    "nick": "Hx",
+    "info": "HTML compliant hexadecimal descriptor of the colour.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ColourToXyz",
+  "fullTypeName": "ColourToXyz",
+  "guid": "00000000-c953-4b18-8455-a8c937dbda7d",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Colour To XYZ",
+   "info": "Compute the channel values of a colour using the CIE XYZ colour model.",
+   "chapter": "Display",
+   "section": "Colour",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Colour to analyse.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "X Channel",
+    "nick": "X",
+    "info": "Value of the Xarvine imaginary colour channel.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Y Channel",
+    "nick": "Y",
+    "info": "Value of the Yimber imaginary colour channel.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Z Channel",
+    "nick": "Z",
+    "info": "Value of the Zorn imaginary colour channel.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ColourToYxy",
+  "fullTypeName": "ColourToYxy",
+  "guid": "00000000-397c-48ab-85f1-e8bf1708388f",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Colour To Yxy",
+   "info": "Compute the channel values of a colour using the Cie-Yxy colour model.",
+   "chapter": "Display",
+   "section": "Colour",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Colour to analyse.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Y Channel",
+    "nick": "Y",
+    "info": "Value of the Y or luminance channel in the $[0,100]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "x Channel",
+    "nick": "x",
+    "info": "Value of the x channel in the $[0,1]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "y Channel",
+    "nick": "y",
+    "info": "Value of the y channel in the $[0,1]$ range.",
+    "type": "Number",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "ColourTransparency",
+  "fullTypeName": "ColourTransparency",
+  "guid": "00000000-db2f-463d-bbbf-cdb713203e83",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Modify Transparency",
+   "info": "Set or adjust the transparency of a colour.",
+   "chapter": "Display",
+   "section": "Colour",
+   "slot": 3,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Colour to make more or less transparent.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Transparency",
+    "nick": "Tr",
+    "info": "Optional specific transparency, from fully transparent at zero to fully opaque at one.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Adjustment",
+    "nick": "Ad",
+    "info": "Optional transparency adjustment factor. When specified, the colour's original transparency is multiplied by this factor.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Colour with adjusted transparency.",
+    "type": "Colour",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "DotFromMeta",
+  "fullTypeName": "DotFromMeta",
+  "guid": "00000000-4890-4be7-98c9-f16375dc41be",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Dot From Meta",
+   "info": "Create a text dot out of given shape metadata values.",
+   "chapter": "Display",
+   "section": "Visuals",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Shape",
+    "nick": "Sh",
+    "info": "Shape with metadata attached.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Names",
+    "nick": "Nm",
+    "info": "Names of meta values to display.",
+    "type": "MetaName",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Include Name",
+    "nick": "In",
+    "info": "Specifies whether to include the meta name in the text dot.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Dot",
+    "nick": "Dt",
+    "info": "Text dot showing meta data.",
+    "type": "Dot",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "DotFromText",
+  "fullTypeName": "DotFromText",
+  "guid": "00000000-4dad-48ff-8dd1-32c6b2f6dc60",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Dot From Text",
+   "info": "Create a text dot out of a point and text.",
+   "chapter": "Display",
+   "section": "Visuals",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Point",
+    "nick": "Pt",
+    "info": "Text dot location.",
+    "type": "Point",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text dot content.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Dot",
+    "nick": "Dt",
+    "info": "Text dot.",
+    "type": "Dot",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "display",
+  "assembly": "G2DisplayComponents",
+  "namespace": "",
+  "typeName": "DrawText3D",
+  "fullTypeName": "DrawText3D",
+  "guid": "00000000-e877-4626-abef-69587b640f6b",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Text 3D",
+   "info": "Draw 3D oriented text in the Rhino viewports.",
+   "chapter": "Display",
+   "section": "Visuals",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Plane",
+    "nick": "Pl",
+    "info": "Text plane.",
+    "type": "Plane",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Text",
+    "nick": "Tx",
+    "info": "Text to display.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Size",
+    "nick": "Sz",
+    "info": "Size of text in world units.",
+    "type": "Field",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Horizontal",
+    "nick": "Ha",
+    "info": "Horizontal alignment of text with respect to the plane origin.",
+    "type": "HiddenEnum",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Vertical",
+    "nick": "Va",
+    "info": "Vertical alignment of text with respect to the plane origin.",
+    "type": "HiddenEnum",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Colour",
+    "nick": "Cl",
+    "info": "Optional colour override.",
+    "type": "HiddenColour",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Font",
+    "nick": "Ft",
+    "info": "Optional fontface override.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Bold",
+    "nick": "Bb",
+    "info": "If true, and if the fontface supports it, the text will be bolded.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Italic",
+    "nick": "Ii",
+    "info": "If true, and if the fontface supports it, the text will be italicised.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ }
+]

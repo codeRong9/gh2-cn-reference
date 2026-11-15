@@ -1,0 +1,20 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="linearfc17dfbe1c59" gradientUnits="userSpaceOnUse" x1="7.5" y1="2" x2="16.5" y2="35">
+      <stop offset="0%" style="stop-color:#FFFFFF;" />
+      <stop offset="100%" style="stop-color:#333333;" />
+    </linearGradient>
+    <linearGradient id="linear7c3000c54a6a" gradientUnits="userSpaceOnUse" x1="7.5" y1="2" x2="16.5" y2="35">
+      <stop offset="0%" style="stop-color:#FFFFFF;" />
+      <stop offset="100%" style="stop-color:#333333;" />
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 2 2.220446E-16 L 22 2.220446E-16 A 2 2 0 0 1 24 2.0000002 L 24 22 A 2 2 0 0 1 22 24 L 2 24 A 2 2 0 0 1 0 22 L 0 2 A 2 2 0 0 1 2 0" fill="#333333" />
+    <path d="M 5 11 L 17 10 L 17.5 13 L 6 15.5 L 5 11" fill="#FF1493" />
+    <path d="M 3 10 L 20 9 L 17 8 L 15 3 L 12 4 L 8 2 L 6 8 L 3 10" fill="url(#linearfc17dfbe1c59)" />
+    <path d="M 4 17 L 20 13.5 L 19 16 L 23 24 L 5 24 L 7 20 L 4 17" fill="url(#linear7c3000c54a6a)" />
+    <path d="M 10 12 A 2.0833333 2.0833333 0 0 1 6 12" fill="#333333" />
+    <path d="M 16 11 A 2.5385349 2.5385349 0 0 1 11.5 12" fill="#333333" />
+  </g>
+</svg>

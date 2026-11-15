@@ -1,0 +1,94 @@
+{
+  "data.sub-list": {
+    "concept": "按起止索引从列表中截取一段，起止都包含在内。它是「只要中间那几项」的标准做法，比先拍平再过滤更直接。",
+    "steps": [
+      "接数据列表。",
+      "给起始索引与长度（或结束索引，看端口给的是哪种）。",
+      "输出就是截取出来的那一段；索引超出范围时返回空值而不是报错。"
+    ],
+    "scenes": [{ "title": "取中间楼层", "body": "从整栋楼的标高列表里截取第 3 到第 8 层单独做处理。", "wiring": "标高 → Sub List(2, 6)" }],
+    "pitfalls": ["索引从 0 开始，写 1 表示第二项。", "结束索引超出列表长度时不会自动补齐。"],
+    "related": ["data.split-list", "data.item-from-index", "data.partition-list"],
+    "tip": "先看一眼 List Length，再填索引，能避免一半的空结果。"
+  },
+  "data.weave": {
+    "concept": "按重复规则把多路数据交错编织成一条列表。AB 两路、规则 1:1 就是交替排列；1:2 就是一路插一个、另一路插两个。",
+    "steps": [
+      "把若干路列表接到不同输入。",
+      "给编织规则（每路连续取几项）。",
+      "输出为交织后的单条列表。"
+    ],
+    "scenes": [{ "title": "交替排布", "body": "把两种尺寸的构件交替排列，形成节奏感。", "wiring": "A(大) + B(小) → Weave(1,1)" }],
+    "pitfalls": ["规则长度与输入路数不一致时，多出的输入会被忽略。", "两路数量不等时，短的一路会提前耗尽。"],
+    "related": ["data.merge", "data.entwine", "data.pick-and-mix"],
+    "tip": "想要「一长一短」交替，就用规则 1:2 去编织。"
+  },
+  "data.entwine": {
+    "concept": "把多路输入合并成一棵树，每路各占一条分支。与普通合并的区别在于它保留了「哪一路」这个信息。",
+    "steps": [
+      "把若干路列表分别接进不同输入。",
+      "选择合并方式（按输入分组、按项分组等）。",
+      "输出是一棵带分组结构的树，下游可以按组分别计算。"
+    ],
+    "scenes": [{ "title": "多方案并列", "body": "把三个方案的体块合成一棵树，统一预览但保持可分别控制。", "wiring": "方案A/B/C → Entwine" }],
+    "pitfalls": ["不同合并方式会得到完全不同的树结构，改之前先看输出。", "分组后下游组件会对每枝各算一次，数据量成倍增长。"],
+    "related": ["data.merge", "data.partition-list", "data.graft-tree"],
+    "tip": "要「分组」用编织成树，要「合并」用合并列表。"
+  },
+  "data.tree-paths": {
+    "concept": "取出树中所有路径。它是排查树结构问题最直接的工具：路径长什么样，决定了数据是「按什么层级」组织的。",
+    "steps": ["接树。", "输出每条分支的路径（形如 {0;1}）。", "把路径接给 Panel，肉眼确认层级是否符合预期。"],
+    "scenes": [{ "title": "检查分组层级", "body": "点阵分组后看路径是 {0;0} 还是 {0;0;0}，判断分组多了一层还是少了一层。", "wiring": "点阵 → Tree Paths → Panel" }],
+    "pitfalls": ["路径数与分支数是同一个概念，但不要和数据项数混淆。", "拍平后路径全为空，看不出原结构。"],
+    "related": ["data.tree-statistics", "data.dissect-path", "data.tree-topology"],
+    "tip": "看不清结构时，先把路径打出来，比猜快得多。"
+  },
+  "data.simplify-tree": {
+    "concept": "去掉所有路径共有的前缀层级，只留有区分度的部分。它不改变分组关系，只把「门牌号」改短。",
+    "steps": ["接树。", "观察路径变化：{0;0;0} 与 {0;0;1} 可能变成 {0} 与 {1}。", "拍平或整枝操作前常用它清理冗余层级。"],
+    "scenes": [{ "title": "清理嵌套路径", "body": "多级嵌套后路径太长，简化后再做按路径取枝。", "wiring": "树 → Simplify → 按路径取枝" }],
+    "pitfalls": ["如果路径本身不共享前缀，简化不会有任何变化。", "简化只改路径不改数据，所以数量不会变。"],
+    "related": ["data.flatten-tree", "data.trim-tree", "data.renumber-tree"],
+    "tip": "简化 = 改门牌号；想改结构请用拍平或嫁接。"
+  },
+  "maths.limit-number": {
+    "concept": "把数值钳制在一个区间内：小于下限取下限，大于上限取上限。常用来防止极端参数把几何「炸飞」。",
+    "steps": ["接数值与限幅区间。", "输出被夹在区间内的数值。", "需要只夹一端时，把另一端设成足够大的值。"],
+    "scenes": [{ "title": "限制板厚", "body": "把用户输入的板厚限制在 8~30 mm，避免出现 0 或负值。", "wiring": "输入 → Limit Number(8~30)" }],
+    "pitfalls": ["区间上下限写反会得到恒定值。", "它只改数值，不会修正已经生成错的几何。"],
+    "related": ["maths.remap-number", "maths.numeric-bounds", "maths.round-multiple"],
+    "tip": "凡是「用户可填」的参数，外面都套一层限幅，能少一半怪结果。"
+  },
+  "maths.remap-interval": {
+    "concept": "把整个区间从一个范围按比例搬到另一个范围。做「参数区间整体缩放」时用它，比逐个数值映射更省事。",
+    "steps": ["接源区间与目标区间。", "输出映射后的区间。", "常与数值映射配合：先定区间，再映射数值。"],
+    "scenes": [{ "title": "统一区间", "body": "把不同量级的指标区间都映射到 0~1，便于比较。", "wiring": "各指标区间 → Remap Interval(→0~1)" }],
+    "pitfalls": ["源区间上下限顺序会影响结果方向（反着映射可用于翻转）。", "跨零区间映射时符号会跟着翻转。"],
+    "related": ["maths.remap-number", "maths.interval-from-limits", "maths.limit-number"],
+    "tip": "先把区间对齐，再做数值运算，逻辑最清楚。"
+  },
+  "maths.mass-addition": {
+    "concept": "把一个列表或整棵树里的所有数值加成一个总和。注意它和「逐项累加」不同：它只给一个数，不给过程。",
+    "steps": ["接数值列表或树。", "输出总和。", "需要每一步的累计值时改用逐项累加。"],
+    "scenes": [{ "title": "算总面积", "body": "把所有面板面积求和，得到幕墙总面积。", "wiring": "面积列表 → Mass Addition" }],
+    "pitfalls": ["树输入会按分支分别求和，输出是每枝一个和。", "存在空值时总和可能变成空值，先剔除空值。"],
+    "related": ["maths.list-addition", "maths.mean", "maths.mass-multiplication"],
+    "tip": "要「一个总数」用求和，要「每一步结果」用逐项累加。"
+  },
+  "vector.vector-from2-points": {
+    "concept": "用两个点生成从起点指向终点的向量：长度等于两点距离，方向沿两点连线。移动、投影、朝向计算都从它开始。",
+    "steps": ["接起点与终点。", "输出向量。", "需要单位方向时，再接一个向量重设长度即可。"],
+    "scenes": [{ "title": "按两点移动", "body": "把一个构件从 A 点搬到 B 点。", "wiring": "A,B → 向量 → Move" }],
+    "pitfalls": ["两点重合时会得到零向量，下游移动会「失效」而不是报错。", "向量没有位置概念，别拿它当点用。"],
+    "related": ["transform.move", "vector.vector-to-xyz", "vector.vector-resize"],
+    "tip": "移动失败先看两点是否重合——零向量不会报错，只会什么都不变。"
+  },
+  "vector.plane-from-normal": {
+    "concept": "用原点与法向构造一个平面。它是「让物件朝向某个方向」最直接的方式：法向决定平面朝向，原点决定位置。",
+    "steps": ["接原点与法向向量。", "输出平面。", "接给朝向对齐或几何生成组件使用。"],
+    "scenes": [{ "title": "沿法向摆板", "body": "用曲面法向做平面朝向，让面板贴合曲面。", "wiring": "分点 + 法向 → Plane → Orient" }],
+    "pitfalls": ["法向为零向量时会退化为默认平面，行为不明显。", "平面的 X 轴方向由算法补全，未必符合预期，需要时再接旋转。"],
+    "related": ["vector.plane-from-x-y", "transform.orient", "surface.evaluate-surface"],
+    "tip": "法向定朝向，原点定位置；要控制「转多少度」再加绕法向旋转。"
+  }
+}

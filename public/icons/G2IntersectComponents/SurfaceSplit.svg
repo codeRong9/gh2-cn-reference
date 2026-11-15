@@ -1,0 +1,20 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="linear310406970114" gradientUnits="userSpaceOnUse" x1="20.5" y1="12" x2="9.5" y2="12">
+      <stop offset="0%" style="stop-color:#C5F6FA;" />
+      <stop offset="100%" style="stop-color:#66D9E8;" />
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 9.546836 20.5 A 15.288898 15.288898 0 0 1 13.645562 3.500001 L 20.5 3.5 L 20.5 20.5 L 9.546834 20.5" fill="url(#linear310406970114)" />
+    <path d="M 13.645563 3.5 A 15.28891 15.28891 0 0 0 9.546832 20.499998 L 3.5 20.5 L 3.5 3.5 L 13.645562 3.5" fill="#FCC419" />
+    <path d="M 12.618641 20.5 A 13.953587 13.953587 0 0 1 17.658472 3.4999971 L 18.59141 3.5 A 13.453602 13.453602 0 0 0 13.163374 20.499998 L 12.618641 20.5" fill="#000000" fill-opacity="0.02" />
+    <path d="M 12.077393 20.5 A 14.453602 14.453602 0 0 1 16.79677 3.5 L 17.658468 3.5 A 13.953607 13.953607 0 0 0 12.61864 20.499998 L 12.077395 20.5" fill="#000000" fill-opacity="0.035" />
+    <path d="M 16.79677 3.5 A 14.453589 14.453589 0 0 0 12.077396 20.500002 L 11.539233 20.5 A 14.953607 14.953607 0 0 1 15.986873 3.499999 L 16.79677 3.5" fill="#000000" fill-opacity="0.055" />
+    <path d="M 11.00381 20.5 A 15.453606 15.453606 0 0 1 15.216489 3.499998 L 15.986871 3.5 A 14.953594 14.953594 0 0 0 11.539232 20.499998 L 11.00381 20.5" fill="#000000" fill-opacity="0.075" />
+    <path d="M 10.470831 20.500002 A 15.953579 15.953579 0 0 1 14.477313 3.500001 L 15.216488 3.5 A 15.45359 15.45359 0 0 0 11.003811 20.500002 L 10.470831 20.5" fill="#000000" fill-opacity="0.102" />
+    <path d="M 9.546834 20.5 L 3.5 20.5 L 3.5 3.5 L 13.645562 3.5" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 13.645562 3.5 L 20.5 3.5 L 20.5 20.5 L 9.546834 20.5" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 10 21.999998 A 16.953598 16.953598 0 0 1 16.000004 0.9999981" stroke="#0B7285" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

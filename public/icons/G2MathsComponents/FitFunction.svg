@@ -1,0 +1,36 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="linear7f3b3ea9a9da" gradientUnits="userSpaceOnUse" x1="19" y1="9" x2="17.6" y2="6.2">
+      <stop offset="0%" style="stop-color:#E64980;" />
+      <stop offset="100%" style="stop-color:#F0157F; stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient id="lineara8509630ef9d" gradientUnits="userSpaceOnUse" x1="13" y1="13" x2="14.4" y2="15.8">
+      <stop offset="0%" style="stop-color:#E64980;" />
+      <stop offset="100%" style="stop-color:#F0157F; stop-opacity:0;" />
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 0.5 0.5 L 23.5 0.5 L 23.5 23.5 L 0.5 23.5 Z" fill="#E6E6E6" />
+    <path d="M 4.5 0.5 L 4.5 23.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 9.5 0.5 L 9.5 23.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 14.5 0.5 L 14.5 23.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 19.5 0.5 L 19.5 23.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 0.5 4.5 L 23.5 4.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 0.5 9.5 L 23.5 9.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 0.5 14.5 L 23.5 14.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 0.5 19.5 L 23.5 19.5" stroke="#000000" stroke-opacity="0.1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 0.5 0.5 L 23.5 0.5 L 23.5 23.5 L 0.5 23.5 Z" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 1 14.5 L 1 18 L 23 7 L 23 3.5 L 1 14.5" fill="url(#linear7f3b3ea9a9da)" />
+    <path d="M 1 18 L 1 19 L 23 8 L 23 7 L 1 18" fill="#A61E4D" />
+    <path d="M 1 19 L 1 22.5 L 23 11.5 L 23 8 L 1 19" fill="url(#lineara8509630ef9d)" />
+    <path d="M 17 9 A 1 1 0 0 1 15 9 A 1 1 0 0 1 17 9" fill="#0B7285" />
+    <path d="M 22 11 A 1 1 0 0 1 20 11 A 1 1 0 0 1 22 11" fill="#0B7285" />
+    <path d="M 18 14 A 1 1 0 0 1 16 14 A 1 1 0 0 1 18 14" fill="#0B7285" />
+    <path d="M 13 12 A 1 1 0 0 1 11 12 A 1 1 0 0 1 13 12" fill="#0B7285" />
+    <path d="M 10 16 A 1 1 0 0 1 8 16 A 1 1 0 0 1 10 16" fill="#0B7285" />
+    <path d="M 8 6 A 1 1 0 0 1 6 6 A 1 1 0 0 1 8 6" fill="#0B7285" />
+    <path d="M 4 13 A 1 1 0 0 1 2 13 A 1 1 0 0 1 4 13" fill="#0B7285" />
+    <path d="M 5 20 A 1 1 0 0 1 3 20 A 1 1 0 0 1 5 20" fill="#0B7285" />
+    <path d="M 6 15 A 1 1 0 0 1 4 15 A 1 1 0 0 1 6 15" fill="#0B7285" />
+  </g>
+</svg>

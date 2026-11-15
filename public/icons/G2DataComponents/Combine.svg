@@ -1,0 +1,16 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="radialfc629009e5f2" gradientUnits="userSpaceOnUse" cx="12" cy="2" r="20.5">
+      <stop offset="0%" style="stop-color:#FFE066;" />
+      <stop offset="100%" style="stop-color:#FCC419;" />
+    </radialGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 23.146446 11.646446 L 12.353554 0.8535534 A 0.5000008 0.5000008 0 0 0 11.646446 0.8535535 L 0.8535534 11.646446 A 0.5000001 0.5000001 0 0 0 0.85355353 12.353554 L 11.646446 23.146446 A 0.50000054 0.50000054 0 0 0 12.353554 23.146446 L 23.146446 12.353554 A 0.5000019 0.5000019 0 0 0 23.146446 11.646446" fill="url(#radialfc629009e5f2)" />
+    <path d="M 1.7374369 12.176777 L 12 22.43934 L 22.262564 12.176777" stroke="#545454" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 22.262564 11.823223 L 12 1.5606601 L 1.7374369 11.823223" stroke="#FDFDFD" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 12 7 L 12 9 L 16 13 L 16 16 A 1 1 0 0 1 14 16 L 14 14 L 10 10 L 10 7 A 1 1 0 0 1 12 7" fill="#303030" />
+    <path d="M 11 17 A 1 1 0 0 0 12 16 L 12 13.5 L 10 11.5 L 10 16 A 1 1 0 0 0 11 17" fill="#303030" />
+    <path d="M 23.146446 11.646446 L 12.353554 0.8535534 A 0.5000008 0.5000008 0 0 0 11.646446 0.8535535 L 0.8535534 11.646446 A 0.5000001 0.5000001 0 0 0 0.85355353 12.353554 L 11.646446 23.146446 A 0.50000054 0.50000054 0 0 0 12.353554 23.146446 L 23.146446 12.353554 A 0.5000019 0.5000019 0 0 0 23.146446 11.646446" stroke="#303030" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

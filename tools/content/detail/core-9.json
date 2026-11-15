@@ -1,0 +1,257 @@
+{
+  "transform.scale3-d": {
+    "concept": "三轴缩放：分别沿 X、Y、Z 方向按比例放大或缩小几何，可绕指定平面进行。",
+    "steps": [
+      "Geometry 端接几何。",
+      "设置三个方向的缩放因子。",
+      "可选接缩放中心平面，输出缩放后的几何。"
+    ],
+    "scenes": [
+      {
+        "title": "体量等比推敲",
+        "body": "整体 1.2 倍放大看比例是否还成立，比重新建模快得多。",
+        "wiring": "体量 → Scale 3D(1.2,1.2,1.2)"
+      },
+      {
+        "title": "竖向拉高",
+        "body": "只放大 Z 方向，快速做层高对比方案。",
+        "wiring": "体量 → Scale 3D(1,1,1.3)"
+      }
+    ],
+    "pitfalls": [
+      "缩放中心默认在世界原点，几何会同时被「推走」，需要定位时接平面。",
+      "非等比缩放会让圆变成椭圆、法线方向改变。"
+    ],
+    "related": ["transform.scale-non-uniform", "transform.scale1-d", "transform.combine-transforms"],
+    "tip": "缩放永远问一句：以哪里为中心？不问就会飞走。"
+  },
+  "transform.mirror": {
+    "concept": "镜像：以指定平面为镜面，把几何翻到另一侧。",
+    "steps": [
+      "Geometry 端接几何。",
+      "Plane 端接镜像平面。",
+      "输出镜像结果。"
+    ],
+    "scenes": [
+      {
+        "title": "对称立面",
+        "body": "做一半立面后镜像到另一侧，保证左右完全对称。",
+        "wiring": "半侧构件 + 中轴平面 → Mirror"
+      }
+    ],
+    "pitfalls": [
+      "镜像平面法线方向决定结果在哪一侧，法线反了会翻到同一侧重叠。",
+      "镜像会翻转几何方向（法线朝内），后续布尔运算前先检查。"
+    ],
+    "related": ["transform.scale3-d", "transform.orient", "transform.project"],
+    "tip": "对称造型只建一半，镜像不仅快，还能保证严格对称。"
+  },
+  "transform.array-circular": {
+    "concept": "环形阵列：把几何绕一根轴按角度复制成一圈，常用于柱列、灯具、栏杆。",
+    "steps": [
+      "Geometry 端接单个几何。",
+      "Axis 端接旋转轴。",
+      "设置数量与总角度，输出阵列结果。"
+    ],
+    "scenes": [
+      {
+        "title": "圆形中庭柱列",
+        "body": "一根柱子绕中庭中心轴阵列 12 份，得到完整柱圈。",
+        "wiring": "柱 + 中轴 → Array Circular(12)"
+      }
+    ],
+    "pitfalls": [
+      "总角度 360 度时首尾会重叠一份，数量要按 n 还是 n+1 想清楚。",
+      "阵列以轴为中心，几何本身离轴的距离决定了环的半径。"
+    ],
+    "related": ["transform.array-polar", "transform.array-arcular", "transform.rotate-about-axis"],
+    "tip": "环形阵列前先把「离轴距离」调好，半径就自然对了。"
+  },
+  "transform.array2-d": {
+    "concept": "二维阵列：把几何按行列复制成网格，行列间距可分别设置。",
+    "steps": [
+      "Geometry 端接单个几何。",
+      "设置 X、Y 方向的数量与间距。",
+      "输出阵列后的几何列表。"
+    ],
+    "scenes": [
+      {
+        "title": "标准柱网",
+        "body": "一根柱按 8 米、9 米柱距阵列成整层柱网。",
+        "wiring": "柱 → Array 2D(间距) → 整层柱"
+      }
+    ],
+    "pitfalls": [
+      "数量包含原始那一个，写 10 会得到 10 个而不是 11 个。",
+      "间距是相对值，几何本身已有位置偏移时会叠加。"
+    ],
+    "related": ["transform.array1-d", "transform.array3-d", "vector.rectangle-grid"],
+    "tip": "阵列数量与间距是两件事，改数量前先确认间距对不对。"
+  },
+  "transform.combine-transforms": {
+    "concept": "把多个变换合成一个。先转再移还是先移再转，结果完全不同。",
+    "steps": [
+      "按执行顺序接入变换（A、B…）。",
+      "输出合成变换。",
+      "再接 Transform Geometry 一次成型。"
+    ],
+    "scenes": [
+      {
+        "title": "先旋转后平移",
+        "body": "把「绕自身转 30 度」与「移到目标位置」合成，避免两次变换带来的坐标混乱。",
+        "wiring": "Rotate + Move → Combine → Transform"
+      }
+    ],
+    "pitfalls": [
+      "变换不满足交换律，顺序接反结果就错。",
+      "合成后难以单独调整其中一步，调试期建议先分开看。"
+    ],
+    "related": ["transform.invert-transform", "transform.repeat-transform", "transform.move"],
+    "tip": "接线顺序就是执行顺序，心里默念一遍「先什么、后什么」。"
+  },
+  "transform.flow-along-curve": {
+    "concept": "沿曲线流动：把几何从一条参考曲线「流」到目标曲线上，自动跟随曲率变形。",
+    "steps": [
+      "Geometry 端接要流动的几何。",
+      "Reference 端接原曲线。",
+      "Target 端接目标曲线，输出变形后的几何。"
+    ],
+    "scenes": [
+      {
+        "title": "栏杆贴合弧形路径",
+        "body": "在直线上排好栏杆花纹，再整体流到弧形路径上，省掉逐个定位。",
+        "wiring": "直排花纹 + 直线 + 弧线 → Flow"
+      }
+    ],
+    "pitfalls": [
+      "目标曲线比参考曲线短时几何会被压缩甚至重叠。",
+      "参考曲线必须真的穿过几何，否则流动结果会整体偏移。"
+    ],
+    "related": ["transform.flow-along-surface", "transform.orient", "curve.divide-by-length"],
+    "tip": "流动前把参考曲线与几何「摆在一起」，是最省心的做法。"
+  },
+  "display.draw-text3-d": {
+    "concept": "在三维空间里直接绘制文字（预览用），不需要转成曲线或曲面。",
+    "steps": [
+      "Text 端接内容。",
+      "Location 端接位置平面或点。",
+      "设置字号与对齐，输出可直接预览的文字。"
+    ],
+    "scenes": [
+      {
+        "title": "空间标注",
+        "body": "在模型中直接标出标高与构件编号，不用建实体字。",
+        "wiring": "Format Text → Draw Text 3D"
+      }
+    ],
+    "pitfalls": [
+      "预览文字不参与烘焙，出图还需要真正的文字或曲线。",
+      "文字朝向跟随输入平面，平面反了字会镜像。"
+    ],
+    "related": ["text.text-on-curve", "display.label-coordinate", "annotation.description"],
+    "tip": "调试期用它看数值，比反复点开面板快得多。"
+  },
+  "display.vector-display": {
+    "concept": "把向量以箭头形式显示出来，用于检查方向与长度是否正确。",
+    "steps": [
+      "Vector 端接向量。",
+      "Origin 端接起点位置。",
+      "输出可预览的箭头图形。"
+    ],
+    "scenes": [
+      {
+        "title": "排查法线方向",
+        "body": "把曲面法线全部画成箭头，一眼看出哪里翻了面。",
+        "wiring": "Evaluate Surface 法线 → Vector Display"
+      }
+    ],
+    "pitfalls": [
+      "箭头长度按向量模长绘制，归一化前后视觉差别很大。",
+      "数量极大时预览会明显卡顿，调试完记得关掉。"
+    ],
+    "related": ["vector.vector-to-xyz", "surface.evaluate-surface", "display.silhouette"],
+    "tip": "方向问题不要靠猜，画出来看三秒就清楚。"
+  },
+  "display.colour-from-rgb": {
+    "concept": "用 0-255 的 RGB 三个整数构造颜色，最直观的取色方式。",
+    "steps": [
+      "R、G、B 三端各接 0-255 的整数。",
+      "输出颜色对象，可接预览着色或烘焙。"
+    ],
+    "scenes": [
+      {
+        "title": "按类型上色",
+        "body": "柱用灰、墙用米、窗用蓝，一次性把整套模型分色。",
+        "wiring": "类型索引 → Dispatch → Colour From RGB"
+      }
+    ],
+    "pitfalls": [
+      "超出 0-255 的值会被裁切，滑条最好设好范围。",
+      "颜色只是显示属性，导出到别的软件不一定带得走。"
+    ],
+    "related": ["display.colour-from-hsv", "display.numbers-to-colours", "display.colour-luminance"],
+    "tip": "先定一套色板常量，别在图上到处硬写 RGB。"
+  },
+  "display.colour-luminance": {
+    "concept": "取颜色的明度（感知亮度），用于判断深浅、决定文字该用黑还是白。",
+    "steps": [
+      "Colour 端接颜色。",
+      "输出 0 到 1 的明度值。"
+    ],
+    "scenes": [
+      {
+        "title": "自动选字色",
+        "body": "背景深就配白字、背景浅就配黑字，避免标注看不清。",
+        "wiring": "底色 → Luminance → Dispatch → 文字颜色"
+      }
+    ],
+    "pitfalls": [
+      "明度是感知值，不与 RGB 平均值等价。",
+      "彩色与灰度的明度不可直接类比，视觉对比需实测。"
+    ],
+    "related": ["display.colour-from-rgb", "display.adjust-hue-sat-lum", "display.numbers-to-colours"],
+    "tip": "做配色自动化时，亮度是最有效的一个判断维度。"
+  },
+  "display.silhouette": {
+    "concept": "以剪影方式显示几何：只画轮廓，不画内部结构，用于干净的表达图。",
+    "steps": [
+      "Geometry 端接几何。",
+      "设置线宽与颜色。",
+      "输出剪影预览。"
+    ],
+    "scenes": [
+      {
+        "title": "出干净的分析图",
+        "body": "把体量显示为剪影，叠在底图上做体量关系分析，画面立刻清爽。",
+        "wiring": "体量 → Silhouette → 截图"
+      }
+    ],
+    "pitfalls": [
+      "剪影是显示效果，不生成几何，无法烘焙成线。",
+      "内部遮挡关系被忽略，复杂模型会丢掉深度信息。"
+    ],
+    "related": ["display.vector-display", "display.curvature-shader", "display.make2-d"],
+    "tip": "做分析图胜过堆材质：剪影 + 单色就能讲清体量。"
+  },
+  "display.point-order": {
+    "concept": "把点集里的每个点按顺序标上序号，用于排查数据顺序问题。",
+    "steps": [
+      "Points 端接点集。",
+      "设置字号与偏移。",
+      "输出带序号的预览标注。"
+    ],
+    "scenes": [
+      {
+        "title": "检查连线为何打结",
+        "body": "逐个看清点的顺序，一眼定位哪一项排错了位置。",
+        "wiring": "点集 → Point Order → 对照 Polyline"
+      }
+    ],
+    "pitfalls": [
+      "点很密时序号会叠在一起，需要先抽样。",
+      "只显示当前分支的顺序，跨分支比较还得另想办法。"
+    ],
+    "related": ["vector.sort-along", "curve.polyline-n-points", "display.label-coordinate"],
+    "tip": "凡是「形状不对」，先看顺序；顺序对了再谈几何。"
+  }
+}

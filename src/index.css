@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: 251 251 252;
+    --surface: 255 255 255;
+    --surface-2: 245 246 248;
+    --line: 230 231 235;
+    --ink: 20 22 26;
+    --muted: 91 100 114;
+    --accent: 47 158 95;
+    --accent-ink: 255 255 255;
+    --grid: 15 23 42;
+    --banner-h: 0px;
+    color-scheme: light;
+  }
+
+  .dark {
+    --bg: 11 13 16;
+    --surface: 18 21 26;
+    --surface-2: 23 27 33;
+    --line: 35 40 48;
+    --ink: 242 243 245;
+    --muted: 154 163 175;
+    --accent: 111 207 151;
+    --accent-ink: 9 20 14;
+    --grid: 148 163 184;
+    color-scheme: dark;
+  }
+
+  * {
+    border-color: rgb(var(--line));
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg text-ink font-sans antialiased;
+    font-size: 15px;
+    transition: background-color 180ms ease, color 180ms ease;
+  }
+
+  ::selection {
+    background: rgb(var(--accent) / 0.22);
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--accent) / 0.65);
+    outline-offset: 2px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(var(--muted) / 0.28);
+    border-radius: 999px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(var(--muted) / 0.45);
+    background-clip: content-box;
+  }
+}
+
+@layer components {
+  .blueprint {
+    background-image: linear-gradient(to right, rgb(var(--grid) / 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(var(--grid) / 0.05) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .card {
+    @apply rounded-card border bg-surface shadow-card;
+  }
+
+  .hairline {
+    @apply border-t;
+  }
+
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 180ms ease;
+  }
+  .link-underline:hover {
+    background-size: 100% 1px;
+  }
+
+  .mono {
+    font-family: "JetBrains Mono", SFMono-Regular, Consolas, monospace;
+    font-feature-settings: "tnum";
+  }
+
+  .prose-zh p {
+    @apply text-body text-ink/85;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

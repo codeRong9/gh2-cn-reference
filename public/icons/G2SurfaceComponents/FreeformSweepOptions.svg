@@ -1,0 +1,19 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="radial777b60e09312" gradientUnits="userSpaceOnUse" cx="8" cy="20" r="15">
+      <stop offset="0%" style="stop-color:#9C9C9C;" />
+      <stop offset="100%" style="stop-color:#F0F0F0;" />
+    </radialGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 2.5 21.5 C 2.5 13.833333, 4.8333335 7.5, 9.5 2.5 A 14.530994 14.530994 0 0 1 22.5 9.500002 C 16.5 9.833333, 13.5 13.833333, 13.5 21.5 L 2.5 21.5" fill="url(#radial777b60e09312)" stroke="#787878" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 18 19 L 21 16" stroke="#A61E4D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 18 16 L 21 19" stroke="#A61E4D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 2 3 L 3.5 4.5 L 6 2" stroke="#087F5B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 7.5 16.5 C 8.5 12.166667, 10.5 9.166667, 13.5 7.5" stroke="#787878" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 13.5 9.5 L 13.5 7.5 L 11.5 7" stroke="#787878" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 18 19 L 21 16" stroke="#FAA2C1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 2 3 L 3.5 4.5 L 6 2" stroke="#63E6BE" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 18 16 L 21 19" stroke="#FAA2C1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

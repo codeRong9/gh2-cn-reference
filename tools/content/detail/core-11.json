@@ -1,0 +1,332 @@
+{
+  "data.explode-tree": {
+    "concept": "把一棵树按分支拆成多个独立输出，每个输出是一条分支。相当于把「打包」的结构解开。",
+    "steps": [
+      "Tree 端接树数据。",
+      "电池会根据分支数量增减输出端。",
+      "每个输出接一个后续操作。"
+    ],
+    "scenes": [
+      {
+        "title": "分组分别建模",
+        "body": "楼层被分成几棵树后拆开，分别给不同的构件参数。",
+        "wiring": "楼层树 → Explode Tree → 各层单独处理"
+      }
+    ],
+    "pitfalls": [
+      "分支数量变化时输出端不会自动跟着变，容易静默丢数据。",
+      "拆开后就失去了「同一棵树」的并行关系，后续合并需要重新组织。"
+    ],
+    "related": ["data.flatten-tree", "data.graft-tree", "data.tree-paths"],
+    "tip": "需要「每一组单独一条逻辑」时用它，需要「统一处理」时别拆。"
+  },
+  "data.flip-tree": {
+    "concept": "翻转树的行列关系：把「分支里的项」与「同一位置的项」互换理解，常用于批量转置。",
+    "steps": [
+      "Tree 端接结构规整的树。",
+      "输出翻转后的树。"
+    ],
+    "scenes": [
+      {
+        "title": "行列互换",
+        "body": "每一行是一条轴线、每个分支是一条街，翻转后就能按街处理。",
+        "wiring": "网格树 → Flip Tree"
+      }
+    ],
+    "pitfalls": [
+      "分支长度不一致时翻转会补空或截断，结果长度以最长分支为准。",
+      "与 Flatten 完全不同：Flip 保留树结构，Flatten 压成一列。"
+    ],
+    "related": ["data.flatten-tree", "data.graft-tree", "data.unflatten-tree"],
+    "tip": "「行列搞反了」的直觉，几乎都指向 Flip Tree。"
+  },
+  "data.prune-tree": {
+    "concept": "裁剪树：按规则去掉分支里多余的项，例如每支只留前 N 个或后 N 个。",
+    "steps": [
+      "Tree 端接树。",
+      "设置裁剪规则与数量。",
+      "输出裁剪后的树。"
+    ],
+    "scenes": [
+      {
+        "title": "每层只留前三个开间",
+        "body": "做局部方案对比时，只需每层前三个开间的数据。",
+        "wiring": "分层树 → Prune → 前 3 项"
+      }
+    ],
+    "pitfalls": [
+      "裁剪按分支独立进行，不会跨分支取全局前 N。",
+      "规则方向（从头还是从尾）弄反会得到完全不同的结果。"
+    ],
+    "related": ["data.trim-tree", "data.clean-tree", "data.sub-list"],
+    "tip": "Prune 管「每支留几个」，Trim 管「去掉几层」。"
+  },
+  "data.trim-tree": {
+    "concept": "削减树层级：去掉路径的最外层（或若干层），把嵌套结构提升一级。",
+    "steps": [
+      "Tree 端接嵌套树。",
+      "设置要削减的层数。",
+      "输出提升层级后的树。"
+    ],
+    "scenes": [
+      {
+        "title": "拆掉多余的分组层",
+        "body": "数据被多包了一层导致下游接不上，Trim 一层就恢复了。",
+        "wiring": "嵌套树 → Trim Tree(1)"
+      }
+    ],
+    "pitfalls": [
+      "削太多层会把不同分组混在一起，数据关系永久丢失。",
+      "只看分支数看不出层级问题，用 Tree Paths 检查路径更准确。"
+    ],
+    "related": ["data.prune-tree", "data.tree-paths", "data.simplify-tree"],
+    "tip": "结构问题的第一诊断工具是 Tree Paths，不是 Trim。"
+  },
+  "maths.exponentiation": {
+    "concept": "幂运算：A 的 B 次方。也可用于开方（指数为 0.5）。",
+    "steps": [
+      "A 端接底数。",
+      "B 端接指数。",
+      "输出结果。"
+    ],
+    "scenes": [
+      {
+        "title": "面积开方",
+        "body": "用 0.5 次方代替开方，链路更短。",
+        "wiring": "面积 → Exponentiation(0.5)"
+      }
+    ],
+    "pitfalls": [
+      "负底数配小数指数会得到无效值。",
+      "指数一大数值就爆掉，用于插值前记得限制范围。"
+    ],
+    "related": ["maths.square-root", "maths.cube-root", "maths.logarithm"],
+    "tip": "做非线性映射时，指数就是「弯曲程度」的旋钮。"
+  },
+  "maths.factorial": {
+    "concept": "阶乘：n! = 1×2×…×n，组合数学的基础。",
+    "steps": [
+      "Number 端接非负整数。",
+      "输出阶乘结果。"
+    ],
+    "scenes": [
+      {
+        "title": "排列组合计数",
+        "body": "算不同排布方式的数量，用于方案可能性估算。",
+        "wiring": "数量 → Factorial → 计数"
+      }
+    ],
+    "pitfalls": [
+      "13 以上的阶乘就会超出常规整数范围，数值会失真。",
+      "只接受非负整数，小数输入结果无意义。"
+    ],
+    "related": ["maths.binomial-coefficient", "data.permutations", "maths.greatest-common-divisor"],
+    "tip": "阶乘增长极快，用它做计数前先估算量级。"
+  },
+  "maths.numeric-bounds": {
+    "concept": "求一列数字的上下界，输出一个区间，便于统一映射与缩放。",
+    "steps": [
+      "Numbers 端接数值列表。",
+      "输出包含所有值的最小与最大值。"
+    ],
+    "scenes": [
+      {
+        "title": "统一映射范围",
+        "body": "把任意范围的数值映射到 0-1，先要拿到实际上下界。",
+        "wiring": "数值 → Numeric Bounds → Remap"
+      }
+    ],
+    "pitfalls": [
+      "列表为空时区间无意义，后续映射会得到空结果。",
+      "个别极值会把区间撑得很大，必要时先 Remove Outliers。"
+    ],
+    "related": ["maths.remap-number", "maths.remove-outliers", "maths.number-statistics"],
+    "tip": "做颜色映射前，先看一眼上下界是否被极端值绑架。"
+  },
+  "maths.sort-intervals": {
+    "concept": "把区间列表按起点排序，让区间顺序与空间中位置对应。",
+    "steps": [
+      "Intervals 端接区间列表。",
+      "输出排序后的区间。"
+    ],
+    "scenes": [
+      {
+        "title": "楼层区间排序",
+        "body": "乱序进来的楼层区间排好后，才能正确对应层号。",
+        "wiring": "区间列表 → Sort Intervals → 楼层编号"
+      }
+    ],
+    "pitfalls": [
+      "按起点排序不考虑区间长度，长短不一混排时仍是起点优先。",
+      "只想排序几何时用 Sort Along，别拿区间硬套。"
+    ],
+    "related": ["data.sort", "maths.stack-intervals", "maths.find-interval"],
+    "tip": "区间排序是「分层分段」类逻辑的前置步骤。"
+  },
+  "curve.curve-on-surface": {
+    "concept": "在曲面的参数空间画曲线，再映射到曲面上，得到贴合曲面的表面曲线。",
+    "steps": [
+      "Surface 端接目标曲面。",
+      "在 UV 空间给曲线（通常是二维轮廓）。",
+      "输出贴附在曲面上的三维曲线。"
+    ],
+    "scenes": [
+      {
+        "title": "曲面上刻线",
+        "body": "在双曲面上按图样刻出分缝线，用于曲面分板。",
+        "wiring": "Surface + UV 图样 → Curve On Surface"
+      }
+    ],
+    "pitfalls": [
+      "UV 曲线必须落在 0-1 范围内，超界部分会被裁掉。",
+      "曲面曲率很大时曲线长度与 UV 比例不再一致。"
+    ],
+    "related": ["surface.surface-iso-curves", "surface.evaluate-surface", "curve.project-curve"],
+    "tip": "曲面分板优先在 UV 空间做，效率远高于三维里硬贴。"
+  },
+  "curve.match-curve": {
+    "concept": "让一条曲线匹配另一条的方向、参数化或闭合性，解决放样、扫掠时的错位。",
+    "steps": [
+      "Curve 端接要调整的曲线。",
+      "Target 端接参考曲线。",
+      "选择匹配项（方向/参数），输出匹配后的曲线。"
+    ],
+    "scenes": [
+      {
+        "title": "修好放样扭曲",
+        "body": "几条截面方向不一致导致放样扭麻花，逐一匹配方向即可修复。",
+        "wiring": "截面列表 → Match Curve(参考) → Loft"
+      }
+    ],
+    "pitfalls": [
+      "匹配方向不等于形状一致，形状差异仍会造成扭曲。",
+      "匹配后曲线被重新参数化，原来按参数布的点会移位。"
+    ],
+    "related": ["curve.flip-curve", "curve.rebuild-curve", "data.reverse-list"],
+    "tip": "放样出问题的标准动作：先 Match，再 Rebuild。"
+  },
+  "curve.extend-to-boundary": {
+    "concept": "把曲线延长到指定边界（曲线或平面），得到刚好触边的结果。",
+    "steps": [
+      "Curve 端接要延长的曲线。",
+      "Boundary 端接边界几何。",
+      "输出延长后的曲线。"
+    ],
+    "scenes": [
+      {
+        "title": "补齐到墙面的分割线",
+        "body": "分格线没到墙边，用边界延长补齐，避免收口有空隙。",
+        "wiring": "分格线 + 墙面 → Extend To Boundary"
+      }
+    ],
+    "pitfalls": [
+      "曲线方向不明时可能向错误的一端延长。",
+      "边界不在曲线延长方向上会失败，先确认几何关系。"
+    ],
+    "related": ["curve.extend-curve", "intersect.curve-curve-intersection", "curve.line2-points"],
+    "tip": "比起手算长度，交给边界延长更稳、改动也自动跟随。"
+  },
+  "surface.ruled-surface": {
+    "concept": "直纹面：在两条曲线之间用直线连接，生成最简单的过渡曲面。",
+    "steps": [
+      "A、B 两端各接一条曲线。",
+      "输出两面之间的直纹曲面。"
+    ],
+    "scenes": [
+      {
+        "title": "快速做过渡面",
+        "body": "上下两条不同形状的轮廓之间拉直纹面，快速看体量交接。",
+        "wiring": "上轮廓 + 下轮廓 → Ruled Surface"
+      }
+    ],
+    "pitfalls": [
+      "两条曲线方向相反会产生自交的扭曲面。",
+      "控制点差异大时曲面会有明显折痕，需要先 Rebuild。"
+    ],
+    "related": ["surface.loft-from-curves", "curve.match-curve", "surface.surface-from-boundaries"],
+    "tip": "只要两条线之间的过渡，Ruled 比 Loft 更可控。"
+  },
+  "surface.rail-rev-surface": {
+    "concept": "轨道回转：让截面一边绕轴旋转、一边沿轨道移动，生成螺旋类曲面。",
+    "steps": [
+      "Profile 端接截面。",
+      "Axis 端接旋转轴，Rail 端接轨道曲线。",
+      "输出沿轨道变化的回转曲面。"
+    ],
+    "scenes": [
+      {
+        "title": "螺旋坡道侧板",
+        "body": "截面绕中心轴旋转同时沿高度上升，一次生成连续螺旋侧板。",
+        "wiring": "截面 + 轴 + 螺旋轨道 → Rail Revolution"
+      }
+    ],
+    "pitfalls": [
+      "轨道与轴的关系决定形态，轨道不环绕轴时会得到奇怪的拉伸面。",
+      "角度与轨道长度需匹配，否则首尾接不上。"
+    ],
+    "related": ["surface.rev-surface", "surface.sweep-from-rail", "curve.nurbs-curve"],
+    "tip": "螺旋造型的稳定解法：一条轴 + 一条轨道 + 一个截面。"
+  },
+  "mesh.fill-mesh-holes": {
+    "concept": "给网格补洞：把边界围成的空隙用面片填上。",
+    "steps": [
+      "Mesh 端接有洞的网格。",
+      "设置最大补洞边数。",
+      "输出补好的网格。"
+    ],
+    "scenes": [
+      {
+        "title": "修补扫描模型",
+        "body": "3D 扫描件常有缺口，补洞后才能做布尔或 3D 打印。",
+        "wiring": "扫描网格 → Fill Holes → 封闭网格"
+      }
+    ],
+    "pitfalls": [
+      "洞太大时补出来的面会非常粗糙，形状不可信。",
+      "补洞不等于修复拓扑，重叠面与法线问题仍需另外处理。"
+    ],
+    "related": ["mesh.mesh-closedness", "mesh.weld-mesh", "mesh.unify-mesh-normals"],
+    "tip": "补洞前先 Weld，否则边界分裂会让补洞失败。"
+  },
+  "mesh.split-disjoint-meshes": {
+    "concept": "把互不相连的网格拆开成多个独立网格。",
+    "steps": [
+      "Mesh 端接包含多块的网格。",
+      "输出拆开后的网格列表。"
+    ],
+    "scenes": [
+      {
+        "title": "分离散落构件",
+        "body": "导入的模型合成了一个网格，拆开后才能逐个赋予材质。",
+        "wiring": "合并网格 → Split Disjoint → 逐块赋材质"
+      }
+    ],
+    "pitfalls": [
+      "仅靠顶点相连判断，微小缝隙就被视为断开。",
+      "拆出的数量可能远超预期，先看列表长度再继续。"
+    ],
+    "related": ["mesh.join-meshes", "mesh.weld-mesh", "data.list-length"],
+    "tip": "Join 与 Split Disjoint 是一对反操作，来回用可验证网格是否真的连通。"
+  },
+  "intersect.curve-line-intersection": {
+    "concept": "求曲线与无限直线（或线段）的交点，输出交点与参数。",
+    "steps": [
+      "Curve 端接曲线。",
+      "Line 端接直线。",
+      "输出交点及对应参数。"
+    ],
+    "scenes": [
+      {
+        "title": "定位剖面交点",
+        "body": "用一条垂直参考线切过轮廓，拿到准确的交点位置。",
+        "wiring": "轮廓 + 参考线 → Intersection → 定位"
+      }
+    ],
+    "pitfalls": [
+      "直线是无限延长的，交点可能落在你画的线段之外。",
+      "相切时交点退化成一点或为空。"
+    ],
+    "related": ["intersect.curve-curve-intersection", "curve.line2-points", "curve.evaluate-curve"],
+    "tip": "求交后按参数排序，顺序对了连线才不会打结。"
+  }
+}

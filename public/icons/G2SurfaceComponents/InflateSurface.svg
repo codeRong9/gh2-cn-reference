@@ -1,0 +1,17 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="radialdce5a052d98b" gradientUnits="userSpaceOnUse" cx="7" cy="7" r="19.79899">
+      <stop offset="0%" style="stop-color:#C5F6FA;" />
+      <stop offset="100%" style="stop-color:#22B8CF;" />
+    </radialGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 4.6515307 20.5 A 10.499992 10.499992 0 0 1 12 2.5000181 A 10.499992 10.499992 0 0 1 19.348467 20.500002 L 19.5 20.5 A 1 1 0 0 1 19.5 22.5 L 4.5 22.5 A 1 1 0 0 1 4.5 20.5 L 4.6515307 20.5" fill="url(#radialdce5a052d98b)" />
+    <path d="M 9.163101 17.7119 A 6.000002 6.000002 0 0 1 6.7573566 7.7573566 A 6.000002 6.000002 0 0 1 16.711903 10.163101 A 5.500001 5.500001 0 0 0 8.110912 9.110912 A 5.500001 5.500001 0 0 0 9.163101 17.7119" fill="#FF1493" />
+    <path d="M 6.5 20.5 L 12.598076 20.5 A 8 8 0 0 0 19.52628 16.5 A 11.000004 11.000004 0 0 0 19.760408 5.92709 A 10.499996 10.499996 0 0 1 19.348467 20.500002 L 19.5 20.5 A 1 1 0 0 1 19.5 22.5 L 4.5 22.5 A 1 1 0 0 1 4.5 20.5 L 6.5 20.5" fill="#FF1493" />
+    <path d="M 4.6515307 20.5 A 10.499992 10.499992 0 0 1 12 2.5000181 A 10.499992 10.499992 0 0 1 19.348467 20.500002 L 19.5 20.5 A 1 1 0 0 1 19.5 22.5 L 4.5 22.5 A 1 1 0 0 1 4.5 20.5 L 4.6515307 20.5" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 4.6515307 20.5 L 6.5 20.5" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 17.5 20.5 L 19.348469 20.5" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 17.5 13 A 5.5 5.5 0 0 1 6.5 12.999999 A 5.5 5.5 0 0 1 17.5 13.000001" fill="#F0F0F0" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

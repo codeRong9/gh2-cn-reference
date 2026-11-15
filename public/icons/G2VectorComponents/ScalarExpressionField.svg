@@ -1,0 +1,13 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 2 13 C 6 13, 7.5 5.0791135, 9.416667 4.0922995 C 11.333333 3.105485, 13.666667 9.052742, 15.583333 9.026371 C 17.5 9, 19 3, 22 3" stroke="#A61E4D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 2 15.5 L 5.5 15.5 L 2.5 21.5 L 6 21.5" stroke="#0B7285" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 7.5 15 L 7.5 15.5 L 9.5 19 L 11.5 15.5 L 11.5 15" stroke="#0B7285" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 9.5 22 L 9.5 19" stroke="#0B7285" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 13 18.5 L 18 18.5" stroke="#0B7285" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 15.5 21 L 15.5 16" stroke="#0B7285" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 19.5 17 L 19.5 16.5 A 1 1 0 0 1 20.5 15.5 L 21.5 15.5 A 1 1 0 0 1 22.5 16.5 L 22.5 17.5 A 1 1 0 0 1 21.5 18.5 L 20.5 18.5" stroke="#0B7285" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 21.5 18.5 A 1 1 0 0 1 22.5 19.5 L 22.5 20.5 A 1 1 0 0 1 21.5 21.5 L 20.5 21.5 A 1 1 0 0 1 19.5 20.5 L 19.5 20" stroke="#0B7285" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+  </g>
+</svg>

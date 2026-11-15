@@ -1,0 +1,334 @@
+{
+  "curve.line2-points": {
+    "concept": "两点连一条直线。最基础的几何构造，几乎所有骨架线都从它开始。",
+    "steps": [
+      "A、B 两端各接一个点。",
+      "输出直线段。",
+      "需要成组时接 Join Curves 或 Polyline。"
+    ],
+    "scenes": [
+      {
+        "title": "拉结构轴线",
+        "body": "把轴网交点两两相连，快速得到柱间的框架线。",
+        "wiring": "点 A → 点 B → Line"
+      }
+    ],
+    "pitfalls": [
+      "两点重合会得到无效曲线，下游全线报错。",
+      "两端都接列表时按数据匹配逐对连线，数量不对会得到交叉的意外直线。"
+    ],
+    "related": ["curve.polyline-n-points", "curve.line-n-points", "vector.vector-from2-points"],
+    "tip": "直线只是「两点」，方向与长度交给后续组件去取。"
+  },
+  "curve.polyline-n-points": {
+    "concept": "把一串点按顺序连成折线，可选是否闭合。",
+    "steps": [
+      "Vertices 端接按顺序排列的点列。",
+      "需要闭合时打开闭合开关。",
+      "输出折线。"
+    ],
+    "scenes": [
+      {
+        "title": "画楼板轮廓",
+        "body": "沿外圈点按顺序连成闭合折线，再用它建面或挤出。",
+        "wiring": "轮廓点 → Polyline(闭合) → 建面"
+      }
+    ],
+    "pitfalls": [
+      "点序错了折线会自我穿插，先用 Sort Along 沿线排序。",
+      "少于两个点无法成线，数据源为空时要先判断数量。"
+    ],
+    "related": ["curve.curve-from-points", "curve.line2-points", "vector.sort-along"],
+    "tip": "闭合开关只影响首尾，不影响点序，别把两者混为一谈。"
+  },
+  "curve.curve-from-points": {
+    "concept": "插值曲线：生成一条真正穿过所有给定点的平滑曲线。",
+    "steps": [
+      "Points 端接一串点。",
+      "设置阶数（degree），越高越平滑也越容易摆动。",
+      "输出穿过所有点的曲线。"
+    ],
+    "scenes": [
+      {
+        "title": "顺着地形画路径",
+        "body": "沿等高线采样点画一条贴合地形的园路。",
+        "wiring": "地形点 → Interpolate → 路径"
+      }
+    ],
+    "pitfalls": [
+      "点间距突变会让曲线出现不自然的鼓包。",
+      "阶数高于点数时组件会自动降阶，别指望强制生效。"
+    ],
+    "related": ["curve.nurbs-curve", "curve.blend-curve", "curve.smooth-polyline"],
+    "tip": "要贴合点用插值，要便于推拉造型用控制点曲线。"
+  },
+  "curve.nurbs-curve": {
+    "concept": "控制点曲线：点只是「牵引力」，曲线被拉向它们但不一定穿过。",
+    "steps": [
+      "Control Points 端接控制点。",
+      "设置阶数与是否周期（闭合）。",
+      "输出 NURBS 曲线。"
+    ],
+    "scenes": [
+      {
+        "title": "调形体的轮廓",
+        "body": "用少量控制点拖出流畅的建筑轮廓，再放样成曲面。",
+        "wiring": "控制点 → Nurbs Curve → Loft"
+      }
+    ],
+    "pitfalls": [
+      "控制点数量少于阶数时无法生成曲线。",
+      "周期曲线首尾自动顺接，手动补点反而会破坏连续性。"
+    ],
+    "related": ["curve.curve-from-points", "curve.nurbs-surface", "curve.evaluate-curve"],
+    "tip": "造型阶段用 Nurbs，精确通过指定点时才换成插值。"
+  },
+  "curve.join-curves": {
+    "concept": "把首尾相接的多条曲线连成一条整体曲线，可设接缝容差。",
+    "steps": [
+      "Curves 端接同一列表里的曲线。",
+      "设置容差，控制首尾多近才算相接。",
+      "输出合并结果与是否全部接上。"
+    ],
+    "scenes": [
+      {
+        "title": "合并分段的路径",
+        "body": "把拆分过的折线路段重新连成一条，便于后续等分。",
+        "wiring": "分段线 → Join Curves → Divide"
+      }
+    ],
+    "pitfalls": [
+      "容差过小时接缝处没合上，输出仍是多段，容易误判成功。",
+      "顺序错乱的曲线无法按预期首尾相连，先排序再合并。"
+    ],
+    "related": ["curve.merge-polyline", "curve.curve-to-polyline", "curve.connect-curves"],
+    "tip": "合并后一定检查输出数量，一条还是一堆，决定了后面所有逻辑。"
+  },
+  "curve.fillet-curve": {
+    "concept": "给曲线拐角倒圆角。指定半径，尖角变圆弧过渡。",
+    "steps": [
+      "Curve 端接含拐角的曲线（折线最常用）。",
+      "设置圆角半径。",
+      "输出倒角后的曲线。"
+    ],
+    "scenes": [
+      {
+        "title": "家具转角",
+        "body": "把矩形轮廓倒成圆角矩形，用于家具台面或软包边。",
+        "wiring": "Rectangle → Fillet Curve(R=50)"
+      }
+    ],
+    "pitfalls": [
+      "半径超过边长一半会倒角失败或结果自交。",
+      "曲线段太短时圆角互相吃掉，需要先用 Reduce Polyline 清理。"
+    ],
+    "related": ["curve.smooth-polyline", "curve.offset-curve", "curve.fillet-curves"],
+    "tip": "倒角前先看最短边长，半径永远不要超过它的一半。"
+  },
+  "curve.curve-to-polyline": {
+    "concept": "把平滑曲线转成折线（多段线）。给容差，容差越小越贴合、点数越多。",
+    "steps": [
+      "Curve 端接曲线。",
+      "设置容差（偏离允许量）。",
+      "输出折线几何。"
+    ],
+    "scenes": [
+      {
+        "title": "为 CNC 加工简化",
+        "body": "把样条转成折线，让下游的加工或网格流程稳定可控。",
+        "wiring": "Spline → Curve To Polyline → 导出"
+      }
+    ],
+    "pitfalls": [
+      "容差设太松形状明显失真，尤其在曲率大的地方。",
+      "转换后阶数信息丢失，圆角不再「真圆」，重新测量会有微小偏差。"
+    ],
+    "related": ["curve.reduce-polyline", "curve.rebuild-curve", "curve.curve-from-segments"],
+    "tip": "进网格流程前先转折线，能躲开大量兼容问题。"
+  },
+  "curve.rebuild-curve": {
+    "concept": "用统一的新控制点数量与阶数重建曲线，抹平不均匀的分段与多余控制点。",
+    "steps": [
+      "Curve 端接原曲线。",
+      "设置控制点数量与阶数。",
+      "输出重建后的曲线，形状大致不变但结构更干净。"
+    ],
+    "scenes": [
+      {
+        "title": "放样前统一曲线",
+        "body": "把放样用的几条轮廓统一到同样的控制点数，避免放样扭曲。",
+        "wiring": "多条轮廓 → Rebuild(统一点数) → Loft"
+      }
+    ],
+    "pitfalls": [
+      "重建会改变形状，点数太少会明显跑形。",
+      "对需要精确复刻的曲线慎用，重建是有损操作。"
+    ],
+    "related": ["curve.fit-curve", "curve.curve-to-polyline", "surface.rebuild-surface"],
+    "tip": "放样、扫掠出现「扭麻花」时，先怀疑控制点数不一致。"
+  },
+  "curve.evaluate-curve": {
+    "concept": "在曲线上的某个参数位置求值，得到该点的位置、切线等几何信息。",
+    "steps": [
+      "Curve 端接曲线。",
+      "Parameter 端给 0 到 1 的归一化参数，或曲线域内的实际参数。",
+      "输出点、切线等结果。"
+    ],
+    "scenes": [
+      {
+        "title": "沿曲线布置构件",
+        "body": "用一组 0 到 1 的参数在曲线上取点并取切线，把构件摆到正确朝向。",
+        "wiring": "Range(0-1) → Evaluate Curve → Orient"
+      }
+    ],
+    "pitfalls": [
+      "参数超出曲线域会得到无效值，先确认用的是归一化还是实际域。",
+      "闭合曲线的 0 与 1 是同一个点，布置构件时会重叠。"
+    ],
+    "related": ["curve.divide-by-length", "curve.divide-by-count", "curve.curve-closest-point"],
+    "tip": "想把构件沿曲线摆正，「点 + 切线」永远是最稳的一组输入。"
+  },
+  "curve.divide-by-length": {
+    "concept": "按固定长度切分曲线，得到等距的点与对应参数。",
+    "steps": [
+      "Curve 端接曲线。",
+      "设置段长（或长度阈值）。",
+      "输出切分点与参数。"
+    ],
+    "scenes": [
+      {
+        "title": "等距布灯",
+        "body": "沿吊顶弧线每 1.2 米布一个灯位。",
+        "wiring": "曲线 → Divide by Length(1.2) → 灯具"
+      }
+    ],
+    "pitfalls": [
+      "曲线长度不是段长整数倍时末尾会剩一截，别以为布满了。",
+      "非常短的曲线可能只返回起点，数量与预期不符。"
+    ],
+    "related": ["curve.divide-by-count", "curve.evaluate-curve", "annotation.measure-length"],
+    "tip": "做施工排布用长度等分，做视觉节奏用数量等分。"
+  },
+  "vector.vector-to-xyz": {
+    "concept": "把一个向量拆成 X、Y、Z 三个分量，方便分别处理。",
+    "steps": [
+      "Vector 端接向量。",
+      "输出三个数值分量。"
+    ],
+    "scenes": [
+      {
+        "title": "只取水平分量",
+        "body": "把向量的 Z 分量清零，得到纯粹的水平投影方向。",
+        "wiring": "Vector → XYZ → 重建(Z=0)"
+      }
+    ],
+    "pitfalls": [
+      "拆开后忘记重新组装，后续拿到的是三个数字而不是向量。",
+      "对点也能用类似组件，但点与向量在数学上含义不同，别混。"
+    ],
+    "related": ["vector.vector-from-xyz", "vector.point-to-xyz", "vector.vector-resize"],
+    "tip": "要做「压平到水平面」，拆分量再重组比旋转更可靠。"
+  },
+  "vector.vector-angle3-d": {
+    "concept": "求两个向量之间的夹角（三维），输出角度值。",
+    "steps": [
+      "A、B 两端各接一个向量。",
+      "输出夹角。"
+    ],
+    "scenes": [
+      {
+        "title": "检查构件是否垂直",
+        "body": "比较构建方向与竖直向量的夹角，接近 90 度即为水平摆放。",
+        "wiring": "方向向量 + Z → Angle 3D → 判断"
+      }
+    ],
+    "pitfalls": [
+      "零向量没有方向，参与计算会得到无效值。",
+      "只给夹角不给朝向；要判断左右还需叉积。"
+    ],
+    "related": ["vector.dot-product", "vector.cross-product", "vector.vector-relation"],
+    "tip": "夹角判垂直、叉积判朝向，这两个组合能解决大部分朝向问题。"
+  },
+  "vector.vector-perpendicular": {
+    "concept": "给一个向量，生成与它垂直的向量，用来构造局部坐标系或取样方向。",
+    "steps": [
+      "Vector 端接基准向量。",
+      "输出一个与它垂直的向量。"
+    ],
+    "scenes": [
+      {
+        "title": "沿方向撒点",
+        "body": "取路径的垂直方向做偏移方向，得到两侧对称的布点。",
+        "wiring": "切线 → Perpendicular → 偏移"
+      }
+    ],
+    "pitfalls": [
+      "垂直方向不唯一（绕轴一圈都垂直），输出方向可能与你的直觉不一致。",
+      "想要特定朝向的垂直方向，用叉积配合参考向量更可控。"
+    ],
+    "related": ["vector.cross-product", "vector.plane-from-normal", "vector.vector-from-angles"],
+    "tip": "需要「确定的垂直方向」时，永远用叉积指定参考轴。"
+  },
+  "vector.plane3-points": {
+    "concept": "三点建平面：三个不共线的点确定一个平面，前两点连线是平面的 X 轴方向。",
+    "steps": [
+      "依次接三个点：原点、X 方向点、Y 方向点。",
+      "输出平面。"
+    ],
+    "scenes": [
+      {
+        "title": "在斜面上布置构件",
+        "body": "用坡屋面上三个点建平面，构件就能顺着坡面摆放。",
+        "wiring": "屋面三点 → Plane 3 Points → Orient"
+      }
+    ],
+    "pitfalls": [
+      "三点共线时无法建面，得到无效平面。",
+      "点的顺序决定平面朝向（正反），顺序换了构件会翻面。"
+    ],
+    "related": ["vector.plane-from-normal", "vector.align-plane", "transform.orient"],
+    "tip": "点序即方向：接错顺序，后面的构件会整体翻个面。"
+  },
+  "vector.rectangle-grid": {
+    "concept": "在矩形范围内生成规则网格点，可分别设置行数与列数。",
+    "steps": [
+      "Rectangle 端接矩形范围。",
+      "设置 U、V 方向的分段数。",
+      "输出网格点（树结构）。"
+    ],
+    "scenes": [
+      {
+        "title": "幕墙分格定位",
+        "body": "按幕墙尺寸生成网格点，直接作为竖挺与横梁的定位基准。",
+        "wiring": "Rectangle → Rectangle Grid → 杆件"
+      }
+    ],
+    "pitfalls": [
+      "分段数不是点数，节点数比段数多一。",
+      "输出是树，Flatten 之后就分不清行列了，分行处理时别乱拍平。"
+    ],
+    "related": ["vector.square-grid", "vector.populate-rectangle", "curve.four-square-grid"],
+    "tip": "网格点保留树结构，行列信息就还在；Flatten 只在你确实只要一列时用。"
+  },
+  "vector.sort-along": {
+    "concept": "把一组点按它们在曲线上的位置排序，让点序与曲线走向一致。",
+    "steps": [
+      "Points 端接乱序点。",
+      "Curve 端接参考曲线。",
+      "输出按曲线方向排好序的点。"
+    ],
+    "scenes": [
+      {
+        "title": "连成正确轮廓",
+        "body": "形状点来自不同来源导致乱序，先沿线排序再连折线就不会打结。",
+        "wiring": "散点 + 轮廓参考线 → Sort Along → Polyline"
+      }
+    ],
+    "pitfalls": [
+      "参考曲线必须真的经过这些点附近，否则排序结果没有意义。",
+      "点分布在曲线两侧时排序仍按最近点投影，不会区分内外。"
+    ],
+    "related": ["vector.sort-points", "curve.polyline-n-points", "curve.curve-from-points"],
+    "tip": "折线自交、放样扭曲，十有八九是点序没排。"
+  }
+}

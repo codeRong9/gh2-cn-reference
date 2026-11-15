@@ -1,0 +1,18 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 19.5 20 L 4.5 23 C 3.6717 23, 2.9999998 20.761, 3 18 C 3.0000002 15.239, 3.6717 13, 4.5 13 L 19.5 16 C 19.83132 16, 20.1 16.8956, 20.1 18 C 20.1 19.1044, 19.83132 20, 19.5 20" stroke="#0B7285" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 19.5 20 L 4.5 23 C 3.6717 23, 2.9999998 20.761, 3 18 C 3.0000002 15.239, 3.6717 13, 4.5 13 L 19.5 16 C 19.83132 16, 20.1 16.8956, 20.1 18 C 20.1 19.1044, 19.83132 20, 19.5 20" fill="#66D9E8" />
+    <!--Icon element '(Grasshopper2.UI.Icon.Vector.EggSpan,Grasshopper2.UI.Icon.Vector.VectorStyle)' failed to create valid SVG.-->
+    <path d="M 19.5 20 L 4.5 23 C 3.9201899 23, 3.4171138 21.90289, 3.1674514 20.297602 L 18.96698 18.91904 C 19.066845 19.561157, 19.268076 20, 19.5 20" fill="#22B8CF" />
+    <path d="M 19.015781 16.8189 L 3.28945 15.047249 C 3.562416 13.806042, 4.0030203 13, 4.5 13 L 19.5 16 C 19.301208 16, 19.124968 16.322416, 19.015781 16.8189" fill="#C5F6FA" />
+    <path d="M 22 10.5 A 1.5 1.5 0 0 0 23.5 9 L 23.5 2 A 1.5 1.5 0 0 0 22 0.5 L 2 0.5 A 1.5 1.5 0 0 0 0.5 1.9999999 L 0.5 9 A 1.5 1.5 0 0 0 1.9999999 10.5 L 11.5 10.5 L 11.5 14.5 L 14 10.5 L 22 10.5" fill="#087F5B" stroke="#087F5B" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 2.5 9 L 2.5 2.5 L 5.5 5.5" stroke="#C3FAE8" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 5.5 9 L 5.5 2" stroke="#C3FAE8" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 8.5 8.5 A 1 1 0 0 1 7.5 7.5 L 7.5 5.5 A 1 1 0 0 1 8.5 4.5 L 9 4.5 A 1.5 1.5 0 0 1 10.5 6.0000005 L 10.5 7 A 1.5 1.5 0 0 1 9 8.5 L 8.5 8.5" stroke="#C3FAE8" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 10.5 9 L 10.5 4" stroke="#C3FAE8" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 12.5 9 L 12.5 4.5 L 15.5 4.5 A 1 1 0 0 1 16.5 5.5 L 16.5 9" stroke="#C3FAE8" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 14.5 4.5 L 14.5 9" stroke="#C3FAE8" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 21.5 8.5 L 19.5 8.5 A 1 1 0 0 1 18.5 7.5 L 18.5 5.5 A 1 1 0 0 1 19.5 4.5 L 20.5 4.5 A 1 1 0 0 1 21.5 5.5 L 21.5 6.5 L 18.5 6.5" stroke="#C3FAE8" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+  </g>
+</svg>

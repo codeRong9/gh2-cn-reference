@@ -1,0 +1,32 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lineara6af7987cb32" gradientUnits="userSpaceOnUse" x1="16.04585" y1="13.83394" x2="15.25691" y2="9.16096">
+      <stop offset="0%" style="stop-color:#FFE066;" />
+      <stop offset="100%" style="stop-color:#FCC419;" />
+    </linearGradient>
+    <linearGradient id="lineard3dfaafed77d" gradientUnits="userSpaceOnUse" x1="9.3463" y1="10.62439" x2="13.4875" y2="16.46907">
+      <stop offset="0%" style="stop-color:#FFE066;" />
+      <stop offset="100%" style="stop-color:#FCC419;" />
+    </linearGradient>
+    <linearGradient id="linear789115028993" gradientUnits="userSpaceOnUse" x1="6.23463" y1="4.97349" x2="7.55119" y2="32.06315">
+      <stop offset="0%" style="stop-color:#66D9E8;" />
+      <stop offset="100%" style="stop-color:#0B7285;" />
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 22.5 14.5 L 19.200006 12.025005 C 16.476604 9.982453, 13.5 11, 12.51218 7.0091352 C 11.660949 9.821864, 12.02946 11.940206, 13.617715 13.364159 L 16 15.5 L 22.5 14.5" fill="url(#lineara6af7987cb32)" />
+    <path d="M 16 15.5 L 13.617715 13.364159 C 12.02946 11.940206, 11.660949 9.821864, 12.51218 7.0091352 C 10.50406 7.6697116, 9.300307 6.891132, 8.900922 4.673396 C 8.900922 5.3418555, 8.107878 6.276819, 7.68041 8.0382805 C 7.2401404 9.85249, 7.1876698 12.543442, 8.470206 15.177576 C 8.886508 16.032595, 9.443466 16.881628, 10.173474 17.692749 L 14.5 22.5 L 16 15.5" fill="url(#lineard3dfaafed77d)" />
+    <path d="M 1.5 2.5 L 2.4424727 3.3449757 C 3.8828578 4.6363554, 3.79232 7.5691676, 4.4235616 9.8747425 C 4.570887 10.412842, 4.7575293 10.916775, 4.983319 11.389951 C 5.7249618 12.944177, 6.88897 14.166572, 8.4697895 15.177779 C 7.1876698 12.543442, 7.2401404 9.85249, 7.68041 8.0382805 C 8.107878 6.276819, 8.900922 5.3418555, 8.900922 4.673396 C 8.900922 4.429904, 8.795696 4.221772, 8.529249 4.021937 L 6.5 2.5 L 1.5 2.5" fill="url(#linear789115028993)" />
+    <path d="M 4.983319 11.389951 C 4.7575293 10.916775, 4.570887 10.412842, 4.4235616 9.8747425 C 3.79232 7.5691676, 3.8828578 4.6363554, 2.4424727 3.3449757 L 1.5 2.5 L 1 7.5 A 25.113625 25.113625 0 0 0 4.9833193 11.389952" fill="#22B8CF" />
+    <path d="M 14.5 22.5 L 20.5 21.5 L 22.5 14.5 L 16 15.5 L 14.5 22.5" fill="#FF1493" />
+    <path d="M 8.470206 15.177576 A 11.076191 11.076191 0 0 0 10.173475 17.692749 L 14.5 22.5" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 6.5 2.5 L 8.529249 4.021937 C 9.527175 4.770381, 8.263587 5.6351905, 7.68041 8.0382805 C 7.2401404 9.85249, 7.1876698 12.543442, 8.470206 15.177576" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 14.5 22.5 L 20.5 21.5 L 22.5 14.5 L 16 15.5 L 14.5 22.5" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 6.5 2.5 L 1.5 2.5 L 1 7.5" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 22.5 14.5 L 19.200006 12.025005 C 16.476604 9.982453, 13.5 11, 12.51218 7.0091352" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 1.5 2.5 L 2.4424727 3.3449757 C 3.8828578 4.6363554, 3.79232 7.5691676, 4.4235616 9.8747425 C 5.054803 12.180317, 6.4078236 13.858653, 8.469373 15.177981" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 16 15.5 L 13.617715 13.364159 C 12.02946 11.940206, 11.660949 9.821864, 12.51218 7.0091352" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 1.0000019 7.500004 A 25.113625 25.113625 0 0 0 4.9833193 11.389952" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 8.900922 4.673396 C 9.300307 6.891132, 10.50406 7.6697116, 12.51218 7.0091352" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

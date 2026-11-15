@@ -1,0 +1,12 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 16 5 L 20 19 C 20 20.1044, 16.4176 21, 12 21 C 7.5824 21, 4 20.1044, 4 19 L 8 5 C 8 4.4478, 9.7912 4, 12 4 C 14.2088 4, 16 4.4478, 16 5" stroke="#E67700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 16 5 L 20 19 C 20 20.1044, 16.4176 21, 12 21 C 7.5824 21, 4 20.1044, 4 19 L 8 5 C 8 4.4478, 9.7912 4, 12 4 C 14.2088 4, 16 4.4478, 16 5" fill="#FFE066" />
+    <!--Icon element '(Grasshopper2.UI.Icon.Vector.EggSpan,Grasshopper2.UI.Icon.Vector.VectorStyle)' failed to create valid SVG.-->
+    <path d="M 16 5 L 20 19 C 20 19.77308, 18.244625 20.443848, 15.676162 20.776731 L 13.838081 5.8883653 C 15.122313 5.721924, 16 5.38654, 16 5" fill="#FCC419" />
+    <path d="M 9.637799 5.8070345 L 7.275597 20.61407 C 5.2896643 20.250114, 4 19.662642, 4 19 L 8 5 C 8 5.33132, 8.644833 5.6250563, 9.637799 5.8070345" fill="#FFF3BF" />
+    <path d="M 21 19 C 21.448969 20.476204, 16.42861 22.149656, 12 22 C 7.5713906 22.149656, 2.5510314 20.476204, 3 19" stroke="#0B7285" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 8.5 5 A 1.5 1.5 0 0 1 5.5 5 A 1.5 1.5 0 0 1 8.5 5.0000005" fill="#66D9E8" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

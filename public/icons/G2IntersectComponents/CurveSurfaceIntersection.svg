@@ -1,0 +1,15 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 14.415396 3.5121794 L 18.964264 16.010092 C 19.247559 16.788439, 17.373323 18.185413, 14.7788315 19.12973 C 12.18434 20.074047, 9.850635 20.20864, 9.567339 19.430292 L 5.0184703 6.9323807 C 4.735175 6.154033, 6.6094117 4.7570586, 9.203903 3.812741 C 11.798395 2.8684235, 14.1321 2.733832, 14.415396 3.5121794" stroke="#0B7285" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 14.415396 3.5121794 L 18.964264 16.010092 C 19.247559 16.788439, 17.373323 18.185413, 14.7788315 19.12973 C 12.18434 20.074047, 9.850635 20.20864, 9.567339 19.430292 L 5.0184703 6.9323807 C 4.735175 6.154033, 6.6094117 4.7570586, 9.203903 3.812741 C 11.798395 2.8684235, 14.1321 2.733832, 14.415396 3.5121794" fill="#66D9E8" />
+    <!--Icon element '(Grasshopper2.UI.Icon.Vector.EggSpan,Grasshopper2.UI.Icon.Vector.VectorStyle)' failed to create valid SVG.-->
+    <path d="M 14.415396 3.5121794 L 18.964264 16.010092 C 19.16257 16.554935, 18.303688 17.402905, 16.8806 18.186552 L 12.33173 5.6886396 C 13.75482 4.904993, 14.613703 4.0570226, 14.415396 3.5121794" fill="#22B8CF" />
+    <path d="M 7.356287 7.369726 L 11.905155 19.86764 C 10.645442 20.035652, 9.737316 19.8973, 9.567339 19.430292 L 5.0184703 6.9323807 C 5.1884475 7.3993893, 6.096573 7.5377398, 7.356287 7.369726" fill="#C5F6FA" />
+    <path d="M 2 20 L 7 16" stroke="#0B7285" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 17 8 L 22 4" stroke="#0B7285" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 7 16 L 17 8" stroke="#595959" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 18.5 8 A 1.5 1.5 0 0 1 15.5 8 A 1.5 1.5 0 0 1 18.5 8" fill="#FCC419" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 8.5 16 A 1.5 1.5 0 0 1 5.5 16 A 1.5 1.5 0 0 1 8.5 16" fill="#FCC419" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

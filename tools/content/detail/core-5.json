@@ -1,0 +1,344 @@
+{
+  "text.format-text": {
+    "concept": "把一段带占位符的模板变成真正的字符串。模板里写 {0}、{1} 表示第几个替换项，组件按序号把 Item 塞进去。",
+    "steps": [
+      "Format 端输入模板，例如「梁 {0}：长度 {1} mm」。",
+      "Items 端按顺序接要填的值，可以是数字也可以是文本。",
+      "连接到预览或烘焙，检查占位符是否都被替换干净。"
+    ],
+    "scenes": [
+      {
+        "title": "批量生成构件命名",
+        "body": "用「L-{0}-{1}」这样的模板配合编号与尺寸，一次性得到整层构件的名字，再交给烘焙命名。",
+        "wiring": "Series → Format Text → 烘焙 Name"
+      },
+      {
+        "title": "图纸说明文字",
+        "body": "把面积、体积等测量值和单位拼成一句完整的中文说明。",
+        "wiring": "Measure Area → Format Text → Text Tag"
+      }
+    ],
+    "pitfalls": [
+      "占位符序号从 0 开始，写 {1} 却只接了一个值会留下空位或报错。",
+      "模板里的花括号是语法符号，想输出花括号本身需要转义，直接写字面量会被当成占位符。"
+    ],
+    "related": ["text.text-join", "text.text-concatenate", "text.replace-text"],
+    "tip": "复杂字符串永远优先用 Format，不要用一堆「+」号拼。"
+  },
+  "text.text-join": {
+    "concept": "把一整列文本合并成一个字符串，中间自动插入分隔符。相当于「把名单连成一句话」。",
+    "steps": [
+      "Texts 端接一列文本（树也可以，会按分支各自合并）。",
+      "Join 端给分隔符，例如逗号、换行或空格。",
+      "输出一条合并后的长文本。"
+    ],
+    "scenes": [
+      {
+        "title": "一行显示全部编号",
+        "body": "把上百个构件编号压成一个字符串，用作图层名或备注。",
+        "wiring": "List → Text Join → 烘焙 Layer"
+      },
+      {
+        "title": "生成 CSV 行",
+        "body": "用逗号做分隔符拼接一行的所有字段，再交给写文件工具。",
+        "wiring": "多列字段 → Text Join(逗号) → 写出"
+      }
+    ],
+    "pitfalls": [
+      "分隔符留空会得到一个完全粘连的字符串，后续无法再拆开。",
+      "输入是树时按分支各自合并，不会跨分支连成一条。"
+    ],
+    "related": ["text.text-split", "text.text-concatenate", "text.format-text"],
+    "tip": "Join 与 Split 是一对：拼接时用什么分隔符，拆分时就得用同一个。"
+  },
+  "text.text-split": {
+    "concept": "按分隔符把一个字符串切开，得到一列片段。和 Text Join 正好相反。",
+    "steps": [
+      "Text 端接要拆的字符串。",
+      "Separator 端填分隔符，例如逗号、分号、制表符。",
+      "输出一列片段，必要时再接 Text Trimming 去掉两侧空格。"
+    ],
+    "scenes": [
+      {
+        "title": "读回 Excel 复制的一行",
+        "body": "从表格里复制的一整行数据按 Tab 拆开，立刻变回可以分别处理的字段。",
+        "wiring": "粘贴行 → Text Split(Tab) → Text Trim"
+      }
+    ],
+    "pitfalls": [
+      "分隔符是整体匹配，不是字符集合；写「,;」并不会按逗号或分号任一拆分。",
+      "连续出现两个分隔符会产生空片段，清洗时记得过滤空字符串。"
+    ],
+    "related": ["text.text-join", "text.text-fragment", "text.dissect-text"],
+    "tip": "拆分后紧跟一次 Trim，能省掉后面大量「为什么多了个空格」的问题。"
+  },
+  "text.text-fragment": {
+    "concept": "从字符串里取一段。给它起点与长度（或终点），它把这截字符截出来。",
+    "steps": [
+      "Text 端接原始字符串。",
+      "设置起点索引（从 0 开始）。",
+      "设置长度或结束位置，输出截取结果。"
+    ],
+    "scenes": [
+      {
+        "title": "提取编码前缀",
+        "body": "构件编号前四位代表楼栋，用固定起点 0、长度 4 取出楼栋码做分组。",
+        "wiring": "编号 → Text Fragment(0,4) → Dispatch"
+      }
+    ],
+    "pitfalls": [
+      "索引从 0 开始，写 1 取到的是第二个字符。",
+      "长度超出字符串总长会返回不满意的结果，最好配合 Text Length 做校验。"
+    ],
+    "related": ["text.text-length", "text.text-split", "text.text-contains"],
+    "tip": "固定格式的编码用 Fragment 最快，格式不稳定的文本用 Split 更稳。"
+  },
+  "text.text-concatenate": {
+    "concept": "把两段文本直接粘在一起，不加任何分隔符。",
+    "steps": [
+      "A、B 两端各接一段文本或数值。",
+      "输出无间隔拼接结果。"
+    ],
+    "scenes": [
+      {
+        "title": "补全单位",
+        "body": "把长度数值与单位「mm」拼成一个可直接显示的字符串。",
+        "wiring": "Length → Text Concatenate(\\\" mm\\\")"
+      }
+    ],
+    "pitfalls": [
+      "多个文本串联时会形成长链条，可读性迅速下降，三件以上建议改用 Format Text。",
+      "数值会按默认格式转成文本，小数位可能不受控。"
+    ],
+    "related": ["text.format-text", "text.text-join", "text.replace-text"],
+    "tip": "两个以内用 Concatenate，再多就用 Format Text。"
+  },
+  "text.replace-text": {
+    "concept": "在字符串里查找指定内容并替换成新内容，可一次替换全部命中项。",
+    "steps": [
+      "Text 端接原始字符串。",
+      "Find 端填要被替换掉的部分。",
+      "Replace 端填新内容，输出替换后的字符串。"
+    ],
+    "scenes": [
+      {
+        "title": "统一命名规范",
+        "body": "把旧项目里的「_final」后缀批量去掉，让名字与图层规范对齐。",
+        "wiring": "名称列表 → Replace Text(_final → 空)"
+      }
+    ],
+    "pitfalls": [
+      "匹配区分大小写，大小写混用时要先统一大小写再替换。",
+      "Find 为空会导致替换行为不可预期，务必先判断输入非空。"
+    ],
+    "related": ["text.text-contains", "text.word-casing", "text.text-split"],
+    "tip": "替换前先用 Text Contains 判断一次，能避免大量空跑。"
+  },
+  "text.word-casing": {
+    "concept": "按规则改写单词大小写：全小写、全大写、首字母大写或驼峰等。",
+    "steps": [
+      "Text 端接字符串。",
+      "选择大小写模式（小写 / 大写 / 词首大写等）。",
+      "输出规范化后的文本。"
+    ],
+    "scenes": [
+      {
+        "title": "规范图层名",
+        "body": "把所有图层名统一为小写加下划线，交给烘焙图层。",
+        "wiring": "Text → Word Casing → Bake Layer"
+      }
+    ],
+    "pitfalls": [
+      "词首大写按空格分词，中文名几乎没有空格，效果等同于不动。",
+      "大小写改变后原有的匹配规则可能失效，检索键要同步更新。"
+    ],
+    "related": ["text.replace-text", "text.normalise-text", "text.text-equality"],
+    "tip": "对外输出的名字先过一遍 Casing，减少后期返工。"
+  },
+  "text.text-length": {
+    "concept": "数一数字符串有多少个字符，输出一个整数。",
+    "steps": [
+      "Text 端接字符串。",
+      "输出字符数。"
+    ],
+    "scenes": [
+      {
+        "title": "控制标签长度",
+        "body": "标签超过 12 个字符就截断或换行，避免图纸压字。",
+        "wiring": "Text Length → Larger Than → Dispatch"
+      }
+    ],
+    "pitfalls": [
+      "按字符计数，一个汉字算一个字符，与显示宽度不等价。",
+      "首尾空格也计入长度，比较前记得 Trim。"
+    ],
+    "related": ["text.text-fragment", "text.text-trimming", "text.dissect-text"],
+    "tip": "凡是做截断的地方，都先用它确认长度，别让越界悄悄发生。"
+  },
+  "text.text-contains": {
+    "concept": "判断一个字符串里是否含有指定片段，输出真或假。",
+    "steps": [
+      "Text 端接被查找的字符串。",
+      "Fragment 端接要找的片段。",
+      "输出布尔值，可直接驱动 Dispatch 分流。"
+    ],
+    "scenes": [
+      {
+        "title": "按关键字筛构件",
+        "body": "把名字里带「窗」的构件挑出来单独统计。",
+        "wiring": "名称列表 → Text Contains(窗) → Dispatch"
+      }
+    ],
+    "pitfalls": [
+      "默认区分大小写，英文关键字要统一大小写。",
+      "只判断有无、不给位置；要位置信息得用别的匹配组件。"
+    ],
+    "related": ["text.text-starts-with", "text.text-ends-with", "text.replace-text"],
+    "tip": "筛选永远优先用布尔组件接 Dispatch，而不是手动挑项。"
+  },
+  "text.dissect-text": {
+    "concept": "把一段文本拆成单词或字符序列，得到一列最小单位，方便逐个处理。",
+    "steps": [
+      "Text 端接要拆的文本。",
+      "选择拆分粒度（单词或字符）。",
+      "输出一列片段，接 List Length 就能统计词数。"
+    ],
+    "scenes": [
+      {
+        "title": "统计说明文字字数",
+        "body": "把一段中文说明拆成字符后计数，用于检查图纸说明是否超框。",
+        "wiring": "说明 → Dissect Text → List Length"
+      }
+    ],
+    "pitfalls": [
+      "按空格分词的规则对中文无效，中文需要按字符拆。",
+      "标点会被一并拆出，统计词数时要先过滤。"
+    ],
+    "related": ["text.text-split", "text.text-length", "text.collapse-whitespace"],
+    "tip": "处理英文文本靠分词，处理中文文本按字符，规则先分清再动手。"
+  },
+  "text.parse-numbers": {
+    "concept": "从一段混合文本中把数字挑出来并转成真正的数值，方便后续计算。",
+    "steps": [
+      "Text 端接含数字的字符串，例如「长 3200」。",
+      "输出解析到的数值，可直接接数学运算。"
+    ],
+    "scenes": [
+      {
+        "title": "读尺寸标注",
+        "body": "把图纸里抄出来的「H=3000」变成能参与计算的 3000。",
+        "wiring": "标注文本 → Parse Numbers → 算术运算"
+      }
+    ],
+    "pitfalls": [
+      "一段文本里有多个数字时，取到哪个取决于解析顺序，不保证是第一个。",
+      "带单位的数字能解析，但千分位逗号等写法要提前清理。"
+    ],
+    "related": ["text.text-split", "text.replace-text", "maths.addition"],
+    "tip": "先替换掉干扰字符再解析，比指望解析器「猜对」可靠得多。"
+  },
+  "text.text-on-curve": {
+    "concept": "把文本排布到一条曲线上，得到沿曲线走向的文字几何，用于图纸标注。",
+    "steps": [
+      "Text 端接要显示的内容。",
+      "Curve 端接基准曲线，例如圆弧或路径线。",
+      "调整高度、对齐与起始位置，输出可预览的文字几何。"
+    ],
+    "scenes": [
+      {
+        "title": "沿弧墙标注",
+        "body": "把「弧墙 A」贴合到弧形轴线上，让标注跟着墙体走。",
+        "wiring": "Text → Text On Curve(弧线)"
+      }
+    ],
+    "pitfalls": [
+      "曲线太短会挤字或溢出，先用 Curve Length 检查可用长度。",
+      "曲线方向决定文字朝向，反向曲线会让字倒过来。"
+    ],
+    "related": ["text.format-text", "curve.divide-by-count", "annotation.description"],
+    "tip": "排版前先统一曲线方向，避免文字方向莫名其妙地翻转。"
+  },
+  "script.python3-component": {
+    "concept": "在电池图里写 Python 3 脚本。输入端在脚本里声明，脚本返回什么，输出端就出现什么。",
+    "steps": [
+      "双击电池打开脚本编辑器。",
+      "在脚本顶部用输入变量接收接入的数据（变量名即端口名）。",
+      "把结果赋给输出变量，关闭编辑器后端口自动更新。"
+    ],
+    "scenes": [
+      {
+        "title": "批量改名规则",
+        "body": "用正则一口气处理命名，标准电池拼不出来的逻辑交给脚本。",
+        "wiring": "名称列表 → Python 3 → 新名称"
+      }
+    ],
+    "pitfalls": [
+      "输入类型默认按 Item 处理，接列表时要显式改成 List 或 Tree，否则只拿到首项。",
+      "脚本报错会让整个下游断流，改完先看电池上的红色提示。"
+    ],
+    "related": ["script.c-sharp-component", "script.script-component", "script.base-script-component"],
+    "tip": "能用标准电池解决就别写脚本：脚本能跑，但别人接手时最难读。"
+  },
+  "script.c-sharp-component": {
+    "concept": "在电池图里写 C# 脚本，适合需要强类型或复用 .NET 库的场合。",
+    "steps": [
+      "双击打开 C# 编辑器，确认输入变量的类型与访问级别。",
+      "编写逻辑，把结果赋给输出变量。",
+      "关闭编辑器后检查端口类型是否与上游匹配。"
+    ],
+    "scenes": [
+      {
+        "title": "复杂排序规则",
+        "body": "按多个关键字联合排序，C# 的 LINQ 写起来比电池更紧凑。",
+        "wiring": "数据 → C# Script → 排序结果"
+      }
+    ],
+    "pitfalls": [
+      "输入类型声明成 Item 却传入 Tree 时只会取到一个值，排查时先看端口类型。",
+      "引用缺失的命名空间会编译失败，报错信息在编辑器下方。"
+    ],
+    "related": ["script.python3-component", "script.script-component", "script.base-script-component"],
+    "tip": "需要类型安全或大量字符串处理时选 C#，快速试错选 Python。"
+  },
+  "annotation.measure-length": {
+    "concept": "量出曲线的总长度，输出一个数值；多条曲线会得到一列长度。",
+    "steps": [
+      "Geometry 端接曲线。",
+      "输出长度数值，可直接接 Format Text 生成「长度 3200 mm」。"
+    ],
+    "scenes": [
+      {
+        "title": "统计总长",
+        "body": "把一排管线的长度汇总，用于算材料用量。",
+        "wiring": "曲线列表 → Measure Length → Mass Addition"
+      }
+    ],
+    "pitfalls": [
+      "长度单位跟随文档单位设置，跨图纸对比前先确认单位一致。",
+      "闭合曲线的长度包含整圈，别把闭合线当成半圈来估。"
+    ],
+    "related": ["annotation.measure-area", "annotation.measure-volume", "text.format-text"],
+    "tip": "测量结果永远接一次 Format Text 再加单位，避免下游把数值误当毫米。"
+  },
+  "annotation.measure-area": {
+    "concept": "量出曲面或平面的面积，输出数值；多个面得到一列面积。",
+    "steps": [
+      "Geometry 端接曲面或闭合平面曲线。",
+      "输出面积数值。",
+      "需要合计时接 Mass Addition。"
+    ],
+    "scenes": [
+      {
+        "title": "统计幕墙面积",
+        "body": "把一组分格面积汇总，直接对接报价表。",
+        "wiring": "分格曲面 → Measure Area → Mass Addition"
+      }
+    ],
+    "pitfalls": [
+      "开放曲线没有面积，接进去会得到无效结果。",
+      "多重曲面要逐面测再相加，整体测不一定给出你要的口径。"
+    ],
+    "related": ["annotation.measure-volume", "annotation.measure-length", "annotation.area-centroid"],
+    "tip": "面积统计先确认口径（投影面积还是真实曲面面积），再决定用哪个组件。"
+  }
+}

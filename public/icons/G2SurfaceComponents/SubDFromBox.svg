@@ -1,0 +1,19 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="radial76f90360141b" gradientUnits="userSpaceOnUse" cx="14" cy="17" r="7.5">
+      <stop offset="0%" style="stop-color:#FCC419;" />
+      <stop offset="100%" style="stop-color:#FFE066;" />
+    </radialGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 11.5 14 L 14.5 22.5" stroke="#0B7285" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 17.5 5.5 L 11.5 14" stroke="#0B7285" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 11.5 14 L 1.5 11" stroke="#0B7285" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 12.001448 4.571948 C 10.577407 3.9048877, 9.153366 3.2378273, 8.067509 3.604023 C 6.9816523 3.970219, 6.233979 5.369671, 5.486306 6.7691226 C 4.738633 8.168574, 3.9909601 9.568027, 3.6849897 10.833692 C 3.3790193 12.099357, 3.5147514 13.231235, 3.6504836 14.363112 C 3.7862155 15.49499, 3.9219477 16.626867, 4.8042064 17.39255 C 5.6864653 18.158232, 7.3152504 18.557718, 8.944036 18.957205 C 10.572821 19.356691, 12.201606 19.756178, 13.558928 19.29011 C 14.916248 18.824043, 16.002106 17.492422, 17.087961 16.1608 C 18.173819 14.82918, 19.259676 13.497559, 19.463274 12.365681 C 19.666872 11.233803, 18.98821 10.301668, 18.309551 9.369534 C 17.63089 8.437399, 16.95223 7.505264, 15.900879 6.705666 C 14.849528 5.906069, 13.4254875 5.2390084, 12.001448 4.571948" fill="url(#radial76f90360141b)" stroke="#E67700" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 5.4239516 6.3559685 C 4.480625 8.864608, 5.214222 10.751367, 6.1480556 12.022456 C 7.081889 13.293547, 8.21596 13.948969, 10.495937 14.931542 C 12.775914 15.914116, 16.2018 17.22384, 17.895596 15.559941" stroke="#E67700" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 10.821884 3.7671373 C 13.656994 5.521997, 14.472873 7.2802143, 14.816901 8.730437 C 15.16093 10.18066, 15.033109 11.32289, 13.975866 13.627746 C 12.918625 15.932601, 10.931962 19.400084, 6.878545 18.667248" stroke="#E67700" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 7.008446 0.49061444 L 1.5 11 L 2.5 19.5 L 14.5 22.5 L 22.5 12.5 L 17.5 5.5 L 7.008446 0.49061444" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 7.008446 0.49061444 L 10 7.5 L 22.5 12.5" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 10 7.5 L 2.5 19.5" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

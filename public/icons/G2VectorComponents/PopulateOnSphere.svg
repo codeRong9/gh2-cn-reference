@@ -1,0 +1,21 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 22.5 4 A 1.5 1.5 0 0 1 19.5 3.9999998 A 1.5 1.5 0 0 1 22.5 4.0000005" fill="#FFE066" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 5.5 21 A 1.5 1.5 0 0 1 2.5 21 A 1.5 1.5 0 0 1 5.5 21" fill="#FFE066" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 23.5 12 A 11.5 11.5 0 0 1 0.5 11.999999 A 11.5 11.5 0 0 1 23.5 12.000002" fill="#C5F6FA" />
+    <path d="M 19.848885 4.151113 A 11.1 11.1 0 0 1 4.1511164 19.848888 C 5.7520185 21.44979, 10.564983 19.233292, 14.8991375 14.8991375 C 19.233292 10.564983, 21.44979 5.7520185, 19.848885 4.1511145" fill="#66D9E8" />
+    <path d="M 19.848885 4.151113 A 11.1 11.1 0 0 1 4.1511164 19.848888 C 7.704341 23.402111, 14.100517 22.768826, 18.434671 18.434671 C 22.768826 14.100517, 23.402111 7.7043405, 19.848885 4.1511145" fill="#22B8CF" />
+    <!--Icon element '(Grasshopper2.UI.Icon.Vector.EggSpan,Grasshopper2.UI.Icon.Vector.VectorStyle)' failed to create valid SVG.-->
+    <path d="M 23.5 12 A 11.5 11.5 0 0 1 0.5 11.999999 A 11.5 11.5 0 0 1 23.5 12.000002" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 18.5 14 A 1.5 1.5 0 0 1 15.5 14 A 1.5 1.5 0 0 1 18.5 14" fill="#FFE066" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 21.5 9 A 1.5 1.5 0 0 1 18.5 9 A 1.5 1.5 0 0 1 21.5 9" fill="#FFE066" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 10.5 9 A 1.5 1.5 0 0 1 7.5 9 A 1.5 1.5 0 0 1 10.5 9" fill="#FFE066" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 11.5 16 A 1.5 1.5 0 0 1 8.5 16 A 1.5 1.5 0 0 1 11.5 16" fill="#FFE066" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 15.5 5 A 1.5 1.5 0 0 1 12.5 5 A 1.5 1.5 0 0 1 15.5 5.0000005" fill="#FFE066" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 5.5 13 A 1.5 1.5 0 0 1 2.5 13 A 1.5 1.5 0 0 1 5.5 13" fill="#FFE066" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 15.5 20 A 1.5 1.5 0 0 1 12.5 20 A 1.5 1.5 0 0 1 15.5 20" fill="#FFE066" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 23.5 18 A 1.5 1.5 0 0 1 20.5 18 A 1.5 1.5 0 0 1 23.5 18" fill="#FFE066" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 5.5 4 A 1.5 1.5 0 0 1 2.5 3.9999998 A 1.5 1.5 0 0 1 5.5 4.0000005" fill="#FFE066" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

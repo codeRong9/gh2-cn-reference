@@ -1,0 +1,28 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="radial6d95e8debae4" gradientUnits="userSpaceOnUse" cx="18" cy="10.5" r="7.07107">
+      <stop offset="0%" style="stop-color:#FCC419;" />
+      <stop offset="100%" style="stop-color:#FFE066;" />
+    </radialGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 5.5910254 7.5 A 2 2 0 0 0 3.642243 9.050281 L 1.5653198 18.050282 A 2.0000005 2.0000005 0 0 0 3.5141022 20.5 L 20.485897 20.5 A 2.0000005 2.0000005 0 0 0 22.43468 18.050282 L 20.357758 9.050281 A 1.9999983 1.9999983 0 0 0 18.408976 7.500001 L 5.5910254 7.5" fill="url(#radial6d95e8debae4)" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 4.1373625 15.799206 L 3.796762 17.27514 A 0.9999994 0.9999994 0 0 0 4.7711535 18.5 L 6.505225 18.5" stroke="#FFF3BF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 5 13.5 A 0.5 0.5 0 0 1 4 13.5 A 0.5 0.5 0 0 1 5 13.5" fill="#FFF3BF" />
+    <path d="M 17.5 15 C 17.77437 16.23017, 14.706372 17.624714, 12 17.5 C 9.293628 17.624714, 6.2256303 16.23017, 6.5 15 C 6.2256303 13.769831, 9.293628 12.375286, 12 12.5 C 14.706372 12.375286, 17.77437 13.769831, 17.5 15" fill="#FFFFFF" />
+    <path d="M 17.5 15 A 1.3740206 1.3740206 0 0 1 17.150213 15.87732" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 15.54673 16.910751 L 14.626818 17.19644" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 12.7224655 17.478338 L 11.759049 17.4976" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 9.843829 17.29988 L 8.908808 17.067783" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 7.192857 16.214697 A 1.9800189 1.9800189 0 0 1 6.597521 15.468693" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 7.192857 13.785302 L 8.010452 13.279108" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 9.843829 12.70012 L 10.797205 12.560514" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 12.7224655 12.521663 L 13.68105 12.619637" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 15.54673 13.089249 L 16.413351 13.508126" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 17.5 9 A 5.5 5.5 0 0 1 6.5 8.999999 A 5.5 5.5 0 0 1 17.5 9.000001" fill="#66D9E8" />
+    <path d="M 15.606244 5.393755 A 5.1 5.1 0 0 1 8.393757 12.606246 C 9.21373 13.42622, 11.493556 12.476293, 13.484924 10.484924 C 15.476293 8.493556, 16.42622 6.213731, 15.606245 5.3937554" fill="#22B8CF" />
+    <path d="M 15.606244 5.393755 A 5.1 5.1 0 0 1 8.393757 12.606246 C 10.189891 14.402381, 13.261323 14.24406, 15.252691 12.252691 C 17.24406 10.261323, 17.402382 7.189892, 15.606245 5.3937554" fill="#0B7285" />
+    <!--Icon element '(Grasshopper2.UI.Icon.Vector.EggSpan,Grasshopper2.UI.Icon.Vector.VectorStyle)' failed to create valid SVG.-->
+    <path d="M 17.5 9 A 5.5 5.5 0 0 1 6.5 8.999999 A 5.5 5.5 0 0 1 17.5 9.000001" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

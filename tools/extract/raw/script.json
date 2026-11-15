@@ -1,0 +1,195 @@
+[
+ {
+  "lib": "script",
+  "assembly": "G2ScriptComponents",
+  "namespace": "",
+  "typeName": "BaseScriptComponent",
+  "fullTypeName": "BaseScriptComponent",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": {
+   "name": "Many",
+   "info": "Multi-threaded execution. Consecutive iterations of the script run on different threads.",
+   "chapter": "Threading",
+   "section": "Execution",
+   "slot": 0,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "il",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "script",
+  "assembly": "G2ScriptComponents",
+  "namespace": "",
+  "typeName": "CSharpComponent",
+  "fullTypeName": "CSharpComponent",
+  "guid": "00000000-09d7-48c4-819a-63d618da60c8",
+  "author": "Ehsan",
+  "iconKey": null,
+  "nomen": {
+   "name": "C# Script",
+   "info": "C# scripting component",
+   "chapter": "Maths",
+   "section": "Script",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "il",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "script",
+  "assembly": "G2ScriptComponents",
+  "namespace": "",
+  "typeName": "MigrateGh1ComponentCSharp",
+  "fullTypeName": "MigrateGh1ComponentCSharp",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "script",
+  "assembly": "G2ScriptComponents",
+  "namespace": "",
+  "typeName": "MigrateGh1ComponentPython3",
+  "fullTypeName": "MigrateGh1ComponentPython3",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "script",
+  "assembly": "G2ScriptComponents",
+  "namespace": "",
+  "typeName": "MigrateGh1ComponentIronPython2",
+  "fullTypeName": "MigrateGh1ComponentIronPython2",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "script",
+  "assembly": "G2ScriptComponents",
+  "namespace": "",
+  "typeName": "MigrateGh1ComponentGeneric",
+  "fullTypeName": "MigrateGh1ComponentGeneric",
+  "guid": null,
+  "author": null,
+  "iconKey": null,
+  "nomen": null,
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "failed",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "script",
+  "assembly": "G2ScriptComponents",
+  "namespace": "",
+  "typeName": "IronPython2Component",
+  "fullTypeName": "IronPython2Component",
+  "guid": "00000000-e7ef-4257-bf78-8cad76484ddc",
+  "author": "Ehsan",
+  "iconKey": null,
+  "nomen": {
+   "name": "IronPython 2 Script",
+   "info": "IronPython 2 scripting component",
+   "chapter": "Maths",
+   "section": "Script",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "il",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "script",
+  "assembly": "G2ScriptComponents",
+  "namespace": "",
+  "typeName": "Python3Component",
+  "fullTypeName": "Python3Component",
+  "guid": "00000000-33f7-4221-9706-35b3266bbc0c",
+  "author": "Ehsan",
+  "iconKey": null,
+  "nomen": {
+   "name": "Python 3 Script",
+   "info": "Python 3 scripting component",
+   "chapter": "Maths",
+   "section": "Script",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "il",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "script",
+  "assembly": "G2ScriptComponents",
+  "namespace": "",
+  "typeName": "ScriptComponent",
+  "fullTypeName": "ScriptComponent",
+  "guid": "00000000-9514-4e72-86eb-f1e833b52b83",
+  "author": "Ehsan",
+  "iconKey": null,
+  "nomen": {
+   "name": "Run Script",
+   "info": "Edit and run scripts in any supported language.",
+   "chapter": "Maths",
+   "section": "Script",
+   "slot": 1,
+   "rank": -1,
+   "sortKey": null
+  },
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "il",
+   "ports": "failed"
+  }
+ }
+]

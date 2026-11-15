@@ -1,0 +1,13 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="radial35c793687de0" gradientUnits="userSpaceOnUse" cx="3" cy="2" r="20">
+      <stop offset="0%" style="stop-color:#FFF3BF;" />
+      <stop offset="100%" style="stop-color:#FFE066;" />
+    </radialGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 2.999999 21.999998 A 20 20 0 0 0 22.097136 7.941331 L 3 2 L 3 22" fill="url(#radial35c793687de0)" />
+    <path d="M 3 22 L 3 2 L 22.097136 7.941331" stroke="#E67700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 2.999999 21.999998 A 20 20 0 0 0 22.097136 7.941331" stroke="#0B7285" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

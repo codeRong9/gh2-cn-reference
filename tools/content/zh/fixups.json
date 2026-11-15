@@ -1,0 +1,5 @@
+{
+  "curve.line2-cloud": { "cn": "射入点云", "summary": "生成一条在首次碰到点云边界时终止的直线。" },
+  "curve.circle-tangents": { "cn": "点与圆切线", "summary": "求一个点与一个圆之间的切线。" },
+  "transform.move-through-field": { "cn": "随场移动", "summary": "按形状中心处的场方向移动形状。" }
+}

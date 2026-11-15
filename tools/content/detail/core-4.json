@@ -1,0 +1,114 @@
+{
+  "curve.curve-through-points": {
+    "concept": "生成一条穿过所有给定点的平滑曲线。和「控制点曲线」的区别是：它真的经过每个点，而控制点只起牵引作用。",
+    "steps": ["按顺序接一串点。", "给阶数（越高越贴合点，也越容易起伏）。", "需要闭合时打开闭合选项。"],
+    "scenes": [{ "title": "随手画形状", "body": "把一组定位点连成平滑轮廓，作为放样或挤出的基础。", "wiring": "点集 → Curve Through Points" }],
+    "pitfalls": ["点序乱了曲线会自我打结，先按路径或距离排序。", "阶数过高会在点之间产生多余摆动。"],
+    "related": ["curve.curve-from-points", "curve.polyline-n-points", "vector.sort-along"],
+    "tip": "先排序再连线：点的顺序决定曲线形状。"
+  },
+  "curve.project-curve": {
+    "concept": "把曲线沿一个方向压到一张或多张曲面上。做「把平面图案投到地形上」这类操作时，它是第一步。",
+    "steps": ["接要投影的曲线。", "接目标曲面（可多张）。", "给投影方向；不给时通常按曲面法向投影。"],
+    "scenes": [{ "title": "平面图案落地形", "body": "把平面上的路网投影到地形曲面上，得到贴合地形的路径。", "wiring": "路网 + 地形 + 方向 → Project" }],
+    "pitfalls": ["投影方向与曲面近乎平行时，曲线会被拉得很长甚至丢失。", "曲面有遮挡时只投到最近的一张，需要时逐张处理。"],
+    "related": ["curve.pull-curve", "intersect.curve-surface-intersection", "vector.project-point"],
+    "tip": "方向优先取「垂直于目标面」，斜投容易变形。"
+  },
+  "curve.extend-curve": {
+    "concept": "把曲线的两端延长或缩短。它保持原有曲率趋势延伸，比「再画一段」自然得多。",
+    "steps": ["接曲线。", "给起点、终点各自的延伸量（负值为缩短）。", "输出延长后的曲线。"],
+    "scenes": [{ "title": "让曲线相交", "body": "两条曲线差一点相交，各自延长一点后做交点。", "wiring": "曲线 → Extend(±) → 求交" }],
+    "pitfalls": ["延长量过大时曲线会翻卷自交。", "闭合曲线两端是同一点，延长会破坏闭合。"],
+    "related": ["curve.extend-to-boundary", "curve.trim-curve", "curve.fit-curve"],
+    "tip": "延长是「顺势而为」，不是直线拉伸；需要直线段请用延伸至点。"
+  },
+  "curve.curve-closest-point": {
+    "concept": "求曲线上距离某个点最近的位置。常用于「把物体吸附到路径上」以及判断点与路径的关系。",
+    "steps": ["接曲线与目标点。", "输出最近位置（含参数值与坐标）。", "需要距离时再接一个距离组件。"],
+    "scenes": [{ "title": "吸附到路径", "body": "把鼠标点或定位点吸附到最近的路径上，用于沿路布置。", "wiring": "点 + 曲线 → Closest Point" }],
+    "pitfalls": ["输出的是参数位置，不是点；接几何前看清端口类型。", "闭合曲线在接缝处可能给出「跳跃」的结果。"],
+    "related": ["curve.evaluate-curve", "curve.curve-locus-from-length", "intersect.curve-containment"],
+    "tip": "最近点给的是「位置」，要坐标再接一次求值。"
+  },
+  "surface.surface-from-corners": {
+    "concept": "用三个或四个角点直接生成一张曲面。做快速平面、斜面板时最快，但它本质是一张双线性曲面，不是真正的平面。",
+    "steps": ["按顺序给角点（三个或四个）。", "输出曲面。", "需要真正的平坦面时，先确认四个角点共面。"],
+    "scenes": [{ "title": "快速斜板", "body": "用四个角点生成一块斜向屋面板。", "wiring": "4 个角点 → Surface From Corners" }],
+    "pitfalls": ["四点不共面时得到的是扭曲面，不是平面，容易在后续布尔中出错。", "角点顺序错误会让曲面自交。"],
+    "related": ["surface.surface-from-edges", "surface.surface-from-boundaries", "curve.dissect-rectangle"],
+    "tip": "要平面先检查共面，否则用「边界成面」更稳。"
+  },
+  "surface.offset-surface": {
+    "concept": "把曲面沿法向整体偏移一段距离。做壳体厚度、双层表皮时用它；结果方向由原曲面法向决定。",
+    "steps": ["接曲面。", "给距离（正负决定偏移方向）。", "必要时先翻转法向，确保厚度朝内或朝外。"],
+    "scenes": [{ "title": "做壳体厚度", "body": "把单层曲面偏移出厚度，再封边成实体。", "wiring": "曲面 → Offset(厚) → 连接" }],
+    "pitfalls": ["法向不一致的曲面偏移后会自交。", "偏移距离接近局部曲率半径时曲面会翻面。"],
+    "related": ["surface.flip-surface", "surface.rebuild-surface", "mesh.offset-mesh"],
+    "tip": "偏移前先统一法向，比事后修补省事。"
+  },
+  "surface.divide-surface": {
+    "concept": "按 U、V 方向的数量把曲面分成网格点。它是「曲面分格」的第一步，输出通常还带着每个位置的平面，可直接用来摆放面板。",
+    "steps": ["接曲面。", "给 U、V 方向数量。", "把输出接给曲面坐标系，得到每个格点的位置与朝向。"],
+    "scenes": [{ "title": "幕墙分格", "body": "U/V 各分 20 格，每格放一块面板。", "wiring": "曲面 → Divide Surface → 坐标系 → 面板" }],
+    "pitfalls": ["数量是「点数」不是「格子数」，格子数比点数少一。", "裁剪曲面的边界格点可能落在面外，需要筛选。"],
+    "related": ["surface.evaluate-surface", "curve.divide-by-count", "intersect.surface-containment"],
+    "tip": "分格先画一版只有点的，确认密度合理再加构件。"
+  },
+  "transform.rotate-about-axis": {
+    "concept": "绕指定原点与轴方向旋转。角度单位要与 GH2 内部约定一致（角度类型或弧度），混用是最常见的错误来源。",
+    "steps": ["接要旋转的几何。", "给旋转原点与轴方向。", "给角度；需要摆到特定朝向时配合朝向对齐更省心。"],
+    "scenes": [{ "title": "扭转塔楼", "body": "每层绕中心轴旋转固定角度，逐层累加得到扭转形态。", "wiring": "楼板 → Rotate(每层角度) → 重复" }],
+    "pitfalls": ["角度单位错用会让旋转量差 57 倍。", "轴向量为零时旋转会失效且不报错。"],
+    "related": ["transform.rotate-in-plane", "transform.array-circular", "transform.orient"],
+    "tip": "不确定单位时，先转 90° 看结果，一次就能试出来。"
+  },
+  "transform.array-along-curve": {
+    "concept": "沿一条曲线生成一串变换阵列：位置沿曲线分布，朝向跟随曲线切向。它是「沿路径排布」的标准做法。",
+    "steps": ["接要阵列的几何。", "接轨道曲线。", "给数量或间距，必要时指定对齐方式。"],
+    "scenes": [{ "title": "栏杆立杆", "body": "沿扶手曲线等距排布立杆，并让其跟随曲线倾斜。", "wiring": "立杆 + 扶手曲线 → Array Along Curve" }],
+    "pitfalls": ["曲线方向反了阵列会从另一端开始，用翻转曲线修正。", "数量过多时预览会明显变卡，先减量验证。"],
+    "related": ["transform.array1-d", "curve.divide-by-count", "transform.orient"],
+    "tip": "阵列自带朝向，比「等分 + 逐个移动」更省步骤。"
+  },
+  "intersect.curve-curve-intersection": {
+    "concept": "求两条曲线的交点。它是布尔、裁剪、分析类操作的输入来源；交点数量不确定是它最大的特点。",
+    "steps": ["接两条曲线。", "给容差（重合判断精度）。", "输出交点，可能为零个、一个或多个。"],
+    "scenes": [{ "title": "找路径交叉口", "body": "求两组路网的交点，作为节点位置。", "wiring": "曲线 A + B → 求交 → 节点" }],
+    "pitfalls": ["交点数量变化会让下游数据结构跟着变，接列表操作时要注意。", "两条曲线仅仅相切时可能返回一个或零个点，取决于容差。"],
+    "related": ["intersect.multiple-curves-intersection", "intersect.curve-self-intersection", "curve.shatter-curve"],
+    "tip": "交点数量不可预期时，先把结果接 Panel 看一眼再往下接。"
+  },
+  "intersect.region-union": {
+    "concept": "把多个平面区域合成一个（布尔并集）。做「把重叠轮廓合成一个可用边界」时用它。",
+    "steps": ["把区域接到输入（可多路）。", "输出合并后的区域。", "合并后可以再取边界曲线用于挤出。"],
+    "scenes": [{ "title": "合并柱网", "body": "把重叠的柱基轮廓合并成一个整块底板。", "wiring": "多组区域 → Region Union → 挤出" }],
+    "pitfalls": ["区域必须共面，否则并集结果不可靠。", "自交的边界会导致并集失败，先修复曲线。"],
+    "related": ["intersect.region-difference", "intersect.region-from-curves", "intersect.curve-boolean"],
+    "tip": "并集前先检查曲线是否闭合、是否共面，能省掉大半失败。"
+  },
+  "mesh.weld-mesh": {
+    "concept": "把距离极近的顶点合并，修复网格裂缝。网格运算前先焊接，能避免「看起来连着、实际断开」的问题。",
+    "steps": ["接网格。", "给焊接容差。", "输出焊接后的网格，顶点数通常变少。"],
+    "scenes": [{ "title": "修复导入网格", "body": "导入的模型面之间没接上，焊接后再做布尔与平滑。", "wiring": "网格 → Weld(0.01) → 后续运算" }],
+    "pitfalls": ["容差过大时会把本该分开的薄壁粘在一起。", "焊接不改面数，只改顶点拓扑。"],
+    "related": ["mesh.unweld-mesh", "mesh.join-meshes", "mesh.mesh-closedness"],
+    "tip": "网格报错先试焊接，这是最常见的一步修复。"
+  },
+  "mesh.quad-remesh": {
+    "concept": "把杂乱网格重构成以四边面为主的规整网格。它是「网格转可编辑模型」的关键一步，目标边数决定细节密度。",
+    "steps": ["接网格。", "给目标边数（越多越贴近原形）。", "必要时开启对称或特征保留选项。"],
+    "scenes": [{ "title": "扫描网格整理", "body": "把三角面扫描模型重构成四边面，便于后续细分与展 UV。", "wiring": "扫描网格 → Quad Remesh → SubD" }],
+    "pitfalls": ["目标边数太低会丢细节，太高则失去规整的意义。", "对有薄壁或尖锐特征的模型，需要开特征保留。"],
+    "related": ["mesh.tri-remesh", "mesh.reduce-mesh", "surface.sub-d-from-mesh"],
+    "tip": "先低边数看结构对不对，再提高边数加细节。"
+  },
+  "display.make2-d": {
+    "concept": "把三维模型按当前视角投影成二维线稿。出图、做分析底图时非常省事，但结果是「视线相关」的，换个角度就不同。",
+    "steps": ["接几何。", "指定视角或投影平面。", "输出一组二维曲线，可直接烘焙出图。"],
+    "scenes": [{ "title": "生成平面图", "body": "从顶视角生成平面轮廓线稿用于排版。", "wiring": "模型 → Make 2D(顶视) → 烘焙" }],
+    "pitfalls": ["结果随视角变化，定稿前不要把视角做成可变参数。", "复杂模型生成的曲线数量可能非常多，注意后续处理成本。"],
+    "related": ["display.silhouette", "display.parallel-view-from-frame", "curve.project-curve"],
+    "tip": "线稿是「视角的产物」：定视角再生成，别反复重算。"
+  }
+}

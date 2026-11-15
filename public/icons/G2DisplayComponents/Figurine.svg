@@ -1,0 +1,18 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 19.5 22.5 L 19.5 21 A 4 4 0 0 0 15.5 17 A 2.0833473 2.0833473 0 0 1 15.067942 16.954706 L 12 19 L 8.932058 16.954706 A 2.0833127 2.0833127 0 0 1 8.5 17 A 4 4 0 0 0 4.5 21 L 4.5 22.5 L 19.5 22.5" fill="#FCC419" />
+    <path d="M 13.445412 15.261547 A 4.5000005 4.5000005 0 0 1 10.554588 15.261547 A 2.0833354 2.0833354 0 0 1 8.932058 16.954706 L 12 19 L 15.067942 16.954706 A 2.0833304 2.0833304 0 0 1 13.445413 15.261547" fill="#FF1493" />
+    <path d="M 16.5 8 L 14.5 8 A 6.8577414 6.8577414 0 0 1 9.5 6 A 1.9052603 1.9052603 0 0 1 7.4999995 8 L 7.5 11 A 4.5 4.5 0 0 0 16.5 11 L 16.5 8" fill="#FFF3BF" />
+    <path d="M 16.526636 17.133991 A 3.7925882 3.7925882 0 0 0 19 11.5 A 10.833326 10.833326 0 0 1 17.5 6.0000005 A 4.5 4.5 0 0 0 13 1.5 L 11 1.5 A 4.5 4.5 0 0 0 6.5 5.9999995 A 10.833334 10.833334 0 0 1 5.0000014 11.5 A 3.7925894 3.7925894 0 0 0 7.4733644 17.133991 A 3.999983 3.999983 0 0 1 8.5 17 A 2.0833323 2.0833323 0 0 0 10.554588 15.261547 A 4.5 4.5 0 0 1 7.499999 11.000001 L 7.5 8 A 1.9052603 1.9052603 0 0 0 9.5 6 A 7.2499967 7.2499967 0 0 0 14.500001 8 L 16.5 8 L 16.5 11 A 4.5 4.5 0 0 1 13.445412 15.261547 A 2.0833354 2.0833354 0 0 0 15.5 17 A 4.0000076 4.0000076 0 0 1 16.526636 17.133991" fill="#FCC419" />
+    <path d="M 7.5 8 L 7.5 11 A 4.5 4.5 0 0 0 16.5 11 L 16.5 8" stroke="#E67700" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 7.5 8 A 1.9052603 1.9052603 0 0 0 9.5 6 A 6.8577433 6.8577433 0 0 0 14.5 8" stroke="#E67700" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 19.5 22.5 L 19.5 21 A 4 4 0 0 0 15.5 17 A 2.0833335 2.0833335 0 0 1 13.490247 15.465458" stroke="#E67700" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 5.4118385 15.921296 A 3.7925897 3.7925897 0 0 1 5 11.5 A 10.833332 10.833332 0 0 0 6.4999995 6 A 4.5 4.5 0 0 1 11 1.5 L 13 1.5 A 4.5 4.5 0 0 1 17.5 6.000001 A 10.833334 10.833334 0 0 0 19 11.500002 A 3.7925882 3.7925882 0 0 1 16.526636 17.133991" stroke="#E67700" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 14.92133 17.052446 L 12 19 L 10.938984 18.292656" stroke="#E67700" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 4.5 22.5 L 4.5 21 A 4 4 0 0 1 8.5 17 A 2.083331 2.083331 0 0 0 9.542029 16.720676" stroke="#E67700" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 1.5 22.5 L 22.5 22.5" stroke="#303030" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 5.500001 21 A 3.000001 3.000001 0 0 1 7.385828 18.214567" stroke="#FFE066" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 15.5 11 A 3.5 3.5 0 0 1 12 14.5" stroke="#FFE066" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

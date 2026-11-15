@@ -1,0 +1,182 @@
+{
+ "libs": [
+  {
+   "lib": "maths",
+   "libCn": "数学",
+   "components": 226,
+   "iconsMatched": 223,
+   "iconTotal": 207
+  },
+  {
+   "lib": "data",
+   "libCn": "数据",
+   "components": 119,
+   "iconsMatched": 117,
+   "iconTotal": 122
+  },
+  {
+   "lib": "vector",
+   "libCn": "向量",
+   "components": 188,
+   "iconsMatched": 184,
+   "iconTotal": 221
+  },
+  {
+   "lib": "curve",
+   "libCn": "曲线",
+   "components": 230,
+   "iconsMatched": 215,
+   "iconTotal": 233
+  },
+  {
+   "lib": "surface",
+   "libCn": "曲面",
+   "components": 177,
+   "iconsMatched": 165,
+   "iconTotal": 195
+  },
+  {
+   "lib": "mesh",
+   "libCn": "网格",
+   "components": 116,
+   "iconsMatched": 105,
+   "iconTotal": 144
+  },
+  {
+   "lib": "transform",
+   "libCn": "变换",
+   "components": 92,
+   "iconsMatched": 89,
+   "iconTotal": 90
+  },
+  {
+   "lib": "intersect",
+   "libCn": "相交",
+   "components": 83,
+   "iconsMatched": 77,
+   "iconTotal": 77
+  },
+  {
+   "lib": "display",
+   "libCn": "显示",
+   "components": 96,
+   "iconsMatched": 87,
+   "iconTotal": 99
+  },
+  {
+   "lib": "text",
+   "libCn": "文本",
+   "components": 38,
+   "iconsMatched": 38,
+   "iconTotal": 41
+  },
+  {
+   "lib": "meta",
+   "libCn": "元组件",
+   "components": 32,
+   "iconsMatched": 32,
+   "iconTotal": 44
+  },
+  {
+   "lib": "annotation",
+   "libCn": "标注",
+   "components": 8,
+   "iconsMatched": 8,
+   "iconTotal": 12
+  },
+  {
+   "lib": "script",
+   "libCn": "脚本",
+   "components": 5,
+   "iconsMatched": 4,
+   "iconTotal": 9
+  }
+ ],
+ "missingNomen": [],
+ "missingPorts": [
+  "data/LongestList",
+  "data/ShortestList",
+  "script/BaseScriptComponent",
+  "script/CSharpComponent",
+  "script/IronPython2Component",
+  "script/Python3Component",
+  "script/ScriptComponent"
+ ],
+ "noIcon": [
+  "maths/PValueFromSamples",
+  "maths/RemoveOutliers",
+  "maths/ArithmeticDerivative",
+  "data/ItemFromIndexObsolete",
+  "data/RepeatItems_Obsolete",
+  "vector/PoincareDisc",
+  "vector/GraphMetric",
+  "vector/PreprocessWaterMesh2",
+  "vector/SurfaceWaterSheddingSimplified",
+  "curve/CirclesConstraint",
+  "curve/TangentCircles2",
+  "curve/RandomWalk",
+  "curve/VolumeSortCurves",
+  "curve/MultiPointBoundingBox",
+  "curve/CurveFromSegments",
+  "curve/FieldTrajectories",
+  "curve/Lorenz",
+  "curve/OffsetCurve_WithoutLoose",
+  "curve/OffsetToLength_WithoutLoose",
+  "curve/SplineFromInflection",
+  "curve/CurveNurbsForm_Obsolete",
+  "curve/DivideByCount_Obsolete",
+  "curve/FindCusps",
+  "curve/CircleStacking",
+  "surface/SubDFromMesh_Obsolete",
+  "surface/SubDFromSweep1",
+  "surface/SubDFromSweep2",
+  "surface/FlipSurface_Obsolete",
+  "surface/LoftFromCurves_OBSOLETE",
+  "surface/PipeSurfaceVariable_OBSOLETE",
+  "surface/SurfaceFromControlNet",
+  "surface/Sweep1Exotic_OBSOLETE",
+  "surface/SweepFromRail_OBSOLETE",
+  "surface/Sweep2Exotic_OBSOLETE",
+  "surface/SweepFromRails_OBSOLETE",
+  "surface/BoundingBoxObsolete",
+  "mesh/LakeShores",
+  "mesh/MeshEdgeCategories_Obsolete",
+  "mesh/MeshFacetCategories_Obsolete",
+  "mesh/MeshVertexCategories_Obsolete",
+  "mesh/VertexNeighbours_Obsolete",
+  "mesh/MeshBrep",
+  "mesh/VoronoiOnSurface",
+  "mesh/WeightedVoronoi",
+  "mesh/CollapseIndexedFacets",
+  "mesh/CollapseIndicatedFacets",
+  "mesh/QuadRemeshOld",
+  "transform/ArrayFromGaps",
+  "transform/MoveThroughField_OBSOLETE",
+  "transform/TwistDeform_OBSOLETE",
+  "intersect/CarveRegion",
+  "intersect/CurveSurfaceIntersection_Obsolete",
+  "intersect/CutWithPlane",
+  "intersect/MeshSolidDifference_Obsolete",
+  "intersect/MeshSolidIntersection_Obsolete",
+  "intersect/RegionIntersectionList",
+  "display/DollyZoom",
+  "display/ZebraShader",
+  "display/ColourFromCmyk",
+  "display/ColourFromHsp",
+  "display/ColourFromHsv",
+  "display/ColourFromLab",
+  "display/ColourFromRgb",
+  "display/ColourFromXyz",
+  "display/ColourFromYxy",
+  "script/BaseScriptComponent"
+ ],
+ "summary": {
+  "components": 1410,
+  "withIcon": 1344,
+  "iconRate": 95.3,
+  "missingNomen": 0,
+  "missingPorts": 7,
+  "chapters": 66,
+  "totalPorts": 5956
+ }
+}

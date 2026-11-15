@@ -1,0 +1,28 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 11.92384 8.07616 L 13.292893 6.7071066 A 0.7071068 0.7071068 0 0 0 13.292893 5.707106 A 0.7071068 0.7071068 0 0 0 12.292893 5.7071066 L 10.92384 7.07616" fill="#22B8CF" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 12.5 10 A 3.5 3.5 0 0 1 5.5 10 A 3.5 3.5 0 0 1 12.5 10.000001" fill="#66D9E8" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 8.641811 11.967663 A 0.99999535 0.99999535 0 0 0 7.7556114 12.2443905 L 5.6666665 14.333333 L 4.6666665 13.333333 L 6.755611 11.24439 A 1.000001 1.000001 0 0 0 7.032336 10.358189" fill="#66D9E8" />
+    <path d="M 4.6666665 13.333333 L 6.755611 11.24439 A 1.000001 1.000001 0 0 0 7.032336 10.358189" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 8.641811 11.967663 A 0.99999535 0.99999535 0 0 0 7.7556114 12.2443905 L 5.6666665 14.333333" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 3 13 C 3.2731164 12.577228, 4.5042796 13.019517, 5.2071066 13.792893 C 5.9804826 14.495721, 6.4227724 15.726884, 6 16 L 1.5 17.5 L 3 13" fill="#66D9E8" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 13.07616 3.07616 L 11.707107 1.7071068 A 0.7071068 0.7071068 0 0 1 11.707107 0.7071067 A 0.7071068 0.7071068 0 0 1 12.707107 0.7071066 L 14.07616 2.07616" fill="#22B8CF" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 1.5 18.5 L 23.5 18.5 L 23.5 22.5 L 1.5 22.5 L 1.5 18.5" fill="#FAA2C1" stroke="#A61E4D" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 9.5 19 L 9.5 20" stroke="#A61E4D" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 5.5 19 L 5.5 20" stroke="#A61E4D" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 19.5 19 L 19.5 21" stroke="#A61E4D" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 7.5 19 L 7.5 21" stroke="#A61E4D" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 11.5 19 L 11.5 21" stroke="#A61E4D" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 15.5 19 L 15.5 21" stroke="#A61E4D" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 3.5 19 L 3.5 21" stroke="#A61E4D" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 19.5 5 A 3.5 3.5 0 0 1 12.5 4.9999995 A 3.5 3.5 0 0 1 19.5 5.0000005" fill="#66D9E8" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 13.5 19 L 13.5 20" stroke="#A61E4D" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 17.5 19 L 17.5 20" stroke="#A61E4D" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 21.5 19 L 21.5 20" stroke="#A61E4D" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 16.358189 6.967664 A 0.99999666 0.99999666 0 0 1 17.244389 7.244389 L 19.333334 9.333333 L 20.333334 8.333333 L 18.244389 6.244389 A 0.999998 0.999998 0 0 1 17.967665 5.358188" fill="#66D9E8" />
+    <path d="M 20.333334 8.333333 L 18.244389 6.244389 A 0.999998 0.999998 0 0 1 17.967665 5.358188" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 16.358189 6.967664 A 0.99999666 0.99999666 0 0 1 17.244389 7.244389 L 19.333334 9.333333" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 22 8 C 21.726883 7.5772276, 20.49572 8.019517, 19.792892 8.792893 C 19.019518 9.495721, 18.577227 10.726884, 19 11 L 23.5 12.5 L 22 8" fill="#66D9E8" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

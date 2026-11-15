@@ -1,0 +1,251 @@
+{
+  "curve.arc-from3-points": {
+    "concept": "三点定弧：给起点、中间某点与终点，生成唯一一段经过它们的圆弧。",
+    "steps": [
+      "依次接起点、途经点、终点三个点。",
+      "输出圆弧曲线。"
+    ],
+    "scenes": [
+      {
+        "title": "依现场三点画弧",
+        "body": "现场量到的三个控制点直接生成圆弧，省掉推算圆心。",
+        "wiring": "三点 → Arc From 3 Points"
+      }
+    ],
+    "pitfalls": [
+      "三点共线时无法成弧，会得到无效结果。",
+      "点序（起—中—终）决定弧的方向与哪一侧是外凸。"
+    ],
+    "related": ["curve.arc-from-angles", "curve.polyarc-n-points", "curve.curve-from-points"],
+    "tip": "有实测点时优先三点定弧，比先求圆心再画弧省心。"
+  },
+  "curve.arc-from-angles": {
+    "concept": "按角度区间生成圆弧：给基准平面与起止角，得到对应的弧段。",
+    "steps": [
+      "Plane 端接基准平面（决定圆心与朝向）。",
+      "设置半径与起止角度。",
+      "输出圆弧。"
+    ],
+    "scenes": [
+      {
+        "title": "画 90 度转角",
+        "body": "以柱心为圆心取 0-90 度，直接得到转角收边弧线。",
+        "wiring": "柱心平面 → Arc From Angles(0-90)"
+      }
+    ],
+    "pitfalls": [
+      "平面朝向反了弧会翻到另一侧，看起来像镜像。",
+      "角度单位与文档设置不一致时弧段长度会差很多。"
+    ],
+    "related": ["curve.arc-from3-points", "curve.arc-from-radius", "maths.angle-from-degrees"],
+    "tip": "参数化转角一律用角度区间，改半径改角度都能自动跟随。"
+  },
+  "curve.rectangle-from2-points": {
+    "concept": "给对角两个点，生成轴对齐矩形。",
+    "steps": [
+      "A、B 两端各接一个对角点。",
+      "输出矩形闭合曲线。"
+    ],
+    "scenes": [
+      {
+        "title": "快速框定范围",
+        "body": "用两个角点框出场地范围，作为后续网格与分格的边界。",
+        "wiring": "场地两点 → Rectangle → Rectangle Grid"
+      }
+    ],
+    "pitfalls": [
+      "矩形是轴对齐的，斜放的范围需要改用带平面的矩形组件。",
+      "两点在同一水平或竖直线时退化成一条线。"
+    ],
+    "related": ["curve.rectangle-from-axis", "curve.rectangle-from-intervals", "vector.rectangle-grid"],
+    "tip": "轴对齐矩形是分格、布点最常用的「容器」。"
+  },
+  "curve.rectangle-from-axis": {
+    "concept": "以一条轴线为基础，向两侧各扩一定宽度，生成矩形。适合做梁、板带的范围。",
+    "steps": [
+      "Axis 端接轴线（直线段）。",
+      "设置两侧宽度。",
+      "输出矩形。"
+    ],
+    "scenes": [
+      {
+        "title": "梁宽范围",
+        "body": "沿梁轴线两侧各扩半个梁宽，得到梁的平面范围。",
+        "wiring": "梁轴线 → Rectangle From Axis(半宽)"
+      }
+    ],
+    "pitfalls": [
+      "轴线方向会决定矩形的长边朝向，接反了矩形会旋转 90 度。",
+      "两侧宽度不等时得到的是偏心矩形，不是错位。"
+    ],
+    "related": ["curve.rectangle-from2-points", "curve.rectangle-from-offsets", "curve.rectangle-property"],
+    "tip": "所有「沿轴线生成带宽」的需求都能用它一步完成。"
+  },
+  "curve.rectangle-from-intervals": {
+    "concept": "用两个参数区间（U 区间与 V 区间）组合出矩形，常在参数化分格里使用。",
+    "steps": [
+      "U 端接水平区间。",
+      "V 端接竖向区间。",
+      "输出矩形曲线。"
+    ],
+    "scenes": [
+      {
+        "title": "网格分板",
+        "body": "把整片范围拆成 U、V 区间，两两组合就是每块板的轮廓。",
+        "wiring": "U 区间 × V 区间 → Rectangle"
+      }
+    ],
+    "pitfalls": [
+      "区间顺序接反矩形会转置（长宽互换）。",
+      "区间为空或退化时得不到面，需要先检查分格数量。"
+    ],
+    "related": ["maths.divide-interval", "curve.rectangle-from2-points", "surface.surface-from-corners"],
+    "tip": "分板逻辑：先把面积拆成区间，再让区间自己生成轮廓。"
+  },
+  "curve.polygon-radius": {
+    "concept": "按边数与半径生成正多边形（以外接圆半径控制大小）。",
+    "steps": [
+      "Plane 端接基准平面。",
+      "设置边数与半径。",
+      "输出正多边形闭合曲线。"
+    ],
+    "scenes": [
+      {
+        "title": "六边形铺装",
+        "body": "生成正六边形单元，配合阵列铺成蜂窝地面。",
+        "wiring": "六边形 + Array → 铺装"
+      }
+    ],
+    "pitfalls": [
+      "半径是外接圆半径，内切圆要自己换算。",
+      "平面朝向决定多边形所在面，默认平面在 XY。"
+    ],
+    "related": ["curve.polygon-from-circle", "curve.polygon-from-edge", "curve.star-polygon"],
+    "tip": "改边数就是换形状，配合旋转可做多种铺装图样。"
+  },
+  "surface.surface-from-boundaries": {
+    "concept": "用一条或多条闭合边界曲线建面：外边界定形状，内边界形成洞。",
+    "steps": [
+      "接外边界曲线（必须闭合）。",
+      "需要洞时把内边界一起接入。",
+      "输出平面或近似平面的曲面。"
+    ],
+    "scenes": [
+      {
+        "title": "楼板开洞",
+        "body": "外轮廓加电梯井内轮廓，一次得到带洞的楼板面。",
+        "wiring": "外轮廓 + 内轮廓 → Surface From Boundaries"
+      }
+    ],
+    "pitfalls": [
+      "边界不闭合或自交会直接失败。",
+      "内边界必须完全落在外边界内部，否则面会破。"
+    ],
+    "related": ["intersect.region-from-curves", "surface.surface-from-edges", "curve.join-curves"],
+    "tip": "建面前先 Join 再检查闭合，比事后修补省时间。"
+  },
+  "surface.merge-faces": {
+    "concept": "把相邻且连续的面合并成一个面，减少面数、简化结构。",
+    "steps": [
+      "Brep 端接多重曲面。",
+      "合并后会得到更少的面。",
+      "输出合并结果。"
+    ],
+    "scenes": [
+      {
+        "title": "清理导入模型",
+        "body": "导入的模型常被切成许多小面，合并后便于取边界与分板。",
+        "wiring": "导入 Brep → Merge Faces → 分板"
+      }
+    ],
+    "pitfalls": [
+      "合并会丢失原来的分割线信息，后续要按分缝定位就麻烦了。",
+      "只是相切但不连续的面不会被合并。"
+    ],
+    "related": ["surface.surface-boundary", "surface.untrim", "mesh.merge-coplanar-facets"],
+    "tip": "分板前千万别合并，分板后清理才合并。"
+  },
+  "mesh.mesh-box": {
+    "concept": "生成盒体网格：给定尺寸或包围盒，得到六面体的网格。",
+    "steps": [
+      "设置长宽高或接包围盒。",
+      "输出盒体网格。"
+    ],
+    "scenes": [
+      {
+        "title": "碰撞占位体",
+        "body": "用盒体网格快速表示家具体积，做空间占位检查。",
+        "wiring": "尺寸 → Mesh Box → 碰撞"
+      }
+    ],
+    "pitfalls": [
+      "默认位于原点，记得配合 Move 或平面定位。",
+      "盒体是空心的面片，做体积计算前要确认是否需要封闭实体。"
+    ],
+    "related": ["surface.box-from-corner", "mesh.mesh-from-surface", "mesh.split-disjoint-meshes"],
+    "tip": "做占位与快速可视化，网格盒比实体轻得多。"
+  },
+  "transform.array1-d": {
+    "concept": "一维阵列：沿一个方向按数量与间距复制几何。",
+    "steps": [
+      "Geometry 端接几何。",
+      "设置方向、数量与间距。",
+      "输出线性阵列结果。"
+    ],
+    "scenes": [
+      {
+        "title": "栏杆立杆",
+        "body": "沿扶手方向按 1.1 米间距排布立杆。",
+        "wiring": "立杆 + 方向 → Array 1D(1.1m)"
+      }
+    ],
+    "pitfalls": [
+      "数量包含原始件，写 20 得到的是一共 20 个。",
+      "方向向量长度会影响间距，通常先归一化再乘间距。"
+    ],
+    "related": ["transform.array2-d", "transform.repeat-transform", "curve.divide-by-length"],
+    "tip": "沿曲线排布用 Array Along Curve，直线排布才用 Array 1D。"
+  },
+  "transform.project": {
+    "concept": "把几何投影到目标上（平面或曲面），可按指定方向投影或取最近点。",
+    "steps": [
+      "Geometry 端接几何。",
+      "Target 端接平面或曲面。",
+      "可给投影方向，输出投影后的几何。"
+    ],
+    "scenes": [
+      {
+        "title": "总图落位",
+        "body": "把三维体量按竖直方向投影到地面，得到平面轮廓用于总图。",
+        "wiring": "体量 + 地面 → Project(Z 向)"
+      }
+    ],
+    "pitfalls": [
+      "不给方向时按最近点投影，结果会贴到最近的面上，可能不是你想要的那一层。",
+      "投影到曲面会让曲线变形甚至自交。"
+    ],
+    "related": ["vector.project-point", "transform.project-along", "display.make2-d"],
+    "tip": "出平面图优先显式给方向，避免「投到背面」这种意外。"
+  },
+  "display.label-coordinate": {
+    "concept": "在点上显示它的坐标数值，调试定位问题时最直接的工具。",
+    "steps": [
+      "Points 端接点。",
+      "设置小数位与偏移。",
+      "输出坐标标注预览。"
+    ],
+    "scenes": [
+      {
+        "title": "核对基准点",
+        "body": "把关键控制点的坐标写在图上，与图纸对照检查偏差。",
+        "wiring": "控制点 → Label Coordinate"
+      }
+    ],
+    "pitfalls": [
+      "点很多时标注会糊成一片，需要先抽样。",
+      "只是预览标注，不能烘焙成正式图纸文字。"
+    ],
+    "related": ["display.draw-text3-d", "display.point-order", "vector.point-to-xyz"],
+    "tip": "坐标对不上时，先标出来看，比读面板快十倍。"
+  }
+}

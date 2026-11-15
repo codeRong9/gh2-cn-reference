@@ -1,0 +1,21 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="linearf11831ce58cb" gradientUnits="userSpaceOnUse" x1="19" y1="4" x2="24" y2="4">
+      <stop offset="0%" style="stop-color:#808080;" />
+      <stop offset="100%" style="stop-color:#808080;" />
+    </linearGradient>
+    <linearGradient id="linearea262d1c8f2f" gradientUnits="userSpaceOnUse" x1="6" y1="19.5" x2="0" y2="19.5">
+      <stop offset="0%" style="stop-color:#808080;" />
+      <stop offset="100%" style="stop-color:#808080;" />
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 7.5 1 L 24 1 L 24 8 L 7.5 8 L 7.5 1" fill="url(#linearf11831ce58cb)" />
+    <path d="M 7.5 9 L 16.5 9 L 16.5 16 L 7.5 16 L 7.5 9" fill="#808080" />
+    <path d="M 0 17 L 16.5 17 L 16.5 24 L 0 24 L 0 17" fill="url(#linearea262d1c8f2f)" />
+    <path d="M 15 17.5 L 16.5 17.5 L 16.5 23.5 L 15 23.5" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 15 9.5 L 16.5 9.5 L 16.5 15.5 L 15 15.5" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 9 1.5 L 7.5 1.5 L 7.5 7.5 L 9 7.5" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 9 9.5 L 7.5 9.5 L 7.5 15.5 L 9 15.5" stroke="#808080" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+  </g>
+</svg>

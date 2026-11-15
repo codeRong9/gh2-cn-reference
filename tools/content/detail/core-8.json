@@ -1,0 +1,380 @@
+{
+  "surface.rev-surface": {
+    "concept": "旋转曲面：把一条轮廓曲线绕一根轴转一圈（或指定角度），扫出回转体。",
+    "steps": [
+      "Profile 端接截面轮廓线。",
+      "Axis 端接旋转轴（一条直线）。",
+      "设置角度，输出旋转曲面。"
+    ],
+    "scenes": [
+      {
+        "title": "做旋转楼梯外壳",
+        "body": "把楼梯剖面绕中柱旋转 90 度，一次得到整段螺旋外壳。",
+        "wiring": "剖面线 + 中轴 → Revolve(90°)"
+      },
+      {
+        "title": "圆形柱子",
+        "body": "用半条剖面绕中心轴转 360 度，得到圆柱或多段式柱身。",
+        "wiring": "柱剖面 + 竖轴 → Revolve(360°)"
+      }
+    ],
+    "pitfalls": [
+      "轮廓线穿过旋转轴会产生自交面，面会被切成两部分。",
+      "角度不足 360 度时首尾是开口的，需要封盖得另加平面。"
+    ],
+    "related": ["surface.sheet-from-curve", "curve.line2-points", "surface.surface-boundary"],
+    "tip": "回转体的成败在剖面：剖面画对，一根轴就够了。"
+  },
+  "surface.sweep-from-rail": {
+    "concept": "单轨扫掠：一个截面沿一条轨道移动扫出曲面。截面会跟着轨道的曲率转向。",
+    "steps": [
+      "Section 端接截面曲线（通常是与轨道垂直的闭合轮廓）。",
+      "Rail 端接轨道曲线。",
+      "输出扫掠曲面。"
+    ],
+    "scenes": [
+      {
+        "title": "沿弧墙生成幕墙",
+        "body": "用竖向分格线做截面，沿水平弧线扫掠，得到连续弯折的幕墙带。",
+        "wiring": "分格截面 + 弧线轨道 → Sweep1"
+      }
+    ],
+    "pitfalls": [
+      "截面与轨道不垂直时曲面会逐渐「歪斜」，越远越明显。",
+      "轨道曲率半径小于截面尺寸时曲面会自交翻面。"
+    ],
+    "related": ["surface.sweep-from-rails", "surface.pipe-surface", "surface.rail-rev-surface"],
+    "tip": "扫掠出问题先看截面与轨道是不是同一空间位置接上的。"
+  },
+  "surface.pipe-surface": {
+    "concept": "沿曲线生成管状曲面：给定曲线与半径，包出一根圆管。",
+    "steps": [
+      "Curve 端接路径曲线。",
+      "设置半径（可分段变化）。",
+      "输出管状曲面，可再封盖成实体。"
+    ],
+    "scenes": [
+      {
+        "title": "管线建模",
+        "body": "把机电管线路径一键变成管体，用于净高检查与碰撞。",
+        "wiring": "管线中心线 → Pipe → 封盖"
+      }
+    ],
+    "pitfalls": [
+      "半径大于路径转弯半径时管体会自交。",
+      "输出是开放管面，不封盖不算实体，布尔运算前记得补盖。"
+    ],
+    "related": ["surface.sweep-from-rail", "surface.cap-holes", "mesh.mesh-pipe"],
+    "tip": "做管线记得留出保温层厚度，半径别只按管内径给。"
+  },
+  "surface.evaluate-surface": {
+    "concept": "在曲面的 (u,v) 参数位置求值，得到该处的点与法线方向。",
+    "steps": [
+      "Surface 端接曲面。",
+      "UV 端给 0 到 1 的归一化参数。",
+      "输出点、法线等几何信息。"
+    ],
+    "scenes": [
+      {
+        "title": "表面布点定向",
+        "body": "在曲面参数网格上取点与法线，把构件按法线方向立在曲面上。",
+        "wiring": "Surface + UV 网格 → Evaluate Surface → 构件"
+      }
+    ],
+    "pitfalls": [
+      "参数超出 0-1 会被裁掉或得到无效值，尤其在裁剪曲面上。",
+      "曲面被裁剪后，落在被剪掉区域的 UV 依然「存在」，求值会得到空点。"
+    ],
+    "related": ["surface.surface-domains", "surface.surface-closest-point", "surface.locus-from-uv"],
+    "tip": "要在曲面上布置东西，唯一可靠的入手点就是「UV + 法线」。"
+  },
+  "surface.surface-domains": {
+    "concept": "读出曲面的 U 与 V 参数区间。做参数化取样前，先知道参数范围。",
+    "steps": [
+      "Surface 端接曲面。",
+      "输出 U 区间与 V 区间。",
+      "交给 Range 生成取样参数。"
+    ],
+    "scenes": [
+      {
+        "title": "等参线取样",
+        "body": "先取 U/V 区间再等分，得到均匀分布的等参线。",
+        "wiring": "Surface Domains → Range → Iso Curves"
+      }
+    ],
+    "pitfalls": [
+      "认为所有曲面的参数都是 0-1 是个常见误解，实际域可能是任意数值。",
+      "多重曲面没有统一参数域，需要逐面处理。"
+    ],
+    "related": ["surface.surface-iso-curves", "surface.evaluate-surface", "maths.range-from-limits"],
+    "tip": "要均匀取样就用它的真实域，硬写 0-1 会在某些曲面上分布不均。"
+  },
+  "surface.surface-boundary": {
+    "concept": "提取曲面的边界曲线。开放曲面得到外边框，带洞的曲面得到多条边界。",
+    "steps": [
+      "Surface 端接曲面。",
+      "输出边界曲线列表。"
+    ],
+    "scenes": [
+      {
+        "title": "提取轮廓做收边",
+        "body": "拿到曲面的外边界，沿边界生成收边条或翻边。",
+        "wiring": "Surface → Boundary → 收边扫掠"
+      }
+    ],
+    "pitfalls": [
+      "边界可能有多条（外框加内洞），当成一条用会漏掉内洞。",
+      "接缝处边界会分段，需要 Join Curves 才能得到完整一圈。"
+    ],
+    "related": ["surface.surface-edge", "curve.join-curves", "surface.untrim"],
+    "tip": "做收边、封边之前，先把边界合并成一条闭合曲线。"
+  },
+  "surface.surface-iso-curves": {
+    "concept": "提取曲面的等参线（U 线或 V 线），是曲面结构最直观的可视化方式。",
+    "steps": [
+      "Surface 端接曲面。",
+      "设置 U、V 方向的等分数量。",
+      "输出等参曲线列表。"
+    ],
+    "scenes": [
+      {
+        "title": "曲面上排龙骨",
+        "body": "按 UV 等参线布置横纵龙骨，天然贴合曲面走向。",
+        "wiring": "Surface → Iso Curves → 杆件"
+      }
+    ],
+    "pitfalls": [
+      "等参线只反映参数分布，不代表几何等距，疏密可能不均。",
+      "裁剪曲面的等参线会被裁断，出现不连续的多段。"
+    ],
+    "related": ["surface.surface-domains", "surface.divide-surface", "surface.surface-wireframe"],
+    "tip": "参数不均的曲面先 Rebuild 再抽等参线，分格会匀得多。"
+  },
+  "surface.bounding-box": {
+    "concept": "给几何体套一个最小的轴对齐盒子，用来快速获取整体尺寸与中心。",
+    "steps": [
+      "Geometry 端接任意几何。",
+      "输出包围盒（作为 Box）及其角点。",
+      "再接 Deconstruct Box 取尺寸。"
+    ],
+    "scenes": [
+      {
+        "title": "整体尺寸统计",
+        "body": "一次性拿到整栋体量的长宽高，用于容积率快速估算。",
+        "wiring": "整体几何 → Bounding Box → 尺寸"
+      }
+    ],
+    "pitfalls": [
+      "轴对齐的盒子在形体旋转时会明显偏大，别拿它当真实外轮廓。",
+      "包围盒不跟随几何的坐标系，方向永远是世界坐标。"
+    ],
+    "related": ["curve.rectangle-bounding-lines", "surface.aligned-box", "surface.dissect-box"],
+    "tip": "要贴合旋转形体的盒子，用带平面的对齐包围盒版本。"
+  },
+  "surface.nurbs-surface": {
+    "concept": "用控制点网格直接构造 NURBS 曲面：点只是牵引，曲面被拉向它们。",
+    "steps": [
+      "Control Points 端接二维点阵（树结构：U 向分支、V 向项）。",
+      "设置 U/V 阶数。",
+      "输出曲面。"
+    ],
+    "scenes": [
+      {
+        "title": "自由曲面造型",
+        "body": "把点阵抬高成起伏地形，用控制网直接生成连续曲面的屋面。",
+        "wiring": "点阵 → Nurbs Surface → 厚度"
+      }
+    ],
+    "pitfalls": [
+      "点阵必须呈规则网格（每个分支项数相同），否则无法建面。",
+      "点太少或阶数过高会导致曲面过冲，出现多余鼓包。"
+    ],
+    "related": ["surface.surface-from-control-net", "surface.surface-from-corners", "curve.nurbs-curve"],
+    "tip": "控制网的行列结构就代表 UV 方向，点序错了曲面会扭曲。"
+  },
+  "mesh.mesh-from-surface": {
+    "concept": "把曲面转成网格：按 UV 密度或容差采样，得到三角/四边面片。",
+    "steps": [
+      "Surface 端接曲面。",
+      "设置 UV 密度或容差。",
+      "输出网格。"
+    ],
+    "scenes": [
+      {
+        "title": "轻量化模型导出",
+        "body": "把复杂曲面转成网格，交给渲染或网页预览。",
+        "wiring": "曲面 → Mesh Surface → 导出"
+      }
+    ],
+    "pitfalls": [
+      "密度过高会让网格面数爆炸，文件瞬间变大。",
+      "转换是有损的，原本平滑的曲面会显出棱面。"
+    ],
+    "related": ["mesh.reduce-mesh", "mesh.quad-remesh", "mesh.mesh-brep"],
+    "tip": "先定目标面数再调密度，不要反过来。"
+  },
+  "mesh.reduce-mesh": {
+    "concept": "网格减面：在保持形状的前提下把面数降到指定目标。",
+    "steps": [
+      "Mesh 端接网格。",
+      "设置目标面数。",
+      "输出简化后的网格。"
+    ],
+    "scenes": [
+      {
+        "title": "网页展示模型",
+        "body": "把几十万面的扫描网格降到几万面，保证网页加载与帧率。",
+        "wiring": "扫描网格 → Reduce → 导出 glTF"
+      }
+    ],
+    "pitfalls": [
+      "目标过低会让棱角崩塌，特征边消失。",
+      "减面后顶点顺序变化，依赖顶点索引的下游逻辑会失效。"
+    ],
+    "related": ["mesh.quad-remesh", "mesh.tri-remesh", "mesh.mesh-from-surface"],
+    "tip": "按目标平台的面数预算反推参数，而不是试到「看着还行」。"
+  },
+  "mesh.mesh-sphere": {
+    "concept": "生成球状网格：给定半径与细分级别，得到球形网格体。",
+    "steps": [
+      "设置半径与分段数。",
+      "输出网格。"
+    ],
+    "scenes": [
+      {
+        "title": "碰撞检测代理",
+        "body": "用低面数球体做快速碰撞代理，比实体计算轻得多。",
+        "wiring": "中心点 → Mesh Sphere → 碰撞检测"
+      }
+    ],
+    "pitfalls": [
+      "分段太少会明显呈多面体，用于渲染会看出棱角。",
+      "球心默认在原点，记得配合 Move 定位。"
+    ],
+    "related": ["mesh.mesh-quad-sphere", "mesh.mesh-ico-sphere", "vector.populate-on-sphere"],
+    "tip": "体量研究用低分段，出图用高分段，按用途选。"
+  },
+  "mesh.join-meshes": {
+    "concept": "把多个网格合并成一个网格。只合并不焊接，重合顶点仍是两份。",
+    "steps": [
+      "Meshes 端接网格列表。",
+      "输出合并后的单个网格。"
+    ],
+    "scenes": [
+      {
+        "title": "合并构件网格",
+        "body": "把成百块幕墙网格合成一个，减少对象数量便于导出。",
+        "wiring": "多块网格 → Join Meshes → 导出"
+      }
+    ],
+    "pitfalls": [
+      "合并后若顶点未焊接，后续平滑会出现裂缝。",
+      "合并不会做布尔运算，内部重叠面仍然存在。"
+    ],
+    "related": ["mesh.weld-mesh", "mesh.split-disjoint-meshes", "mesh.unify-mesh-normals"],
+    "tip": "Join 之后接一次 Weld，才算真正连成一体。"
+  },
+  "mesh.subdivide-mesh": {
+    "concept": "网格细分：把每个面切成更多小面，让网格更平滑、更细致。",
+    "steps": [
+      "Mesh 端接网格。",
+      "设置细分级别。",
+      "输出细分后的网格。"
+    ],
+    "scenes": [
+      {
+        "title": "平滑体量",
+        "body": "把低模体量细分两三次，得到圆润的形体用于渲染。",
+        "wiring": "低模网格 → Subdivide → 渲染"
+      }
+    ],
+    "pitfalls": [
+      "每加一级面数翻数倍，两级以上就要算清面数预算。",
+      "细分不会补洞，破面处会越细越明显。"
+    ],
+    "related": ["mesh.tri-remesh", "mesh.smooth-mesh", "mesh.reduce-mesh"],
+    "tip": "先修好拓扑再细分，否则只是把错误放大。"
+  },
+  "intersect.curve-surface-intersection": {
+    "concept": "求曲线与曲面的交点，同时输出交点对应的曲线参数，便于排序与分组。",
+    "steps": [
+      "Curve 端接曲线。",
+      "Surface 端接曲面。",
+      "输出交点与参数。"
+    ],
+    "scenes": [
+      {
+        "title": "找到落地点",
+        "body": "把竖向路径与地形曲面求交，得到准确的落地标高。",
+        "wiring": "竖向线 + 地形 → Curve Surface Intersection → 落地点"
+      }
+    ],
+    "pitfalls": [
+      "曲线完全贴在曲面上时可能有无数交点，结果不稳定。",
+      "交点是点数据，需要砍断曲线得再接 Split 类组件。"
+    ],
+    "related": ["intersect.curve-curve-intersection", "intersect.surface-line-intersection", "curve.curve-closest-point"],
+    "tip": "求交后一定按参数排序，交点的顺序直接决定后续连线是否打结。"
+  },
+  "intersect.surface-surface-intersection": {
+    "concept": "求两张曲面的交线，结果是一组曲线。",
+    "steps": [
+      "A、B 两端各接曲面。",
+      "输出交线曲线列表。"
+    ],
+    "scenes": [
+      {
+        "title": "找屋面与墙面的交线",
+        "body": "坡屋面与垂直外墙求交，得到天沟所在的三维线。",
+        "wiring": "屋面 + 外墙 → Surface Intersection → 天沟"
+      }
+    ],
+    "pitfalls": [
+      "两张面只是相切时交线退化成一点或为空。",
+      "完全重合的面没有离散交线，结果不可用。"
+    ],
+    "related": ["intersect.surface-section", "intersect.surface-split", "intersect.curve-surface-intersection"],
+    "tip": "交线先 Join，再判断是否闭合，能立刻发现曲面是否真的贯穿。"
+  },
+  "intersect.solid-union": {
+    "concept": "实体并集：把多个闭合实体合成一个整体，重叠部分被合并掉。",
+    "steps": [
+      "A、B 两端接闭合多重曲面（实体）。",
+      "输出并集实体。",
+      "需要批量时先 Collect 再逐对计算。"
+    ],
+    "scenes": [
+      {
+        "title": "合并梁柱体量",
+        "body": "把相交的梁与柱合成一个实心体，便于统计混凝土方量。",
+        "wiring": "梁 + 柱 → Solid Union → Volume"
+      }
+    ],
+    "pitfalls": [
+      "输入必须是闭合实体，开放曲面会直接失败。",
+      "面与面共面重叠时布尔结果可能残留碎片面。"
+    ],
+    "related": ["intersect.solid-difference", "intersect.solid-intersection", "annotation.measure-volume"],
+    "tip": "布尔失败九成是几何不闭合或有微小缝隙，先修几何再重试。"
+  },
+  "intersect.region-intersection": {
+    "concept": "区域交集：两张平面区域重叠的部分，输出为新的区域。",
+    "steps": [
+      "A、B 两端接共面闭合区域。",
+      "输出重叠区域。"
+    ],
+    "scenes": [
+      {
+        "title": "算功能重叠面积",
+        "body": "把两个功能分区的范围求交，得到共用区域面积。",
+        "wiring": "区域 A + 区域 B → Intersection → Area"
+      }
+    ],
+    "pitfalls": [
+      "区域必须共面，不在同一平面时结果不可靠。",
+      "完全不相交时输出为空，需要先判断再继续。"
+    ],
+    "related": ["intersect.region-union", "intersect.region-difference", "intersect.region-from-curves"],
+    "tip": "区域运算的输入永远是「闭合、共面、不自交」，三个条件缺一个就出错。"
+  }
+}

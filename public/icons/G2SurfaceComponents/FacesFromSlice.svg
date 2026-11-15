@@ -1,0 +1,28 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lineareda6c99d168f" gradientUnits="userSpaceOnUse" x1="18" y1="10.5" x2="9.5" y2="31">
+      <stop offset="0%" style="stop-color:#FCC419;" />
+      <stop offset="100%" style="stop-color:#D66000;" />
+    </linearGradient>
+    <linearGradient id="linear26050bede3b5" gradientUnits="userSpaceOnUse" x1="11.5" y1="9.5" x2="8" y2="21.5">
+      <stop offset="0%" style="stop-color:#FFE066;" />
+      <stop offset="100%" style="stop-color:#FCC419;" />
+    </linearGradient>
+    <linearGradient id="linearb3dd8d24adfd" gradientUnits="userSpaceOnUse" x1="9.93012" y1="5.7176" x2="-5.5" y2="11.5">
+      <stop offset="0%" style="stop-color:#FFF3BF;" />
+      <stop offset="100%" style="stop-color:#FFE066;" />
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 14.5 9.5 L 22.5 11.5 L 20.5 3.5 L 12.5 1.5 L 14.5 9.5" fill="#FF1493" />
+    <path d="M 14.003406 18.277567 A 4.232545 4.232545 0 0 1 17.612886 14.095013 A 8.287114 8.287114 0 0 0 22.5 11.5 L 14.5 9.5 C 12.134861 11.865139, 13.856565 15.1665125, 14.003406 18.277565" fill="url(#lineareda6c99d168f)" />
+    <path d="M 12.5 1.5 C 11.083747 2.9162533, 10.363712 4.2993536, 9.930121 5.717596 C 8.679868 9.807079, 9.811245 14.188755, 3.5 20.5 L 12.5 22.5 C 13.759673 21.240326, 14.063294 19.81786, 14.006091 18.351028 C 13.883933 15.218561, 12.116238 11.883762, 14.5 9.5 L 12.5 1.5" fill="url(#linear26050bede3b5)" />
+    <path d="M 3.5 20.5 C 9.811245 14.188755, 8.679868 9.807079, 9.930121 5.717596 A 4.8359394 4.8359394 0 0 1 5.969851 9.2316885 A 7.8932457 7.8932457 0 0 0 1.5000005 11.5 L 3.5 20.5" fill="url(#linearb3dd8d24adfd)" />
+    <path d="M 17.612888 14.095011 A 4.127779 4.127779 0 0 0 14.006092 18.35103 A 5.199835 5.199835 0 0 1 12.500001 22.499998 L 3.5 20.5 L 1.5 11.5 A 8.701779 8.701779 0 0 1 5.9698467 9.231689 A 5.039568 5.039568 0 0 0 9.93012 5.717596 A 9.778784 9.778784 0 0 1 12.500002 1.4999981 L 14.5 9.5 L 22.5 11.5 A 8.287088 8.287088 0 0 1 17.612888 14.095011" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 22.5 11.5 L 20.5 3.5 L 12.5 1.5" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 9.930121 5.717596 C 8.679868 9.807079, 9.811245 14.188755, 3.5 20.5" stroke="#D66000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 14.5 9.5 C 12.116238 11.883762, 13.883933 15.218561, 14.006091 18.351028" stroke="#D66000" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 14.981671 15.521478 L 15.241827 15.241827 L 17.5 17.5 L 17.5 22.5 L 1.5 6.5 L 6.5 6.5 L 8.219543 8.219543 L 7.554393 8.664172 A 6.732374 6.732374 0 0 1 8.6274605 12.222769 A 6.939701 6.939701 0 0 1 13.540892 15.143315 A 1.547751 1.547751 0 0 1 14.981671 15.521477" fill="#E64980" />
+    <path d="M 8.219543 8.219543 L 6.5 6.5 L 1.5 6.5 L 17.5 22.5 L 17.5 17.5 L 15.241827 15.241827" stroke="#A61E4D" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

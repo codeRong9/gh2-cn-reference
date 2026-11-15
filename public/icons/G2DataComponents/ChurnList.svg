@@ -1,0 +1,24 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="linear8cef3cf0fc8f" gradientUnits="userSpaceOnUse" x1="5.5" y1="9" x2="18.5" y2="9">
+      <stop offset="0%" style="stop-color:#22B8CF;" />
+      <stop offset="100%" style="stop-color:#66D9E8;" />
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 22 9 L 20 20 C 20 21.1044, 16.4176 22, 12 22 C 7.5824 22, 4 21.1044, 4 20 L 2 9 C 2 7.3434, 6.4779997 6, 12 6 C 17.522 6, 22 7.3434, 22 9" stroke="#0B7285" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 22 9 L 20 20 C 20 21.1044, 16.4176 22, 12 22 C 7.5824 22, 4 21.1044, 4 20 L 2 9 C 2 7.3434, 6.4779997 6, 12 6 C 17.522 6, 22 7.3434, 22 9" fill="#66D9E8" />
+    <!--Icon element '(Grasshopper2.UI.Icon.Vector.EggSpan,Grasshopper2.UI.Icon.Vector.VectorStyle)' failed to create valid SVG.-->
+    <path d="M 22 9 L 20 20 C 20 20.773079, 18.244625 21.443848, 15.676162 21.776731 L 16.5952 11.665097 C 19.805779 11.1657715, 22 10.15962, 22 9" fill="#22B8CF" />
+    <path d="M 6.0944967 11.421103 L 7.275597 21.614069 C 5.2896643 21.250114, 4 20.66264, 4 20 L 2 9 C 2 9.99396, 3.61208 10.875169, 6.0944967 11.421103" fill="#C5F6FA" />
+    <path d="M 20 9 C 20.399084 9.984136, 15.936542 11.099771, 12 11 C 8.063458 11.099771, 3.6009166 9.984136, 4 9 C 3.6009166 8.015864, 8.063458 6.900229, 12 7 C 15.936542 6.900229, 20.399084 8.015864, 20 9" fill="url(#linear8cef3cf0fc8f)" />
+    <path d="M 18.924229 9.973549 A 20.429749 20.429749 0 0 1 12.000003 11 A 20.609585 20.609585 0 0 1 5.1308165 9.995306" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 15.010871 10.852948 A 0.9999969 0.9999969 0 0 1 15.086188 10.593862 L 19.08619 1.5938616 A 0.9999992 0.9999992 0 0 1 20.40614 1.0861892 A 0.9999992 0.9999992 0 0 1 20.91381 2.4061384 L 17.319273 10.493849 A 20.1418 20.1418 0 0 1 15.010869 10.852949" fill="#0B7285" />
+    <path d="M 9 2 L 14 2" stroke="#E67700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 7 5 A 1 1 0 0 1 5 5 A 1 1 0 0 1 7 5" fill="#E67700" />
+    <path d="M 7 8 A 1 1 0 0 1 5 8 A 1 1 0 0 1 7 8" fill="#E67700" />
+    <path d="M 9 8 L 13 8" stroke="#E67700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 9 5 L 15 5" stroke="#E67700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 7 2 A 1 1 0 0 1 5 1.9999999 A 1 1 0 0 1 7 2.0000002" fill="#E67700" />
+  </g>
+</svg>

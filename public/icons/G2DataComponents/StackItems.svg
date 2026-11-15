@@ -1,0 +1,34 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="linear36494ad28172" gradientUnits="userSpaceOnUse" x1="12.5" y1="14" x2="13.5" y2="16">
+      <stop offset="0%" style="stop-color:#63E6BE;" />
+      <stop offset="100%" style="stop-color:#C3FAE8;" />
+    </linearGradient>
+    <linearGradient id="linear6c6ebfc94b2c" gradientUnits="userSpaceOnUse" x1="1.5" y1="12.5" x2="7" y2="12.5">
+      <stop offset="0%" style="stop-color:#12B886;" />
+      <stop offset="100%" style="stop-color:#63E6BE;" />
+    </linearGradient>
+    <linearGradient id="linear12151080491f" gradientUnits="userSpaceOnUse" x1="10.5" y1="9" x2="11.5" y2="11">
+      <stop offset="0%" style="stop-color:#63E6BE;" />
+      <stop offset="100%" style="stop-color:#C3FAE8;" />
+    </linearGradient>
+    <linearGradient id="lineara10d6bb40ce0" gradientUnits="userSpaceOnUse" x1="1.5" y1="12.5" x2="7" y2="12.5">
+      <stop offset="0%" style="stop-color:#12B886;" />
+      <stop offset="100%" style="stop-color:#63E6BE;" />
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 21.5 15.5 L 11.5 10.5 L 1.5 15.5 L 1.5 17.5 L 11.5 22.5 L 21.5 17.5 L 21.5 15.5" fill="url(#linear36494ad28172)" />
+    <path d="M 11.5 20.5 L 1.5 15.5 L 1.5 17.5 L 11.5 22.5 L 11.5 20.5" fill="url(#linear6c6ebfc94b2c)" />
+    <path d="M 21.5 15.5 L 21.5 17.5 L 11.5 22.5 L 11.5 20.5 L 21.5 15.5" fill="#12B886" />
+    <path d="M 21.5 15.5 L 11.5 10.5 L 1.5 15.5 L 1.5 17.5 L 11.5 22.5 L 21.5 17.5 L 21.5 15.5" stroke="#087F5B" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 17.5 9.5 L 11.5 6.5 L 1.5 11.5 L 1.5 13.5 L 7.5 16.5 L 17.5 11.5 L 17.5 9.5" fill="url(#linear12151080491f)" />
+    <path d="M 17.5 9.5 L 17.5 11.5 L 7.5 16.5 L 7.5 14.5 L 17.5 9.5" fill="#12B886" />
+    <path d="M 7.5 14.5 L 1.5 11.5 L 1.5 13.5 L 7.5 16.5 L 7.5 14.5" fill="url(#lineara10d6bb40ce0)" />
+    <path d="M 17.5 9.5 L 11.5 6.5 L 1.5 11.5 L 1.5 13.5 L 7.5 16.5 L 17.5 11.5 L 17.5 9.5" stroke="#087F5B" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 15.5 4.5 L 11.5 2.5 L 1.5 7.5 L 1.5 9.5 L 5.5 11.5 L 15.5 6.5 L 15.5 4.5" fill="#C3FAE8" />
+    <path d="M 5.5 9.5 L 1.5 7.5 L 1.5 9.5 L 5.5 11.5 L 5.5 9.5" fill="#63E6BE" />
+    <path d="M 15.5 4.5 L 15.5 6.5 L 5.5 11.5 L 5.5 9.5 L 15.5 4.5" fill="#12B886" />
+    <path d="M 15.5 4.5 L 11.5 2.5 L 1.5 7.5 L 1.5 9.5 L 5.5 11.5 L 15.5 6.5 L 15.5 4.5" stroke="#087F5B" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

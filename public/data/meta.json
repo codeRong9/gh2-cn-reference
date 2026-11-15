@@ -1,0 +1,642 @@
+{
+ "componentCount": 1410,
+ "libCount": 13,
+ "portCount": 5956,
+ "detailCount": 171,
+ "translatedCount": 1410,
+ "withIcon": 1344,
+ "libs": [
+  {
+   "lib": "maths",
+   "cn": "数学",
+   "desc": "数值运算、三角函数、区间、复数、统计与随机数",
+   "count": 226,
+   "sections": {
+    "": {
+     "name": "",
+     "cn": "",
+     "chapter": "",
+     "count": 24
+    },
+    "Complex": {
+     "name": "Complex",
+     "cn": "复数",
+     "chapter": "Maths",
+     "count": 7
+    },
+    "Function": {
+     "name": "Function",
+     "cn": "函数",
+     "chapter": "Maths",
+     "count": 29
+    },
+    "Operator": {
+     "name": "Operator",
+     "cn": "运算符",
+     "chapter": "Maths",
+     "count": 34
+    },
+    "Random": {
+     "name": "Random",
+     "cn": "随机",
+     "chapter": "Maths",
+     "count": 17
+    },
+    "Script": {
+     "name": "Script",
+     "cn": "脚本",
+     "chapter": "Maths",
+     "count": 3
+    },
+    "Seq": {
+     "name": "Seq",
+     "cn": "Seq",
+     "chapter": "Maths",
+     "count": 9
+    },
+    "Special": {
+     "name": "Special",
+     "cn": "Special",
+     "chapter": "Maths",
+     "count": 21
+    },
+    "Statistics": {
+     "name": "Statistics",
+     "cn": "统计",
+     "chapter": "Maths",
+     "count": 43
+    },
+    "Trig": {
+     "name": "Trig",
+     "cn": "三角函数",
+     "chapter": "Maths",
+     "count": 16
+    },
+    "Interval": {
+     "name": "Interval",
+     "cn": "Interval",
+     "chapter": "Vector",
+     "count": 23
+    }
+   }
+  },
+  {
+   "lib": "data",
+   "cn": "数据",
+   "desc": "列表、树、集合、字符串与数据结构的增删改查",
+   "count": 119,
+   "sections": {
+    "Filter": {
+     "name": "Filter",
+     "cn": "Filter",
+     "chapter": "Data",
+     "count": 25
+    },
+    "List": {
+     "name": "List",
+     "cn": "列表",
+     "chapter": "Data",
+     "count": 28
+    },
+    "Order": {
+     "name": "Order",
+     "cn": "Order",
+     "chapter": "Data",
+     "count": 18
+    },
+    "Sets": {
+     "name": "Sets",
+     "cn": "集合",
+     "chapter": "Data",
+     "count": 17
+    },
+    "Tree": {
+     "name": "Tree",
+     "cn": "树",
+     "chapter": "Data",
+     "count": 31
+    }
+   }
+  },
+  {
+   "lib": "vector",
+   "cn": "向量",
+   "desc": "点、向量、平面、场与图结构的构造与计算",
+   "count": 188,
+   "sections": {
+    "Operator": {
+     "name": "Operator",
+     "cn": "运算符",
+     "chapter": "Maths",
+     "count": 2
+    },
+    "Graph": {
+     "name": "Graph",
+     "cn": "图",
+     "chapter": "Mesh",
+     "count": 31
+    },
+    "Hyperbolics": {
+     "name": "Hyperbolics",
+     "cn": "Hyperbolics",
+     "chapter": "Transform",
+     "count": 1
+    },
+    "Field": {
+     "name": "Field",
+     "cn": "场",
+     "chapter": "Vector",
+     "count": 42
+    },
+    "Plane": {
+     "name": "Plane",
+     "cn": "平面",
+     "chapter": "Vector",
+     "count": 33
+    },
+    "Point": {
+     "name": "Point",
+     "cn": "点",
+     "chapter": "Vector",
+     "count": 35
+    },
+    "Spread": {
+     "name": "Spread",
+     "cn": "Spread",
+     "chapter": "Vector",
+     "count": 25
+    },
+    "Vector": {
+     "name": "Vector",
+     "cn": "向量",
+     "chapter": "Vector",
+     "count": 19
+    }
+   }
+  },
+  {
+   "lib": "curve",
+   "cn": "曲线",
+   "desc": "直线、圆弧、样条、多段线的创建、分析与细分",
+   "count": 230,
+   "sections": {
+    "Analysis": {
+     "name": "Analysis",
+     "cn": "分析",
+     "chapter": "Curve",
+     "count": 39
+    },
+    "Conic": {
+     "name": "Conic",
+     "cn": "Conic",
+     "chapter": "Curve",
+     "count": 54
+    },
+    "Fragment": {
+     "name": "Fragment",
+     "cn": "Fragment",
+     "chapter": "Curve",
+     "count": 17
+    },
+    "Freeform": {
+     "name": "Freeform",
+     "cn": "自由曲线",
+     "chapter": "Curve",
+     "count": 50
+    },
+    "Line": {
+     "name": "Line",
+     "cn": "Line",
+     "chapter": "Curve",
+     "count": 35
+    },
+    "ODE": {
+     "name": "ODE",
+     "cn": "ODE",
+     "chapter": "Curve",
+     "count": 1
+    },
+    "Polygon": {
+     "name": "Polygon",
+     "cn": "Polygon",
+     "chapter": "Curve",
+     "count": 28
+    },
+    "Demo": {
+     "name": "Demo",
+     "cn": "Demo",
+     "chapter": "Demo",
+     "count": 3
+    },
+    "Field": {
+     "name": "Field",
+     "cn": "场",
+     "chapter": "Vector",
+     "count": 1
+    },
+    "Spread": {
+     "name": "Spread",
+     "cn": "Spread",
+     "chapter": "Vector",
+     "count": 2
+    }
+   }
+  },
+  {
+   "lib": "surface",
+   "cn": "曲面",
+   "desc": "曲面与多重曲面的构建、放样、扫掠与拆解",
+   "count": 177,
+   "sections": {
+    "Analysis": {
+     "name": "Analysis",
+     "cn": "分析",
+     "chapter": "Curve",
+     "count": 36
+    },
+    "Freeform": {
+     "name": "Freeform",
+     "cn": "自由曲线",
+     "chapter": "Surface",
+     "count": 44
+    },
+    "Modifier": {
+     "name": "Modifier",
+     "cn": "Modifier",
+     "chapter": "Surface",
+     "count": 23
+    },
+    "Primitive": {
+     "name": "Primitive",
+     "cn": "基本曲线",
+     "chapter": "Surface",
+     "count": 40
+    },
+    "SubD": {
+     "name": "SubD",
+     "cn": "SubD",
+     "chapter": "Surface",
+     "count": 16
+    },
+    "Topology": {
+     "name": "Topology",
+     "cn": "Topology",
+     "chapter": "Surface",
+     "count": 18
+    }
+   }
+  },
+  {
+   "lib": "mesh",
+   "cn": "网格",
+   "desc": "网格生成、细分、简化、焊接与拓扑修复",
+   "count": 116,
+   "sections": {
+    "Analysis": {
+     "name": "Analysis",
+     "cn": "分析",
+     "chapter": "Display",
+     "count": 14
+    },
+    "Intersection": {
+     "name": "Intersection",
+     "cn": "相交",
+     "chapter": "Intersect",
+     "count": 1
+    },
+    "Operators": {
+     "name": "Operators",
+     "cn": "Operators",
+     "chapter": "Intersect",
+     "count": 1
+    },
+    "Region": {
+     "name": "Region",
+     "cn": "Region",
+     "chapter": "Intersect",
+     "count": 4
+    },
+    "Freeform": {
+     "name": "Freeform",
+     "cn": "自由曲线",
+     "chapter": "Mesh",
+     "count": 20
+    },
+    "Graph": {
+     "name": "Graph",
+     "cn": "图",
+     "chapter": "Mesh",
+     "count": 1
+    },
+    "Modifiers": {
+     "name": "Modifiers",
+     "cn": "Modifiers",
+     "chapter": "Mesh",
+     "count": 33
+    },
+    "Polytope": {
+     "name": "Polytope",
+     "cn": "Polytope",
+     "chapter": "Mesh",
+     "count": 11
+    },
+    "Topology": {
+     "name": "Topology",
+     "cn": "Topology",
+     "chapter": "Mesh",
+     "count": 31
+    }
+   }
+  },
+  {
+   "lib": "transform",
+   "cn": "变换",
+   "desc": "移动、旋绕、缩放、阵列与坐标系统变换",
+   "count": 92,
+   "sections": {
+    "Affine": {
+     "name": "Affine",
+     "cn": "仿射变换",
+     "chapter": "Transform",
+     "count": 15
+    },
+    "Analysis": {
+     "name": "Analysis",
+     "cn": "分析",
+     "chapter": "Transform",
+     "count": 10
+    },
+    "Exotic": {
+     "name": "Exotic",
+     "cn": "Exotic",
+     "chapter": "Transform",
+     "count": 27
+    },
+    "IJK": {
+     "name": "IJK",
+     "cn": "IJK",
+     "chapter": "Transform",
+     "count": 13
+    },
+    "Rigid": {
+     "name": "Rigid",
+     "cn": "Rigid",
+     "chapter": "Transform",
+     "count": 21
+    },
+    "Util": {
+     "name": "Util",
+     "cn": "工具",
+     "chapter": "Transform",
+     "count": 6
+    }
+   }
+  },
+  {
+   "lib": "intersect",
+   "cn": "相交",
+   "desc": "曲线、曲面、网格之间的交线与布尔运算",
+   "count": 83,
+   "sections": {
+    "Intersection": {
+     "name": "Intersection",
+     "cn": "相交",
+     "chapter": "Intersect",
+     "count": 29
+    },
+    "Operators": {
+     "name": "Operators",
+     "cn": "Operators",
+     "chapter": "Intersect",
+     "count": 27
+    },
+    "Region": {
+     "name": "Region",
+     "cn": "Region",
+     "chapter": "Intersect",
+     "count": 7
+    },
+    "Relation": {
+     "name": "Relation",
+     "cn": "Relation",
+     "chapter": "Intersect",
+     "count": 20
+    }
+   }
+  },
+  {
+   "lib": "display",
+   "cn": "显示",
+   "desc": "预览着色、文字标注、尺寸与烘焙相关组件",
+   "count": 96,
+   "sections": {
+    "Analysis": {
+     "name": "Analysis",
+     "cn": "分析",
+     "chapter": "Display",
+     "count": 19
+    },
+    "Colour": {
+     "name": "Colour",
+     "cn": "颜色",
+     "chapter": "Display",
+     "count": 23
+    },
+    "Gradient": {
+     "name": "Gradient",
+     "cn": "Gradient",
+     "chapter": "Display",
+     "count": 9
+    },
+    "Scene": {
+     "name": "Scene",
+     "cn": "Scene",
+     "chapter": "Display",
+     "count": 5
+    },
+    "Time": {
+     "name": "Time",
+     "cn": "Time",
+     "chapter": "Display",
+     "count": 18
+    },
+    "View": {
+     "name": "View",
+     "cn": "View",
+     "chapter": "Display",
+     "count": 14
+    },
+    "Visuals": {
+     "name": "Visuals",
+     "cn": "Visuals",
+     "chapter": "Display",
+     "count": 8
+    }
+   }
+  },
+  {
+   "lib": "text",
+   "cn": "文本",
+   "desc": "文本拼接、格式化、解析与标记",
+   "count": 38,
+   "sections": {
+    "Analysis": {
+     "name": "Analysis",
+     "cn": "分析",
+     "chapter": "Text",
+     "count": 13
+    },
+    "Create": {
+     "name": "Create",
+     "cn": "Create",
+     "chapter": "Text",
+     "count": 11
+    },
+    "Encoding": {
+     "name": "Encoding",
+     "cn": "Encoding",
+     "chapter": "Text",
+     "count": 4
+    },
+    "Operators": {
+     "name": "Operators",
+     "cn": "Operators",
+     "chapter": "Text",
+     "count": 10
+    }
+   }
+  },
+  {
+   "lib": "meta",
+   "cn": "元组件",
+   "desc": "元数据、分组、簇与文档级操作",
+   "count": 32,
+   "sections": {
+    "Meta": {
+     "name": "Meta",
+     "cn": "元数据",
+     "chapter": "Data",
+     "count": 27
+    },
+    "Metric": {
+     "name": "Metric",
+     "cn": "Metric",
+     "chapter": "Data",
+     "count": 5
+    }
+   }
+  },
+  {
+   "lib": "annotation",
+   "cn": "标注",
+   "desc": "面积、体积、质心等测量标注组件",
+   "count": 8,
+   "sections": {
+    "Analysis": {
+     "name": "Analysis",
+     "cn": "分析",
+     "chapter": "Curve",
+     "count": 1
+    },
+    "Metric": {
+     "name": "Metric",
+     "cn": "Metric",
+     "chapter": "Data",
+     "count": 7
+    }
+   }
+  },
+  {
+   "lib": "script",
+   "cn": "脚本",
+   "desc": "C# 与 Python 脚本电池，自定义算法入口",
+   "count": 5,
+   "sections": {
+    "Script": {
+     "name": "Script",
+     "cn": "脚本",
+     "chapter": "Maths",
+     "count": 4
+    },
+    "Execution": {
+     "name": "Execution",
+     "cn": "Execution",
+     "chapter": "Threading",
+     "count": 1
+    }
+   }
+  }
+ ],
+ "typeCounts": {
+  "Number": 417,
+  "Integer": 388,
+  "Point": 341,
+  "Generic": 310,
+  "Curve": 243,
+  "Boolean": 213,
+  "Plane": 179,
+  "Surface": 165,
+  "Enum": 152,
+  "Mesh": 150,
+  "Field": 121,
+  "Vector": 105,
+  "Text": 98,
+  "Angle": 89,
+  "Line": 87,
+  "Transform": 68,
+  "Interval": 67,
+  "Function": 57,
+  "Curve Locus": 56,
+  "Numeric": 51,
+  "Rectangle": 49,
+  "Circle": 48,
+  "Box": 44,
+  "Polyline": 43,
+  "Colour": 39,
+  "Graph": 35,
+  "Sphere": 33,
+  "Gradient": 32,
+  "Index": 28,
+  "Continuous": 27,
+  "Tuple": 27,
+  "Arc": 23,
+  "Surface Locus": 21,
+  "Triangle": 20,
+  "Deform": 20,
+  "Region": 19,
+  "Tube": 18,
+  "MetaData": 17,
+  "View": 14,
+  "Random": 11,
+  "TimeSpan": 11,
+  "Discrete": 9,
+  "Path": 9,
+  "MeshFacet": 9,
+  "Complex": 8,
+  "Site": 8,
+  "Dot": 8,
+  "DateTime": 8,
+  "UvPoint": 7,
+  "HiddenEnum": 6,
+  "Cage": 6,
+  "MetaName": 6,
+  "HiddenLine": 5,
+  "NPoint": 4,
+  "HiddenMetaData": 3,
+  "HiddenUvPoint": 2,
+  "HiddenCircle": 2,
+  "HiddenGraph": 2,
+  "HiddenColour": 2,
+  "HiddenMesh": 1,
+  "HiddenField": 1,
+  "PresetPatterns": 1,
+  "HiddenCurveLocus": 1,
+  "HiddenAngle": 1,
+  "Hidden": 1,
+  "HiddenSurface": 1,
+  "LensLengthPresets": 1,
+  "HiddenFunction": 1,
+  "Text Pattern": 1,
+  "Guid": 1
+ }
+}

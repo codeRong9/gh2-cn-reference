@@ -1,0 +1,16 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="radial54b027ade84d" gradientUnits="userSpaceOnUse" cx="8.5" cy="8.5" r="13.72953">
+      <stop offset="0%" style="stop-color:#FFE066;" />
+      <stop offset="100%" style="stop-color:#FCC419;" />
+    </radialGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 23 9 A 20.113369 20.113369 0 0 1 10 23 A 20.297901 20.297901 0 0 0 0.99999523 7.999998 A 9.85038 9.85038 0 0 0 10 1.0000001 A 13.536314 13.536314 0 0 1 23 9.000002" fill="url(#radial54b027ade84d)" />
+    <path d="M 7.999999 16 A 18.414726 18.414726 0 0 0 19.000002 4.0000014" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 4.999999 11 A 10.657587 10.657587 0 0 0 14 1.5000012" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 5.0000043 7 A 12.131324 12.131324 0 0 1 14 20.999998" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 7.999999 4.999999 A 11.441763 11.441763 0 0 1 18 17.999998" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 23 9 A 20.113369 20.113369 0 0 1 10 23 A 20.297901 20.297901 0 0 0 0.99999523 7.999998 A 9.85038 9.85038 0 0 0 10 1.0000001 A 13.536314 13.536314 0 0 1 23 9.000002" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs />
+  <g fill="none" stroke="none">
+    <path d="M 13 3 A 1 1 0 0 1 11 3 A 1 1 0 0 1 13 3.0000002" fill="#0B7285" />
+    <path d="M 2 7.5 L 5 7.5" stroke="#0B7285" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 3.5 7.5 L 3.5 1.5 L 2 3" stroke="#0B7285" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 6.5 3 L 6.5 2.5 A 1 1 0 0 1 7.5 1.5 L 8.5 1.5 A 1 1 0 0 1 9.5 2.5000002 L 9.5 3.5 L 6.5 6.5 L 6.5 7.5 L 10 7.5" stroke="#0B7285" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 14.5 3 L 14.5 2.5 A 1 1 0 0 1 15.5 1.5 L 16.5 1.5 A 1 1 0 0 1 17.5 2.5000002 L 17.5 3.5 A 1 1 0 0 1 16.5 4.5 L 15.5 4.5" stroke="#0B7285" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 16.5 4.5 A 1 1 0 0 1 17.5 5.5 L 17.5 6.5 A 1 1 0 0 1 16.5 7.5 L 15.5 7.5 A 1 1 0 0 1 14.5 6.5 L 14.5 6" stroke="#0B7285" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 22 1.5 L 21.5 1.5 A 2 2 0 0 0 19.5 3.4999998 L 19.5 6.5 A 1 1 0 0 0 20.5 7.5 L 21.5 7.5 A 1 1 0 0 0 22.5 6.5 L 22.5 5.5 A 1 1 0 0 0 21.5 4.5 L 19.5 4.5" stroke="#0B7285" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" />
+    <path d="M 16.096193 16.096193 L 21 21" stroke="#A61E4D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 18 11.5 A 6.5 6.5 0 0 1 5 11.499999 A 6.5 6.5 0 0 1 18 11.500001" fill="#FFDEEB" stroke="#A61E4D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 8 15 L 12 15 A 1 1 0 0 0 12 13 L 9.414213 13 L 12.121321 10.292893 A 2.9999986 2.9999986 0 0 0 13 8.171573 L 13 8 A 3 3 0 0 0 12.28521 6.0563393 A 5.5000052 5.5000052 0 0 0 7.0403233 8.281105 A 0.9999999 0.9999999 0 0 0 9.000001 8 A 1 1 0 0 1 11 8 L 11 8.171573 A 0.9999974 0.9999974 0 0 1 10.707107 8.878679 L 7.8786798 11.707107 A 2.9999967 2.9999967 0 0 0 7.0000005 13.828427 L 7 14 A 1 1 0 0 0 8 15" fill="#E64980" />
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="linear9106a3fac45b" gradientUnits="userSpaceOnUse" x1="8.65482" y1="5.81575" x2="10.92271" y2="10.60926">
+      <stop offset="0%" style="stop-color:#66D9E8;" />
+      <stop offset="100%" style="stop-color:#22B8CF;" />
+    </linearGradient>
+    <linearGradient id="lineara0282b2cb657" gradientUnits="userSpaceOnUse" x1="16.02548" y1="17.58476" x2="12.33156" y2="13.27232">
+      <stop offset="0%" style="stop-color:#FFE066;" />
+      <stop offset="100%" style="stop-color:#FCC419;" />
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 10.5 2.5000005 A 34.50518 34.50518 0 0 0 11.773567 12.329649 A 26.711006 26.711006 0 0 1 8.882296 9.774899 L 8.797983 9.688783 A 23.866693 23.866693 0 0 1 5.5 5.500001 L 10.5 2.5" fill="url(#linear9106a3fac45b)" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 18.999998 13 A 5.1265373 5.1265373 0 0 1 20.5 16.499998" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 18.5 14.5 L 18.5 12.5 L 20.5 12.5" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 18.5 20 L 20.5 20 L 20.5 22" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 20 20.5 A 5.126524 5.126524 0 0 1 16.5 22" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 13 21 A 5.1265144 5.1265144 0 0 1 11.5 17.5" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 13.5 19.5 L 13.5 21.5 L 11.5 21.5" stroke="#0B7285" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 8.882299 9.7749 A 36.045532 36.045532 0 0 0 18.500002 16.5 L 15.5 19.5 A 18.93516 18.93516 0 0 1 13.117058 15.799321 A 23.535154 23.535154 0 0 0 8.882291 9.774893" fill="url(#lineara0282b2cb657)" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

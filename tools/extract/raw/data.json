@@ -1,0 +1,6517 @@
+[
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "CartesianProduct",
+  "fullTypeName": "CartesianProduct",
+  "guid": "00000000-a751-4a7e-83e0-a813d95711e2",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Cartesian Product",
+   "info": "Create the cartesian product of two sets.",
+   "chapter": "Data",
+   "section": "Sets",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "First Set",
+    "nick": "A",
+    "info": "First set of values.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Second Set",
+    "nick": "B",
+    "info": "Second set of values.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Product",
+    "nick": "Pr",
+    "info": "Cartesian product of A⨯B, as a list of tuples.",
+    "type": "Tuple",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "CreateSet",
+  "fullTypeName": "CreateSet",
+  "guid": "00000000-8a84-4d0e-acb0-dbd4d5498f30",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Create Set",
+   "info": "Create a valid set out of a list of values. Valid sets contain only unique elements.",
+   "chapter": "Data",
+   "section": "Sets",
+   "slot": 1,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "Source list containing all elements for the set.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Set",
+    "nick": "St",
+    "info": "Set containing only the unique elements in the input list.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Filter",
+    "nick": "Fl",
+    "info": "Retention filter applied to the input list.",
+    "type": "Boolean",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "CullConsecutive",
+  "fullTypeName": "CullConsecutive",
+  "guid": "00000000-0d3f-4a60-b13f-b12506813ca0",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Cull Consecutive",
+   "info": "Delete consecutive identical values from a list.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List with repeated values to cull.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Cyclical",
+    "nick": "Cy",
+    "info": "Treat the list as a cyclical collection.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Method",
+    "nick": "Mt",
+    "info": "Culling method to apply.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List with remaining values.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Culling Pattern",
+    "nick": "Cp",
+    "info": "The applied culling pattern.",
+    "type": "Boolean",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "DisjointSet",
+  "fullTypeName": "DisjointSet",
+  "guid": "00000000-3795-4182-9a74-1e07fbfb885c",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Disjoint Set",
+   "info": "Test whether two sets are fully disjoint.",
+   "chapter": "Data",
+   "section": "Sets",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "First Set",
+    "nick": "A",
+    "info": "First set of values.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Second Set",
+    "nick": "B",
+    "info": "Second set of values.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Disjoint",
+    "nick": "Dj",
+    "info": "Disjoint state. If true, A and B share no values.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "FindSimilar",
+  "fullTypeName": "FindSimilar",
+  "guid": "00000000-3dcb-46fd-b994-bf0313501e69",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Find Similar",
+   "info": "Find the value in a list which is most similar to a given value.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Values",
+    "nick": "Vs",
+    "info": "List of values to search in.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Search",
+    "nick": "Se",
+    "info": "Approximate value to search for.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "may-be-null"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Value",
+    "nick": "Vl",
+    "info": "Value most similar to the given search criterion.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Index",
+    "nick": "Ix",
+    "info": "Index of the most similar value.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "KeyValueSearch",
+  "fullTypeName": "KeyValueSearch",
+  "guid": "00000000-0b31-4da6-88aa-8e41fc07944b",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Key Value Search",
+   "info": "Find a matching key in a list and output the value associated with it.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Keys",
+    "nick": "Ks",
+    "info": "List of keys to search in.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Values",
+    "nick": "Vs",
+    "info": "List of associated values, one for each key.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Search",
+    "nick": "Se",
+    "info": "Key to search for.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "may-be-null"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Value",
+    "nick": "Vl",
+    "info": "Value associated with the found key.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Index",
+    "nick": "Ix",
+    "info": "Index of the found key, or -1 if no key matched the search.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "SetExclusion",
+  "fullTypeName": "SetExclusion",
+  "guid": "00000000-4b2e-435b-8cac-1a3d7d0dd2d8",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Set Exclusion",
+   "info": "Create the exclusion (or symmetric difference) of two sets. That is, a new set containing all the values which occur either in A or in B, but not both.",
+   "chapter": "Data",
+   "section": "Sets",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "First Set",
+    "nick": "A",
+    "info": "First set for exclusion.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Second Set",
+    "nick": "B",
+    "info": "Second set for exclusion.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Exclusion",
+    "nick": "Ex",
+    "info": "Set containing the elements present in either A, or B, but not both.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "SetIntersection",
+  "fullTypeName": "SetIntersection",
+  "guid": "00000000-8f11-41ad-bdab-34883ad83938",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Set Intersection",
+   "info": "Create the new set containing only the elements which occur in all inputs.",
+   "chapter": "Data",
+   "section": "Sets",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "",
+    "nick": "",
+    "info": "",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "",
+    "nick": "",
+    "info": "",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Intersection",
+    "nick": "Is",
+    "info": "Set containing the elements shared amongst all inputs.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "SetMajority",
+  "fullTypeName": "SetMajority",
+  "guid": "00000000-30fc-4d23-985d-b7d60f5e0a1c",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Set Majority",
+   "info": "Find all values which appear in at least two out of three sets.",
+   "chapter": "Data",
+   "section": "Sets",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "First Set",
+    "nick": "A",
+    "info": "First set of values.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Second Set",
+    "nick": "B",
+    "info": "Second set of values.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Third Set",
+    "nick": "C",
+    "info": "Third set of values.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Majority",
+    "nick": "Mj",
+    "info": "Set containing all values which appear in at least two of the inputs.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "SetSubtraction",
+  "fullTypeName": "SetSubtraction",
+  "guid": "00000000-c6d8-48fd-a084-ce8070df93c5",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Set Subtraction",
+   "info": "Create a set which contais only those elements from set A that do not also occur in set B. Note that duplicate elements in A will be retrained.",
+   "chapter": "Data",
+   "section": "Sets",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "First Set",
+    "nick": "A",
+    "info": "Set to subtract from.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Second Set",
+    "nick": "B",
+    "info": "Subtraction set.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Remainder",
+    "nick": "Rm",
+    "info": "Set containing the elements present in A, but not in B.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "SubSet",
+  "fullTypeName": "SubSet",
+  "guid": "00000000-7e6a-4909-84b3-74b820cbfc93",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Subset",
+   "info": "Test whether one set is a proper subset of another.",
+   "chapter": "Data",
+   "section": "Sets",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "First Set",
+    "nick": "A",
+    "info": "Primary set of values.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Second Set",
+    "nick": "B",
+    "info": "Potential subset to validate.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Subset",
+    "nick": "Ss",
+    "info": "Subset state. If true, all the values in B also appear in A.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "CreateTuple",
+  "fullTypeName": "CreateTuple",
+  "guid": "00000000-06d4-45b8-bba9-ead48a16e836",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Create Tuple",
+   "info": "Combine several named values into a single tuple.",
+   "chapter": "Data",
+   "section": "Sets",
+   "slot": 100,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "A",
+    "nick": "",
+    "info": "",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "B",
+    "nick": "",
+    "info": "",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Tuple",
+    "nick": "Tu",
+    "info": "Tuple of all input values.",
+    "type": "Tuple",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "DissolveTuple",
+  "fullTypeName": "DissolveTuple",
+  "guid": "00000000-39f1-4ad5-b699-015d1d796345",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Dissolve Tuple",
+   "info": "Dissolve a tuple into individual values.",
+   "chapter": "Data",
+   "section": "Sets",
+   "slot": 100,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tuple",
+    "nick": "Tu",
+    "info": "Tuple to dissolve.",
+    "type": "Tuple",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "GrowTuple",
+  "fullTypeName": "GrowTuple",
+  "guid": "00000000-1c34-4b53-8b4c-b59b0f69892c",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Grow Tuple",
+   "info": "Add or overwrite a single element to a tuple of named values.",
+   "chapter": "Data",
+   "section": "Sets",
+   "slot": 100,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tuple",
+    "nick": "Tu",
+    "info": "Tuple to add to.",
+    "type": "Tuple",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Element Name",
+    "nick": "Nm",
+    "info": "Name of element to add.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Element Value",
+    "nick": "Vl",
+    "info": "Value of element to add.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Tuple",
+    "nick": "Tu",
+    "info": "Grown tuple.",
+    "type": "Tuple",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "PareTuple",
+  "fullTypeName": "PareTuple",
+  "guid": "00000000-89d4-4e21-9c8e-361736edc7b1",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Pare Tuple",
+   "info": "Remove from a tuple all elements whose names match the given pattern.",
+   "chapter": "Data",
+   "section": "Sets",
+   "slot": 100,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tuple",
+    "nick": "Tu",
+    "info": "Tuple to pare down.",
+    "type": "Tuple",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Name Pattern",
+    "nick": "Pt",
+    "info": "Name matching pattern.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Tuple",
+    "nick": "Tu",
+    "info": "Pared tuple.",
+    "type": "Tuple",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "PeekTuple",
+  "fullTypeName": "PeekTuple",
+  "guid": "00000000-220f-454a-ad5c-84cbe5ff5b56",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Peek Tuple",
+   "info": "Find a single element in a tuple of named values using the element's name.",
+   "chapter": "Data",
+   "section": "Sets",
+   "slot": 100,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tuple",
+    "nick": "Tu",
+    "info": "Tuple to examine.",
+    "type": "Tuple",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Element Name",
+    "nick": "Nm",
+    "info": "Name of element to search for.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Value",
+    "nick": "Vl",
+    "info": "Value of found element, or null if no element is found.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "TupleFromList",
+  "fullTypeName": "TupleFromList",
+  "guid": "00000000-a871-4799-aed4-accc91a96525",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Tuple From List",
+   "info": "Create a tuple out of all the items in a list.",
+   "chapter": "Data",
+   "section": "Sets",
+   "slot": 101,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to convert into a tuple.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Element Name",
+    "nick": "Nm",
+    "info": "Name for all elements. The index will be appended as a suffix to ensure uniqueness.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Tuple",
+    "nick": "Tu",
+    "info": "Tuple containing all list items.",
+    "type": "Tuple",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "TupleFromPear",
+  "fullTypeName": "TupleFromPear",
+  "guid": "00000000-96fe-4ad4-861b-9a4ac48b7c7c",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Tuple From Pear",
+   "info": "Create a tuple out of a value and its associated meta data.",
+   "chapter": "Data",
+   "section": "Sets",
+   "slot": 101,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Value",
+    "nick": "Vl",
+    "info": "A value with meta data.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "may-be-null"
+   },
+   {
+    "name": "Meta Data",
+    "nick": "Md",
+    "info": "Optional meta data to use in case the value input lacks meta data.",
+    "type": "MetaData",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Tuple",
+    "nick": "Tu",
+    "info": "Tuple containing the input value and the meta data.",
+    "type": "Tuple",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "TupleToList",
+  "fullTypeName": "TupleToList",
+  "guid": "00000000-4ba4-46ac-9ff7-fea685fa17ae",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Tuple To List",
+   "info": "Create a list out of all the elements in a tuple.",
+   "chapter": "Data",
+   "section": "Sets",
+   "slot": 101,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tuple",
+    "nick": "Tu",
+    "info": "Tuple to convert to a list.",
+    "type": "Tuple",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Items",
+    "nick": "Li",
+    "info": "List of items matching the tuple elements.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Names",
+    "nick": "Nm",
+    "info": "List of tuple element names.",
+    "type": "Text",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "TupleToPear",
+  "fullTypeName": "TupleToPear",
+  "guid": "00000000-2b06-4bb8-8832-6d628986d29e",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Tuple To Pear",
+   "info": "Extract the value and meta data from a correctly formatted tuple.",
+   "chapter": "Data",
+   "section": "Sets",
+   "slot": 101,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tuple",
+    "nick": "Tu",
+    "info": "A tuple containing a value and a meta data element.",
+    "type": "Tuple",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Value",
+    "nick": "Vl",
+    "info": "Value with meta data.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "Combine",
+  "fullTypeName": "Combine",
+  "guid": "00000000-1b82-43a0-ba28-4763b969c4ea",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Combine",
+   "info": "Replace the null values in the first list with the parallel values of following lists. This component functions as the inverse of the Sift component. The Sift and Combine components are the preferred tools for conditional logic in Grasshopper.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [],
+  "outputs": [
+   {
+    "name": "Combined List",
+    "nick": "Li",
+    "info": "List with inserted non-null values.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "CullByFrequency",
+  "fullTypeName": "CullByFrequency",
+  "guid": "00000000-9af8-4255-ba16-a2e625ff62b8",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Cull By Frequency",
+   "info": "Remove every Nth item from a list.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List whose items to cull.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Frequency",
+    "nick": "Fq",
+    "info": "Culling frequency. From a given starting point, every Nth item will be culled.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Start",
+    "nick": "St",
+    "info": "Index of first item to cull. If no start is given, culling begins at the last item of the first cycle, so every Nth item is culled.",
+    "type": "Index",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Culled List",
+    "nick": "Li",
+    "info": "List without the culled items.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Culling Pattern",
+    "nick": "Cp",
+    "info": "The applied culling pattern.",
+    "type": "Boolean",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "CullByIndex",
+  "fullTypeName": "CullByIndex",
+  "guid": "00000000-1790-4c5e-b073-86e3c88b37c9",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Cull By Index",
+   "info": "Remove all specified items from a list.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 10,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List whose items to cull.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Indices",
+    "nick": "Ix",
+    "info": "Indices of the items to be culled.",
+    "type": "Index",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Culled List",
+    "nick": "Li",
+    "info": "List without the culled items.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Culling Pattern",
+    "nick": "Cp",
+    "info": "The applied culling pattern.",
+    "type": "Boolean",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "CullByPattern",
+  "fullTypeName": "CullByPattern",
+  "guid": "00000000-cd07-429e-a2f2-50d9357d34fa",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Cull By Pattern",
+   "info": "Remove all indicated items from a list.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 10,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List whose values to cull.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Pattern",
+    "nick": "Pt",
+    "info": "Culling pattern. Items paired up with the value `false` in the pattern are retained, while those paired up with the value `true` are culled.",
+    "type": "Boolean",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Culled List",
+    "nick": "Li",
+    "info": "List without the culled items.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Count",
+    "nick": "Ct",
+    "info": "Number of removed items.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "CullByProbability",
+  "fullTypeName": "CullByProbability",
+  "guid": "00000000-5049-4416-be04-ab5c69dc7062",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Cull By Probability",
+   "info": "Remove items from a list probabilistically.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 11,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List whose items to cull.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Probability",
+    "nick": "Pr",
+    "info": "Probability function between zero (definitely keep) and one (definitely cull). The function is evaluated at the list's indices to yield per-item probabilities.",
+    "type": "Function",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Random engine used for culling.",
+    "nick": "",
+    "info": "",
+    "type": "Random",
+    "access": null,
+    "requirement": null
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Culled List",
+    "nick": "Li",
+    "info": "List without the culled items.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Culling Pattern",
+    "nick": "Cp",
+    "info": "The applied culling pattern.",
+    "type": "Boolean",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "CullBySites",
+  "fullTypeName": "CullBySites",
+  "guid": "00000000-fb52-43f6-b8c5-b36377b2b2cf",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Cull By Sites",
+   "info": "Remove a specific set of items from a tree.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree whose items to cull.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "Sites",
+    "nick": "St",
+    "info": "Sites of tree items to be removed.",
+    "type": "Site",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Culled Tree",
+    "nick": "Tr",
+    "info": "Tree with the specified items removed.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   },
+   {
+    "name": "Culling Pattern",
+    "nick": "Cp",
+    "info": "The applied culling pattern.",
+    "type": "Boolean",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "CullByValue",
+  "fullTypeName": "CullByValue",
+  "guid": "00000000-2c03-4d92-98dd-2f4410223758",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Cull By Value",
+   "info": "Remove all items which are equal to one or more filter values.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List whose items to cull.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Filter Values",
+    "nick": "Fv",
+    "info": "Values to remove from the list.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Culled List",
+    "nick": "Li",
+    "info": "List without the culled items.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Culling Pattern",
+    "nick": "Cp",
+    "info": "The applied culling pattern.",
+    "type": "Boolean",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "CullNulls",
+  "fullTypeName": "CullNulls",
+  "guid": "00000000-5e35-4556-ba6f-f2527ab36fe5",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Cull Nulls",
+   "info": "Remove all null values from a list.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List whose null values to remove.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Culled List",
+    "nick": "Li",
+    "info": "List without null values.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Culling Pattern",
+    "nick": "Cp",
+    "info": "The applied culling pattern.",
+    "type": "Boolean",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "Dispatch",
+  "fullTypeName": "Dispatch",
+  "guid": "00000000-35d2-4bca-8416-ce8b1bd505cc",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Dispatch",
+   "info": "Dispatch values to one of two outputs based on a boolean pattern.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Items",
+    "nick": "It",
+    "info": "Items to dispatch.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Pattern",
+    "nick": "Pt",
+    "info": "Dispatching pattern to apply.",
+    "type": "Boolean",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "True",
+    "nick": "A",
+    "info": "Destination output for all items matched up with a `true` pattern value.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "False",
+    "nick": "B",
+    "info": "Destination output for all items matched up with a `false` pattern value.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "ItemFromSite",
+  "fullTypeName": "ItemFromSite",
+  "guid": "00000000-9e88-429e-afbe-f8305823a92d",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Item From Site",
+   "info": "Find an item in a tree, based on its site.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 0,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree containing items.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "Site",
+    "nick": "Si",
+    "info": "Site of item to retrieve.",
+    "type": "Site",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Item",
+    "nick": "It",
+    "info": "The item at the given site.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Null",
+    "nick": "Nl",
+    "info": "Null state at the given site.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "ItemFromIndexObsolete",
+  "fullTypeName": "ItemFromIndexObsolete",
+  "guid": "00000000-3143-4f90-aefd-2a135a78475d",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Item From Index",
+   "info": "Find an item in a list, based on its index.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 0,
+   "rank": -1,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List of items.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Index",
+    "nick": "Ix",
+    "info": "Index of the item to be retrieved.",
+    "type": "Index",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Item",
+    "nick": "It",
+    "info": "The item at the given index.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Null",
+    "nick": "Nl",
+    "info": "Null state at the given index.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "ItemFromIndex",
+  "fullTypeName": "ItemFromIndex",
+  "guid": "00000000-93db-4e9b-b58d-69a782fba1fd",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Item From Index",
+   "info": "Find an item in a list, based on its index.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 0,
+   "rank": 173,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List of items.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Index",
+    "nick": "Ix",
+    "info": "Index of the item to be retrieved.",
+    "type": "Index",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Item",
+    "nick": "It",
+    "info": "The item at the given index.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "Merge",
+  "fullTypeName": "Merge",
+  "guid": "00000000-6887-4b93-adbe-081fb52095b4",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Merge",
+   "info": "Merge the values from several inputs into a single output.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [],
+  "outputs": [
+   {
+    "name": "Merged Data",
+    "nick": "Dt",
+    "info": "Combined data from all inputs.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "MetaFromIndex",
+  "fullTypeName": "MetaFromIndex",
+  "guid": "00000000-9d32-48d2-8d96-3ef5014ac844",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Meta From Index",
+   "info": "Find meta data in a list, based on its index.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 0,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List of value and meta pairs.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Index",
+    "nick": "Ix",
+    "info": "Index of item whose meta data to retrieve.",
+    "type": "Index",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Metadata",
+    "nick": "Md",
+    "info": "The meta data of the item at the given index.",
+    "type": "MetaData",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Null",
+    "nick": "Nl",
+    "info": "Null state of the meta data at the given index.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "MetaFromSite",
+  "fullTypeName": "MetaFromSite",
+  "guid": "00000000-cc65-4b96-a733-64f2298a8203",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Meta From Site",
+   "info": "Find meta data in a tree, based on its site.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 0,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree of value and meta pairs.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "Site",
+    "nick": "Si",
+    "info": "Site of meta data to retrieve.",
+    "type": "Site",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Metadata",
+    "nick": "Md",
+    "info": "The meta data of the item at the given site.",
+    "type": "MetaData",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Null",
+    "nick": "Nl",
+    "info": "Null state of the meta data at the given site.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "RandomReduce",
+  "fullTypeName": "RandomReduce",
+  "guid": "00000000-9c01-459a-a57f-ee8ab61629db",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Random Reduce",
+   "info": "Randomly remove a set number of elements from a list.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 11,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List whose items to cull.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Remove",
+    "nick": "Rm",
+    "info": "Optional number of items to remove. If unspecified, the `Retain` input must be set.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Retain",
+    "nick": "Rt",
+    "info": "Optional number of items to retain. If unspecified, the `Remove` input must be set.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Random engine used for removal.",
+    "nick": "",
+    "info": "",
+    "type": "Random",
+    "access": null,
+    "requirement": null
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Culled List",
+    "nick": "Li",
+    "info": "List without the culled items.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Culling Pattern",
+    "nick": "Cp",
+    "info": "The applied culling pattern.",
+    "type": "Boolean",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "RandomSelect",
+  "fullTypeName": "RandomSelect",
+  "guid": "00000000-be27-457f-8451-2e332d7f34da",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Random Select",
+   "info": "Randomly select a number of elements from a list.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 11,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List of items to select from.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Count",
+    "nick": "Cn",
+    "info": "Number of items to select.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Random engine used for selection.",
+    "nick": "",
+    "info": "",
+    "type": "Random",
+    "access": null,
+    "requirement": null
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Selected Items",
+    "nick": "Li",
+    "info": "List of randomly selected items.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Selected Indices",
+    "nick": "Ix",
+    "info": "Indices of randomly selected items.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "Sift",
+  "fullTypeName": "Sift",
+  "guid": "00000000-4379-47e1-ba0f-7e0dcec87c40",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Sift",
+   "info": "Sift a list of items using an output index pattern. This component functions as the inverse of the Combine component. The Sift and Combine components are the preferred tools for conditional logic in Grasshopper.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 1,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to sift.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Pattern",
+    "nick": "Pt",
+    "info": "Sifting pattern to apply.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "TwigFromIndex",
+  "fullTypeName": "TwigFromIndex",
+  "guid": "00000000-3554-4bdf-bf74-b64b5ec340fb",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "List From Index",
+   "info": "Find a list, or 'twig', based on its index within a tree.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 0,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree of items.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "Index",
+    "nick": "Ix",
+    "info": "Index of the list to be retrieved.",
+    "type": "Index",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "The list at the given index.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "TwigFromPath",
+  "fullTypeName": "TwigFromPath",
+  "guid": "00000000-3b56-491d-8896-d1b14c67b0ae",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "List From Path",
+   "info": "Find a list, or 'twig', based on its path within a tree.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 0,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree of items.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "Path",
+    "nick": "Pt",
+    "info": "Path of the list to be retrieved.",
+    "type": "Path",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "The list at the given path.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "ChurnList",
+  "fullTypeName": "ChurnList",
+  "guid": "00000000-fb66-4b5c-b075-464d5d44949b",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Churn",
+   "info": "Randomly and cyclically shuffle the order of items in a list.",
+   "chapter": "Data",
+   "section": "Order",
+   "slot": 3,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to churn.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Vigour",
+    "nick": "Vg",
+    "info": "Churning vigour. Zero means no shuffling at all, one equals total randomisation.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Random engine to use for churning.",
+    "nick": "",
+    "info": "",
+    "type": "Random",
+    "access": null,
+    "requirement": null
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Li",
+    "info": "Churned list.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Index Map",
+    "nick": "Mp",
+    "info": "Index map containing the changes applied to the list.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "CombineIndexMaps",
+  "fullTypeName": "CombineIndexMaps",
+  "guid": "00000000-89ff-45b9-8fea-9dc49fea908d",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Combine Maps",
+   "info": "Combine two or more index maps into a single map.",
+   "chapter": "Data",
+   "section": "Order",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [],
+  "outputs": [
+   {
+    "name": "Combined Map",
+    "nick": "Pm",
+    "info": "Combined index map.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "CrossingPairs",
+  "fullTypeName": "CrossingPairs",
+  "guid": "00000000-2cb2-4a4b-8ab7-040ac61fe4a2",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Crossing Pairs",
+   "info": "Create pairs out of the elements of a given list.",
+   "chapter": "Data",
+   "section": "Order",
+   "slot": 6,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List whose elements to pair up.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Pairing",
+    "nick": "Pr",
+    "info": "Pairing mechanism to apply.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Omit Nulls",
+    "nick": "On",
+    "info": "If true, omit any pairs containing null elements.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Primary Items",
+    "nick": "P1",
+    "info": "List containing the primary elements of all pairs.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Secondary Items",
+    "nick": "P2",
+    "info": "List containing the secondary elements of all pairs.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "CrossReference",
+  "fullTypeName": "CrossReference",
+  "guid": "00000000-bca1-4949-9460-d5b60c810eec",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Cross Reference",
+   "info": "Cross reference values in multiple lists with each other.",
+   "chapter": "Data",
+   "section": "Order",
+   "slot": 6,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "",
+    "nick": "",
+    "info": "",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "",
+    "nick": "",
+    "info": "",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Pairing",
+    "nick": "Pr",
+    "info": "Pairing mechanism to apply.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Groups",
+    "nick": "Gr",
+    "info": "Groups consisting of all cross-references value combinations.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "CycleList",
+  "fullTypeName": "CycleList",
+  "guid": "00000000-13f7-4289-9397-9f280756ac3f",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Cycle",
+   "info": "Cycle the items in a list by shifting them forwards or backwards.",
+   "chapter": "Data",
+   "section": "Order",
+   "slot": 3,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to cycle.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Offset",
+    "nick": "Of",
+    "info": "Number of steps in the cycling process. Negative offsets move items backwards.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Li",
+    "info": "Cycled list.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Index Map",
+    "nick": "Mp",
+    "info": "Index map containing the changes applied to the list.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "IdentityIndexMap",
+  "fullTypeName": "IdentityIndexMap",
+  "guid": "00000000-3fe5-45b0-8e70-37f7d3ae8fe1",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Identity Map",
+   "info": "Create an identity index mapping for a list of a given length.",
+   "chapter": "Data",
+   "section": "Order",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Length",
+    "nick": "Ln",
+    "info": "Length of map. Negative lengths yield an index map which reverses the order of a list.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Identity Map",
+    "nick": "Mp",
+    "info": "Indentity index map.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "InvertIndexMap",
+  "fullTypeName": "InvertIndexMap",
+  "guid": "00000000-9f06-4d70-b7c8-762692d939a5",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Invert Map",
+   "info": "Invert an index map. An inverted map undoes the changes indicated by the original map.",
+   "chapter": "Data",
+   "section": "Order",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Map",
+    "nick": "Mp",
+    "info": "Index map to invert.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Inverted Map",
+    "nick": "Pm",
+    "info": "Inverted index map.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "MapItems",
+  "fullTypeName": "MapItems",
+  "guid": "00000000-09f4-4421-854d-31e5ed65b8f9",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Map Items",
+   "info": "Reorder the items in a list as indicated by an index map.",
+   "chapter": "Data",
+   "section": "Order",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to reorder.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Map",
+    "nick": "Mp",
+    "info": "Index map.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Li",
+    "info": "Reordered list.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "MoveToEnd",
+  "fullTypeName": "MoveToEnd",
+  "guid": "00000000-b7b0-44aa-b04c-71d0a1fdae7e",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Move To End",
+   "info": "Move indicated items to the end of a list.",
+   "chapter": "Data",
+   "section": "Order",
+   "slot": 5,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to modify.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Indices",
+    "nick": "Ix",
+    "info": "Indices of the items to be moved to the end of the list.",
+    "type": "Index",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Li",
+    "info": "Modified list.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Index Map",
+    "nick": "Mp",
+    "info": "Index map containing the changes applied to the list.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "MoveToStart",
+  "fullTypeName": "MoveToStart",
+  "guid": "00000000-3e6d-4336-b72e-23d3bd71b7fe",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Move To Start",
+   "info": "Move indicated items to the start of a list.",
+   "chapter": "Data",
+   "section": "Order",
+   "slot": 5,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to modify.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Indices",
+    "nick": "Ix",
+    "info": "Indices of the items to be moved to the start of the list.",
+    "type": "Index",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Li",
+    "info": "Modified list.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Index Map",
+    "nick": "Mp",
+    "info": "Index map containing the changes applied to the list.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "OffsetPairs",
+  "fullTypeName": "OffsetPairs",
+  "guid": "00000000-1759-4ac1-9bb2-a51b483f567e",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Offset Pairs",
+   "info": "Pair up items in a given list based on an index offset.",
+   "chapter": "Data",
+   "section": "Order",
+   "slot": 6,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List whose items to pair up.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "First Offset",
+    "nick": "F1",
+    "info": "Offset of primary items. Positive offsets remove the leading items, while negative offsets remove the trailing items.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Second Offset",
+    "nick": "F2",
+    "info": "Offset of secondary items. Positive offsets remove the leading items, while negative offsets remove the trailing items.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Primary Items",
+    "nick": "L1",
+    "info": "List containing the primary elements of all pairs.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Secondary Items",
+    "nick": "L2",
+    "info": "List containing the secondary elements of all pairs.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "ReverseList",
+  "fullTypeName": "ReverseList",
+  "guid": "00000000-ef5a-4d61-b822-84bfbe046f5b",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Reverse",
+   "info": "Reverse the items in a list by inverting their order.",
+   "chapter": "Data",
+   "section": "Order",
+   "slot": 3,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to reverse.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Li",
+    "info": "Reversed list.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "ShakeList",
+  "fullTypeName": "ShakeList",
+  "guid": "00000000-7df0-4022-af8a-09443e76dec6",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Shake",
+   "info": "Randomly shuffle the order of items in a list.",
+   "chapter": "Data",
+   "section": "Order",
+   "slot": 3,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to shake.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Vigour",
+    "nick": "Vg",
+    "info": "Shaking vigour. Zero means no shuffling at all, one equals total randomisation.",
+    "type": "Number",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Random engine used for shaking.",
+    "nick": "",
+    "info": "",
+    "type": "Random",
+    "access": null,
+    "requirement": null
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Li",
+    "info": "Shaken list.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Index Map",
+    "nick": "Mp",
+    "info": "Index map containing the changes applied to the list.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "Sort",
+  "fullTypeName": "Sort",
+  "guid": "00000000-7058-4EED-BD85-F94A9F89F2C0",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Sort",
+   "info": "Sort the values in a list based on their intrinsic sorting order.",
+   "chapter": "Data",
+   "section": "Order",
+   "slot": 1,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to sort.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Sorted List",
+    "nick": "Li",
+    "info": "Sorted list.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Index Map",
+    "nick": "Mp",
+    "info": "Index map containing the changes applied to the list.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "SortByNumber",
+  "fullTypeName": "SortByNumber",
+  "guid": "00000000-3181-486b-93f8-48ee14ce5c35",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Sort By Number",
+   "info": "Reorder values based on a given numeric sorting order.",
+   "chapter": "Data",
+   "section": "Order",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Keys",
+    "nick": "Ky",
+    "info": "Numeric sorting keys.",
+    "type": "Numeric",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Sorted Keys",
+    "nick": "Ky",
+    "info": "Sorted keys.",
+    "type": "Numeric",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "SortByText",
+  "fullTypeName": "SortByText",
+  "guid": "00000000-e867-4eb0-aa38-ecd7020de44c",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Sort By Text",
+   "info": "Reorder values based on a given textual sorting order.",
+   "chapter": "Data",
+   "section": "Order",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Keys",
+    "nick": "Ky",
+    "info": "Textual sorting keys.",
+    "type": "Text",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Sorted Keys",
+    "nick": "Ky",
+    "info": "Sorted keys.",
+    "type": "Text",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "SortingKey",
+  "fullTypeName": "SortingKey",
+  "guid": "00000000-48d1-4ebd-95ba-c5e4f3e714a2",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Sorting Key",
+   "info": "Extract the sorting key of a given value. When collections contain differing or unknown types, items are sorted according to these keys, rather than type specific comparisons.",
+   "chapter": "Data",
+   "section": "Order",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Value",
+    "nick": "Vl",
+    "info": "Value whose sorting key to extract.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Sorting Key",
+    "nick": "Sk",
+    "info": "Sorting key.",
+    "type": "Text",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Key Fragments",
+    "nick": "Fr",
+    "info": "Alternating textual and numeric fragments of the key.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "SwapItems",
+  "fullTypeName": "SwapItems",
+  "guid": "00000000-6a52-43a9-80d9-ff274d07e785",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Swap Items",
+   "info": "Swap the places of items in a list, pair by pair.",
+   "chapter": "Data",
+   "section": "Order",
+   "slot": 5,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List whose items to swap.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Index A",
+    "nick": "Ia",
+    "info": "First index of each swapping pair.",
+    "type": "Index",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Index B",
+    "nick": "Ib",
+    "info": "Second index of each swapping pair.",
+    "type": "Index",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Li",
+    "info": "Modified list.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Index Map",
+    "nick": "Mp",
+    "info": "Index map containing the changes applied to the list.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "BracketList",
+  "fullTypeName": "BracketList",
+  "guid": "00000000-e15e-43df-a07b-898102e90e1a",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Bracket List",
+   "info": "Insert a value at the start or the end of a list, or both.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Prepend",
+    "nick": "Vs",
+    "info": "Optional value to add to the start of the list.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to bracket.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Append",
+    "nick": "Ve",
+    "info": "Optional value to add to the end of the list.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Li",
+    "info": "Bracketed list.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "ExpandList",
+  "fullTypeName": "ExpandList",
+  "guid": "00000000-97e9-41db-8ff9-0a49b27bd09c",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Expand",
+   "info": "Lengthen a list by repeating its items according to a specified repetition method.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to expand.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Target",
+    "nick": "Tn",
+    "info": "Number of items after expansion.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Method",
+    "nick": "Me",
+    "info": "Item repetition method.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Li",
+    "info": "Expanded list with repeated items.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "FragmentList",
+  "fullTypeName": "FragmentList",
+  "guid": "00000000-9957-4829-a67d-b09ef365014e",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Fragment List",
+   "info": "Break a list of items into consecutive fragments at specified indices.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to fragment.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Indices",
+    "nick": "Ix",
+    "info": "Fragmentation indices.",
+    "type": "Index",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Method",
+    "nick": "Mt",
+    "info": "Fragmentation method.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Fragments",
+    "nick": "Fr",
+    "info": "Fragments of the input list.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "InsertIntoList",
+  "fullTypeName": "InsertIntoList",
+  "guid": "00000000-4309-4d30-b44f-56af12fd02a5",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Insert Into List",
+   "info": "Insert values into a list at indexed locations.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to modify.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Items",
+    "nick": "It",
+    "info": "Values to insert. If not specified, nulls will be inserted.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Indices",
+    "nick": "Ix",
+    "info": "Insertion indices for each item. The indices refer to positions in the original list.",
+    "type": "Index",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Li",
+    "info": "List with inserted items.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "ListLength",
+  "fullTypeName": "ListLength",
+  "guid": "00000000-d625-472d-b6e9-04aa3c32c5cc",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "List Length",
+   "info": "Count the number of items contained in a list, including all null values.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 0,
+   "rank": 43,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List whose items to count.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Length",
+    "nick": "N",
+    "info": "Total number of values and nulls in the list.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "ListStatistics",
+  "fullTypeName": "ListStatistics",
+  "guid": "00000000-cf88-4daf-97c6-d6c779d81930",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "List Statistics",
+   "info": "Measure various statistics of the items contained in a list.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 0,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to analyse.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Length",
+    "nick": "N",
+    "info": "Total number of items in the list.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Values",
+    "nick": "V",
+    "info": "Number of actual, non-null values in the list.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Nulls",
+    "nick": "Ø",
+    "info": "Number of nulls in the list.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Metas",
+    "nick": "M",
+    "info": "Number of values with associated meta data.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "LongestList",
+  "fullTypeName": "LongestList",
+  "guid": "00000000-360e-41f5-bf4b-b5331275ebd1",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Longest List",
+   "info": "Expand lists in a collection until they are all equally long.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 5,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "il",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "PartitionList",
+  "fullTypeName": "PartitionList",
+  "guid": "00000000-aa32-43fb-a8f8-d6cc344eec67",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Partition List",
+   "info": "Divide a list into consecutive shorter lists, using a specified pattern.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to partition.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Partition Pattern",
+    "nick": "Pp",
+    "info": "Lengths of partitioned segments.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Segments",
+    "nick": "Sg",
+    "info": "Consecutive parts of the original list.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "Permutations",
+  "fullTypeName": "Permutations",
+  "guid": "00000000-ec4e-4616-98b1-cbb7ff9291de",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Permutations",
+   "info": "Create various permutations of a list.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to permute.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Limit",
+    "nick": "Lm",
+    "info": "Maximum number of permutations to generate.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Random",
+    "nick": "Rd",
+    "info": "Optional random engine to use for permutation ordering.",
+    "type": "Random",
+    "access": "item",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Permutations",
+    "nick": "Pm",
+    "info": "Tree containing permutations of the input list.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   },
+   {
+    "name": "Count",
+    "nick": "Cn",
+    "info": "Number of unique permutations generated.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "PickAndMix",
+  "fullTypeName": "PickAndMix",
+  "guid": "00000000-0744-40a0-a3ab-110e04ff705d",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Pick And Mix",
+   "info": "Build a list by picking items one at a time from two or more input lists.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Pattern",
+    "nick": "Pt",
+    "info": "Picking pattern. Each integer in this pattern specifies from which input list the next item is picked. The output will contain as many items as there are elements in the pattern.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "",
+    "nick": "",
+    "info": "",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "",
+    "nick": "",
+    "info": "",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List with individually picked items.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "PickOrOmit",
+  "fullTypeName": "PickOrOmit",
+  "guid": "00000000-3453-4135-9c36-03bdbc547928",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Pick And Omit",
+   "info": "Build a list by picking from competing items in two or more input lists.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Pattern",
+    "nick": "Pt",
+    "info": "Picking pattern. Each integer in this pattern specifies from which input list the next item is picked. The output will contain as many items as there are elements in the pattern.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "",
+    "nick": "",
+    "info": "",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "",
+    "nick": "",
+    "info": "",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List with individually picked items.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "PunchList",
+  "fullTypeName": "PunchList",
+  "guid": "00000000-d49a-4752-89b2-23007f9126c2",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Punch List",
+   "info": "Exclude a contiguous set of items from a list.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to punch.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "First Index",
+    "nick": "Ia",
+    "info": "Index of first value to be excluded.",
+    "type": "Index",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Second Index",
+    "nick": "Ib",
+    "info": "Index of last value to be excluded.",
+    "type": "Index",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Punched List",
+    "nick": "Li",
+    "info": "List containing only the items before and after the excluded range.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "RelativeItem",
+  "fullTypeName": "RelativeItem",
+  "guid": "00000000-f625-4523-9d48-cb3918f3431a",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Relative Item",
+   "info": "Select pairs of items from the same tree using an offset pattern.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 30,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree to pick from.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "Offset Pattern",
+    "nick": "Of",
+    "info": "Offset pattern for path elements and item indices.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Wrap Paths",
+    "nick": "Wp",
+    "info": "Wrap offset path elements when they exceed path limits.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Wrap Items",
+    "nick": "Wi",
+    "info": "Wrap offset item indices when they exceed list limits.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Skip Singletons",
+    "nick": "Sk",
+    "info": "Skip pairs with only a single defined element.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Item A",
+    "nick": "A",
+    "info": "First item in each pair.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   },
+   {
+    "name": "Item B",
+    "nick": "B",
+    "info": "Second item in each pair.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "RelativeItems",
+  "fullTypeName": "RelativeItems",
+  "guid": "00000000-8d07-415a-8ba8-e452351d4cf2",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Relative Items",
+   "info": "Select pairs of items from different trees using an offset pattern.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 30,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "First Tree",
+    "nick": "T1",
+    "info": "First tree to pick from.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "Second Tree",
+    "nick": "T2",
+    "info": "Second tree to pick from.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "Offset Pattern",
+    "nick": "Of",
+    "info": "Offset pattern for path elements and item indices.",
+    "type": "Text",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Wrap Paths",
+    "nick": "Wp",
+    "info": "Wrap offset path elements when they exceed path limits.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Wrap Items",
+    "nick": "Wi",
+    "info": "Wrap offset item indices when they exceed list limits.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Skip Singletons",
+    "nick": "Sk",
+    "info": "Skip pairs with only a single defined element.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Item A",
+    "nick": "A",
+    "info": "First item in each pair, picked from the first tree.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   },
+   {
+    "name": "Item B",
+    "nick": "B",
+    "info": "Second item in each pair, picked from the second tree.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "RepeatItems",
+  "fullTypeName": "RepeatItems",
+  "guid": "00000000-6c92-4555-937e-e9fb759b5e4b",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Repeat Items",
+   "info": "Repeat the items in a list a fixed number of times.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Items",
+    "nick": "It",
+    "info": "Items to repeat.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Repetitions",
+    "nick": "Re",
+    "info": "Number of times to repeat each item.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Repeat List",
+    "nick": "Rl",
+    "info": "If true, the list as a whole is repeated, keeping the ordering of items mostly intact.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Li",
+    "info": "List with repeated items.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "RepeatItems_Obsolete",
+  "fullTypeName": "RepeatItems_Obsolete",
+  "guid": "00000000-53a0-44f1-b6e2-72ad94568855",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Repeat Items",
+   "info": "Repeat the items in a list a fixed number of times.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 1,
+   "rank": -1,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Items",
+    "nick": "It",
+    "info": "Items to repeat.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Repetitions",
+    "nick": "Re",
+    "info": "Number of times to repeat each item.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Li",
+    "info": "List with repeated items.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "RepeatList",
+  "fullTypeName": "RepeatList",
+  "guid": "00000000-b5e0-46d4-b681-f7ab61e9f8a9",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Repeat List",
+   "info": "Repeat a list until a given new length is reached.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 1,
+   "rank": -1,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to repeat.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Target Length",
+    "nick": "Ln",
+    "info": "Target length of repeated list.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Rule",
+    "nick": "Ru",
+    "info": "Repeating rule.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Li",
+    "info": "Repeated list.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "ReplaceItems",
+  "fullTypeName": "ReplaceItems",
+  "guid": "00000000-11d9-4337-b6cf-7d952d1bcd2a",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Replace Indices",
+   "info": "Replace items in a list by index.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List whose items to replace.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Indices",
+    "nick": "Ix",
+    "info": "Indices of items to replace.",
+    "type": "Index",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Replacements",
+    "nick": "Rp",
+    "info": "Replacing values. If not specified, the items will be replaced with nulls.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Modified List",
+    "nick": "Li",
+    "info": "List with replaced items.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "ReplaceNulls",
+  "fullTypeName": "ReplaceNulls",
+  "guid": "00000000-aa54-4348-a25e-d9bb116246b7",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Replace Nulls",
+   "info": "Replace all the nulls in a list.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List with nulls to replace.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Replacement",
+    "nick": "Rp",
+    "info": "Optional replacement value.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Method",
+    "nick": "Mt",
+    "info": "Replacement method.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Repaired List",
+    "nick": "Li",
+    "info": "List with replaced nulls.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Replacement Count",
+    "nick": "Rn",
+    "info": "Number of replacements.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "ReplacePaths",
+  "fullTypeName": "ReplacePaths",
+  "guid": "00000000-3d30-4e33-a3c2-e662445f94cc",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Replace Paths",
+   "info": "Replace some or all paths in a tree.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 40,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree whose paths to replace.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "Search",
+    "nick": "Pa",
+    "info": "Paths to replace. If omitted, all paths in the tree are replaced one by one.",
+    "type": "Path",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Replace",
+    "nick": "Pb",
+    "info": "Replacement paths.",
+    "type": "Path",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Modified Tree",
+    "nick": "Tr",
+    "info": "Tree with replaced paths.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "ResizeList",
+  "fullTypeName": "ResizeList",
+  "guid": "00000000-0713-4f8c-ac75-04d7179ee324",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Resize List",
+   "info": "Resize a list by repeating its items until a given length is reached.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to resize.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Target Length",
+    "nick": "Ln",
+    "info": "Target length of resized list.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Rule",
+    "nick": "Ru",
+    "info": "Repeating rule.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Repeat List",
+    "nick": "Rl",
+    "info": "If true, the list as a whole is repeated, keeping the ordering of items mostly intact.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Li",
+    "info": "Resized list.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "ShortestList",
+  "fullTypeName": "ShortestList",
+  "guid": "00000000-aa25-4ca3-8c81-f0005fb79e77",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Shortest List",
+   "info": "Shrink lists in a collection until they are all equally short.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 5,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [],
+  "outputs": [],
+  "resolve": {
+   "nomen": "il",
+   "ports": "failed"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "ShrinkList",
+  "fullTypeName": "ShrinkList",
+  "guid": "00000000-36a0-4a45-9106-5c7a93e346f5",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Shrink",
+   "info": "Shorten a list by removing items according to a specified culling method.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 1,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to shrink.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Target",
+    "nick": "Tn",
+    "info": "Number of items after shrinking.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Method",
+    "nick": "Me",
+    "info": "Item removal method.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Li",
+    "info": "Shrunk list containing fewer items.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "SnipList",
+  "fullTypeName": "SnipList",
+  "guid": "00000000-9aae-4390-8d33-530efd4b9e10",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Snip List",
+   "info": "Shorten a list by removing leading and/or trailing items.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 2,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to snip.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Start",
+    "nick": "Bg",
+    "info": "Number of items to remove from the beginning of the list.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "End",
+    "nick": "En",
+    "info": "Number of items to remove from the end of the list.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Li",
+    "info": "Snipped list.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "SplitList",
+  "fullTypeName": "SplitList",
+  "guid": "00000000-b269-440e-acfc-2c342f145153",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Split List",
+   "info": "Split a list of items into two parts at a specified index.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 2,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to split.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Index",
+    "nick": "Ix",
+    "info": "Index of first item in the second output list.",
+    "type": "Index",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "First List",
+    "nick": "A",
+    "info": "The portion of the original list that comes before the splitting index.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Second List",
+    "nick": "B",
+    "info": "The portion of the original list starting at the splitting index.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "SplitTree",
+  "fullTypeName": "SplitTree",
+  "guid": "00000000-49ab-43b6-bd0a-2788c0b99feb",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Split Tree",
+   "info": "Separate all items in a tree based on whether or not they pass path or index rules.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 30,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree to split.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "Splitting Rules",
+    "nick": "Rs",
+    "info": "Splitting rules to apply to all items in the tree.",
+    "type": "Text",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "Insert Nulls",
+    "nick": "Nu",
+    "info": "Insert nulls whenever an item is assigned to the other output.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Positive",
+    "nick": "Ps",
+    "info": "All items in the tree which match at least one splitting pattern.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   },
+   {
+    "name": "Negative",
+    "nick": "Ng",
+    "info": "All items in the tree which match none of the splitting patterns.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "StackItems",
+  "fullTypeName": "StackItems",
+  "guid": "00000000-698a-4508-8bd3-729073ce6982",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Stack Items",
+   "info": "Duplicate items in a list a given a number of times.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Items",
+    "nick": "It",
+    "info": "Items to repeat.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Stacking Pattern",
+    "nick": "Pt",
+    "info": "Number of times to repeat each item.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Result",
+    "nick": "Li",
+    "info": "Stacked list.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "SubList",
+  "fullTypeName": "SubList",
+  "guid": "00000000-c203-4d68-8234-e73b27c25ff4",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Sub List",
+   "info": "Extract from a list a section bounded by indices.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 2,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to copy from.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "First Index",
+    "nick": "Ia",
+    "info": "Index of the first value in the resulting sub list.",
+    "type": "Index",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Second Index",
+    "nick": "Ib",
+    "info": "Index of the last value in the resulting sub list.",
+    "type": "Index",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Sub List",
+    "nick": "Li",
+    "info": "The portion of the original list between, and including, the bounding indices.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "TreePaths",
+  "fullTypeName": "TreePaths",
+  "guid": "00000000-5ac8-4305-a423-9a553dd07d15",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Tree Paths",
+   "info": "Extract all the paths in a data tree.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 40,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree whose paths to extract.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Paths",
+    "nick": "Ps",
+    "info": "All the paths in the tree.",
+    "type": "Path",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Simplified Paths",
+    "nick": "Ss",
+    "info": "All the paths, but in simplified form.",
+    "type": "Path",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "Weave",
+  "fullTypeName": "Weave",
+  "guid": "00000000-1d5c-45f3-aeef-96c2e52c4526",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Weave",
+   "info": "Weave a list by interspersing values from two or more input lists in a particular repeating pattern.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Pattern",
+    "nick": "Pt",
+    "info": "Weaving pattern. Each integer in this pattern specifies from which input list the next item is picked.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Rule",
+    "nick": "Ru",
+    "info": "Rule for stopping the weave.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "",
+    "nick": "",
+    "info": "",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "",
+    "nick": "",
+    "info": "",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List of woven items.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "AllTreeSites",
+  "fullTypeName": "AllTreeSites",
+  "guid": "00000000-2709-4bbf-9a2a-22264c03cabe",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "All Tree Sites",
+   "info": "Harvest all the sites of a data tree.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 50,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree whose sites to harvest.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Sites",
+    "nick": "St",
+    "info": "All the sites contained within the tree, with original topology.",
+    "type": "Site",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "CleanTree",
+  "fullTypeName": "CleanTree",
+  "guid": "00000000-0309-4c2c-814a-0ca512701d35",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Clean Tree",
+   "info": "Clean a data tree by nulls, invalid items and empty twigs.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree to clean.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "Remove Nulls",
+    "nick": "Nn",
+    "info": "If true, null values are removed from all twigs.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Remove Invalids",
+    "nick": "Xx",
+    "info": "If true, invalid values are removed from all twigs.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Remove Empty",
+    "nick": "Oo",
+    "info": "If true, twigs with no leaves are removed.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Cleaned tree.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   },
+   {
+    "name": "Twig Difference",
+    "nick": "Dt",
+    "info": "Number of twigs that were removed.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Item Difference",
+    "nick": "Di",
+    "info": "Number of items and nulls that were removed.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "DecodeIndex",
+  "fullTypeName": "DecodeIndex",
+  "guid": "00000000-fbf6-4edc-871b-b0b4aff2ad3f",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Decode Index",
+   "info": "Reorder items in a list based on their `Data.Index` meta data.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 11,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Items",
+    "nick": "It",
+    "info": "List of items to be reordered.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Nulls",
+    "nick": "Nl",
+    "info": "Insert nulls into index gaps.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Omit",
+    "nick": "Om",
+    "info": "Omit items without `Data.Index` meta data.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List with restored ordering.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "DecodeSites",
+  "fullTypeName": "DecodeSites",
+  "guid": "00000000-a664-4d8d-92df-c70d16b00bce",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Decode Sites",
+   "info": "Harvest the `Data.Path` and `Data.Index` meta data from all items and recreate the implied tree.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 60,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Items",
+    "nick": "It",
+    "info": "Items to decode.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Decoded tree.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "DissectPath",
+  "fullTypeName": "DissectPath",
+  "guid": "00000000-7dca-4d70-96d7-436c7693b7df",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Dissect Path",
+   "info": "Extract the elements of a data tree path.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 40,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Path",
+    "nick": "Pa",
+    "info": "Original path.",
+    "type": "Path",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Elements",
+    "nick": "El",
+    "info": "Path elements.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "EncodeIndex",
+  "fullTypeName": "EncodeIndex",
+  "guid": "00000000-d55d-4728-b7bd-339c6d1b3c02",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Encode Index",
+   "info": "Assign the `Data.Index` meta data to all items in each list based on their current position.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 11,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List whose items to encode.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List with index-encoded items.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "EncodeSites",
+  "fullTypeName": "EncodeSites",
+  "guid": "00000000-f4f6-4492-81e4-83894bc25e6c",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Encode Sites",
+   "info": "Assign `Data.Path` and `Data.Index` meta data to all items in a tree based on their current position.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 60,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree to encode.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree with site-encoded items.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "Entwine",
+  "fullTypeName": "Entwine",
+  "guid": "00000000-9737-43b8-83bc-a52d766693ae",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Entwine",
+   "info": "Combine inputs into a single output tree using a variety of mechanisms.",
+   "chapter": "Data",
+   "section": "Filter",
+   "slot": 1,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [],
+  "outputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Entwined tree.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "ExplodeTree",
+  "fullTypeName": "ExplodeTree",
+  "guid": "00000000-82a4-4451-8762-fae5d140f6df",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Explode Tree",
+   "info": "Explode a tree and redirect each resulting list to a separate output.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 60,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree to explode.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "may-be-missing"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "-",
+    "nick": "ud83eudde8",
+    "info": "This output is not matched to any twig in the tree.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "-",
+    "nick": "ud83cudf33",
+    "info": "This output is not matched to any twig in the tree.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "FindValues",
+  "fullTypeName": "FindValues",
+  "guid": "00000000-446b-4da6-b077-40eef35d3cb1",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Find Values",
+   "info": "Find all indices where a specific value occurs in a list.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to search.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Find",
+    "nick": "Fi",
+    "info": "Value to search for.",
+    "type": "Generic",
+    "access": "item",
+    "requirement": "may-be-null"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Indices",
+    "nick": "Ix",
+    "info": "Indices of all items which match the search value.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Count",
+    "nick": "Cn",
+    "info": "Number of matching values.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "FlattenTree",
+  "fullTypeName": "FlattenTree",
+  "guid": "00000000-0c68-49c2-86dd-be1caecaa465",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Flatten Tree",
+   "info": "Flatten a tree by moving all its items into a single list.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 20,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree to flatten.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "Path",
+    "nick": "Pa",
+    "info": "Flattening path.",
+    "type": "Path",
+    "access": "tree",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Flattened tree.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "FlipTree",
+  "fullTypeName": "FlipTree",
+  "guid": "00000000-8d25-4904-b556-94a981495ab2",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Flip Tree",
+   "info": "Flip a tree by swapping one of the numbers in the path of each item, with that item's list index. When the tree represents a simple table, this has the effect of flipping rows and columns.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 20,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree to flip.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "Path Number Index",
+    "nick": "Pi",
+    "info": "Index of number within each path to be replaced with the item list index.",
+    "type": "Index",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Flipped tree.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "GraftByKey",
+  "fullTypeName": "GraftByKey",
+  "guid": "00000000-a7a9-4f57-a120-fc0b74bfb7e6",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Graft By Key",
+   "info": "Graft all lists in a tree by moving values with shared keys into their own lists.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 20,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Lists",
+    "nick": "Ls",
+    "info": "Lists to graft.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Keys",
+    "nick": "Ks",
+    "info": "Keys for item grouping.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Grafted tree.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "GraftTree",
+  "fullTypeName": "GraftTree",
+  "guid": "00000000-8471-4f10-bc34-1ae10041e8b4",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Graft Tree",
+   "info": "Graft a tree by moving each value into its own list.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 20,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree to graft.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Grafted tree.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "IncrementalTree",
+  "fullTypeName": "IncrementalTree",
+  "guid": "00000000-196f-4094-86a9-c537ea2715d7",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Incremental Tree",
+   "info": "Simplify the topology of a tree by restarting all path discontinuities at zero.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree to simplify.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Simplified, incremental tree.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "PathFromElements",
+  "fullTypeName": "PathFromElements",
+  "guid": "00000000-24ee-4990-8e38-9f860c8e8f25",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Path From Elements",
+   "info": "Create a data tree path out of integer elements.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 40,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Elements",
+    "nick": "El",
+    "info": "Path elements.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Path",
+    "nick": "Pa",
+    "info": "Created path.",
+    "type": "Path",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "PathFromTree",
+  "fullTypeName": "PathFromTree",
+  "guid": "00000000-ded8-4c8c-a775-4fe4eb05e810",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Path From Tree",
+   "info": "Extract a specified path from a data tree.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 40,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree for path extraction.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Path Index",
+    "nick": "Pi",
+    "info": "Index of path to extract.",
+    "type": "Index",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Path",
+    "nick": "Pa",
+    "info": "Path at given index.",
+    "type": "Path",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "PruneTree",
+  "fullTypeName": "PruneTree",
+  "guid": "00000000-d603-445e-9fff-ccf256bda947",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Prune Tree",
+   "info": "Prune a data tree by removing short or long branches.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree to prune.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "Short Limit",
+    "nick": "Sh",
+    "info": "Optional lower limit. Twigs with this many leaves or fewer will be removed.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Long Limit",
+    "nick": "Ln",
+    "info": "Optional upper limit. Twigs with this many leaves or more will be removed.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "may-be-missing"
+   },
+   {
+    "name": "Count Values",
+    "nick": "Cv",
+    "info": "If true, only the non-null values are counted in each twig.",
+    "type": "Boolean",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Pruned tree.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "RenumberTree",
+  "fullTypeName": "RenumberTree",
+  "guid": "00000000-0b28-4a70-a9d5-ff7d6844fb95",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Renumber Tree",
+   "info": "Modify the topology of a tree by incrementally renumbering all paths.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree to renumber.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "First Path",
+    "nick": "Fp",
+    "info": "Start value for renumbering.",
+    "type": "Integer",
+    "access": "tree",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Renumbered tree.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "ReplaceSites",
+  "fullTypeName": "ReplaceSites",
+  "guid": "00000000-2964-4af8-88ae-47e5330e188d",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Replace Sites",
+   "info": "Replace items in a tree.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 50,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree whose items to replace.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "Sites",
+    "nick": "St",
+    "info": "Sites of tree items to be replaced.",
+    "type": "Site",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Replacements",
+    "nick": "Rp",
+    "info": "Replacing values.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Modified Tree",
+    "nick": "Tr",
+    "info": "Tree with replaced items.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "ReplaceValues",
+  "fullTypeName": "ReplaceValues",
+  "guid": "00000000-dd8a-48b0-87d4-09a9f574c363",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Replace Values",
+   "info": "Replace values in a list with other values.",
+   "chapter": "Data",
+   "section": "List",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "List",
+    "nick": "Li",
+    "info": "List to modify.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Find",
+    "nick": "Fi",
+    "info": "Values to replace.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   },
+   {
+    "name": "Replace",
+    "nick": "Re",
+    "info": "Replacement values.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Modified List",
+    "nick": "Li",
+    "info": "List with replaced items.",
+    "type": "Generic",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "Count",
+    "nick": "Cn",
+    "info": "Number of replacements.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "SimplifyTree",
+  "fullTypeName": "SimplifyTree",
+  "guid": "00000000-b818-466e-b205-1992ee534430",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Simplify Tree",
+   "info": "Simplify the topology of a tree by removing the elements shared by all paths.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree to simplify.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "Alignment",
+    "nick": "Al",
+    "info": "Path alignment in case of differently sized paths.",
+    "type": "Enum",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Simplified tree.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "SiteFromIndex",
+  "fullTypeName": "SiteFromIndex",
+  "guid": "00000000-1250-4c50-976b-a80b1e31ce37",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Site From Index",
+   "info": "Convert a linear index within a tree into a tree site.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 50,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree to peruse.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "Linear Index",
+    "nick": "Li",
+    "info": "Linear index within data tree.",
+    "type": "Index",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Site",
+    "nick": "St",
+    "info": "Site at linear index.",
+    "type": "Site",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "SiteFromOffset",
+  "fullTypeName": "SiteFromOffset",
+  "guid": "00000000-e91a-47dc-a1fb-b9734f024ee7",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Site From Offset",
+   "info": "Create a tree site out of a list offset and an item index.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 50,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree for path creation.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "Offset",
+    "nick": "Of",
+    "info": "Index of the list within the tree.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Index",
+    "nick": "Ix",
+    "info": "Index of the item within the list.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Site",
+    "nick": "St",
+    "info": "The specified site within the data tree.",
+    "type": "Site",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "SiteFromPath",
+  "fullTypeName": "SiteFromPath",
+  "guid": "00000000-c997-4e93-8562-8b2ee4df6775",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Site From Path",
+   "info": "Create a tree site out of a list path and an item index.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 50,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Path",
+    "nick": "Pa",
+    "info": "Path for the list within the tree.",
+    "type": "Path",
+    "access": "item",
+    "requirement": "must"
+   },
+   {
+    "name": "Index",
+    "nick": "Ix",
+    "info": "Index of the item within the list.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Site",
+    "nick": "St",
+    "info": "The specified site within the data tree.",
+    "type": "Site",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "TransferPaths",
+  "fullTypeName": "TransferPaths",
+  "guid": "00000000-3651-4f83-9a50-a61153594e2f",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Transfer Paths",
+   "info": "Transfer paths from one tree to another.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 20,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree to modify.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "Guide",
+    "nick": "Gd",
+    "info": "Tree whose paths to transfer.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Modified tree.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "TreeLength",
+  "fullTypeName": "TreeLength",
+  "guid": "00000000-f813-4064-99d3-5954f465d5c2",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Tree Length",
+   "info": "Count the number of items contained in a tree, including all null values.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 0,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree whose items to count.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Length",
+    "nick": "N",
+    "info": "Total number of values and nulls in the tree.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "TreeStatistics",
+  "fullTypeName": "TreeStatistics",
+  "guid": "00000000-a856-430f-b2d1-3681c0a0b319",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Tree Statistics",
+   "info": "Calculate various statistics of the items contained in a data tree.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 0,
+   "rank": 21,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree to analyse.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Length",
+    "nick": "N",
+    "info": "Total number of items in the tree.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Values",
+    "nick": "V",
+    "info": "Number of actual values in the tree.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Nulls",
+    "nick": "Ø",
+    "info": "Number of nulls in the tree.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "Metas",
+    "nick": "M",
+    "info": "Number of values with associated meta data.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "TreeTopology",
+  "fullTypeName": "TreeTopology",
+  "guid": "00000000-6ad7-4f2b-b553-8640ee954832",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Tree Topology",
+   "info": "Extract the topology of a data tree.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 0,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree to analyse.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "List Count",
+    "nick": "N",
+    "info": "Total number of lists in the tree.",
+    "type": "Integer",
+    "access": "item",
+    "requirement": null
+   },
+   {
+    "name": "List Paths",
+    "nick": "P",
+    "info": "The path associated with each list.",
+    "type": "Path",
+    "access": "twig",
+    "requirement": null
+   },
+   {
+    "name": "List Lengths",
+    "nick": "L",
+    "info": "Length of each list.",
+    "type": "Integer",
+    "access": "twig",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "TrimTree",
+  "fullTypeName": "TrimTree",
+  "guid": "00000000-20fc-4e2f-93bd-7d72887901fb",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Trim Tree",
+   "info": "Trim a tree by merging lists which share the last N elements of their paths.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 10,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree to trim.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "Depth",
+    "nick": "Dp",
+    "info": "Trimming depth.",
+    "type": "Integer",
+    "access": "tree",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Trimmed tree.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ },
+ {
+  "lib": "data",
+  "assembly": "G2DataComponents",
+  "namespace": "",
+  "typeName": "UnflattenTree",
+  "fullTypeName": "UnflattenTree",
+  "guid": "00000000-b69d-4bd8-aac9-b6008bad0f84",
+  "author": "DavidR",
+  "iconKey": null,
+  "nomen": {
+   "name": "Unflatten Tree",
+   "info": "Unflatten a tree by copying the topology of another tree.",
+   "chapter": "Data",
+   "section": "Tree",
+   "slot": 20,
+   "rank": 10,
+   "sortKey": null
+  },
+  "inputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Tree to unflatten.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   },
+   {
+    "name": "Guide",
+    "nick": "Gd",
+    "info": "Guide tree whose topology to copy.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": "must"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Tree",
+    "nick": "Tr",
+    "info": "Unflattened tree.",
+    "type": "Generic",
+    "access": "tree",
+    "requirement": null
+   }
+  ],
+  "resolve": {
+   "nomen": "il",
+   "ports": "il"
+  }
+ }
+]
