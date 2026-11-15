@@ -37,6 +37,13 @@ npm run dev        # http://localhost:5173
 
 需要 Node 18+。数据与图标已随仓库提供（`public/data`、`public/icons`），**不装 Rhino 也能跑起来**。
 
+## 界面预览
+
+> 截图待生成：`npm i -D playwright && npx playwright install chromium && node tools/build/capture_screenshots.mjs`
+> 会把首页、详情页、检索、识别台等页面截到 `docs/screenshots/`，替换下面占位即可。
+
+（截图占位区）
+
 ## 收录范围与数据来源
 
 数据不是截图、不是道听途说，而是**从本机安装的 Grasshopper 2（随 Rhino 9 提供）的程序集里直接读出来的**，读的正是 GH2 帮助面板的原文出处。

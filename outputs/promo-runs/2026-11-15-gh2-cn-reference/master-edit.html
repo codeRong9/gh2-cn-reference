@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#FBFBFC; overflow:hidden; font-family:'Noto Sans SC','Inter',sans-serif; }
+  .clip { position:absolute; top:0; left:0; width:1920px; height:1080px; }
+  .mono { font-family:'JetBrains Mono',monospace; }
+  .grid { background-image:linear-gradient(to right,rgba(20,22,26,.045) 1px,transparent 1px),linear-gradient(to bottom,rgba(20,22,26,.045) 1px,transparent 1px); background-size:56px 56px; }
+  .green { color:#2F9E5F; }
+  .ink { color:#14161A; }
+  .muted { color:#5B6472; }
+  .center { display:flex; align-items:center; justify-content:center; flex-direction:column; }
+  .card { background:#fff; border:1px solid #E6E7EB; border-radius:16px; box-shadow:0 20px 50px rgba(20,22,26,.08); }
+  .bar { position:absolute; top:0; left:0; right:0; height:10px; background:#2F9E5F; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="promo" data-start="0" data-duration="75" data-width="1920" data-height="1080">
+
+  <!-- 1. Hook 数字 -->
+  <div id="s1" class="clip grid" data-start="0" data-duration="5" data-track-index="0">
+    <div class="center" style="height:1080px">
+      <div id="s1-num" style="font-size:280px;font-weight:800;letter-spacing:-8px" class="ink">1516</div>
+    </div>
+  </div>
+
+  <!-- 2. Hook 副标 -->
+  <div id="s2" class="clip grid" data-start="5" data-duration="3" data-track-index="1">
+    <div class="center" style="height:1080px">
+      <div id="s2-sub" style="font-size:52px;font-weight:300" class="muted">个 Grasshopper 2 组件，都有中文说明</div>
+    </div>
+  </div>
+
+  <!-- 3. 痛点：英文面板 -->
+  <div id="s3" class="clip" data-start="9" data-duration="7" data-track-index="0" style="background:#0B0D10">
+    <div class="center" style="height:1080px">
+      <div id="s3-line" class="mono" style="font-size:46px;color:#9AA3AF">WHY is every battery in English?</div>
+      <div id="s3-sub" style="font-size:30px;font-weight:300;color:rgba(255,255,255,.35);margin-top:28px">每个电池的帮助，只有英文。</div>
+    </div>
+  </div>
+
+  <!-- 4. 产品登场 -->
+  <div id="s4" class="clip grid" data-start="17" data-duration="10" data-track-index="0">
+    <div class="center" style="height:1080px">
+      <div id="s4-title" style="font-size:96px;font-weight:700" class="ink">GH2 中文操作库</div>
+      <div id="s4-sub" style="font-size:40px;font-weight:300;margin-top:20px" class="muted">把每个电池讲成中文</div>
+    </div>
+  </div>
+
+  <!-- 5. 组件详情（UI 卡模拟） -->
+  <div id="s5" class="clip grid" data-start="27" data-duration="8" data-track-index="0">
+    <div class="center" style="height:1080px">
+      <div id="s5-card" class="card" style="width:1120px;padding:60px 70px">
+        <div style="font-size:44px;font-weight:700" class="ink">加法 Addition</div>
+        <div id="s5-ports" style="display:flex;gap:18px;margin-top:34px">
+          <div class="mono" style="padding:12px 22px;border-radius:10px;background:#2F9E5F;color:#fff;font-size:26px">Number</div>
+          <div class="mono" style="padding:12px 22px;border-radius:10px;background:#F0F1F3;color:#5B6472;font-size:26px">Number</div>
+          <div style="font-size:26px;color:#5B6472;align-self:center">→</div>
+          <div class="mono" style="padding:12px 22px;border-radius:10px;background:#2F9E5F;color:#fff;font-size:26px">Result</div>
+        </div>
+        <div id="s5-note" style="font-size:30px;font-weight:300;margin-top:34px" class="muted">端口吃什么、怎么连、什么时候用 —— 一页说清</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. 检索 -->
+  <div id="s6" class="clip grid" data-start="35" data-duration="8" data-track-index="0">
+    <div class="center" style="height:1080px">
+      <div id="s6-box" class="card" style="width:980px;padding:40px 50px">
+        <div id="s6-input" class="mono" style="font-size:40px" class="ink">加法 / addition / jiāfǎ / jf</div>
+      </div>
+      <div id="s6-res" style="font-size:36px;font-weight:300;margin-top:34px" class="muted">中文、英文、拼音、首字母 —— 都能查</div>
+    </div>
+  </div>
+
+  <!-- 7. 识别台（高光） -->
+  <div id="s7" class="clip" data-start="44" data-duration="12" data-track-index="0" style="background:#0B0D10">
+    <div class="center" style="height:1080px">
+      <div class="card" style="width:1240px;padding:56px 66px;background:#12151A;border-color:#232A33">
+        <div id="s7-code" class="mono" style="font-size:34px;color:#6FCF97">00000000-a9e2-4ef6-a4d8-a8f87f93757f</div>
+      </div>
+      <div id="s7-hit" style="margin-top:44px;font-size:64px;font-weight:700;color:#fff">加法 <span style="color:#6FCF97" class="mono">Addition</span></div>
+      <div id="s7-sub" style="font-size:32px;font-weight:300;margin-top:18px;color:rgba(255,255,255,.5)">贴一串代号，直接认出画布里的电池</div>
+    </div>
+  </div>
+
+  <!-- 8. 开源 / 反馈 -->
+  <div id="s8" class="clip grid" data-start="56" data-duration="8" data-track-index="0">
+    <div class="center" style="height:1080px">
+      <div id="s8-card" class="card" style="width:1000px;padding:56px 66px">
+        <div style="font-size:52px;font-weight:700" class="ink">开源 · 免费</div>
+        <div id="s8-sub" style="font-size:32px;font-weight:300;margin-top:18px" class="muted">缺组件、想加插件翻译？GitHub 上告诉我们</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9. CTA -->
+  <div id="s9" class="clip grid" data-start="65" data-duration="10" data-track-index="0">
+    <div class="center" style="height:1080px">
+      <div id="s9-url" class="mono" style="font-size:56px;font-weight:600" class="green">coderong9.github.io/gh2-cn-reference</div>
+      <div id="s9-qq" style="font-size:30px;font-weight:300;margin-top:26px" class="muted">论坛 Q 群 1104824684</div>
+    </div>
+  </div>
+
+  <!-- 转场黑幕 -->
+  <div id="t-black" class="clip" data-start="0" data-duration="75" data-track-index="5" style="background:#000;opacity:0"></div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script>
+  window.__timelines = window.__timelines || {};
+  const tl = gsap.timeline({ paused: true });
+
+  // 1. Hook 数字弹入
+  tl.from("#s1-num", { scale: 0, duration: .7, ease: "elastic.out(1,0.55)" }, 0.3);
+  tl.to("#s1-num", { color: "#2F9E5F", duration: .3, ease: "power1.inOut" }, 2.2);
+  tl.to("#s1", { opacity: 0, duration: .3, ease: "power2.in" }, 4.7);
+
+  // 2. 副标
+  tl.from("#s2-sub", { opacity: 0, y: 24, duration: .5, ease: "power2.out" }, 5.3);
+  tl.to("#s2", { opacity: 0, duration: .3, ease: "power2.in" }, 7.7);
+
+  // T1 black dip
+  tl.fromTo("#t-black", { opacity: 0 }, { opacity: 1, duration: .25 }, 8.7);
+  tl.to("#t-black", { opacity: 0, duration: .25 }, 9.2);
+
+  // 3. 痛点 typewriter
+  const chars = document.querySelectorAll("#s3-line");
+  tl.from("#s3-line", { opacity: 0, duration: .4 }, 9.4);
+  tl.from("#s3-sub", { opacity: 0, y: 16, duration: .5 }, 11.0);
+  tl.to("#s3", { scale: 1.08, filter: "blur(10px)", opacity: 0, duration: .6, ease: "power2.in" }, 15.2);
+
+  // T2 scale blur 已并入 s3 退出
+  // 4. 产品
+  tl.from("#s4-title", { clipPath: "inset(0 100% 0 0)", duration: 1.0, ease: "power2.inOut" }, 16.6);
+  tl.from("#s4-sub", { opacity: 0, y: 20, duration: .6 }, 17.6);
+  tl.to("#s4", { opacity: 0, duration: .5, ease: "power1.inOut" }, 26.5);
+
+  // 5. 详情卡
+  tl.from("#s5-card", { opacity: 0, y: 60, duration: .7, ease: "power2.out" }, 27.2);
+  tl.from("#s5-ports > *", { opacity: 0, y: 14, stagger: .08, duration: .4 }, 28.0);
+  tl.from("#s5-note", { opacity: 0, duration: .6 }, 29.0);
+  tl.to("#s5", { opacity: 0, duration: .5, ease: "power1.inOut" }, 34.5);
+
+  // 6. 检索
+  tl.from("#s6-box", { opacity: 0, scale: .96, duration: .5 }, 35.3);
+  tl.from("#s6-res", { opacity: 0, y: 16, duration: .5 }, 36.2);
+  tl.to("#s6", { opacity: 0, duration: .5 }, 42.5);
+
+  // 7. 识别台高光
+  tl.from("#s7-code", { opacity: 0, duration: .3 }, 44.4);
+  tl.from("#s7-hit", { scale: 0.6, opacity: 0, duration: .5, ease: "back.out(1.6)" }, 47.5);
+  tl.from("#s7-sub", { opacity: 0, duration: .5 }, 48.3);
+  tl.to("#s7", { opacity: 0, duration: .5 }, 55.5);
+
+  // 8. 开源
+  tl.from("#s8-card", { opacity: 0, y: 40, duration: .6 }, 56.4);
+  tl.to("#s8", { opacity: 0, duration: .5 }, 63.5);
+
+  // 9. CTA
+  tl.from("#s9-url", { opacity: 0, y: 20, duration: .7 }, 65.5);
+  tl.from("#s9-qq", { opacity: 0, duration: .5 }, 66.5);
+  tl.to("#t-black", { opacity: 1, duration: .8, ease: "power2.in" }, 74.2);
+
+  window.__timelines["promo"] = tl;
+</script>
+</body>
+</html>
