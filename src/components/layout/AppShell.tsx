@@ -1,10 +1,9 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { TopBar } from "./TopBar";
 import { Footer } from "./Footer";
-import { AnnouncementBar } from "./AnnouncementBar";
+import { AnnouncementBar, BANNER_KEY } from "./AnnouncementBar";
 import { CommandPalette } from "@/components/search/CommandPalette";
 
-const BANNER_KEY = "gh2:announcement-dismissed";
 const TOPBAR_H = 60;
 const BANNER_H = 36;
 
@@ -35,6 +34,16 @@ export function AppShell({ children }: { children: ReactNode }) {
       bannerOpen ? `${BANNER_H}px` : "0px",
     );
   }, [bannerOpen]);
+
+  // 页脚等入口可请求重新显示公告
+  useEffect(() => {
+    const onShow = () => {
+      window.localStorage.removeItem(BANNER_KEY);
+      setBannerOpen(true);
+    };
+    window.addEventListener("gh2:banner-show", onShow);
+    return () => window.removeEventListener("gh2:banner-show", onShow);
+  }, []);
 
   const dismissBanner = () => {
     setBannerOpen(false);

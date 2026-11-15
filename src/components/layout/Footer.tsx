@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Github, Languages, MessageSquarePlus, Puzzle } from "lucide-react";
+import { Github, Languages, Megaphone, MessageSquarePlus, Puzzle } from "lucide-react";
+import { showAnnouncement } from "./AnnouncementBar";
 
 const REPO = "https://github.com/codeRong9/gh2-cn-reference";
 const QQ = "1104824684";
@@ -79,6 +80,13 @@ export function Footer() {
             <span className="inline-flex items-center gap-1.5 rounded-lg border border-dashed border-line px-3 py-1.5 text-small text-muted">
               论坛 Q 群 <span className="mono text-ink">{QQ}</span>
             </span>
+            <button
+              type="button"
+              onClick={showAnnouncement}
+              className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface px-3 py-1.5 text-small text-muted transition hover:text-ink"
+            >
+              <Megaphone size={13} /> 重新显示顶部公告
+            </button>
           </div>
         </div>
       </section>

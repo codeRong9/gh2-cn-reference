@@ -3,6 +3,15 @@ import { X } from "lucide-react";
 /** 论坛 Q 群，改动只需动这里 */
 export const QQ_GROUP = "1104824684";
 
+/** 公告关闭状态的本地存储键 */
+export const BANNER_KEY = "gh2:announcement-dismissed";
+
+/** 清除「已关闭」标记并通知 AppShell 重新显示公告（供页脚等入口调用） */
+export function showAnnouncement() {
+  window.localStorage.removeItem(BANNER_KEY);
+  window.dispatchEvent(new Event("gh2:banner-show"));
+}
+
 /**
  * 顶部公告条：位于固定导航之上，可关闭。
  * 关闭后 AppShell 会把导航与正文整体上移，不留空档。
