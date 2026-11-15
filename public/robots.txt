@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://coderong9.github.io/gh2-cn-reference/sitemap.xml
