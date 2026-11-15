@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 先看使用说明与常见问题
+    url: https://coderong9.github.io/gh2-cn-reference/about
+    about: 数据从哪来、为什么认不出某个组件、收录范围与版权说明都在这里
+  - name: 在 Q 群直接问一句
+    url: https://coderong9.github.io/gh2-cn-reference/
+    about: 论坛 Q 群 1104824684；不确定该提 Issue 还是讨论时，先来群里说一声更省时间

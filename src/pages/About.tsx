@@ -17,7 +17,7 @@ export default function About() {
           {
             icon: <Database size={16} />,
             title: "数据来源",
-            body: "读取 13 个原生组件库（数学 / 数据 / 向量 / 曲线 / 曲面 / 网格 / 变换 / 相交 / 显示 / 文本 / 元组件 / 标注 / 脚本）的程序集定义，共 1410 个组件、5956 个端口。",
+            body: "读取 13 个原生组件库（数学 / 数据 / 向量 / 曲线 / 曲面 / 网格 / 变换 / 相交 / 显示 / 文本 / 元组件 / 标注 / 脚本）加 1 个参数库（点、数值、滑块、Panel、Listen / Shout 等参数对象）的程序集定义，共 1493 个对象、5956 个端口。",
           },
           {
             icon: <Wrench size={16} />,
@@ -27,7 +27,7 @@ export default function About() {
           {
             icon: <FileWarning size={16} />,
             title: "未收录",
-            body: "GH1 旧组件迁移器（migration 库）属于文件兼容用途、不承担教学意义，未收录。GH2 的「参数」面板（点、向量、圆、滑块、Panel 等）正在补充，它们是参数对象而不是组件。",
+            body: "GH1 旧组件迁移器（migration 库）属于文件兼容用途、不承担教学意义，未收录。参数面板里的对象（点、数值、滑块、Panel、Listen / Shout）已单独归入「参数」库，它们的性质是参数对象而不是组件，页面里会标注清楚。",
           },
           {
             icon: <Scale size={16} />,

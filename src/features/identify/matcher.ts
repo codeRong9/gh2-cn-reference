@@ -13,8 +13,21 @@ export interface NameIndex {
   names: string[];
 }
 
-const LIB_KEYS = ["maths", "data", "vector", "curve", "surface", "mesh", "transform",
+const LIB_KEYS = ["params", "maths", "data", "vector", "curve", "surface", "mesh", "transform",
   "intersect", "display", "text", "meta", "annotation", "script"];
+
+/** GH2 的组件代号（IoId，GUID 形式），形如 00000000-a9e2-4ef6-a4d8-a8f87f93757f */
+export const GUID_RE = /[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}/g;
+
+/** 从任意文本里捞出 GUID 并逐一对表；用于「把组件拖进网页」这种只带代号的场景。 */
+export function scanGuids(text: string, index: NameIndex): MatchResult[] {
+  const found = new Map<string, MatchResult>();
+  for (const raw of text.match(GUID_RE) ?? []) {
+    const hit = matchByGuid(raw, index);
+    if (hit?.record && !found.has(hit.record.id)) found.set(hit.record.id, hit);
+  }
+  return [...found.values()];
+}
 
 let indexPromise: Promise<NameIndex> | null = null;
 
@@ -44,7 +57,7 @@ export function resetIndex() {
   indexPromise = null;
 }
 
-/** 从任意文本里按「连续英文词」滑窗匹配已知组件名。 */
+/** 从任意文本里先按代号（GUID）对表，再按「连续英文词」滑窗匹配已知组件名。 */
 export function scanText(text: string, index: NameIndex, limit = 200): MatchResult[] {
   const tokens = text
     .replace(/[^A-Za-z0-9_\- ]+/g, " ")
@@ -52,6 +65,9 @@ export function scanText(text: string, index: NameIndex, limit = 200): MatchResu
     .filter(Boolean);
 
   const found = new Map<string, MatchResult>();
+  for (const hit of scanGuids(text, index)) {
+    if (hit.record) found.set(hit.record.id, hit);
+  }
   const maxWindow = 5;
   for (let i = 0; i < tokens.length; i += 1) {
     for (let n = 1; n <= maxWindow && i + n <= tokens.length; n += 1) {

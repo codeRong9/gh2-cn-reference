@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ClipboardPaste, FileUp, Info, Loader2, MousePointerClick, Search, Upload } from "lucide-react";
-import { buildIndex, scanText, type MatchResult, type NameIndex } from "@/features/identify/matcher";
+import { buildIndex, matchByGuid, scanText, type MatchResult, type NameIndex } from "@/features/identify/matcher";
 import { isProbablyBinary, parseBinary } from "@/features/identify/parseGh2";
 import { looksLikeGhx, parseGhx, parseGhxText } from "@/features/identify/parseGhx";
 import { ComponentIcon } from "@/components/library/ComponentIcon";
@@ -37,11 +37,19 @@ const SAMPLE = `<?xml version="1.0" encoding="utf-8"?>
   </items>
 </Archive>`;
 
+const HOW_LABEL: Record<MatchResult["how"], string> = {
+  guid: "代号命中",
+  name: "名称命中",
+  type: "类型名命中",
+  guess: "模糊匹配",
+};
+
 export default function Identify() {
   const [index, setIndex] = useState<NameIndex | null>(null);
   const [state, setState] = useState<State>({ status: "idle", source: "", results: [], unknown: [], note: "" });
   const [dragging, setDragging] = useState(false);
   const [expanded, setExpanded] = useState<string | null>(null);
+  const [code, setCode] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -94,6 +102,24 @@ export default function Identify() {
     [finish, index],
   );
 
+  /** 直接输入 GH2 组件代号（拖拽时显示的那串 GUID） */
+  const handleCode = useCallback(() => {
+    if (!index) return;
+    const value = code.trim();
+    if (!value) return;
+    const direct = matchByGuid(value, index);
+    if (direct?.record) {
+      finish(
+        `代号 ${value.slice(0, 8)}…`,
+        [direct],
+        [],
+        "按 GH2 组件代号（IoId / GUID）直接命中，不需要画布文件。",
+      );
+      return;
+    }
+    handleText(value);
+  }, [code, finish, handleText, index]);
+
   useEffect(() => {
     const onPaste = (event: ClipboardEvent) => {
       const text = event.clipboardData?.getData("text/plain");
@@ -110,9 +136,11 @@ export default function Identify() {
     <div className="mx-auto max-w-[1080px] px-4 py-10 sm:px-6">
       <p className="text-micro uppercase tracking-[0.18em] text-muted">Identify</p>
       <h1 className="mt-2 text-h1 font-semibold">识别台</h1>
-      <p className="mt-3 max-w-[64ch] text-body leading-relaxed text-muted">
+      <p className="mt-3 max-w-[68ch] text-body leading-relaxed text-muted">
         把一张看不懂的画布丢进来，站内会列出它用到的每个组件，并给出中文名、作用与端口含义。
-        支持拖入 .ghx / .gh2 文件、直接粘贴画布内容、或把从 GH2 拖出的文本放进来。
+        支持拖入 .ghx / .gh2 文件、粘贴画布内容、粘贴从 GH2 拖出的文本，
+        或者直接贴一个组件代号（拖拽时显示的那串 GUID）。收录范围含 1410 个组件与
+        83 个参数对象（Listen / Shout / 滑块 / Panel 等）。
       </p>
 
       <div
@@ -169,6 +197,29 @@ export default function Identify() {
         </div>
       </div>
 
+      <div className="mt-4 flex flex-col gap-2 rounded-xl border bg-surface p-3 sm:flex-row sm:items-center">
+        <label htmlFor="gh2-code" className="shrink-0 px-1 text-micro text-muted">
+          已知组件代号
+        </label>
+        <input
+          id="gh2-code"
+          value={code}
+          onChange={(e) => setCode(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") handleCode();
+          }}
+          placeholder="00000000-a9e2-4ef6-a4d8-a8f87f93757f"
+          className="mono min-w-0 flex-1 rounded-lg border-0 bg-transparent px-2 py-1.5 text-[12.5px] text-ink outline-none placeholder:text-muted/50"
+        />
+        <button
+          type="button"
+          onClick={handleCode}
+          className="shrink-0 rounded-lg border border-line bg-surface-2 px-3 py-1.5 text-small text-ink transition hover:border-accent/40 hover:bg-accent/[0.08]"
+        >
+          识别这个代号
+        </button>
+      </div>
+
       <div className="mt-3 flex flex-wrap gap-2">
         <button
           onClick={() => handleText(SAMPLE)}
@@ -206,8 +257,8 @@ export default function Identify() {
             <div className="mt-4 rounded-xl border border-dashed px-5 py-10 text-center">
               <p className="text-[15px] font-medium">没识别出可对应的 GH2 原生组件</p>
               <p className="mx-auto mt-2 max-w-[52ch] text-small leading-relaxed text-muted">
-                可能是文件是 GH1 画布、只用了参数对象（点、滑块、Panel），或者内容不是画布。
-                试试在组件库里按英文名搜索。
+                可能是 GH1 画布、第三方插件组件，或者这段内容不是画布。
+                试试在组件库里按英文名搜索，或确认拖进来的文本里含有组件代号。
               </p>
             </div>
           ) : (
@@ -227,8 +278,13 @@ export default function Identify() {
                           <span className="truncate text-[14.5px] font-medium">{record.cn || record.name}</span>
                           <span className="truncate font-mono text-micro text-muted">{record.name}</span>
                         </span>
-                        <span className="mt-0.5 block truncate text-micro text-muted">
-                          {record.libCn} · {record.chapter} / {record.sectionCn || record.section}
+                        <span className="mt-0.5 flex items-center gap-1.5 truncate text-micro text-muted">
+                          <span>
+                            {record.libCn} · {record.chapter} / {record.sectionCn || record.section}
+                          </span>
+                          <span className="shrink-0 rounded border border-line px-1 py-px text-[10px]">
+                            {HOW_LABEL[item.how]}
+                          </span>
                         </span>
                       </span>
                       <span className="hidden shrink-0 gap-1 sm:flex">
@@ -312,8 +368,14 @@ export default function Identify() {
             如果你从 GH2 拖出的是图片，页面上不会得到组件信息——这时请改用「另存为 .ghx 再拖入」。
           </p>
           <p>
-            <strong className="text-ink/80">未收录</strong>：GH1 专有组件、第三方插件、以及 GH2 的参数对象（点、数值、滑块、Panel）
-            不在原生组件库里，识别不到属于正常。
+            <strong className="text-ink/80">组件代号</strong>：GH2 给每个组件与参数对象都写死了一个 IoId（形如
+            <code className="mono mx-1 rounded bg-surface-2 px-1">00000000-a9e2-4ef6-a4d8-a8f87f93757f</code>
+            就是「加法」）。它不随界面语言、重命名或版本变化，所以站内优先按代号对表，对不上再退回按名字匹配。
+            画布文件、复制到剪贴板的内容、拖拽文本里都带着它。
+          </p>
+          <p>
+            <strong className="text-ink/80">未收录</strong>：GH1 专有组件、第三方插件、以及 GH2 的画布级对象
+            （如自定义簇、注释框）不在收录范围内，识别不到属于正常。
           </p>
         </div>
       </details>

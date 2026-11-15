@@ -7,6 +7,7 @@
 ```
 D:\RHINO\RHINO 9\Plug-ins\Grasshopper2\net8.0\
 ├─ Grasshopper2.dll            框架（Component / Nomen / InputAdder 等）
+│                              └─ Parameters.* 里的 83 个参数对象（Listen / Shout / 滑块 / Panel…）
 ├─ Grasshopper2.xml            2352 个类型的 API 文档注释
 └─ Components\G2*Components.rhp   13 个组件库（另有 migration 库未收录）
 ```
@@ -46,6 +47,21 @@ Access:      Item / Twig / Tree
 Requirement: MustExist / MayBeNull / MayBeMissing
 ```
 
+### 2b. 参数对象（`tools/extract/parse_params.py`）
+
+Params 面板里的对象（点、数值、滑块、Panel、**Listen / Shout**）不是组件：它们继承 `Parameter`，
+而且住在 `Grasshopper2.dll` 本体里，不在 `Components\G2*Components.rhp` 中，所以上面的组件解析脚本会全部漏掉。
+
+补充脚本的做法：
+
+1. 用 `Gh2Decomp list-types Grasshopper2.Parameters.` 列出命名空间下的类型（带是否为嵌套/抽象的标记）；
+2. 对非嵌套类型逐个调用 `Gh2Decomp type` 反编译，写进 `decompiled/Grasshopper2.Parameters.cs`；
+3. 复用 `parse_components.py` 的类切分与端口解析，只保留 **有 Nomen** 且基类为 `Parameter` 系的对象；
+4. Nomen 选择规则：优先取 **chapter 为 `Params`** 的那一条——因为像 `Point3Parameter` 这类类里还嵌着
+   `Set Constrained` 之类的辅助类，它们也带 Nomen，直接取第一条会张冠李戴。
+
+产物 `tools/extract/raw/params.json`，与其它库同 schema，`merge.py` 直接消费（库标签 `params`）。
+
 ### 3. 图标（`tools/icons/Gh2Icons`）
 
 `.ghicon` 是 GHIO 二进制序列化的矢量图标（不是 SVG、不是 zip）。导出思路：
@@ -62,10 +78,13 @@ Requirement: MustExist / MayBeNull / MayBeMissing
 
 ```
 public/data/meta.json       统计与分类树
-public/data/index.json      轻量检索索引（含拼音全拼与首字母）
+public/data/index.json      轻量检索索引（含拼音全拼、首字母与组件代号 g）
 public/data/lib/<lib>.json  分库完整数据（含端口）
 public/icons/…              被引用到的图标
 ```
+
+索引里的 `g` 是组件代号（IoId / GUID）。识别台拿到拖拽文本后，先用正则捞出 GUID 对这张表，
+命中就直接显示中文；对不上才退回按名称滑窗匹配。这也是为什么「贴一串代号」比「贴一张截图」可靠。
 
 ## 中文内容层
 

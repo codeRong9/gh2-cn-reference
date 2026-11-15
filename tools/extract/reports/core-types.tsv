@@ -1,0 +1,28 @@
+Grasshopper2.SpecialObjects.PlaceholderComponent	00000000-95c3-4b0e-8de1-4c1af3e6b27a	
+Grasshopper2.Parameters.Special.ValueTrackerObject	00000000-8f37-4e52-a1c0-7e3b5f0a9d84	AndyPayne
+Grasshopper2.Display.TestDisplaySettings	00000000-a698-b7c8-6643-b7076c174810	MathiasF
+Grasshopper2.Display.TestWireframe	00000000-a698-b7c8-6643-b7076c174900	MathiasF
+Grasshopper2.Components.Standard.Chain	00000000-3baf-4e2d-8f59-4be3e23087bf	DavidR
+Grasshopper2.Components.Standard.Cluster	00000000-5b8c-4ffa-b0d9-38e86ca1f51d	DavidR
+Grasshopper2.Components.Standard.ConstraintComponent	00000000-44a9-443f-a00d-afaeb60830ca	DavidR
+Grasshopper2.Components.Standard.CreateMessages	00000000-946f-4561-ac8b-838a9683b735	DavidR
+Grasshopper2.Components.Standard.CustomiseRibbon	00000000-c0a6-43a4-a68a-47ac90a159c0	DavidR
+Grasshopper2.Components.Standard.DataFromFile	00000000-304f-4153-94ac-221a9195c40e	DavidR
+Grasshopper2.Components.Standard.DataToFile	00000000-f321-47fa-97f7-7889aa3f4334	DavidR
+Grasshopper2.Components.Standard.DelayingComponent	00000000-05ab-4a66-9dea-dab74e9358e8	DavidR
+Grasshopper2.Components.Standard.ExportCoordinates	00000000-5e21-4c9a-bf3d-7c1a2b9e6f44	AndyP
+Grasshopper2.Components.Standard.GH1InteropComponent	00000000-c696-44af-8f1f-44b67ba4e4d0	DavidR
+Grasshopper2.Components.Standard.GraphMapperComponent	00000000-8f4b-4e01-b16b-9f2b8e2a010a	DavidR
+Grasshopper2.Components.Standard.ImportCoordinates	00000000-33d7-4125-90ae-6b7411fbe0a2	AndyP
+Grasshopper2.Components.Standard.LogRecord	00000000-7019-47cf-90df-131c1abce8ed	DavidR
+Grasshopper2.Components.Standard.Read3dmFile	00000000-f378-4138-b329-16501c7117d3	DavidR
+Grasshopper2.Components.Standard.ReadTextFile	00000000-cce8-4511-a4eb-a4abe46dd150	DavidR
+Grasshopper2.Components.Standard.WriteTextFile	00000000-1321-4599-906e-aa8b017a9e30	DavidR
+Grasshopper2.Components.Standard.RhinoPipeline	00000000-dc6b-4e68-8907-d77126951cec	DavidR
+Grasshopper2.Components.Standard.SubDRaceProbe	00000000-9682-1000-0000-000000000001	Mathias
+Grasshopper2.Components.Standard.DebugMeshWithoutNormals	00000000-0000-0000-0000-bdb18af500cc	
+Grasshopper2.Components.Standard.DebugUpperVertices	00000000-0000-0000-0000-3970127e2483	
+Grasshopper2.Components.Standard.DebugStackMesh	00000000-0000-0000-0000-4a391075bcf1	
+Grasshopper2.Components.Standard.WarningsAndErrors	00000000-0A31-452C-A44D-19B69DBD6AB9	DavidR
+Grasshopper2.Components.DisplayExamples.SvgThemedIconExample	00000000-5b6d-4e9a-bb31-2f7c9d4e1a55	MathiasF
+Grasshopper2.Components.Descriptive.AiComponent	00000000-a054-4c2b-9723-56cfe1c5860f	

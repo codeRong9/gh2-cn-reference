@@ -1,0 +1,34 @@
+name: 功能建议
+description: 希望站点多一个能力，或某个交互改得更顺手
+title: "[建议] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: scene
+    attributes:
+      label: 你遇到的具体场景
+      description: 先讲场景，再讲方案——场景比方案更能说明问题
+      placeholder: |
+        我在 GH2 里想……，但站内现在需要……，很费时间。
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: 你希望的解决方式
+      placeholder: 例如：组件详情页加一个「复制接线片段」按钮
+    validations:
+      required: false
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 现在你是怎么绕过这个问题的
+      validations:
+        required: false
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: 范围判断
+      options:
+        - label: 我理解这是一个纯静态站点，不能跑 Rhino / 不能调用本地插件
+          required: false

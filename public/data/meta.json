@@ -1,11 +1,56 @@
 {
- "componentCount": 1410,
- "libCount": 13,
+ "componentCount": 1493,
+ "paramCount": 83,
+ "libCount": 14,
  "portCount": 5956,
  "detailCount": 171,
- "translatedCount": 1410,
- "withIcon": 1344,
+ "translatedCount": 1493,
+ "withIcon": 1373,
  "libs": [
+  {
+   "lib": "params",
+   "cn": "参数",
+   "desc": "点、数值、滑块、面板、Listen/Shout 等参数与数据承载对象",
+   "count": 83,
+   "sections": {
+    "Meta": {
+     "name": "Meta",
+     "cn": "元数据",
+     "chapter": "Data",
+     "count": 1
+    },
+    "Data": {
+     "name": "Data",
+     "cn": "Data",
+     "chapter": "Params",
+     "count": 13
+    },
+    "Geometric": {
+     "name": "Geometric",
+     "cn": "Geometric",
+     "chapter": "Params",
+     "count": 28
+    },
+    "Input": {
+     "name": "Input",
+     "cn": "Input",
+     "chapter": "Params",
+     "count": 17
+    },
+    "Numeric": {
+     "name": "Numeric",
+     "cn": "Numeric",
+     "chapter": "Params",
+     "count": 13
+    },
+    "Util": {
+     "name": "Util",
+     "cn": "工具",
+     "chapter": "Params",
+     "count": 11
+    }
+   }
+  },
   {
    "lib": "maths",
    "cn": "数学",

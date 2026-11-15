@@ -87,6 +87,9 @@ export default function ComponentDetail() {
             {record.hasDetail && (
               <span className="rounded-full bg-accent/10 px-2 py-0.5 text-micro text-accent">精讲</span>
             )}
+            {record.lib === "params" && (
+              <span className="rounded-full bg-surface-2 px-2 py-0.5 text-micro text-muted">参数对象</span>
+            )}
           </div>
           <p className="mt-1 text-micro text-muted">
             {record.chapter} / {record.section} · {record.inputs.length} 输入 · {record.outputs.length} 输出
@@ -133,6 +136,15 @@ export default function ComponentDetail() {
             <p className="mt-2 text-[11px] leading-relaxed text-muted">
               打开 GH2 工具面板，按这个路径逐级展开即可找到同名电池；面板顶部搜索英文名更快。
             </p>
+            {record.guid && (
+              <div className="mt-2.5 border-t pt-2.5">
+                <p className="text-[11px] text-muted">组件代号（IoId）</p>
+                <p className="mono mt-1 break-all text-[11px] leading-relaxed text-ink/70">{record.guid}</p>
+                <p className="mt-1.5 text-[10.5px] leading-relaxed text-muted">
+                  把组件拖进本站识别台，或直接粘贴这串代号，都能认出它。
+                </p>
+              </div>
+            )}
           </div>
         </div>
         <div>

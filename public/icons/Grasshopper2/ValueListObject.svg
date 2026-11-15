@@ -1,0 +1,30 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="radiala606ef37a10b" gradientUnits="userSpaceOnUse" cx="6" cy="5" r="13.43503">
+      <stop offset="0%" style="stop-color:#EAEAEA;" />
+      <stop offset="100%" style="stop-color:#757575;" />
+    </radialGradient>
+    <radialGradient id="radial6ab6041cd90f" gradientUnits="userSpaceOnUse" cx="10" cy="14.5" r="7.77817">
+      <stop offset="0%" style="stop-color:#000000; stop-opacity:0.412;" />
+      <stop offset="100%" style="stop-color:#000000; stop-opacity:0;" />
+    </radialGradient>
+    <linearGradient id="lineare711d5650872" gradientUnits="userSpaceOnUse" x1="6" y1="8" x2="12.5" y2="19">
+      <stop offset="0%" style="stop-color:#FFE066;" />
+      <stop offset="100%" style="stop-color:#FCC419;" />
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 12.5 10.5 A 6 6 0 0 1 0.5 10.499999 A 6 6 0 0 1 12.5 10.500001" fill="url(#radiala606ef37a10b)" />
+    <path d="M 12.5 10.5 A 6 6 0 0 1 0.5 10.499999 A 6 6 0 0 1 12.5 10.500001" fill="url(#radial6ab6041cd90f)" />
+    <path d="M 12.5 10.5 A 6 6 0 0 1 0.5 10.499999 A 6 6 0 0 1 12.5 10.500001" stroke="#808080" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 7.0113544 5.475663 A 5.3269525 5.3269525 0 0 1 13.621719 1.6937227 A 8.514693 8.514693 0 0 1 7.0113544 5.475662" fill="#ADADAD" stroke="#808080" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 7.0113544 5.475663 A 4.9348445 4.9348445 0 0 0 5 1.5000002" stroke="#808080" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 19 9 A 4.03113 4.03113 0 0 1 23 7" stroke="#61380C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 11.136048 10.511048 A 6.0000005 6.0000005 0 0 0 7.257357 20.74264 A 6.0000005 6.0000005 0 0 0 17.48895 16.863953 A 6.0000043 6.0000043 0 0 1 19.492634 12.742635 A 2.9999995 2.9999995 0 0 0 19.62132 8.378678 A 2.9999995 2.9999995 0 0 0 15.257365 8.507365 A 5.9999905 5.9999905 0 0 1 11.136048 10.511048" fill="url(#lineare711d5650872)" />
+    <path d="M 5.5000005 6.5 A 4.123104 4.123104 0 0 0 2.6394162 9.052281" stroke="#F3F3F3" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 16.468754 10.138865 A 8.000132 8.000132 0 0 1 15.689384 10.832429" stroke="#FFF3BF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 13.811419 11.922268 A 7.999998 7.999998 0 0 1 11.257366 12.507366 A 4.000062 4.000062 0 0 0 10.700042 12.580808" stroke="#FFF3BF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 5.9809685 18.853783 C 9.222301 20.709478, 10.245175 19.492699, 11.328839 18.757336 C 12.658237 17.85522, 14.079119 17.67761, 14.789559 17.005472 C 15.5 16.333334, 15.5 15.166667, 16.625 13.708333 C 17.536991 12.526123, 19.188295 11.152239, 19.514551 8.277033 A 2.9999986 2.9999986 0 0 1 19.492634 12.742634 A 5.9999933 5.9999933 0 0 0 17.48895 16.86395 A 6.0000014 6.0000014 0 0 1 5.9809666 18.853783" fill="#FF1493" />
+    <path d="M 11.136048 10.511048 A 6.0000005 6.0000005 0 0 0 7.257357 20.74264 A 6.0000005 6.0000005 0 0 0 17.48895 16.863953 A 6.0000043 6.0000043 0 0 1 19.492634 12.742635 A 2.9999995 2.9999995 0 0 0 19.62132 8.378678 A 2.9999995 2.9999995 0 0 0 15.257365 8.507365 A 5.9999905 5.9999905 0 0 1 11.136048 10.511048" stroke="#D66000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

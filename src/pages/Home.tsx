@@ -64,7 +64,7 @@ export default function Home() {
   }, []);
 
   const stats = [
-    { label: "原生组件", value: meta?.componentCount ?? "—" },
+    { label: "组件与参数", value: meta?.componentCount ?? "—" },
     { label: "内置库", value: meta?.libCount ?? "—" },
     { label: "端口条目", value: meta?.portCount ?? "—" },
     { label: "章节", value: meta ? meta.libs.reduce((s, l) => s + Object.keys(l.sections).length, 0) : "—" },
@@ -92,7 +92,7 @@ export default function Home() {
             </h1>
 
             <p className="mt-5 max-w-[46ch] text-body text-muted">
-              1410 个原生组件逐条翻译：它做什么、每个端口吃什么类型、该怎么连、什么时候该用它。
+              1410 个原生组件、83 个参数对象逐条翻译：它做什么、每个端口吃什么类型、该怎么连、什么时候该用它。
               翻译底稿取自 Grasshopper 2 自带帮助（组件右上角那个小问号），不是二手猜测。
             </p>
 
@@ -168,7 +168,8 @@ export default function Home() {
               <p className="text-micro uppercase tracking-[0.18em] text-muted">By Library</p>
               <h2 className="mt-2 text-h2 font-semibold">按库速览</h2>
               <p className="mt-2 max-w-[56ch] text-small text-muted">
-                GH2 把原生组件拆成 13 个库，每个库下面按「章 → 节」组织。点进去就是完整清单。
+                GH2 把原生组件拆成 13 个库，另有 1 个「参数」库放点、数值、滑块与 Listen/Shout 这类对象，
+                每个库下面按「章 → 节」组织。点进去就是完整清单。
               </p>
             </div>
             <Link to="/library" className="hidden shrink-0 items-center gap-1 text-small text-muted hover:text-ink sm:flex">

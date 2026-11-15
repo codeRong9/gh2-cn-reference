@@ -90,6 +90,8 @@ export interface IndexItem {
   in: number;
   out: number;
   i?: string | null;
+  /** 组件代号（IoId / GUID），用于识别台按代号对表 */
+  g?: string;
   py?: string;
   pyi?: string;
 }

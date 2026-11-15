@@ -1,0 +1,50 @@
+name: 识别台认不出
+description: 拖入画布、粘贴内容或贴组件代号后，识别结果不对 / 为空
+title: "[识别] "
+labels: ["identify"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        识别台按「组件代号（IoId）→ 名称」两级匹配。如果认不出，通常是代号没被解析到，或者这个对象不在收录范围。
+  - type: dropdown
+    id: mode
+    attributes:
+      label: 你是怎么喂给识别台的
+      options:
+        - 拖入 .ghx 文件
+        - 拖入 .gh2 文件
+        - 直接粘贴（Ctrl+V）
+        - 粘贴组件代号（GUID）
+        - 从 GH2 拖组件进来
+    validations:
+      required: true
+  - type: input
+    id: code
+    attributes:
+      label: 组件代号（如果有）
+      description: 在 GH2 里拖拽组件时显示的那串 GUID，形如 00000000-a9e2-4ef6-a4d8-a8f87f93757f
+      placeholder: 00000000-0000-0000-0000-000000000000
+    validations:
+      required: false
+  - type: textarea
+    id: actual
+    attributes:
+      label: 站点给出的结果
+      description: 识别为空？认成了别的组件？把结果贴过来或截图
+    validations:
+      required: true
+  - type: input
+    id: expected
+    attributes:
+      label: 你认为它应该是哪个组件
+      placeholder: 例如：Listen（监听）
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: Rhino / GH2 版本
+      placeholder: Rhino 9 SR? / GH2 版本?
+    validations:
+      required: false

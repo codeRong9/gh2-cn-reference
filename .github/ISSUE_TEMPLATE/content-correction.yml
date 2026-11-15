@@ -1,0 +1,52 @@
+name: 释义纠错
+description: 某条中文名、用途或精讲与 GH2 的实际行为不符
+title: "[释义] "
+labels: ["content", "correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        谢谢你来纠错。**准确的依据比结论本身更重要**，麻烦把下面几项填清楚，我们才能判断要不要改、怎么改。
+  - type: input
+    id: component
+    attributes:
+      label: 涉及的组件
+      description: 中文名或英文名都行，最好带上页面链接或组件 id
+      placeholder: "例如：Offset Curve（curve.offset-curve）https://coderong9.github.io/gh2-cn-reference/c/curve.offset-curve"
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: 站点现在写的是什么
+      placeholder: 直接把有问题的那句贴过来
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 实际行为是什么
+      description: 描述你在 GH2 里的操作与看到的结果
+      placeholder: |
+        我在 GH2 里做了：……
+        实际结果是：……
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 依据
+      description: 官方说明原文、截图、GH2 版本号，任一即可
+      placeholder: |
+        GH2 帮助原文：「……」
+        Rhino 版本：Rhino 9 SR? / GH2 版本：?
+        截图：（可直接拖进输入框）
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 确认
+      options:
+        - label: 我确认这是与 GH2 实际行为的差异，而不是个人偏好
+          required: true

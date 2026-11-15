@@ -22,10 +22,11 @@ ICON_SRC = ROOT / "tools" / "icons" / "svg2"
 PUBLIC = ROOT / "public"
 DATA_OUT = PUBLIC / "data"
 
-LIB_ORDER = ["maths", "data", "vector", "curve", "surface", "mesh", "transform",
+LIB_ORDER = ["params", "maths", "data", "vector", "curve", "surface", "mesh", "transform",
              "intersect", "display", "text", "meta", "annotation", "script"]
 
 LIB_META = {
+    "params": {"cn": "参数", "desc": "点、数值、滑块、面板、Listen/Shout 等参数与数据承载对象"},
     "maths": {"cn": "数学", "desc": "数值运算、三角函数、区间、复数、统计与随机数"},
     "data": {"cn": "数据", "desc": "列表、树、集合、字符串与数据结构的增删改查"},
     "vector": {"cn": "向量", "desc": "点、向量、平面、场与图结构的构造与计算"},
@@ -178,6 +179,9 @@ def main() -> int:
     port_terms = load_port_dict()
 
     for c in comps:
+        # 代号统一小写，方便识别台与外部工具直接对表
+        if c.get("guid"):
+            c["guid"] = c["guid"].lower()
         z = zh_lib.get(c["id"], {})
         c["cn"] = z.get("cn", "")
         c["summary"] = z.get("summary", "")
@@ -234,12 +238,16 @@ def main() -> int:
             "in": len(c.get("inputs", [])),
             "out": len(c.get("outputs", [])),
             "i": c["icon"],
+            "g": c.get("guid") or "",
             "py": c.get("py", ""),
             "pyi": c.get("pyi", ""),
         })
     (DATA_OUT / "index.json").write_text(
         json.dumps(index, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
     )
+
+    # 检索索引里带上组件代号（IoId），识别台与外部工具都能按 GUID 直接对表
+    # （完整记录里也有 guid，这里冗余一份是为了不加载分库就能命中）
 
     # 分类树
     tree: dict[str, dict] = {}
@@ -259,6 +267,7 @@ def main() -> int:
 
     meta = {
         "componentCount": len(comps),
+        "paramCount": sum(1 for c in comps if c["lib"] == "params"),
         "libCount": len(by_lib),
         "portCount": sum(len(c.get("inputs", [])) + len(c.get("outputs", [])) for c in comps),
         "detailCount": sum(1 for c in comps if c["hasDetail"]),

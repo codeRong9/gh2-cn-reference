@@ -1,0 +1,38 @@
+MIT License
+
+Copyright (c) 2026 GH2 中文操作库 contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## 范围说明（Scope）
+
+上面的 MIT 许可**仅适用于本站的源代码与本项目原创的中文内容**
+（中文释义、精讲、术语表、教程、界面文案）。
+
+以下内容的版权归 Robert McNeel & Associates 及各组件作者所有，
+随站点一同分发仅为学习与识别用途，不在 MIT 许可范围内，
+也不得用于商业再分发：
+
+- Grasshopper 2 组件名称、章节分类与英文说明原文
+- 由 `.ghicon` 资源导出的组件图标（`public/icons/`）
+- 由程序集提取的组件元数据（`data/raw/`、`public/data/` 中的英文部分）
+
+本项目为社区非官方项目，与 Robert McNeel & Associates 无隶属或背书关系。

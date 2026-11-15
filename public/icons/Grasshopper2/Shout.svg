@@ -1,0 +1,19 @@
+<svg version="1.1" baseProfile="full" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="linear2bb961c4c13e" gradientUnits="userSpaceOnUse" x1="10" y1="7" x2="10" y2="17">
+      <stop offset="0%" style="stop-color:#FFE066;" />
+      <stop offset="100%" style="stop-color:#E67700;" />
+    </linearGradient>
+    <radialGradient id="radial88ff2eec1c2c" gradientUnits="userSpaceOnUse" cx="12" cy="12" r="9">
+      <stop offset="0%" style="stop-color:#C7C7C7;" />
+      <stop offset="100%" style="stop-color:#FFFFFF;" />
+    </radialGradient>
+  </defs>
+  <g fill="none" stroke="none">
+    <path d="M 14 17 A 4 4 0 0 1 6 17 A 4 4 0 0 1 14 17" stroke="#303030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 2.5895054 9.063869 L 18.378504 4.097154 C 20.286858 3.6651294, 21.423977 5.2899218, 22.102262 6.949866 C 22.780548 8.60981, 23 10.304905, 23 12 C 23 13.695095, 22.780548 15.39019, 22.102262 17.050135 C 21.423977 18.710077, 20.286858 20.334871, 18.378504 19.902845 L 2.5895054 14.936131 C 1.4326555 14.45073, 1 13.225365, 1 12 C 1 10.774635, 1.4326555 9.54927, 2.5895054 9.063869" fill="url(#linear2bb961c4c13e)" stroke="#303030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" paint-order="stroke fill" />
+    <path d="M 14.059371 7.0282803 L 14.159925 6.996649" stroke="#FDFDFD" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 3.039613 10.494744 L 11.438885 7.8526015" stroke="#FDFDFD" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 22 12 C 22 12.926648, 21.908876 13.853296, 21.75816 14.753483 C 21.607445 15.653669, 21.397137 16.527395, 20.927511 17.363977 C 20.457886 18.20056, 19.728943 19, 19 19 C 18.271057 19, 17.542114 18.20056, 17.072489 17.363977 C 16.602863 16.527395, 16.392555 15.653669, 16.24184 14.753483 C 16.091124 13.853296, 16 12.926648, 16 12 C 16 11.073352, 16.091124 10.146704, 16.24184 9.246517 C 16.392555 8.346331, 16.602863 7.472605, 17.072489 6.6360226 C 17.542114 5.79944, 18.271057 5, 19 5 C 19.728943 5, 20.457886 5.79944, 20.927511 6.6360226 C 21.397137 7.472605, 21.607445 8.346331, 21.75816 9.246517 C 21.908876 10.146704, 22 11.073352, 22 12" fill="url(#radial88ff2eec1c2c)" />
+  </g>
+</svg>
