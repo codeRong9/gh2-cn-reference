@@ -39,10 +39,11 @@ npm run dev        # http://localhost:5173
 
 ## 界面预览
 
-> 截图待生成：`npm i -D playwright && npx playwright install chromium && node tools/build/capture_screenshots.mjs`
-> 会把首页、详情页、检索、识别台等页面截到 `docs/screenshots/`，替换下面占位即可。
+<img src="docs/screenshots/home.png" width="49%" alt="首页"/> <img src="docs/screenshots/detail.png" width="49%" alt="组件详情"/>
+<img src="docs/screenshots/search.png" width="49%" alt="检索"/> <img src="docs/screenshots/identify.png" width="49%" alt="识别台"/>
+<img src="docs/screenshots/learn.png" width="49%" alt="入门路径"/> <img src="docs/screenshots/glossary.png" width="49%" alt="术语表"/>
 
-（截图占位区）
+> 截图用 Playwright 自动捕获（`tools/build/capture_screenshots.mjs`），指向线上站点。
 
 ## 收录范围与数据来源
 

@@ -5,9 +5,10 @@
 //   node tools/build/capture_screenshots.mjs
 import { chromium } from "playwright";
 import { mkdirSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 
 const BASE = "https://coderong9.github.io/gh2-cn-reference/";
-const OUT = new URL("../../docs/screenshots/", import.meta.url).pathname.replace(/^\//, "");
+const OUT = fileURLToPath(new URL("../../docs/screenshots/", import.meta.url));
 
 const shots = [
   { name: "home.png", path: "/", full: true },

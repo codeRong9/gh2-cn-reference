@@ -109,10 +109,16 @@
   <div id="t-black" class="clip" data-start="0" data-duration="75" data-track-index="5" style="background:#000;opacity:0"></div>
 
 </div>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="assets/gsap.min.js"></script>
 <script>
   window.__timelines = window.__timelines || {};
   const tl = gsap.timeline({ paused: true });
+
+  // 逐镜显隐：每个镜头默认隐藏，到点显示、到期隐藏（用于逐帧渲染）
+  tl.set(["#s1","#s2","#s3","#s4","#s5","#s6","#s7","#s8","#s9"], { opacity: 0 });
+  const show = (id, t) => tl.to(id, { opacity: 1, duration: 0.01 }, t);
+  show("#s1", 0); show("#s2", 5); show("#s3", 9); show("#s4", 17); show("#s5", 27);
+  show("#s6", 35); show("#s7", 44); show("#s8", 56); show("#s9", 65);
 
   // 1. Hook 数字弹入
   tl.from("#s1-num", { scale: 0, duration: .7, ease: "elastic.out(1,0.55)" }, 0.3);
